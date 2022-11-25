@@ -5,9 +5,9 @@
 * MIPI Rx IP  实现了MIPI-CSI2协议，用于把MIPI信号转为内部video信号。此模块仅适用于xilinx-zynqmp平台
 * Vitis/Vivado 2022.1
 
-![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/raw/main/Doc/HW_Diagram.png)
+![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/blob/main/Doc/HW_Diagram.png)
 
-![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/raw/main/Doc/IPCore_Flow.png)
+![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/blob/main/Doc/IPCore_Flow.png)
 
 
 ## ISP Lite IP
@@ -47,4 +47,4 @@
     mipi_rx_to_video - 内部时序转为video时序
 
 
-![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/raw/main/Doc/snapshot.jpg)
+![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/blob/main/Doc/snapshot.jpg)
