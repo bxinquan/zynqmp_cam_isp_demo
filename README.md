@@ -1,14 +1,13 @@
 # ZynqMP-ISP
-#### ISP Lite IP基于verilog实现了ISP常规处理模块，用于处理CIS(CMOS Image Sensor)的RAW数据，并支持图像统计。其主要代码保持着跨平台特性(altera/xilinx)
-#### VIP IP实现了一些图像辅助处理，如CROP，DSCALE等。其主要代码同样保持着跨平台特性
-#### MIPI Rx IP实现了MIPI-CSI2协议，用于把MIPI信号转为内部video信号。此模块仅适用于xilinx-zynqmp平台
-#### Demo设计实现了CIS(AR1335接在IAS1口)配置，MIPI接收，ISP处理，DP显示。3MP-RAW10@30FPS
-#### Demo软件基于Vitis裸机环境开发，实现简单的2A控制。Linux软件请见zynqmp_cam_isp_demo_linux
-#### Vitis/Vivado 2022.1
+#### Demo基于KV260平台，设计实现了CIS(AR1335接在IAS1口)配置，MIPI接收，ISP处理，DP显示。3MP-RAW10@30FPS。Demo软件基于Vitis裸机环境开发，实现简单的2A控制。Linux软件请见zynqmp_cam_isp_demo_linux
+ISP Lite IP 基于verilog实现了ISP常规处理模块，用于处理CIS(CMOS Image Sensor)的RAW数据，并支持图像统计。其主要代码保持着跨平台特性(altera/xilinx)
+VIP IP      实现了一些图像辅助处理，如CROP，DSCALE等。其主要代码同样保持着跨平台特性
+MIPI Rx IP  实现了MIPI-CSI2协议，用于把MIPI信号转为内部video信号。此模块仅适用于xilinx-zynqmp平台
+Vitis/Vivado 2022.1
 
-![image](​https://github.com/bxinquan/zynqmp_cam_isp_demo/tree/main/Doc/HW_Diagram.png)
+![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/blob/main/Doc/HW_Diagram.png)
 
-![image](​https://github.com/bxinquan/zynqmp_cam_isp_demo/tree/main/Doc/IPCore_Flow.png)
+![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/blob/main/Doc/IPCore_Flow.png)
 
 
 ## ISP Lite IP
@@ -48,4 +47,4 @@
     mipi_rx_to_video - 内部时序转为video时序
 
 
-![image](​https://github.com/bxinquan/zynqmp_cam_isp_demo/tree/main/Doc/snapshot.jpg)
+![image](https://github.com/bxinquan/zynqmp_cam_isp_demo/blob/main/Doc/snapshot.jpg)
