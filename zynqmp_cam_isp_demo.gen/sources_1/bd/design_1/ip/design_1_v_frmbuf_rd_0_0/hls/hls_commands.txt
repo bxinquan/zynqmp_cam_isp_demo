@@ -1,0 +1,9 @@
+
+#config_rtl -enable_maxiConservative -enable_axiFlushable
+config_rtl -reset all
+config_interface -m_axi_flush_mode
+config_interface -m_axi_conservative_mode 
+
+#config_interface -input_reg_mode both -output_reg_mode both
+config_interface -m_axi_addr64=false
+

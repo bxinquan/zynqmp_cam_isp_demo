@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="zynqmp_cam_isp_demo_system" platform="D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:kv260::0.0(custom)" sysConfig="design_1_wrapper" runtime="cpp" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.1993408707">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="zynqmp_cam_isp_demo" domainName="standalone_psu_cortexa53_0" domainPrettyName="standalone_psu_cortexa53_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.system.managedbuilder.releaseConfiguration.2024301982">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="zynqmp_cam_isp_demo" domainName="standalone_psu_cortexa53_0" domainPrettyName="standalone_psu_cortexa53_0" appBuildConfig="Release"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

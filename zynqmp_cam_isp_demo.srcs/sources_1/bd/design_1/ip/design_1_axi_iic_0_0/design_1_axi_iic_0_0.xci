@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:design xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>xci</spirit:library>
+  <spirit:name>unknown</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:componentInstances>
+    <spirit:componentInstance>
+      <spirit:instanceName>design_1_axi_iic_0_0</spirit:instanceName>
+      <spirit:componentRef spirit:vendor="xilinx.com" spirit:library="ip" spirit:name="axi_iic" spirit:version="2.1"/>
+      <spirit:configurableElementValues>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.INTERRUPT.PortWidth">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH">9</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN">design_1_clk_wiz_0_0_clk_sys</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH">32</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ">150074602</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_PROT">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_QOS">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_REGION">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.INSERT_VIP">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING">2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING">2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE">0.0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL">AXI4LITE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE">READ_WRITE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_PORT"/>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN">design_1_clk_wiz_0_0_clk_sys</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ">150074602</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_TOLERANCE_HZ">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.INSERT_VIP">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.PHASE">0.0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.S_AXI_ARESETN.INSERT_VIP">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DEFAULT_VALUE">0x00</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DISABLE_SETUP_VIOLATION_CHECK">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_FAMILY">zynquplus</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_GPO_WIDTH">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_IIC_FREQ">100000</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SCL_INERTIAL_DELAY">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SDA_INERTIAL_DELAY">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SDA_LEVEL">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_STATIC_TIMING_REG_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_S_AXI_ACLK_FREQ_HZ">150074602</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_TEN_BIT_ADR">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_TIMING_REG_WIDTH">32</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.AXI_ACLK_FREQ_MHZ">150.074602</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_DEFAULT_VALUE">0x00</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_DISABLE_SETUP_VIOLATION_CHECK">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_GPO_WIDTH">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_SCL_INERTIAL_DELAY">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_SDA_INERTIAL_DELAY">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_SDA_LEVEL">1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_STATIC_TIMING_REG_WIDTH">0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_TIMING_REG_WIDTH">32</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.Component_Name">design_1_axi_iic_0_0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.IIC_BOARD_INTERFACE">Custom</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.IIC_FREQ_KHZ">100</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.TEN_BIT_ADR">7_bit</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.USE_BOARD_FLOW">false</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">zynquplus</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BASE_BOARD_PART">xilinx.com:kv260_som:part0:1.3</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.BOARD_CONNECTIONS"/>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.DEVICE">xck26</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PACKAGE">sfvc784</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.PREFHDL">VERILOG</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SILICON_REVISION"/>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SIMULATOR_LANGUAGE">MIXED</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.SPEEDGRADE">-2LV</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.STATIC_POWER"/>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.TEMPERATURE_GRADE">C</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_CUSTOMIZATION">TRUE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.USE_RDI_GENERATION">TRUE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPCONTEXT">IP_Integrator</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.IPREVISION">2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.MANAGED">TRUE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.OUTPUTDIR">../../../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SELECTEDSIMMODEL"/>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SHAREDDIR">../../ipshared</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SWVERSION">2022.1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="RUNTIME_PARAM.SYNTHESISFLOW">OUT_OF_CONTEXT</spirit:configurableElementValue>
+      </spirit:configurableElementValues>
+      <spirit:vendorExtensions>
+        <xilinx:componentInstanceExtensions>
+          <xilinx:configElementInfos>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ADDR_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.DATA_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_READ_THREADS" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.NUM_WRITE_THREADS" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.SUPPORTS_NARROW_BURST" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_BITS_PER_BYTE" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_PORT" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_ACLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+            <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.AXI_ACLK_FREQ_MHZ" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+          </xilinx:configElementInfos>
+          <xilinx:boundaryDescriptionInfo>
+            <xilinx:boundaryDescription xilinx:boundaryDescriptionJSON="{
+              &quot;schema&quot;: &quot;xilinx.com:schema:json_boundary:1.0&quot;,
+              &quot;boundary&quot;: {
+                &quot;ports&quot;: {
+                  &quot;s_axi_aclk&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;s_axi_aresetn&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;driver_value&quot;: &quot;0x1&quot; } ],
+                  &quot;iic2intc_irpt&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;s_axi_awaddr&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;8&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_awvalid&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;s_axi_awready&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;s_axi_wdata&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_wstrb&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;3&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_wvalid&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;s_axi_wready&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;s_axi_bresp&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;1&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_bvalid&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;s_axi_bready&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;s_axi_araddr&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;8&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_arvalid&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;s_axi_arready&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;s_axi_rdata&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;31&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_rresp&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;1&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
+                  &quot;s_axi_rvalid&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;s_axi_rready&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;sda_i&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;sda_o&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;sda_t&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;scl_i&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;scl_o&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;scl_t&quot;: [ { &quot;direction&quot;: &quot;out&quot; } ],
+                  &quot;gpo&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;0&quot;, &quot;size_right&quot;: &quot;0&quot; } ]
+                },
+                &quot;interfaces&quot;: {
+                  &quot;S_AXI&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:interface:aximm:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:interface:aximm_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;memory_map_ref&quot;: &quot;S_AXI&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;DATA_WIDTH&quot;: [ { &quot;value&quot;: &quot;32&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;PROTOCOL&quot;: [ { &quot;value&quot;: &quot;AXI4LITE&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;FREQ_HZ&quot;: [ { &quot;value&quot;: &quot;150074602&quot;, &quot;value_src&quot;: &quot;ip_propagated&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;ID_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;ADDR_WIDTH&quot;: [ { &quot;value&quot;: &quot;9&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;AWUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;ARUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;WUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;RUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;BUSER_WIDTH&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;READ_WRITE_MODE&quot;: [ { &quot;value&quot;: &quot;READ_WRITE&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_BURST&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_LOCK&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_PROT&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_CACHE&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_QOS&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_REGION&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_WSTRB&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_BRESP&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;HAS_RRESP&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;SUPPORTS_NARROW_BURST&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_src&quot;: &quot;ip_propagated&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;NUM_READ_OUTSTANDING&quot;: [ { &quot;value&quot;: &quot;2&quot;, &quot;value_src&quot;: &quot;default_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;NUM_WRITE_OUTSTANDING&quot;: [ { &quot;value&quot;: &quot;2&quot;, &quot;value_src&quot;: &quot;default_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;MAX_BURST_LENGTH&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_src&quot;: &quot;ip_propagated&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;PHASE&quot;: [ { &quot;value&quot;: &quot;0.0&quot;, &quot;value_src&quot;: &quot;ip_propagated&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;float&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;CLK_DOMAIN&quot;: [ { &quot;value&quot;: &quot;design_1_clk_wiz_0_0_clk_sys&quot;, &quot;value_src&quot;: &quot;default_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;NUM_READ_THREADS&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;NUM_WRITE_THREADS&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;RUSER_BITS_PER_BYTE&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;WUSER_BITS_PER_BYTE&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;INSERT_VIP&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;resolve_type&quot;: &quot;user&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.rtl&quot;, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;ARADDR&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_araddr&quot; } ],
+                      &quot;ARREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arready&quot; } ],
+                      &quot;ARVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_arvalid&quot; } ],
+                      &quot;AWADDR&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awaddr&quot; } ],
+                      &quot;AWREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awready&quot; } ],
+                      &quot;AWVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_awvalid&quot; } ],
+                      &quot;BREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bready&quot; } ],
+                      &quot;BRESP&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bresp&quot; } ],
+                      &quot;BVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_bvalid&quot; } ],
+                      &quot;RDATA&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rdata&quot; } ],
+                      &quot;RREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rready&quot; } ],
+                      &quot;RRESP&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rresp&quot; } ],
+                      &quot;RVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_rvalid&quot; } ],
+                      &quot;WDATA&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_wdata&quot; } ],
+                      &quot;WREADY&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_wready&quot; } ],
+                      &quot;WSTRB&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_wstrb&quot; } ],
+                      &quot;WVALID&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_wvalid&quot; } ]
+                    }
+                  },
+                  &quot;S_AXI_ACLK&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:clock:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:clock_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;ASSOCIATED_BUSIF&quot;: [ { &quot;value&quot;: &quot;S_AXI&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;ASSOCIATED_RESET&quot;: [ { &quot;value&quot;: &quot;s_axi_aresetn&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;FREQ_HZ&quot;: [ { &quot;value&quot;: &quot;150074602&quot;, &quot;value_src&quot;: &quot;ip_propagated&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;FREQ_TOLERANCE_HZ&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;PHASE&quot;: [ { &quot;value&quot;: &quot;0.0&quot;, &quot;value_src&quot;: &quot;ip_propagated&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;float&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;CLK_DOMAIN&quot;: [ { &quot;value&quot;: &quot;design_1_clk_wiz_0_0_clk_sys&quot;, &quot;value_src&quot;: &quot;default_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;ASSOCIATED_PORT&quot;: [ { &quot;value&quot;: &quot;&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;is_static_object&quot;: false } ],
+                      &quot;INSERT_VIP&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;resolve_type&quot;: &quot;user&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.rtl&quot;, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;CLK&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_aclk&quot; } ]
+                    }
+                  },
+                  &quot;S_AXI_ARESETN&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:reset:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:reset_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;slave&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;POLARITY&quot;: [ { &quot;value&quot;: &quot;ACTIVE_LOW&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;INSERT_VIP&quot;: [ { &quot;value&quot;: &quot;0&quot;, &quot;resolve_type&quot;: &quot;user&quot;, &quot;format&quot;: &quot;long&quot;, &quot;usage&quot;: &quot;simulation.rtl&quot;, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;RST&quot;: [ { &quot;physical_name&quot;: &quot;s_axi_aresetn&quot; } ]
+                    }
+                  },
+                  &quot;INTERRUPT&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:signal:interrupt:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:signal:interrupt_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;master&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;SENSITIVITY&quot;: [ { &quot;value&quot;: &quot;LEVEL_HIGH&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;usage&quot;: &quot;all&quot; } ],
+                      &quot;PortWidth&quot;: [ { &quot;value&quot;: &quot;1&quot;, &quot;value_src&quot;: &quot;default_prop&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;resolve_type&quot;: &quot;generated&quot;, &quot;format&quot;: &quot;long&quot;, &quot;is_static_object&quot;: false } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;INTERRUPT&quot;: [ { &quot;physical_name&quot;: &quot;iic2intc_irpt&quot; } ]
+                    }
+                  },
+                  &quot;IIC&quot;: {
+                    &quot;vlnv&quot;: &quot;xilinx.com:interface:iic:1.0&quot;,
+                    &quot;abstraction_type&quot;: &quot;xilinx.com:interface:iic_rtl:1.0&quot;,
+                    &quot;mode&quot;: &quot;master&quot;,
+                    &quot;parameters&quot;: {
+                      &quot;BOARD.ASSOCIATED_PARAM&quot;: [ { &quot;value&quot;: &quot;IIC_BOARD_INTERFACE&quot;, &quot;value_src&quot;: &quot;constant&quot;, &quot;value_permission&quot;: &quot;bd&quot;, &quot;usage&quot;: &quot;all&quot; } ]
+                    },
+                    &quot;port_maps&quot;: {
+                      &quot;SCL_I&quot;: [ { &quot;physical_name&quot;: &quot;scl_i&quot; } ],
+                      &quot;SCL_O&quot;: [ { &quot;physical_name&quot;: &quot;scl_o&quot; } ],
+                      &quot;SCL_T&quot;: [ { &quot;physical_name&quot;: &quot;scl_t&quot; } ],
+                      &quot;SDA_I&quot;: [ { &quot;physical_name&quot;: &quot;sda_i&quot; } ],
+                      &quot;SDA_O&quot;: [ { &quot;physical_name&quot;: &quot;sda_o&quot; } ],
+                      &quot;SDA_T&quot;: [ { &quot;physical_name&quot;: &quot;sda_t&quot; } ]
+                    }
+                  }
+                },
+                &quot;memory_maps&quot;: {
+                  &quot;S_AXI&quot;: {
+                    &quot;display_name&quot;: &quot;S_AXI_MEM&quot;,
+                    &quot;description&quot;: &quot;Memory Map for S_AXI&quot;,
+                    &quot;address_blocks&quot;: {
+                      &quot;Reg&quot;: {
+                        &quot;base_address&quot;: &quot;0&quot;,
+                        &quot;range&quot;: &quot;4096&quot;,
+                        &quot;display_name&quot;: &quot;Reg&quot;,
+                        &quot;description&quot;: &quot;Register Block&quot;,
+                        &quot;usage&quot;: &quot;register&quot;,
+                        &quot;access&quot;: &quot;read-write&quot;,
+                        &quot;registers&quot;: {
+                          &quot;GIE&quot;: {
+                            &quot;address_offset&quot;: &quot;0x1c&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;GIE&quot;,
+                            &quot;description&quot;: &quot;Global Interrupt Enable Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;GIE&quot;: {
+                                &quot;bit_offset&quot;: 31,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;GIE&quot;,
+                                &quot;description&quot;: &quot;Global Interrupt Enable\n0 - All Interrupts disabled; no interrupt (even if unmasked in IER) possible from AXI IIC core\n1 - Unmasked AXI IIC core interrupts are passed to processor\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;ISR&quot;: {
+                            &quot;address_offset&quot;: &quot;0x020&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;ISR&quot;,
+                            &quot;description&quot;: &quot;Interrupt Status Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0xd0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;int0&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int0&quot;,
+                                &quot;description&quot;: &quot;Interrupt0 - Arbitration Lost\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int1&quot;: {
+                                &quot;bit_offset&quot;: 1,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int1&quot;,
+                                &quot;description&quot;: &quot;Interrupt1 - Transmit Error/Slave Transmit Complete\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int2&quot;: {
+                                &quot;bit_offset&quot;: 2,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int2&quot;,
+                                &quot;description&quot;: &quot;Interrupt2 - Transmit FIFO Empty\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int3&quot;: {
+                                &quot;bit_offset&quot;: 3,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int3&quot;,
+                                &quot;description&quot;: &quot;Interrupt3 - Recieve FIFO FULL\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int4&quot;: {
+                                &quot;bit_offset&quot;: 4,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int4&quot;,
+                                &quot;description&quot;: &quot;Interrupt4 - IIC Bus is Not Busy\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int5&quot;: {
+                                &quot;bit_offset&quot;: 5,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int5&quot;,
+                                &quot;description&quot;: &quot;Interrupt5 - Addressed As Slave\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int6&quot;: {
+                                &quot;bit_offset&quot;: 6,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int6&quot;,
+                                &quot;description&quot;: &quot;Interrupt6 - Not Addessed As Slave\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int7&quot;: {
+                                &quot;bit_offset&quot;: 7,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int7&quot;,
+                                &quot;description&quot;: &quot;Interrupt7 - Transmit FIFO Half Empty\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;IER&quot;: {
+                            &quot;address_offset&quot;: &quot;0x028&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;IER&quot;,
+                            &quot;description&quot;: &quot;Interrupt Enable Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;int0&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int0&quot;,
+                                &quot;description&quot;: &quot;Interrupt0 - Arbitration Lost\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int1&quot;: {
+                                &quot;bit_offset&quot;: 1,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int1&quot;,
+                                &quot;description&quot;: &quot;Interrupt1 - Transmit Error/Slave Transmit Complete\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int2&quot;: {
+                                &quot;bit_offset&quot;: 2,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int2&quot;,
+                                &quot;description&quot;: &quot;Interrupt2 - Transmit FIFO Empty\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int3&quot;: {
+                                &quot;bit_offset&quot;: 3,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int3&quot;,
+                                &quot;description&quot;: &quot;Interrupt3 - Recieve FIFO FULL\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int4&quot;: {
+                                &quot;bit_offset&quot;: 4,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int4&quot;,
+                                &quot;description&quot;: &quot;Interrupt4 - IIC Bus is Not Busy\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int5&quot;: {
+                                &quot;bit_offset&quot;: 5,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int5&quot;,
+                                &quot;description&quot;: &quot;Interrupt5 - Addressed As Slave\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int6&quot;: {
+                                &quot;bit_offset&quot;: 6,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int6&quot;,
+                                &quot;description&quot;: &quot;Interrupt6 - Not Addessed As Slave\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;int7&quot;: {
+                                &quot;bit_offset&quot;: 7,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;int7&quot;,
+                                &quot;description&quot;: &quot;Interrupt7 - Transmit FIFO Half Empty\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;SOFTR&quot;: {
+                            &quot;address_offset&quot;: &quot;0x040&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;SOFTR&quot;,
+                            &quot;description&quot;: &quot;Soft Reset Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;RKEY&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 4,
+                                &quot;display_name&quot;: &quot;RKEY&quot;,
+                                &quot;description&quot;: &quot;Reset Key - Firmware must write a value of 0xA to this field to\n            cause a soft reset of the Interrupt registers of AXI IIC controller.\n            Writing any other value results in an AXI transaction\n            acknowledgement with SLVERR and no reset occurs.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;write-only&quot;
+                              }
+                            }
+                          },
+                          &quot;CR&quot;: {
+                            &quot;address_offset&quot;: &quot;0x100&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;CR&quot;,
+                            &quot;description&quot;: &quot;Control Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;EN&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;AXI IIC Enable&quot;,
+                                &quot;description&quot;: &quot;This bit must be set before any other CR bits have any effect\n0 - resets and disables the AXI IIC controller but not the registers or FIFOs\n1 - enables the AXI IIC controller\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;TX_FIFO_Reset&quot;: {
+                                &quot;bit_offset&quot;: 1,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Transmit FIFO Reset&quot;,
+                                &quot;description&quot;: &quot;This bit must be set to flush the FIFO if either (a) arbitration is lost or (b) if a transmit error occurs\n0 - transmit FIFO normal operation\n1 - resets the transmit FIFO\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;MSMS&quot;: {
+                                &quot;bit_offset&quot;: 2,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Master/Slave Mode Select&quot;,
+                                &quot;description&quot;: &quot;When this bit is changed from 0 to 1, the\nAXI IIC bus interface generates a START condition in master mode. When\nthis bit is cleared, a STOP condition is generated and the AXI IIC bus\ninterface switches to slave mode. When this bit is cleared by the\nhardware, because arbitration for the bus has been lost, a STOP\ncondition is not generated\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;TX&quot;: {
+                                &quot;bit_offset&quot;: 3,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Transmit/Recieve Mode Select&quot;,
+                                &quot;description&quot;: &quot;This bit selects the direction of master/slave transfers.\n0 - selects an AXI IIC receive\n1 - selects an AXI IIC transmit\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;TXAK&quot;: {
+                                &quot;bit_offset&quot;: 4,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Transmit Acknowledgement&quot;,
+                                &quot;description&quot;: &quot;This bit specifies the value driven onto\nthe sda line during acknowledge cycles for both master and slave recievers.\n0 - acknowledge\n1 - not-acknowledge\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;RSTA&quot;: {
+                                &quot;bit_offset&quot;: 5,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Repeated Start&quot;,
+                                &quot;description&quot;: &quot;Writing a 1 to this bit generates a repeated START \ncondition on the bus if the AXI IIC bus interface is the current bus\nmaster. Attempting a repeated START at the wrong time, if the bus is\nowned by another master, results in a loss of arbitration. This bit is reset\nwhen the repeated start occurs. This bit must be set prior to writing the\nnew address to the TX_FIFO or DTR\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              },
+                              &quot;GC_EN&quot;: {
+                                &quot;bit_offset&quot;: 6,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;General Call Enable&quot;,
+                                &quot;description&quot;: &quot;Setting this bit High allows the AXI IIC to respond to a general call address.\n0 - General Call Disabled\n1 - General Call Enabled\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;SR&quot;: {
+                            &quot;address_offset&quot;: &quot;0x104&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;SR&quot;,
+                            &quot;description&quot;: &quot;Status Register&quot;,
+                            &quot;access&quot;: &quot;read-only&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;ABGC&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Addressed By a General Call&quot;,
+                                &quot;description&quot;: &quot;This bit is set to 1 when another master has issued a general call and\nthe general call enable bit is set to 1, CR(6) = 1.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;AAS&quot;: {
+                                &quot;bit_offset&quot;: 1,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Addressed As Slave&quot;,
+                                &quot;description&quot;: &quot;When the address on the IIC bus matches the slave address in the Address register (ADR), the IIC bus interface\nis being addressed as a slave and switches to slave mode. If 10-bit addressing is selected this device only responds to a 10-bit\naddress or general call if enabled. This bit is cleared when a stop\ncondition is detected or a repeated start occurs.\n0 - indicates not being addressed as a slave\n1 - indicates being addressed as a slave\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;BB&quot;: {
+                                &quot;bit_offset&quot;: 2,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Bus Busy&quot;,
+                                &quot;description&quot;: &quot;This bit indicates the status of the IIC bus. This bit is set\nwhen a START condition is detected and cleared when a STOP\ncondition is detected.\n0 - indicates the bus is idle\n1 - indicates the bus is busy\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;ARW&quot;: {
+                                &quot;bit_offset&quot;: 3,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Slave Read/Write&quot;,
+                                &quot;description&quot;: &quot;When the IIC bus interface has been addressed as a slave (AAS is set), \nthis bit indicates the value of the read/write bit sent by the master.\nThis bit is only valid when a complete transfer has occurred and\nno other transfers have been initiated.\n0 - indicates master writing to slave\n1 - indicates master reading from slave\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;TX_FIFO_Full&quot;: {
+                                &quot;bit_offset&quot;: 4,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Transmit FIFO Full&quot;,
+                                &quot;description&quot;: &quot;This bit is set High when the transmit FIFO is full.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;RX_FIFO_Full&quot;: {
+                                &quot;bit_offset&quot;: 5,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Recieve FUFO Full&quot;,
+                                &quot;description&quot;: &quot;This bit is set High when the receive FIFO is full.\nThis bit is set only when all 16 locations in the FIFO are full,\nregardless of the compare value field of the RX_FIFO_PIRQ register.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;RX_FIFO_Empty&quot;: {
+                                &quot;bit_offset&quot;: 6,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Receive FIFO empty&quot;,
+                                &quot;description&quot;: &quot;This is set High when the receive FIFO is empty.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              },
+                              &quot;TX_FIFO_Empty&quot;: {
+                                &quot;bit_offset&quot;: 7,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Transmit FIFO Empty&quot;,
+                                &quot;description&quot;: &quot;This is set High when the transmit FIFO is empty.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              }
+                            }
+                          },
+                          &quot;TX_FIFO&quot;: {
+                            &quot;address_offset&quot;: &quot;0x108&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TX_FIFO&quot;,
+                            &quot;description&quot;: &quot;Transmit FIFO Register&quot;,
+                            &quot;access&quot;: &quot;write-only&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;D7_D0&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 8,
+                                &quot;display_name&quot;: &quot;AXI IIC Transmit Data&quot;,
+                                &quot;description&quot;: &quot;If the dynamic stop bit is used and the AXI IIC is a master receiver,\nthe value is the number of bytes to receive.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;write-only&quot;
+                              },
+                              &quot;Start&quot;: {
+                                &quot;bit_offset&quot;: 8,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Start&quot;,
+                                &quot;description&quot;: &quot;The dynamic start bit can be used to send a start or repeated start sequence on the\nIIC bus. A start sequence is generated if the MSMS = 0, a\nrepeated start sequence is generated if the MSMS = 1.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;write-only&quot;
+                              },
+                              &quot;Stop&quot;: {
+                                &quot;bit_offset&quot;: 9,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;Stop&quot;,
+                                &quot;description&quot;: &quot;The dynamic stop bit can be used to send an IIC stop\nsequence on the IIC bus after the last byte has been transmitted or received.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;write-only&quot;
+                              }
+                            }
+                          },
+                          &quot;RX_FIFO&quot;: {
+                            &quot;address_offset&quot;: &quot;0x10C&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;RX_FIFO&quot;,
+                            &quot;description&quot;: &quot;Recieve FIFO Register&quot;,
+                            &quot;access&quot;: &quot;read-only&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;D7_D0&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 8,
+                                &quot;display_name&quot;: &quot;IIC Receive Data&quot;,
+                                &quot;description&quot;: &quot;IIC Receive Data\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              }
+                            }
+                          },
+                          &quot;ADR&quot;: {
+                            &quot;address_offset&quot;: &quot;0x110&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;ADR&quot;,
+                            &quot;description&quot;: &quot;Slave Address Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;Slave_Address&quot;: {
+                                &quot;bit_offset&quot;: 1,
+                                &quot;bit_width&quot;: 7,
+                                &quot;display_name&quot;: &quot;Slave Address&quot;,
+                                &quot;description&quot;: &quot;Address used by the IIC bus interface when in slave mode.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;TX_FIFO_OCY&quot;: {
+                            &quot;address_offset&quot;: &quot;0x114&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TX_FIFO_OCY&quot;,
+                            &quot;description&quot;: &quot;Transmit FIFO Occupency Register&quot;,
+                            &quot;access&quot;: &quot;read-only&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;Occupancy_Value&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 4,
+                                &quot;display_name&quot;: &quot;Occupancy_Value&quot;,
+                                &quot;description&quot;: &quot;Bit[3] is the MSB. A binary value of 1001 indicates that\n10 locations are full in the FIFO\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              }
+                            }
+                          },
+                          &quot;RX_FIFO_OCY&quot;: {
+                            &quot;address_offset&quot;: &quot;0x118&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;RX_FIFO_OCY&quot;,
+                            &quot;description&quot;: &quot;Recieve FIFO Occupency Register&quot;,
+                            &quot;access&quot;: &quot;read-only&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;Occupancy_Value&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 4,
+                                &quot;display_name&quot;: &quot;Occupancy_Value&quot;,
+                                &quot;description&quot;: &quot;Bit[3] is the MSB. A binary value of 1001 indicates that\n10 locations are full in the FIFO\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-only&quot;
+                              }
+                            }
+                          },
+                          &quot;TEN_ADR&quot;: {
+                            &quot;address_offset&quot;: &quot;0x11C&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TEN_ADR&quot;,
+                            &quot;description&quot;: &quot;Slave Ten Bit Address Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;MSB_of_Slave_Address&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 3,
+                                &quot;display_name&quot;: &quot;MSB_of_Slave_Address&quot;,
+                                &quot;description&quot;: &quot;Three MSBs of the 10-bit address used by the AXI IIC bus interface when in slave mode.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;RX_FIFO_PIRQ&quot;: {
+                            &quot;address_offset&quot;: &quot;0x120&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;RX_FIFO_PIRQ&quot;,
+                            &quot;description&quot;: &quot;Recieve FIFO Programmable Depth Interrupt Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;Compare_Value&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 4,
+                                &quot;display_name&quot;: &quot;Compare Value&quot;,
+                                &quot;description&quot;: &quot;Bit[3] is the MSB. A binary value of 1001 implies that when\n10 locations in the receive FIFO are filled, the receive FIFO\ninterrupt is set.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;GPO&quot;: {
+                            &quot;address_offset&quot;: &quot;0x124&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;GPO&quot;,
+                            &quot;description&quot;: &quot;General Purpose Output Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;General_Purpose_Outputs&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 1,
+                                &quot;display_name&quot;: &quot;General Purpose Outputs&quot;,
+                                &quot;description&quot;: &quot;The LSB (Bit[0]) is the first bit populated\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;TSUSTA&quot;: {
+                            &quot;address_offset&quot;: &quot;0x128&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TSUSTA&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter TSUSTA Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;TSUSTA&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;TSUSTA&quot;,
+                                &quot;description&quot;: &quot;Setup time for a repeated START condition.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;TSUSTO&quot;: {
+                            &quot;address_offset&quot;: &quot;0x12C&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TSUSTO&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter TSUSTO Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;TSUSTO&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;TSUSTO&quot;,
+                                &quot;description&quot;: &quot;Setup time for a repeated STOP condition.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;THDSTA&quot;: {
+                            &quot;address_offset&quot;: &quot;0x130&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;THDSTA&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter THDSTA Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;THDSTA&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;THDSTA&quot;,
+                                &quot;description&quot;: &quot;Hold time for a repeated START condition.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;TSUDAT&quot;: {
+                            &quot;address_offset&quot;: &quot;0x134&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TSUDAT&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter TSUDAT Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;TSUDAT&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;TSUDAT&quot;,
+                                &quot;description&quot;: &quot;Data Setup time\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;TBUF&quot;: {
+                            &quot;address_offset&quot;: &quot;0x138&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TBUF&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter TBUF Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;TBUF&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;TBUF&quot;,
+                                &quot;description&quot;: &quot;Bus free time between a STOP and START condition\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;THIGH&quot;: {
+                            &quot;address_offset&quot;: &quot;0x13C&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;THIGH&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter THIGH Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;THIGH&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;THIGH&quot;,
+                                &quot;description&quot;: &quot;High Period of the scl clock.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;TLOW&quot;: {
+                            &quot;address_offset&quot;: &quot;0x140&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;TLOW&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter TLOW Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;TLOW&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;TLOW&quot;,
+                                &quot;description&quot;: &quot;Low Period of scl clock.\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          },
+                          &quot;THDDAT&quot;: {
+                            &quot;address_offset&quot;: &quot;0x144&quot;,
+                            &quot;size&quot;: 32,
+                            &quot;display_name&quot;: &quot;THDDAT&quot;,
+                            &quot;description&quot;: &quot;Timing Parameter THDDAT Register&quot;,
+                            &quot;access&quot;: &quot;read-write&quot;,
+                            &quot;reset_value&quot;: &quot;0x0&quot;,
+                            &quot;fields&quot;: {
+                              &quot;THDDAT&quot;: {
+                                &quot;bit_offset&quot;: 0,
+                                &quot;bit_width&quot;: 32,
+                                &quot;display_name&quot;: &quot;THDDAT&quot;,
+                                &quot;description&quot;: &quot;Data Hold time\n&quot;,
+                                &quot;is_volatile&quot;: true,
+                                &quot;access&quot;: &quot;read-write&quot;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }"/>
+          </xilinx:boundaryDescriptionInfo>
+        </xilinx:componentInstanceExtensions>
+      </spirit:vendorExtensions>
+    </spirit:componentInstance>
+  </spirit:componentInstances>
+</spirit:design>

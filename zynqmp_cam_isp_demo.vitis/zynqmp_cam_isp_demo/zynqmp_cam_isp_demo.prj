@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="zynqmp_cam_isp_demo" location="D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo" platform="D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm" platformUID="xilinx:kv260::0.0(custom)" systemProject="zynqmp_cam_isp_demo_system" sysConfig="design_1_wrapper" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="c0fba5bc14a7a424e6ebcf3fc5dc5cfd">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1380987828">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.990043995" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

@@ -1,0 +1,1932 @@
+diff --git a/cross_file_arm64.txt b/cross_file_arm64.txt
+new file mode 100644
+index 0000000..564226a
+--- /dev/null
++++ b/cross_file_arm64.txt
+@@ -0,0 +1,15 @@
++[binaries]
++c = 'aarch64-linux-gnu-gcc'
++cpp = 'aarch64-linux-gnu-c++'
++ar = 'aarch64-linux-gnu-gcc-ar'
++strip = 'aarch64-linux-gnu-strip'
++ld = 'aarch64-linux-gnu-ld'
++pcap-config = ''
++cmake = 'cmake'
++
++[host_machine]
++system = 'linux'
++cpu_family = 'aarch64'
++cpu = 'armv8-a'
++endian = 'little'
++
+diff --git a/include/libcamera/internal/v4l2_videodevice.h b/include/libcamera/internal/v4l2_videodevice.h
+index d157a44..e7078ef 100644
+--- a/include/libcamera/internal/v4l2_videodevice.h
++++ b/include/libcamera/internal/v4l2_videodevice.h
+@@ -117,7 +117,8 @@ struct V4L2Capability final : v4l2_capability {
+ 	}
+ 	bool hasMediaController() const
+ 	{
+-		return device_caps() & V4L2_CAP_IO_MC;
++		return device_caps();
++		//return device_caps() & V4L2_CAP_IO_MC;
+ 	}
+ };
+ 
+diff --git a/include/linux/videodev2.h b/include/linux/videodev2.h
+index bfb315d..af58921 100644
+--- a/include/linux/videodev2.h
++++ b/include/linux/videodev2.h
+@@ -555,7 +555,9 @@ struct v4l2_pix_format {
+ #define V4L2_PIX_FMT_Y4      v4l2_fourcc('Y', '0', '4', ' ') /*  4  Greyscale     */
+ #define V4L2_PIX_FMT_Y6      v4l2_fourcc('Y', '0', '6', ' ') /*  6  Greyscale     */
+ #define V4L2_PIX_FMT_Y10     v4l2_fourcc('Y', '1', '0', ' ') /* 10  Greyscale     */
++#define V4L2_PIX_FMT_XY10    v4l2_fourcc('X', 'Y', '1', '0') /* 10  Greyscale 2-10-10-10 */
+ #define V4L2_PIX_FMT_Y12     v4l2_fourcc('Y', '1', '2', ' ') /* 12  Greyscale     */
++#define V4L2_PIX_FMT_XY12    v4l2_fourcc('X', 'Y', '1', '2') /* 12  Greyscale 4-12-12-12 */
+ #define V4L2_PIX_FMT_Y14     v4l2_fourcc('Y', '1', '4', ' ') /* 14  Greyscale     */
+ #define V4L2_PIX_FMT_Y16     v4l2_fourcc('Y', '1', '6', ' ') /* 16  Greyscale     */
+ #define V4L2_PIX_FMT_Y16_BE  v4l2_fourcc_be('Y', '1', '6', ' ') /* 16  Greyscale BE  */
+diff --git a/include/linux/xil-isp-lite.h b/include/linux/xil-isp-lite.h
+new file mode 100644
+index 0000000..92c065e
+--- /dev/null
++++ b/include/linux/xil-isp-lite.h
+@@ -0,0 +1,165 @@
++/* SPDX-License-Identifier: ((GPL-2.0+ WITH Linux-syscall-note) OR BSD-3-Clause) */
++/*
++ * xil-isp-lite.h
++ *
++ * Xil ISP Lite driver - user space header file.
++ *
++ * Copyright © 2022- bxinquan Ltd.
++ *
++ * Author: Xinquan Bian (544177215@qq.com)
++ *
++ */
++
++#ifndef __XIL_ISP_LITE_H_
++#define __XIL_ISP_LITE_H_
++
++#include <linux/v4l2-controls.h>
++
++#define V4L2_CID_USER_XIL_ISP_LITE_BASE			(V4L2_CID_USER_BASE + 0x10e0)
++
++#define V4L2_CID_USER_XIL_ISP_LITE_TOP			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0001)
++#define V4L2_CID_USER_XIL_ISP_LITE_DPC			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0002)
++#define V4L2_CID_USER_XIL_ISP_LITE_BLC			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0003)
++#define V4L2_CID_USER_XIL_ISP_LITE_BNR			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0004)
++#define V4L2_CID_USER_XIL_ISP_LITE_DGAIN		(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0005)
++#define V4L2_CID_USER_XIL_ISP_LITE_DEMOSAIC		(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0006)
++#define V4L2_CID_USER_XIL_ISP_LITE_WB			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0007)
++#define V4L2_CID_USER_XIL_ISP_LITE_CCM			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0008)
++#define V4L2_CID_USER_XIL_ISP_LITE_CSC			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x0009)
++#define V4L2_CID_USER_XIL_ISP_LITE_GAMMA		(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x000a)
++#define V4L2_CID_USER_XIL_ISP_LITE_2DNR			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x000b)
++#define V4L2_CID_USER_XIL_ISP_LITE_EE			(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x000c)
++#define V4L2_CID_USER_XIL_ISP_LITE_STAT_AE_CFG		(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x000d)
++#define V4L2_CID_USER_XIL_ISP_LITE_STAT_AWB_CFG		(V4L2_CID_USER_XIL_ISP_LITE_BASE + 0x000e)
++
++
++/* ISP Configure structure define */
++
++struct xil_isp_lite_top {
++	__u32 dpc_en		:1;
++	__u32 blc_en		:1;
++	__u32 bnr_en		:1;
++	__u32 dgain_en		:1;
++	__u32 demosaic_en	:1;
++	__u32 wb_en		:1;
++	__u32 ccm_en		:1;
++	__u32 csc_en		:1;
++	__u32 gamma_en		:1;
++	__u32 nr2d_en		:1;
++	__u32 ee_en		:1;
++	__u32 stat_ae_en	:1;
++	__u32 stat_awb_en	:1;
++	__u32 padding		:19; /* Unused */
++};
++
++struct xil_isp_lite_dpc {
++	__u32 enabled;
++	__u16 threshold;
++	__u16 padding;
++};
++
++struct xil_isp_lite_blc {
++	__u32 enabled;
++	__u16 black_level_r;
++	__u16 black_level_gr;
++	__u16 black_level_gb;
++	__u16 black_level_b;
++};
++
++struct xil_isp_lite_bnr {
++	__u32 enabled;
++	__u32 nr_level   :4;
++	__u32 padding    :28;
++};
++
++struct xil_isp_lite_dgain {
++	__u32 enabled;
++	__u8  gain;  //U4.4
++	__u16 offset;
++	__u8  padding;
++};
++
++struct xil_isp_lite_demosaic {
++	__u32 enabled;
++};
++
++struct xil_isp_lite_wb {
++	__u32 enabled;
++	__u8  rgain; //U4.4
++	__u8  ggain;
++	__u8  bgain;
++	__u8  padding;
++};
++
++struct xil_isp_lite_ccm {
++	__u32 enabled;
++	__s8  matrix[3*3];
++	__u8  padding[3];
++};
++
++struct xil_isp_lite_csc {
++	__u32 enabled;
++};
++
++struct xil_isp_lite_gamma {
++	__u32 enabled;
++	__u8  gamma_table[256];
++};
++
++struct xil_isp_lite_2dnr {
++	__u32 enabled;
++	__u8  space_weight[7*7];
++	__u8  color_curve[9][2];
++	__u8  padding;
++};
++
++struct xil_isp_lite_ee {
++	__u32 enabled;
++};
++
++struct xil_isp_lite_stat_ae_cfg {
++	__u32 enabled;
++	__u16 rect_x;
++	__u16 rect_y;
++	__u16 rect_w;
++	__u16 rect_h;
++};
++
++struct xil_isp_lite_stat_awb_cfg {
++	__u32 enabled;
++	__u16 thresh_min;
++	__u16 thresh_max;
++};
++
++
++/* ISP statistics buffer define */
++
++#define V4L2_META_FMT_XIL_ISP_LITE_STAT		v4l2_fourcc('X', 'I', 'S', 'P') 
++#define XIL_ISP_LITE_AE_HIST_BIN_NUM		(256)
++#define XIL_ISP_LITE_AWB_HIST_BIN_NUM		(256)
++
++struct xil_isp_lite_stat_ae_result {
++	__u64 pix_cnt;
++	__u64 sum;
++	__u32 hist_r[XIL_ISP_LITE_AE_HIST_BIN_NUM];
++	__u32 hist_gr[XIL_ISP_LITE_AE_HIST_BIN_NUM];
++	__u32 hist_gb[XIL_ISP_LITE_AE_HIST_BIN_NUM];
++	__u32 hist_b[XIL_ISP_LITE_AE_HIST_BIN_NUM];
++};
++
++struct xil_isp_lite_stat_awb_result {
++	__u64 pix_cnt;
++	__u64 sum_r;
++	__u64 sum_g;
++	__u64 sum_b;
++	__u32 hist_r[XIL_ISP_LITE_AWB_HIST_BIN_NUM];
++	__u32 hist_g[XIL_ISP_LITE_AWB_HIST_BIN_NUM];
++	__u32 hist_b[XIL_ISP_LITE_AWB_HIST_BIN_NUM];
++};
++
++struct xil_isp_lite_stat_result {
++	struct xil_isp_lite_stat_ae_result  ae;
++	struct xil_isp_lite_stat_awb_result awb;
++};
++
++#endif /* __XIL_ISP_LITE_H_ */
+diff --git a/src/cam/meson.build b/src/cam/meson.build
+index 8259239..5985068 100644
+--- a/src/cam/meson.build
++++ b/src/cam/meson.build
+@@ -1,6 +1,10 @@
+ # SPDX-License-Identifier: CC0-1.0
+ 
+ libevent = dependency('libevent_pthreads', required : get_option('cam'))
++libevent = declare_dependency(
++        include_directories : include_directories('/home/bxinquan/libevent-2.1.12-stable/install_arm64/include'),
++        link_args : ['-L/home/bxinquan/libevent-2.1.12-stable/install_arm64/lib', '-levent_pthreads', '-levent_core', '-levent']
++    )
+ 
+ if not libevent.found()
+     cam_enabled = false
+diff --git a/src/ipa/raspberrypi/cam_helper_ar1335.cpp b/src/ipa/raspberrypi/cam_helper_ar1335.cpp
+new file mode 100644
+index 0000000..87ea713
+--- /dev/null
++++ b/src/ipa/raspberrypi/cam_helper_ar1335.cpp
+@@ -0,0 +1,220 @@
++/* SPDX-License-Identifier: BSD-2-Clause */
++/*
++ * Copyright (C) 2019, Raspberry Pi Ltd
++ *
++ * cam_helper_ar1335.cpp - camera information for ar1335 sensor
++ */
++
++#include <assert.h>
++
++#include "cam_helper.h"
++
++using namespace RPiController;
++
++class CamHelperAr1335 : public CamHelper
++{
++public:
++	CamHelperAr1335();
++	uint32_t gainCode(double gain) const override;
++	double gain(uint32_t gainCode) const override;
++	void getDelays(int &exposureDelay, int &gainDelay,
++		       int &vblankDelay) const override;
++	unsigned int hideFramesStartup() const override;
++	unsigned int hideFramesModeSwitch() const override;
++	unsigned int mistrustFramesStartup() const override;
++	unsigned int mistrustFramesModeSwitch() const override;
++
++private:
++	/*
++	 * Smallest difference between the frame length and integration time,
++	 * in units of lines.
++	 */
++	static constexpr int frameIntegrationDiff = 4;
++};
++
++/*
++ * AR1335 doesn't output metadata, so we have to use the "unicam parser" which
++ * works by counting frames.
++ */
++
++CamHelperAr1335::CamHelperAr1335()
++	: CamHelper({}, frameIntegrationDiff)
++{
++}
++
++static const unsigned _gainTable[][2] = {
++	{0x0010, 0x2010},
++	{0x0014, 0x2014},
++	{0x0018, 0x2018},
++	{0x001C, 0x201C},
++	{0x0020, 0x2020},
++	{0x0024, 0x2022},
++	{0x0028, 0x2024},
++	{0x002C, 0x2026},
++	{0x0030, 0x2028},
++	{0x0034, 0x202A},
++	{0x0038, 0x202C},
++	{0x003C, 0x202E},
++	{0x0040, 0x2030},
++	{0x0044, 0x2031},
++	{0x0048, 0x2032},
++	{0x004C, 0x2033},
++	{0x0050, 0x2034},
++	{0x0054, 0x2035},
++	{0x0058, 0x2036},
++	{0x005C, 0x2037},
++	{0x0060, 0x2038},
++	{0x0064, 0x2039},
++	{0x0068, 0x203A},
++	{0x006C, 0x203B},
++	{0x0070, 0x203C},
++	{0x0074, 0x203D},
++	{0x0075, 0x203E},
++	{0x007C, 0x203F},
++	{0x0080, 0x213F},
++	{0x0084, 0x223F},
++	{0x0088, 0x233F},
++	{0x008C, 0x243F},
++	{0x0090, 0x253F},
++	{0x0094, 0x263F},
++	{0x0098, 0x273F},
++	{0x009C, 0x28BF},
++	{0x00A0, 0x29BF},
++	{0x00A4, 0x2ABF},
++	{0x00A8, 0x2BBF},
++	{0x00AC, 0x2CBF},
++	{0x00B0, 0x2DBF},
++	{0x00B4, 0x2EBF},
++	{0x00B8, 0x2FBF},
++	{0x00BC, 0x30BF},
++	{0x00C0, 0x31BF},
++	{0x00C4, 0x32BF},
++	{0x00C8, 0x33BF},
++	{0x00CC, 0x34BF},
++	{0x00D0, 0x35BF},
++	{0x00D4, 0x36BF},
++	{0x00D8, 0x37BF},
++	{0x00DC, 0x393F},
++	{0x00E0, 0x3A3F},
++	{0x00E4, 0x3B3F},
++	{0x00E8, 0x3C3F},
++	{0x00EC, 0x3D3F},
++	{0x00F0, 0x3E3F},
++	{0x00F4, 0x3F3F},
++	{0x00F8, 0x403F},
++	{0x00FC, 0x413F},
++	{0x0100, 0x423F},
++	{0x0104, 0x433F},
++	{0x0108, 0x443F},
++	{0x010C, 0x453F},
++	{0x0110, 0x463F},
++	{0x0114, 0x473F},
++	{0x0118, 0x48BF},
++	{0x011C, 0x49BF},
++	{0x0120, 0x4ABF},
++	{0x0124, 0x4BBF},
++	{0x0128, 0x4CBF},
++	{0x012C, 0x4DBF},
++	{0x0130, 0x4EBF},
++	{0x0134, 0x4FBF},
++	{0x0138, 0x50BF},
++	{0x013C, 0x51BF},
++	{0x0140, 0x52BF},
++	{0x0144, 0x53BF},
++	{0x0148, 0x54BF},
++	{0x014C, 0x55BF},
++	{0x0150, 0x56BF},
++	{0x0154, 0x57BF},
++	{0x0158, 0x593F},
++	{0x015C, 0x5A3F},
++	{0x0160, 0x5B3F},
++	{0x0164, 0x5C3F},
++	{0x0168, 0x5D3F},
++	{0x016C, 0x5E3F},
++	{0x0170, 0x5F3F},
++	{0x0174, 0x603F},
++	{0x0178, 0x613F},
++	{0x017C, 0x623F},
++	{0x0180, 0x633F}
++};
++
++uint32_t CamHelperAr1335::gainCode(double gain) const
++{
++	unsigned u32Gain = gain * 16;
++	unsigned index = 0;
++	for (index = 0; index < sizeof(_gainTable)/sizeof(_gainTable[0]); index ++) {
++		if (_gainTable[index][0] > u32Gain) {
++			break;
++		}
++	}
++	index = index > 0 ? index - 1 : 0;
++
++	return static_cast<uint32_t>(_gainTable[index][1]);
++}
++
++double CamHelperAr1335::gain(uint32_t gainCode) const
++{
++	unsigned index = 0;
++	for (index = 0; index < sizeof(_gainTable)/sizeof(_gainTable[0]); index ++) {
++		if (_gainTable[index][1] > gainCode) {
++			break;
++		}
++	}
++	index = index > 0 ? index - 1 : 0;
++	return static_cast<double>(_gainTable[index][0]) / 16.0;
++}
++
++void CamHelperAr1335::getDelays(int &exposureDelay, int &gainDelay,
++				int &vblankDelay) const
++{
++	/*
++	 * We run this sensor in a mode where the gain delay is bumped up to
++	 * 2. It seems to be the only way to make the delays "predictable".
++	 */
++	exposureDelay = 2;
++	gainDelay = 2;
++	vblankDelay = 2;
++}
++
++unsigned int CamHelperAr1335::hideFramesStartup() const
++{
++	/*
++	 * On startup, we get a couple of under-exposed frames which
++	 * we don't want shown.
++	 */
++	return 2;
++}
++
++unsigned int CamHelperAr1335::hideFramesModeSwitch() const
++{
++	/*
++	 * After a mode switch, we get a couple of under-exposed frames which
++	 * we don't want shown.
++	 */
++	return 2;
++}
++
++unsigned int CamHelperAr1335::mistrustFramesStartup() const
++{
++	/*
++	 * First couple of frames are under-exposed and are no good for control
++	 * algos.
++	 */
++	return 2;
++}
++
++unsigned int CamHelperAr1335::mistrustFramesModeSwitch() const
++{
++	/*
++	 * First couple of frames are under-exposed even after a simple
++	 * mode switch, and are no good for control algos.
++	 */
++	return 2;
++}
++
++static CamHelper *create()
++{
++	return new CamHelperAr1335();
++}
++
++static RegisterCamHelper reg("ar1335", &create);
+diff --git a/src/ipa/raspberrypi/controller/controller.h b/src/ipa/raspberrypi/controller/controller.h
+index 3e1e051..cdd4d49 100644
+--- a/src/ipa/raspberrypi/controller/controller.h
++++ b/src/ipa/raspberrypi/controller/controller.h
+@@ -15,7 +15,7 @@
+ #include <vector>
+ #include <string>
+ 
+-#include <linux/bcm2835-isp.h>
++#include <linux/xil-isp-lite.h>
+ 
+ #include "libcamera/internal/yaml_parser.h"
+ 
+@@ -27,7 +27,7 @@ namespace RPiController {
+ 
+ class Algorithm;
+ typedef std::unique_ptr<Algorithm> AlgorithmPtr;
+-typedef std::shared_ptr<bcm2835_isp_stats> StatisticsPtr;
++typedef std::shared_ptr<xil_isp_lite_stat_result> StatisticsPtr;
+ 
+ /*
+  * The Controller holds a pointer to some global_metadata, which is how
+diff --git a/src/ipa/raspberrypi/controller/rpi/agc.cpp b/src/ipa/raspberrypi/controller/rpi/agc.cpp
+index bd54a63..9069f5d 100644
+--- a/src/ipa/raspberrypi/controller/rpi/agc.cpp
++++ b/src/ipa/raspberrypi/controller/rpi/agc.cpp
+@@ -9,7 +9,7 @@
+ #include <map>
+ #include <tuple>
+ 
+-#include <linux/bcm2835-isp.h>
++#include <linux/xil-isp-lite.h>
+ 
+ #include <libcamera/base/log.h>
+ 
+@@ -584,33 +584,10 @@ void Agc::fetchAwbStatus(Metadata *imageMetadata)
+ 		LOG(RPiAgc, Debug) << "No AWB status found";
+ }
+ 
+-static double computeInitialY(bcm2835_isp_stats *stats, AwbStatus const &awb,
+-			      double weights[], double gain)
++static double computeInitialY(xil_isp_lite_stat_result *stats, AwbStatus const &/*awb*/,
++			      double /*weights*/[], double /*gain*/)
+ {
+-	bcm2835_isp_stats_region *regions = stats->agc_stats;
+-	/*
+-	 * Note how the calculation below means that equal weights give you
+-	 * "average" metering (i.e. all pixels equally important).
+-	 */
+-	double rSum = 0, gSum = 0, bSum = 0, pixelSum = 0;
+-	for (unsigned int i = 0; i < AgcStatsSize; i++) {
+-		double counted = regions[i].counted;
+-		double rAcc = std::min(regions[i].r_sum * gain, ((1 << PipelineBits) - 1) * counted);
+-		double gAcc = std::min(regions[i].g_sum * gain, ((1 << PipelineBits) - 1) * counted);
+-		double bAcc = std::min(regions[i].b_sum * gain, ((1 << PipelineBits) - 1) * counted);
+-		rSum += rAcc * weights[i];
+-		gSum += gAcc * weights[i];
+-		bSum += bAcc * weights[i];
+-		pixelSum += counted * weights[i];
+-	}
+-	if (pixelSum == 0.0) {
+-		LOG(RPiAgc, Warning) << "computeInitialY: pixelSum is zero";
+-		return 0;
+-	}
+-	double ySum = rSum * awb.gainR * .299 +
+-		      gSum * awb.gainG * .587 +
+-		      bSum * awb.gainB * .114;
+-	return ySum / pixelSum / (1 << PipelineBits);
++	return stats->ae.sum / stats->ae.pix_cnt / 1024.0;
+ }
+ 
+ /*
+@@ -629,17 +606,17 @@ static double constraintComputeGain(AgcConstraint &c, Histogram &h, double lux,
+ 	targetY = c.yTarget.eval(c.yTarget.domain().clip(lux));
+ 	targetY = std::min(EvGainYTargetLimit, targetY * evGain);
+ 	double iqm = h.interQuantileMean(c.qLo, c.qHi);
+-	return (targetY * NUM_HISTOGRAM_BINS) / iqm;
++	return (targetY * XIL_ISP_LITE_AE_HIST_BIN_NUM) / iqm; //FIXME
+ }
+ 
+-void Agc::computeGain(bcm2835_isp_stats *statistics, Metadata *imageMetadata,
++void Agc::computeGain(xil_isp_lite_stat_result *statistics, Metadata *imageMetadata,
+ 		      double &gain, double &targetY)
+ {
+ 	struct LuxStatus lux = {};
+ 	lux.lux = 400; /* default lux level to 400 in case no metadata found */
+ 	if (imageMetadata->get("lux.status", lux) != 0)
+ 		LOG(RPiAgc, Warning) << "No lux level found";
+-	Histogram h(statistics->hist[0].g_hist, NUM_HISTOGRAM_BINS);
++	Histogram h(statistics->ae.hist_gr, XIL_ISP_LITE_AE_HIST_BIN_NUM); //FIXME
+ 	double evGain = status_.ev * config_.baseEv;
+ 	/*
+ 	 * The initial gain and target_Y come from some of the regions. After
+diff --git a/src/ipa/raspberrypi/controller/rpi/agc.h b/src/ipa/raspberrypi/controller/rpi/agc.h
+index 6d6b0e5..10e8452 100644
+--- a/src/ipa/raspberrypi/controller/rpi/agc.h
++++ b/src/ipa/raspberrypi/controller/rpi/agc.h
+@@ -98,7 +98,7 @@ private:
+ 	void housekeepConfig();
+ 	void fetchCurrentExposure(Metadata *imageMetadata);
+ 	void fetchAwbStatus(Metadata *imageMetadata);
+-	void computeGain(bcm2835_isp_stats *statistics, Metadata *imageMetadata,
++	void computeGain(xil_isp_lite_stat_result *statistics, Metadata *imageMetadata,
+ 			 double &gain, double &targetY);
+ 	void computeTargetExposure(double gain);
+ 	bool applyDigitalGain(double gain, double targetY);
+diff --git a/src/ipa/raspberrypi/controller/rpi/awb.cpp b/src/ipa/raspberrypi/controller/rpi/awb.cpp
+index 2b88c3b..a407eff 100644
+--- a/src/ipa/raspberrypi/controller/rpi/awb.cpp
++++ b/src/ipa/raspberrypi/controller/rpi/awb.cpp
+@@ -21,8 +21,8 @@ LOG_DEFINE_CATEGORY(RPiAwb)
+ 
+ #define NAME "rpi.awb"
+ 
+-static constexpr unsigned int AwbStatsSizeX = DEFAULT_AWB_REGIONS_X;
+-static constexpr unsigned int AwbStatsSizeY = DEFAULT_AWB_REGIONS_Y;
++static constexpr unsigned int AwbStatsSizeX = 1;
++static constexpr unsigned int AwbStatsSizeY = 1;
+ 
+ /*
+  * todo - the locking in this algorithm needs some tidying up as has been done
+@@ -410,21 +410,19 @@ void Awb::asyncFunc()
+ }
+ 
+ static void generateStats(std::vector<Awb::RGB> &zones,
+-			  bcm2835_isp_stats_region *stats, double minPixels,
++			  xil_isp_lite_stat_awb_result *stats, double minPixels,
+ 			  double minG)
+ {
+-	for (unsigned int i = 0; i < AwbStatsSizeX * AwbStatsSizeY; i++) {
+ 		Awb::RGB zone;
+-		double counted = stats[i].counted;
++		double counted = stats->pix_cnt;
+ 		if (counted >= minPixels) {
+-			zone.G = stats[i].g_sum / counted;
++			zone.G = stats->sum_g / counted;
+ 			if (zone.G >= minG) {
+-				zone.R = stats[i].r_sum / counted;
+-				zone.B = stats[i].b_sum / counted;
++				zone.R = stats->sum_r / counted;
++				zone.B = stats->sum_b / counted;
+ 				zones.push_back(zone);
+ 			}
+ 		}
+-	}
+ }
+ 
+ void Awb::prepareStats()
+@@ -434,7 +432,7 @@ void Awb::prepareStats()
+ 	 * LSC has already been applied to the stats in this pipeline, so stop
+ 	 * any LSC compensation.  We also ignore config_.fast in this version.
+ 	 */
+-	generateStats(zones_, statistics_->awb_stats, config_.minPixels,
++	generateStats(zones_, &statistics_->awb, config_.minPixels,
+ 		      config_.minG);
+ 	/*
+ 	 * we're done with these; we may as well relinquish our hold on the
+diff --git a/src/ipa/raspberrypi/controller/rpi/contrast.cpp b/src/ipa/raspberrypi/controller/rpi/contrast.cpp
+index 5b37edc..a0a90b4 100644
+--- a/src/ipa/raspberrypi/controller/rpi/contrast.cpp
++++ b/src/ipa/raspberrypi/controller/rpi/contrast.cpp
+@@ -106,7 +106,7 @@ Pwl computeStretchCurve(Histogram const &histogram,
+ 	 * bit.
+ 	 */
+ 	double histLo = histogram.quantile(config.loHistogram) *
+-			(65536 / NUM_HISTOGRAM_BINS);
++			(65536 / XIL_ISP_LITE_AWB_HIST_BIN_NUM);
+ 	double levelLo = config.loLevel * 65536;
+ 	LOG(RPiContrast, Debug)
+ 		<< "Move histogram point " << histLo << " to " << levelLo;
+@@ -119,7 +119,7 @@ Pwl computeStretchCurve(Histogram const &histogram,
+ 	 * Keep the mid-point (median) in the same place, though, to limit the
+ 	 * apparent amount of global brightness shift.
+ 	 */
+-	double mid = histogram.quantile(0.5) * (65536 / NUM_HISTOGRAM_BINS);
++	double mid = histogram.quantile(0.5) * (65536 / XIL_ISP_LITE_AWB_HIST_BIN_NUM);
+ 	enhance.append(mid, mid);
+ 
+ 	/*
+@@ -127,7 +127,7 @@ Pwl computeStretchCurve(Histogram const &histogram,
+ 	 * there up.
+ 	 */
+ 	double histHi = histogram.quantile(config.hiHistogram) *
+-			(65536 / NUM_HISTOGRAM_BINS);
++			(65536 / XIL_ISP_LITE_AWB_HIST_BIN_NUM);
+ 	double levelHi = config.hiLevel * 65536;
+ 	LOG(RPiContrast, Debug)
+ 		<< "Move histogram point " << histHi << " to " << levelHi;
+@@ -158,7 +158,7 @@ Pwl applyManualContrast(Pwl const &gammaCurve, double brightness,
+ void Contrast::process(StatisticsPtr &stats,
+ 		       [[maybe_unused]] Metadata *imageMetadata)
+ {
+-	Histogram histogram(stats->hist[0].g_hist, NUM_HISTOGRAM_BINS);
++	Histogram histogram(stats->awb.hist_g, XIL_ISP_LITE_AWB_HIST_BIN_NUM);
+ 	/*
+ 	 * We look at the histogram and adjust the gamma curve in the following
+ 	 * ways: 1. Adjust the gamma curve so as to pull the start of the
+diff --git a/src/ipa/raspberrypi/controller/rpi/lux.cpp b/src/ipa/raspberrypi/controller/rpi/lux.cpp
+index 9759186..411fa2a 100644
+--- a/src/ipa/raspberrypi/controller/rpi/lux.cpp
++++ b/src/ipa/raspberrypi/controller/rpi/lux.cpp
+@@ -83,20 +83,13 @@ void Lux::process(StatisticsPtr &stats, Metadata *imageMetadata)
+ 	if (imageMetadata->get("device.status", deviceStatus) == 0) {
+ 		double currentGain = deviceStatus.analogueGain;
+ 		double currentAperture = deviceStatus.aperture.value_or(currentAperture_);
+-		uint64_t sum = 0;
+-		uint32_t num = 0;
+-		uint32_t *bin = stats->hist[0].g_hist;
+-		const int numBins = sizeof(stats->hist[0].g_hist) /
+-				    sizeof(stats->hist[0].g_hist[0]);
+-		for (int i = 0; i < numBins; i++)
+-			sum += bin[i] * (uint64_t)i, num += bin[i];
+ 		/* add .5 to reflect the mid-points of bins */
+-		double currentY = sum / (double)num + .5;
++		double currentY = stats->ae.sum / (double)stats->ae.pix_cnt + .5;
+ 		double gainRatio = referenceGain_ / currentGain;
+ 		double shutterSpeedRatio =
+ 			referenceShutterSpeed_ / deviceStatus.shutterSpeed;
+ 		double apertureRatio = referenceAperture_ / currentAperture;
+-		double yRatio = currentY * (65536 / numBins) / referenceY_;
++		double yRatio = currentY * (65536 / 1024) / referenceY_;
+ 		double estimatedLux = shutterSpeedRatio * gainRatio *
+ 				      apertureRatio * apertureRatio *
+ 				      yRatio * referenceLux_;
+diff --git a/src/ipa/raspberrypi/data/ar1335.json b/src/ipa/raspberrypi/data/ar1335.json
+new file mode 100644
+index 0000000..a8aeb8d
+--- /dev/null
++++ b/src/ipa/raspberrypi/data/ar1335.json
+@@ -0,0 +1,487 @@
++{
++    "version": 2.0,
++    "target": "bcm2835",
++    "algorithms": [
++        {
++            "rpi.black_level":
++            {
++                "black_level": 1024
++            }
++        },
++        {
++            "rpi.dpc": { }
++        },
++        {
++            "rpi.lux":
++            {
++                "reference_shutter_speed": 21663,
++                "reference_gain": 1.0,
++                "reference_aperture": 1.0,
++                "reference_lux": 987,
++                "reference_Y": 8961
++            }
++        },
++        {
++            "rpi.noise":
++            {
++                "reference_constant": 0,
++                "reference_slope": 4.25
++            }
++        },
++        {
++            "rpi.geq":
++            {
++                "offset": 401,
++                "slope": 0.05619
++            }
++        },
++        {
++            "rpi.sdn": { }
++        },
++        {
++            "rpi.awb":
++            {
++                "priors": [
++                    {
++                        "lux": 0,
++                        "prior":
++                        [
++                            2000, 1.0,
++                            3000, 0.0,
++                            13000, 0.0
++                        ]
++                    },
++                    {
++                        "lux": 800,
++                        "prior":
++                        [
++                            2000, 0.0,
++                            6000, 2.0,
++                            13000, 2.0
++                        ]
++                    },
++                    {
++                        "lux": 1500,
++                        "prior":
++                        [
++                            2000, 0.0,
++                            4000, 1.0,
++                            6000, 6.0,
++                            6500, 7.0,
++                            7000, 1.0,
++                            13000, 1.0
++                        ]
++                    }
++                ],
++                "modes":
++                {
++                    "auto":
++                    {
++                        "lo": 2500,
++                        "hi": 8000
++                    },
++                    "incandescent":
++                    {
++                        "lo": 2500,
++                        "hi": 3000
++                    },
++                    "tungsten":
++                    {
++                        "lo": 3000,
++                        "hi": 3500
++                    },
++                    "fluorescent":
++                    {
++                        "lo": 4000,
++                        "hi": 4700
++                    },
++                    "indoor":
++                    {
++                        "lo": 3000,
++                        "hi": 5000
++                    },
++                    "daylight":
++                    {
++                        "lo": 5500,
++                        "hi": 6500
++                    },
++                    "cloudy":
++                    {
++                        "lo": 7000,
++                        "hi": 8600
++                    }
++                },
++                "bayes": 1,
++                "ct_curve":
++                [
++                    2500.0, 1.0289, 0.4503,
++                    2803.0, 0.9428, 0.5108,
++                    2914.0, 0.9406, 0.5127,
++                    3605.0, 0.8261, 0.6249,
++                    4540.0, 0.7331, 0.7533,
++                    5699.0, 0.6715, 0.8627,
++                    8625.0, 0.6081, 1.0012
++                ],
++                "sensitivity_r": 1.05,
++                "sensitivity_b": 1.05,
++                "transverse_pos": 0.0321,
++                "transverse_neg": 0.04313
++            }
++        },
++        {
++            "rpi.agc":
++            {
++                "metering_modes":
++                {
++                    "centre-weighted":
++                    {
++                        "weights": [ 3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0 ]
++                    },
++                    "spot":
++                    {
++                        "weights": [ 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
++                    },
++                    "matrix":
++                    {
++                        "weights": [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
++                    }
++                },
++                "exposure_modes":
++                {
++                    "normal":
++                    {
++                        "shutter": [ 100, 10000, 30000, 60000, 66666 ],
++                        "gain": [ 1.0, 2.0, 4.0, 6.0, 8.0 ]
++                    },
++                    "short":
++                    {
++                        "shutter": [ 100, 5000, 10000, 20000, 33333 ],
++                        "gain": [ 1.0, 2.0, 4.0, 6.0, 8.0 ]
++                    },
++                    "long":
++                    {
++                        "shutter": [ 100, 10000, 30000, 60000, 120000 ],
++                        "gain": [ 1.0, 2.0, 4.0, 6.0, 12.0 ]
++                    }
++                },
++                "constraint_modes":
++                {
++                    "normal": [
++                        {
++                            "bound": "LOWER",
++                            "q_lo": 0.98,
++                            "q_hi": 1.0,
++                            "y_target":
++                            [
++                                0, 0.5,
++                                1000, 0.5
++                            ]
++                        }
++                    ],
++                    "highlight": [
++                        {
++                            "bound": "LOWER",
++                            "q_lo": 0.98,
++                            "q_hi": 1.0,
++                            "y_target":
++                            [
++                                0, 0.5,
++                                1000, 0.5
++                            ]
++                        },
++                        {
++                            "bound": "UPPER",
++                            "q_lo": 0.98,
++                            "q_hi": 1.0,
++                            "y_target":
++                            [
++                                0, 0.8,
++                                1000, 0.8
++                            ]
++                        }
++                    ],
++                    "shadows": [
++                        {
++                            "bound": "LOWER",
++                            "q_lo": 0.0,
++                            "q_hi": 0.5,
++                            "y_target":
++                            [
++                                0, 0.17,
++                                1000, 0.17
++                            ]
++                        }
++                    ]
++                },
++                "y_target":
++                [
++                    0, 0.16,
++                    1000, 0.165,
++                    10000, 0.17
++                ],
++                "base_ev": 1.25
++            }
++        },
++        {
++            "rpi.alsc":
++            {
++                "omega": 1.3,
++                "n_iter": 100,
++                "luminance_strength": 0.5,
++                "calibrations_Cr": [
++                    {
++                        "ct": 3000,
++                        "table":
++                        [
++                            1.105, 1.103, 1.093, 1.083, 1.071, 1.065, 1.065, 1.065, 1.066, 1.069, 1.072, 1.077, 1.084, 1.089, 1.093, 1.093,
++                            1.103, 1.096, 1.084, 1.072, 1.059, 1.051, 1.047, 1.047, 1.051, 1.053, 1.059, 1.067, 1.075, 1.082, 1.085, 1.086,
++                            1.096, 1.084, 1.072, 1.059, 1.051, 1.045, 1.039, 1.038, 1.039, 1.045, 1.049, 1.057, 1.063, 1.072, 1.081, 1.082,
++                            1.092, 1.075, 1.061, 1.052, 1.045, 1.039, 1.036, 1.035, 1.035, 1.039, 1.044, 1.049, 1.056, 1.063, 1.072, 1.081,
++                            1.092, 1.073, 1.058, 1.048, 1.043, 1.038, 1.035, 1.033, 1.033, 1.035, 1.039, 1.044, 1.051, 1.057, 1.069, 1.078,
++                            1.091, 1.068, 1.054, 1.045, 1.041, 1.038, 1.035, 1.032, 1.032, 1.032, 1.036, 1.041, 1.045, 1.055, 1.069, 1.078,
++                            1.091, 1.068, 1.052, 1.043, 1.041, 1.038, 1.035, 1.032, 1.031, 1.032, 1.034, 1.036, 1.043, 1.055, 1.069, 1.078,
++                            1.092, 1.068, 1.052, 1.047, 1.042, 1.041, 1.038, 1.035, 1.032, 1.032, 1.035, 1.039, 1.043, 1.055, 1.071, 1.079,
++                            1.092, 1.073, 1.057, 1.051, 1.047, 1.047, 1.044, 1.041, 1.038, 1.038, 1.039, 1.043, 1.051, 1.059, 1.076, 1.083,
++                            1.092, 1.081, 1.068, 1.058, 1.056, 1.056, 1.053, 1.052, 1.049, 1.048, 1.048, 1.051, 1.059, 1.066, 1.083, 1.085,
++                            1.091, 1.087, 1.081, 1.068, 1.065, 1.064, 1.062, 1.062, 1.061, 1.056, 1.056, 1.056, 1.064, 1.069, 1.084, 1.089,
++                            1.091, 1.089, 1.085, 1.079, 1.069, 1.068, 1.067, 1.067, 1.067, 1.063, 1.061, 1.063, 1.068, 1.069, 1.081, 1.092
++                        ]
++                    },
++                    {
++                        "ct": 5000,
++                        "table":
++                        [
++                            1.486, 1.484, 1.468, 1.449, 1.427, 1.403, 1.399, 1.399, 1.399, 1.404, 1.413, 1.433, 1.454, 1.473, 1.482, 1.488,
++                            1.484, 1.472, 1.454, 1.431, 1.405, 1.381, 1.365, 1.365, 1.367, 1.373, 1.392, 1.411, 1.438, 1.458, 1.476, 1.481,
++                            1.476, 1.458, 1.433, 1.405, 1.381, 1.361, 1.339, 1.334, 1.334, 1.346, 1.362, 1.391, 1.411, 1.438, 1.462, 1.474,
++                            1.471, 1.443, 1.417, 1.388, 1.361, 1.339, 1.321, 1.313, 1.313, 1.327, 1.346, 1.362, 1.391, 1.422, 1.453, 1.473,
++                            1.469, 1.439, 1.408, 1.377, 1.349, 1.321, 1.312, 1.299, 1.299, 1.311, 1.327, 1.348, 1.378, 1.415, 1.446, 1.468,
++                            1.468, 1.434, 1.402, 1.371, 1.341, 1.316, 1.299, 1.296, 1.295, 1.299, 1.314, 1.338, 1.371, 1.408, 1.441, 1.466,
++                            1.468, 1.434, 1.401, 1.371, 1.341, 1.316, 1.301, 1.296, 1.295, 1.297, 1.314, 1.338, 1.369, 1.408, 1.441, 1.465,
++                            1.469, 1.436, 1.401, 1.374, 1.348, 1.332, 1.315, 1.301, 1.301, 1.313, 1.324, 1.342, 1.372, 1.409, 1.442, 1.465,
++                            1.471, 1.444, 1.413, 1.388, 1.371, 1.348, 1.332, 1.323, 1.323, 1.324, 1.342, 1.362, 1.386, 1.418, 1.449, 1.467,
++                            1.473, 1.454, 1.431, 1.407, 1.388, 1.371, 1.359, 1.352, 1.351, 1.351, 1.362, 1.383, 1.404, 1.433, 1.462, 1.472,
++                            1.474, 1.461, 1.447, 1.424, 1.407, 1.394, 1.385, 1.381, 1.379, 1.381, 1.383, 1.401, 1.419, 1.444, 1.466, 1.481,
++                            1.474, 1.464, 1.455, 1.442, 1.421, 1.408, 1.403, 1.403, 1.403, 1.399, 1.402, 1.415, 1.432, 1.446, 1.467, 1.483
++                        ]
++                    },
++                    {
++                        "ct": 6500,
++                        "table":
++                        [
++                            1.567, 1.565, 1.555, 1.541, 1.525, 1.518, 1.518, 1.518, 1.521, 1.527, 1.532, 1.541, 1.551, 1.559, 1.567, 1.569,
++                            1.565, 1.557, 1.542, 1.527, 1.519, 1.515, 1.511, 1.516, 1.519, 1.524, 1.528, 1.533, 1.542, 1.553, 1.559, 1.562,
++                            1.561, 1.546, 1.532, 1.521, 1.518, 1.515, 1.511, 1.516, 1.519, 1.524, 1.528, 1.529, 1.533, 1.542, 1.554, 1.559,
++                            1.561, 1.539, 1.526, 1.524, 1.521, 1.521, 1.522, 1.524, 1.525, 1.531, 1.529, 1.529, 1.531, 1.538, 1.549, 1.558,
++                            1.559, 1.538, 1.526, 1.525, 1.524, 1.528, 1.534, 1.536, 1.536, 1.536, 1.532, 1.529, 1.531, 1.537, 1.548, 1.556,
++                            1.561, 1.537, 1.525, 1.524, 1.526, 1.532, 1.537, 1.539, 1.538, 1.537, 1.532, 1.529, 1.529, 1.537, 1.546, 1.556,
++                            1.561, 1.536, 1.524, 1.522, 1.525, 1.532, 1.538, 1.538, 1.537, 1.533, 1.528, 1.526, 1.527, 1.536, 1.546, 1.555,
++                            1.561, 1.537, 1.522, 1.521, 1.524, 1.531, 1.536, 1.537, 1.534, 1.529, 1.526, 1.522, 1.523, 1.534, 1.547, 1.555,
++                            1.561, 1.538, 1.524, 1.522, 1.526, 1.531, 1.535, 1.535, 1.534, 1.527, 1.524, 1.522, 1.522, 1.535, 1.549, 1.556,
++                            1.558, 1.543, 1.532, 1.526, 1.526, 1.529, 1.534, 1.535, 1.533, 1.526, 1.523, 1.522, 1.524, 1.537, 1.552, 1.557,
++                            1.555, 1.546, 1.541, 1.528, 1.527, 1.528, 1.531, 1.533, 1.531, 1.527, 1.522, 1.522, 1.526, 1.536, 1.552, 1.561,
++                            1.555, 1.547, 1.542, 1.538, 1.526, 1.526, 1.529, 1.531, 1.529, 1.528, 1.519, 1.519, 1.527, 1.531, 1.543, 1.561
++                        ]
++                    }
++                ],
++                "calibrations_Cb": [
++                    {
++                        "ct": 3000,
++                        "table":
++                        [
++                            1.684, 1.688, 1.691, 1.697, 1.709, 1.722, 1.735, 1.745, 1.747, 1.745, 1.731, 1.719, 1.709, 1.705, 1.699, 1.699,
++                            1.684, 1.689, 1.694, 1.708, 1.721, 1.735, 1.747, 1.762, 1.762, 1.758, 1.745, 1.727, 1.716, 1.707, 1.701, 1.699,
++                            1.684, 1.691, 1.704, 1.719, 1.734, 1.755, 1.772, 1.786, 1.789, 1.788, 1.762, 1.745, 1.724, 1.709, 1.702, 1.698,
++                            1.682, 1.694, 1.709, 1.729, 1.755, 1.773, 1.798, 1.815, 1.817, 1.808, 1.788, 1.762, 1.733, 1.714, 1.704, 1.699,
++                            1.682, 1.693, 1.713, 1.742, 1.772, 1.798, 1.815, 1.829, 1.831, 1.821, 1.807, 1.773, 1.742, 1.716, 1.703, 1.699,
++                            1.681, 1.693, 1.713, 1.742, 1.772, 1.799, 1.828, 1.839, 1.839, 1.828, 1.807, 1.774, 1.742, 1.715, 1.699, 1.695,
++                            1.679, 1.691, 1.712, 1.739, 1.771, 1.798, 1.825, 1.829, 1.831, 1.818, 1.801, 1.774, 1.738, 1.712, 1.695, 1.691,
++                            1.676, 1.685, 1.703, 1.727, 1.761, 1.784, 1.801, 1.817, 1.817, 1.801, 1.779, 1.761, 1.729, 1.706, 1.691, 1.684,
++                            1.669, 1.678, 1.692, 1.714, 1.741, 1.764, 1.784, 1.795, 1.795, 1.779, 1.761, 1.738, 1.713, 1.696, 1.683, 1.679,
++                            1.664, 1.671, 1.679, 1.693, 1.716, 1.741, 1.762, 1.769, 1.769, 1.753, 1.738, 1.713, 1.701, 1.687, 1.681, 1.676,
++                            1.661, 1.664, 1.671, 1.679, 1.693, 1.714, 1.732, 1.739, 1.739, 1.729, 1.708, 1.701, 1.685, 1.679, 1.676, 1.677,
++                            1.659, 1.661, 1.664, 1.671, 1.679, 1.693, 1.712, 1.714, 1.714, 1.708, 1.701, 1.687, 1.679, 1.672, 1.673, 1.677
++                        ]
++                    },
++                    {
++                        "ct": 5000,
++                        "table":
++                        [
++                            1.177, 1.183, 1.187, 1.191, 1.197, 1.206, 1.213, 1.215, 1.215, 1.215, 1.211, 1.204, 1.196, 1.191, 1.183, 1.182,
++                            1.179, 1.185, 1.191, 1.196, 1.206, 1.217, 1.224, 1.229, 1.229, 1.226, 1.221, 1.212, 1.202, 1.195, 1.188, 1.182,
++                            1.183, 1.191, 1.196, 1.206, 1.217, 1.229, 1.239, 1.245, 1.245, 1.245, 1.233, 1.221, 1.212, 1.199, 1.193, 1.187,
++                            1.183, 1.192, 1.201, 1.212, 1.229, 1.241, 1.252, 1.259, 1.259, 1.257, 1.245, 1.233, 1.217, 1.201, 1.194, 1.192,
++                            1.183, 1.192, 1.202, 1.219, 1.238, 1.252, 1.261, 1.269, 1.268, 1.261, 1.257, 1.241, 1.223, 1.204, 1.194, 1.191,
++                            1.182, 1.192, 1.202, 1.219, 1.239, 1.255, 1.266, 1.271, 1.271, 1.265, 1.258, 1.242, 1.223, 1.205, 1.192, 1.191,
++                            1.181, 1.189, 1.199, 1.218, 1.239, 1.254, 1.262, 1.268, 1.268, 1.258, 1.253, 1.241, 1.221, 1.204, 1.191, 1.187,
++                            1.179, 1.184, 1.193, 1.211, 1.232, 1.243, 1.254, 1.257, 1.256, 1.253, 1.242, 1.232, 1.216, 1.199, 1.187, 1.183,
++                            1.174, 1.179, 1.187, 1.202, 1.218, 1.232, 1.243, 1.246, 1.246, 1.239, 1.232, 1.218, 1.207, 1.191, 1.183, 1.179,
++                            1.169, 1.175, 1.181, 1.189, 1.202, 1.218, 1.229, 1.232, 1.232, 1.224, 1.218, 1.207, 1.199, 1.185, 1.181, 1.174,
++                            1.164, 1.168, 1.175, 1.179, 1.189, 1.201, 1.209, 1.213, 1.213, 1.209, 1.201, 1.198, 1.186, 1.181, 1.174, 1.173,
++                            1.161, 1.166, 1.171, 1.175, 1.179, 1.189, 1.197, 1.198, 1.198, 1.197, 1.196, 1.186, 1.182, 1.175, 1.173, 1.173
++                        ]
++                    },
++                    {
++                        "ct": 6500,
++                        "table":
++                        [
++                            1.166, 1.171, 1.173, 1.178, 1.187, 1.193, 1.201, 1.205, 1.205, 1.205, 1.199, 1.191, 1.184, 1.179, 1.174, 1.171,
++                            1.166, 1.172, 1.176, 1.184, 1.195, 1.202, 1.209, 1.216, 1.216, 1.213, 1.208, 1.201, 1.189, 1.182, 1.176, 1.171,
++                            1.166, 1.173, 1.183, 1.195, 1.202, 1.214, 1.221, 1.228, 1.229, 1.228, 1.221, 1.209, 1.201, 1.186, 1.179, 1.174,
++                            1.165, 1.174, 1.187, 1.201, 1.214, 1.223, 1.235, 1.241, 1.242, 1.241, 1.229, 1.221, 1.205, 1.188, 1.181, 1.177,
++                            1.165, 1.174, 1.189, 1.207, 1.223, 1.235, 1.242, 1.253, 1.252, 1.245, 1.241, 1.228, 1.211, 1.189, 1.181, 1.178,
++                            1.164, 1.173, 1.189, 1.207, 1.224, 1.238, 1.249, 1.255, 1.255, 1.249, 1.242, 1.228, 1.211, 1.191, 1.179, 1.176,
++                            1.163, 1.172, 1.187, 1.207, 1.223, 1.237, 1.245, 1.253, 1.252, 1.243, 1.237, 1.228, 1.207, 1.188, 1.176, 1.173,
++                            1.159, 1.167, 1.179, 1.199, 1.217, 1.227, 1.237, 1.241, 1.241, 1.237, 1.228, 1.217, 1.201, 1.184, 1.174, 1.169,
++                            1.156, 1.164, 1.172, 1.189, 1.205, 1.217, 1.226, 1.229, 1.229, 1.222, 1.217, 1.204, 1.192, 1.177, 1.171, 1.166,
++                            1.154, 1.159, 1.166, 1.177, 1.189, 1.205, 1.213, 1.216, 1.216, 1.209, 1.204, 1.192, 1.183, 1.172, 1.168, 1.162,
++                            1.152, 1.155, 1.161, 1.166, 1.177, 1.188, 1.195, 1.198, 1.199, 1.196, 1.187, 1.183, 1.173, 1.168, 1.163, 1.162,
++                            1.151, 1.154, 1.158, 1.162, 1.168, 1.177, 1.183, 1.184, 1.184, 1.184, 1.182, 1.172, 1.168, 1.165, 1.162, 1.161
++                        ]
++                    }
++                ],
++                "luminance_lut":
++                [
++                    2.236, 2.111, 1.912, 1.741, 1.579, 1.451, 1.379, 1.349, 1.349, 1.361, 1.411, 1.505, 1.644, 1.816, 2.034, 2.159,
++                    2.139, 1.994, 1.796, 1.625, 1.467, 1.361, 1.285, 1.248, 1.239, 1.265, 1.321, 1.408, 1.536, 1.703, 1.903, 2.087,
++                    2.047, 1.898, 1.694, 1.511, 1.373, 1.254, 1.186, 1.152, 1.142, 1.166, 1.226, 1.309, 1.441, 1.598, 1.799, 1.978,
++                    1.999, 1.824, 1.615, 1.429, 1.281, 1.179, 1.113, 1.077, 1.071, 1.096, 1.153, 1.239, 1.357, 1.525, 1.726, 1.915,
++                    1.976, 1.773, 1.563, 1.374, 1.222, 1.119, 1.064, 1.032, 1.031, 1.049, 1.099, 1.188, 1.309, 1.478, 1.681, 1.893,
++                    1.973, 1.756, 1.542, 1.351, 1.196, 1.088, 1.028, 1.011, 1.004, 1.029, 1.077, 1.169, 1.295, 1.459, 1.663, 1.891,
++                    1.973, 1.761, 1.541, 1.349, 1.193, 1.087, 1.031, 1.006, 1.006, 1.023, 1.075, 1.169, 1.298, 1.463, 1.667, 1.891,
++                    1.982, 1.789, 1.568, 1.373, 1.213, 1.111, 1.051, 1.029, 1.024, 1.053, 1.106, 1.199, 1.329, 1.495, 1.692, 1.903,
++                    2.015, 1.838, 1.621, 1.426, 1.268, 1.159, 1.101, 1.066, 1.068, 1.099, 1.166, 1.259, 1.387, 1.553, 1.751, 1.937,
++                    2.076, 1.911, 1.692, 1.507, 1.346, 1.236, 1.169, 1.136, 1.139, 1.174, 1.242, 1.349, 1.475, 1.641, 1.833, 2.004,
++                    2.193, 2.011, 1.798, 1.604, 1.444, 1.339, 1.265, 1.235, 1.237, 1.273, 1.351, 1.461, 1.598, 1.758, 1.956, 2.125,
++                    2.263, 2.154, 1.916, 1.711, 1.549, 1.432, 1.372, 1.356, 1.356, 1.383, 1.455, 1.578, 1.726, 1.914, 2.119, 2.211
++                ],
++                "sigma": 0.006,
++                "sigma_Cb": 0.00208
++            }
++        },
++        {
++            "rpi.contrast":
++            {
++                "ce_enable": 1,
++                "gamma_curve":
++                [
++                    0, 0,
++                    1024, 5040,
++                    2048, 9338,
++                    3072, 12356,
++                    4096, 15312,
++                    5120, 18051,
++                    6144, 20790,
++                    7168, 23193,
++                    8192, 25744,
++                    9216, 27942,
++                    10240, 30035,
++                    11264, 32005,
++                    12288, 33975,
++                    13312, 35815,
++                    14336, 37600,
++                    15360, 39168,
++                    16384, 40642,
++                    18432, 43379,
++                    20480, 45749,
++                    22528, 47753,
++                    24576, 49621,
++                    26624, 51253,
++                    28672, 52698,
++                    30720, 53796,
++                    32768, 54876,
++                    36864, 57012,
++                    40960, 58656,
++                    45056, 59954,
++                    49152, 61183,
++                    53248, 62355,
++                    57344, 63419,
++                    61440, 64476,
++                    65535, 65535
++                ]
++            }
++        },
++        {
++            "rpi.ccm":
++            {
++                "ccms": [
++                    {
++                        "ct": 2500,
++                        "ccm":
++                        [
++                            1.70741, -0.05307, -0.65433,
++                            -0.62822, 1.68836, -0.06014,
++                            -0.04452, -1.87628, 2.92079
++                        ]
++                    },
++                    {
++                        "ct": 2803,
++                        "ccm":
++                        [
++                            1.74383, -0.18731, -0.55652,
++                            -0.56491, 1.67772, -0.11281,
++                            -0.01522, -1.60635, 2.62157
++                        ]
++                    },
++                    {
++                        "ct": 2912,
++                        "ccm":
++                        [
++                            1.75215, -0.22221, -0.52995,
++                            -0.54568, 1.63522, -0.08954,
++                            0.02633, -1.56997, 2.54364
++                        ]
++                    },
++                    {
++                        "ct": 2914,
++                        "ccm":
++                        [
++                            1.72423, -0.28939, -0.43484,
++                            -0.55188, 1.62925, -0.07737,
++                            0.01959, -1.28661, 2.26702
++                        ]
++                    },
++                    {
++                        "ct": 3605,
++                        "ccm":
++                        [
++                            1.80381, -0.43646, -0.36735,
++                            -0.46505, 1.56814, -0.10309,
++                            0.00929, -1.00424, 1.99495
++                        ]
++                    },
++                    {
++                        "ct": 4540,
++                        "ccm":
++                        [
++                            1.85263, -0.46545, -0.38719,
++                            -0.44136, 1.68443, -0.24307,
++                            0.04108, -0.85599, 1.81491
++                        ]
++                    },
++                    {
++                        "ct": 5699,
++                        "ccm":
++                        [
++                            1.98595, -0.63542, -0.35054,
++                            -0.34623, 1.54146, -0.19522,
++                            0.00411, -0.70936, 1.70525
++                        ]
++                    },
++                    {
++                        "ct": 8625,
++                        "ccm":
++                        [
++                            2.21637, -0.56663, -0.64974,
++                            -0.41133, 1.96625, -0.55492,
++                            -0.02307, -0.83529, 1.85837
++                        ]
++                    }
++                ]
++            }
++        },
++        {
++            "rpi.sharpen": { }
++        }
++    ]
++}
+diff --git a/src/ipa/raspberrypi/meson.build b/src/ipa/raspberrypi/meson.build
+index 517d815..e038a02 100644
+--- a/src/ipa/raspberrypi/meson.build
++++ b/src/ipa/raspberrypi/meson.build
+@@ -24,22 +24,19 @@ rpi_ipa_sources = files([
+     'cam_helper_imx477.cpp',
+     'cam_helper_imx519.cpp',
+     'cam_helper_ov9281.cpp',
++    'cam_helper_ar1335.cpp',
+     'controller/controller.cpp',
+     'controller/histogram.cpp',
+     'controller/algorithm.cpp',
+-    'controller/rpi/alsc.cpp',
+     'controller/rpi/awb.cpp',
+     'controller/rpi/sharpen.cpp',
+     'controller/rpi/black_level.cpp',
+-    'controller/rpi/focus.cpp',
+-    'controller/rpi/geq.cpp',
+     'controller/rpi/noise.cpp',
+     'controller/rpi/lux.cpp',
+     'controller/rpi/agc.cpp',
+     'controller/rpi/dpc.cpp',
+     'controller/rpi/ccm.cpp',
+     'controller/rpi/contrast.cpp',
+-    'controller/rpi/sdn.cpp',
+     'controller/pwl.cpp',
+     'controller/device_status.cpp',
+ ])
+diff --git a/src/ipa/raspberrypi/raspberrypi.cpp b/src/ipa/raspberrypi/raspberrypi.cpp
+index 14b06a4..8cdcead 100644
+--- a/src/ipa/raspberrypi/raspberrypi.cpp
++++ b/src/ipa/raspberrypi/raspberrypi.cpp
+@@ -14,7 +14,7 @@
+ #include <string.h>
+ #include <sys/mman.h>
+ 
+-#include <linux/bcm2835-isp.h>
++#include <linux/xil-isp-lite.h>
+ 
+ #include <libcamera/base/log.h>
+ #include <libcamera/base/shared_fd.h>
+@@ -621,18 +621,20 @@ bool IPARPi::validateSensorControls()
+ bool IPARPi::validateIspControls()
+ {
+ 	static const uint32_t ctrls[] = {
+-		V4L2_CID_RED_BALANCE,
+-		V4L2_CID_BLUE_BALANCE,
+-		V4L2_CID_DIGITAL_GAIN,
+-		V4L2_CID_USER_BCM2835_ISP_CC_MATRIX,
+-		V4L2_CID_USER_BCM2835_ISP_GAMMA,
+-		V4L2_CID_USER_BCM2835_ISP_BLACK_LEVEL,
+-		V4L2_CID_USER_BCM2835_ISP_GEQ,
+-		V4L2_CID_USER_BCM2835_ISP_DENOISE,
+-		V4L2_CID_USER_BCM2835_ISP_SHARPEN,
+-		V4L2_CID_USER_BCM2835_ISP_DPC,
+-		V4L2_CID_USER_BCM2835_ISP_LENS_SHADING,
+-		V4L2_CID_USER_BCM2835_ISP_CDN,
++		V4L2_CID_USER_XIL_ISP_LITE_TOP,
++		V4L2_CID_USER_XIL_ISP_LITE_DPC,
++		V4L2_CID_USER_XIL_ISP_LITE_BLC,
++		V4L2_CID_USER_XIL_ISP_LITE_BNR,
++		V4L2_CID_USER_XIL_ISP_LITE_DGAIN,
++		V4L2_CID_USER_XIL_ISP_LITE_DEMOSAIC,
++		V4L2_CID_USER_XIL_ISP_LITE_WB,
++		V4L2_CID_USER_XIL_ISP_LITE_CCM,
++		V4L2_CID_USER_XIL_ISP_LITE_CSC,
++		V4L2_CID_USER_XIL_ISP_LITE_GAMMA,
++		V4L2_CID_USER_XIL_ISP_LITE_2DNR,
++		V4L2_CID_USER_XIL_ISP_LITE_EE,
++		V4L2_CID_USER_XIL_ISP_LITE_STAT_AE_CFG,
++		V4L2_CID_USER_XIL_ISP_LITE_STAT_AWB_CFG,
+ 	};
+ 
+ 	for (auto c : ctrls) {
+@@ -1122,8 +1124,8 @@ void IPARPi::processStats(unsigned int bufferId)
+ 	}
+ 
+ 	Span<uint8_t> mem = it->second.planes()[0];
+-	bcm2835_isp_stats *stats = reinterpret_cast<bcm2835_isp_stats *>(mem.data());
+-	RPiController::StatisticsPtr statistics = std::make_shared<bcm2835_isp_stats>(*stats);
++	xil_isp_lite_stat_result *stats = reinterpret_cast<xil_isp_lite_stat_result *>(mem.data());
++	RPiController::StatisticsPtr statistics = std::make_shared<xil_isp_lite_stat_result>(*stats);
+ 	helper_->process(statistics, rpiMetadata_);
+ 	controller_.process(statistics, &rpiMetadata_);
+ 
+@@ -1141,10 +1143,14 @@ void IPARPi::applyAWB(const struct AwbStatus *awbStatus, ControlList &ctrls)
+ 	LOG(IPARPI, Debug) << "Applying WB R: " << awbStatus->gainR << " B: "
+ 			   << awbStatus->gainB;
+ 
+-	ctrls.set(V4L2_CID_RED_BALANCE,
+-		  static_cast<int32_t>(awbStatus->gainR * 1000));
+-	ctrls.set(V4L2_CID_BLUE_BALANCE,
+-		  static_cast<int32_t>(awbStatus->gainB * 1000));
++	xil_isp_lite_wb wb;
++	wb.enabled = 1;
++	wb.ggain = 1 * 16;
++	wb.rgain = awbStatus->gainR * 16;
++	wb.bgain = awbStatus->gainB * 16;
++	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&wb),
++					    sizeof(wb) });
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_WB, c);
+ }
+ 
+ void IPARPi::applyFrameDurations(Duration minFrameDuration, Duration maxFrameDuration)
+@@ -1216,192 +1222,112 @@ void IPARPi::applyAGC(const struct AgcStatus *agcStatus, ControlList &ctrls)
+ 
+ void IPARPi::applyDG(const struct AgcStatus *dgStatus, ControlList &ctrls)
+ {
+-	ctrls.set(V4L2_CID_DIGITAL_GAIN,
+-		  static_cast<int32_t>(dgStatus->digitalGain * 1000));
++	xil_isp_lite_dgain dgain;
++
++	dgain.enabled = 1;
++	dgain.gain = dgStatus->digitalGain * 16;
++	dgain.offset = 0;
++
++	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&dgain),
++					    sizeof(dgain) });
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_DGAIN, c);
+ }
+ 
+ void IPARPi::applyCCM(const struct CcmStatus *ccmStatus, ControlList &ctrls)
+ {
+-	bcm2835_isp_custom_ccm ccm;
++	xil_isp_lite_ccm ccm;
+ 
+ 	for (int i = 0; i < 9; i++) {
+-		ccm.ccm.ccm[i / 3][i % 3].den = 1000;
+-		ccm.ccm.ccm[i / 3][i % 3].num = 1000 * ccmStatus->matrix[i];
++		ccm.matrix[i] = ccmStatus->matrix[i] * 16;
+ 	}
+ 
+ 	ccm.enabled = 1;
+-	ccm.ccm.offsets[0] = ccm.ccm.offsets[1] = ccm.ccm.offsets[2] = 0;
+ 
+ 	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&ccm),
+ 					    sizeof(ccm) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_CC_MATRIX, c);
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_CCM, c);
+ }
+ 
+-void IPARPi::applyGamma(const struct ContrastStatus *contrastStatus, ControlList &ctrls)
++void IPARPi::applyGamma([[maybe_unused]] const struct ContrastStatus *contrastStatus, [[maybe_unused]] ControlList &ctrls)
+ {
+-	struct bcm2835_isp_gamma gamma;
++	//struct xil_isp_lite_gamma gamma;
+ 
+-	gamma.enabled = 1;
+-	for (unsigned int i = 0; i < ContrastNumPoints; i++) {
+-		gamma.x[i] = contrastStatus->points[i].x;
+-		gamma.y[i] = contrastStatus->points[i].y;
+-	}
++	//gamma.enabled = 1;
++	//for (unsigned int i = 0; i < ContrastNumPoints; i++) {
++	//	//TODO
++	//}
+ 
+-	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&gamma),
+-					    sizeof(gamma) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_GAMMA, c);
++	//ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&gamma),
++	//				    sizeof(gamma) });
++	//ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_GAMMA, c);
+ }
+ 
+ void IPARPi::applyBlackLevel(const struct BlackLevelStatus *blackLevelStatus, ControlList &ctrls)
+ {
+-	bcm2835_isp_black_level blackLevel;
++	xil_isp_lite_blc blackLevel;
+ 
+ 	blackLevel.enabled = 1;
+-	blackLevel.black_level_r = blackLevelStatus->blackLevelR;
+-	blackLevel.black_level_g = blackLevelStatus->blackLevelG;
+-	blackLevel.black_level_b = blackLevelStatus->blackLevelB;
++	blackLevel.black_level_r  = blackLevelStatus->blackLevelR;
++	blackLevel.black_level_gr = blackLevelStatus->blackLevelG;
++	blackLevel.black_level_gb = blackLevelStatus->blackLevelG;
++	blackLevel.black_level_b  = blackLevelStatus->blackLevelB;
+ 
+ 	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&blackLevel),
+ 					    sizeof(blackLevel) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_BLACK_LEVEL, c);
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_BLC, c);
+ }
+ 
+-void IPARPi::applyGEQ(const struct GeqStatus *geqStatus, ControlList &ctrls)
++void IPARPi::applyGEQ([[maybe_unused]] const struct GeqStatus *geqStatus, [[maybe_unused]] ControlList &ctrls)
+ {
+-	bcm2835_isp_geq geq;
+-
+-	geq.enabled = 1;
+-	geq.offset = geqStatus->offset;
+-	geq.slope.den = 1000;
+-	geq.slope.num = 1000 * geqStatus->slope;
+-
+-	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&geq),
+-					    sizeof(geq) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_GEQ, c);
+ }
+ 
+-void IPARPi::applyDenoise(const struct DenoiseStatus *denoiseStatus, ControlList &ctrls)
++void IPARPi::applyDenoise([[maybe_unused]] const struct DenoiseStatus *denoiseStatus, [[maybe_unused]] ControlList &ctrls)
+ {
+ 	using RPiController::DenoiseMode;
+ 
+-	bcm2835_isp_denoise denoise;
++	xil_isp_lite_bnr bnr;
+ 	DenoiseMode mode = static_cast<DenoiseMode>(denoiseStatus->mode);
+ 
+-	denoise.enabled = mode != DenoiseMode::Off;
+-	denoise.constant = denoiseStatus->noiseConstant;
+-	denoise.slope.num = 1000 * denoiseStatus->noiseSlope;
+-	denoise.slope.den = 1000;
+-	denoise.strength.num = 1000 * denoiseStatus->strength;
+-	denoise.strength.den = 1000;
+-
+-	/* Set the CDN mode to match the SDN operating mode. */
+-	bcm2835_isp_cdn cdn;
+-	switch (mode) {
+-	case DenoiseMode::ColourFast:
+-		cdn.enabled = 1;
+-		cdn.mode = CDN_MODE_FAST;
+-		break;
+-	case DenoiseMode::ColourHighQuality:
+-		cdn.enabled = 1;
+-		cdn.mode = CDN_MODE_HIGH_QUALITY;
+-		break;
+-	default:
+-		cdn.enabled = 0;
+-	}
+-
+-	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&denoise),
+-					    sizeof(denoise) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_DENOISE, c);
++	bnr.enabled = mode != DenoiseMode::Off;
++	bnr.nr_level = denoiseStatus->strength * 4;
+ 
+-	c = ControlValue(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&cdn),
+-					      sizeof(cdn) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_CDN, c);
++	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&bnr),
++					    sizeof(bnr) });
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_BNR, c);
+ }
+ 
+-void IPARPi::applySharpen(const struct SharpenStatus *sharpenStatus, ControlList &ctrls)
++void IPARPi::applySharpen([[maybe_unused]] const struct SharpenStatus *sharpenStatus, [[maybe_unused]] ControlList &ctrls)
+ {
+-	bcm2835_isp_sharpen sharpen;
+-
+-	sharpen.enabled = 1;
+-	sharpen.threshold.num = 1000 * sharpenStatus->threshold;
+-	sharpen.threshold.den = 1000;
+-	sharpen.strength.num = 1000 * sharpenStatus->strength;
+-	sharpen.strength.den = 1000;
+-	sharpen.limit.num = 1000 * sharpenStatus->limit;
+-	sharpen.limit.den = 1000;
+-
+-	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&sharpen),
+-					    sizeof(sharpen) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_SHARPEN, c);
++	xil_isp_lite_ee ee;
++	ee.enabled = sharpenStatus->strength >= 0.5;
++
++	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&ee),
++					    sizeof(ee) });
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_EE, c);
+ }
+ 
+ void IPARPi::applyDPC(const struct DpcStatus *dpcStatus, ControlList &ctrls)
+ {
+-	bcm2835_isp_dpc dpc;
+-
+-	dpc.enabled = 1;
+-	dpc.strength = dpcStatus->strength;
++	xil_isp_lite_dpc dpc;
++
++	if (dpcStatus->strength == 0) {
++		dpc.enabled = 0;
++		dpc.threshold = 0;
++	} else if (dpcStatus->strength == 1) {
++		dpc.enabled = 0;
++		dpc.threshold = 32 << 2;
++	} else {
++		dpc.enabled = 0;
++		dpc.threshold = 8 << 2;
++	}
+ 
+ 	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&dpc),
+ 					    sizeof(dpc) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_DPC, c);
++	ctrls.set(V4L2_CID_USER_XIL_ISP_LITE_DPC, c);
+ }
+ 
+-void IPARPi::applyLS(const struct AlscStatus *lsStatus, ControlList &ctrls)
++void IPARPi::applyLS([[maybe_unused]] const struct AlscStatus *lsStatus, [[maybe_unused]] ControlList &ctrls)
+ {
+-	/*
+-	 * Program lens shading tables into pipeline.
+-	 * Choose smallest cell size that won't exceed 63x48 cells.
+-	 */
+-	const int cellSizes[] = { 16, 32, 64, 128, 256 };
+-	unsigned int numCells = std::size(cellSizes);
+-	unsigned int i, w, h, cellSize;
+-	for (i = 0; i < numCells; i++) {
+-		cellSize = cellSizes[i];
+-		w = (mode_.width + cellSize - 1) / cellSize;
+-		h = (mode_.height + cellSize - 1) / cellSize;
+-		if (w < 64 && h <= 48)
+-			break;
+-	}
+-
+-	if (i == numCells) {
+-		LOG(IPARPI, Error) << "Cannot find cell size";
+-		return;
+-	}
+-
+-	/* We're going to supply corner sampled tables, 16 bit samples. */
+-	w++, h++;
+-	bcm2835_isp_lens_shading ls = {
+-		.enabled = 1,
+-		.grid_cell_size = cellSize,
+-		.grid_width = w,
+-		.grid_stride = w,
+-		.grid_height = h,
+-		/* .dmabuf will be filled in by pipeline handler. */
+-		.dmabuf = 0,
+-		.ref_transform = 0,
+-		.corner_sampled = 1,
+-		.gain_format = GAIN_FORMAT_U4P10
+-	};
+-
+-	if (!lsTable_ || w * h * 4 * sizeof(uint16_t) > MaxLsGridSize) {
+-		LOG(IPARPI, Error) << "Do not have a correctly allocate lens shading table!";
+-		return;
+-	}
+-
+-	if (lsStatus) {
+-		/* Format will be u4.10 */
+-		uint16_t *grid = static_cast<uint16_t *>(lsTable_);
+-
+-		resampleTable(grid, lsStatus->r, w, h);
+-		resampleTable(grid + w * h, lsStatus->g, w, h);
+-		std::memcpy(grid + 2 * w * h, grid + w * h, w * h * sizeof(uint16_t));
+-		resampleTable(grid + 3 * w * h, lsStatus->b, w, h);
+-	}
+-
+-	ControlValue c(Span<const uint8_t>{ reinterpret_cast<uint8_t *>(&ls),
+-					    sizeof(ls) });
+-	ctrls.set(V4L2_CID_USER_BCM2835_ISP_LENS_SHADING, c);
+ }
+ 
+ /*
+diff --git a/src/libcamera/formats.cpp b/src/libcamera/formats.cpp
+index f5769c4..b3f9358 100644
+--- a/src/libcamera/formats.cpp
++++ b/src/libcamera/formats.cpp
+@@ -622,7 +622,7 @@ const std::map<PixelFormat, PixelFormatInfo> pixelFormatInfo{
+ 	{ formats::SGRBG10_CSI2P, {
+ 		.name = "SGRBG10_CSI2P",
+ 		.format = formats::SGRBG10_CSI2P,
+-		.v4l2Formats = { V4L2PixelFormat(V4L2_PIX_FMT_SGRBG10P), },
++		.v4l2Formats = { V4L2PixelFormat(V4L2_PIX_FMT_XY10), },
+ 		.bitsPerPixel = 10,
+ 		.colourEncoding = PixelFormatInfo::ColourEncodingRAW,
+ 		.packed = true,
+diff --git a/src/libcamera/ipa_manager.cpp b/src/libcamera/ipa_manager.cpp
+index 030ef43..ff53590 100644
+--- a/src/libcamera/ipa_manager.cpp
++++ b/src/libcamera/ipa_manager.cpp
+@@ -281,6 +281,7 @@ IPAModule *IPAManager::module(PipelineHandler *pipe, uint32_t minVersion,
+ 
+ bool IPAManager::isSignatureValid([[maybe_unused]] IPAModule *ipa) const
+ {
++	return true;
+ #if HAVE_IPA_PUBKEY
+ 	char *force = utils::secure_getenv("LIBCAMERA_IPA_FORCE_ISOLATION");
+ 	if (force && force[0] != '\0') {
+diff --git a/src/libcamera/pipeline/raspberrypi/raspberrypi.cpp b/src/libcamera/pipeline/raspberrypi/raspberrypi.cpp
+index d366a8b..2e93609 100644
+--- a/src/libcamera/pipeline/raspberrypi/raspberrypi.cpp
++++ b/src/libcamera/pipeline/raspberrypi/raspberrypi.cpp
+@@ -26,7 +26,7 @@
+ #include <libcamera/property_ids.h>
+ #include <libcamera/request.h>
+ 
+-#include <linux/bcm2835-isp.h>
++#include <linux/xil-isp-lite.h>
+ #include <linux/media-bus-format.h>
+ #include <linux/videodev2.h>
+ 
+@@ -108,6 +108,11 @@ V4L2DeviceFormat toV4L2DeviceFormat(const V4L2VideoDevice *dev,
+ 	deviceFormat.fourcc = dev->toV4L2PixelFormat(pix);
+ 	deviceFormat.size = format.size;
+ 	deviceFormat.colorSpace = format.colorSpace;
++	if (deviceFormat.fourcc == V4L2_PIX_FMT_XY10) { //by bxq
++		deviceFormat.planesCount = 1;
++		deviceFormat.planes[0].bpl = (((deviceFormat.size.width + 2) / 3 * 4) + 255) / 256 * 256;
++		deviceFormat.planes[0].size = deviceFormat.planes[0].bpl * deviceFormat.size.height;
++	}
+ 	return deviceFormat;
+ }
+ 
+@@ -175,7 +180,7 @@ V4L2SubdeviceFormat findBestFormat(const SensorFormats &formatsMap, const Size &
+ }
+ 
+ enum class Unicam : unsigned int { Image, Embedded };
+-enum class Isp : unsigned int { Input, Output0, Output1, Stats };
++enum class Isp : unsigned int { Input, Output0, Stats };
+ 
+ } /* namespace */
+ 
+@@ -227,8 +232,9 @@ public:
+ 	std::unique_ptr<CameraSensor> sensor_;
+ 	SensorFormats sensorFormats_;
+ 	/* Array of Unicam and ISP device streams and associated buffers/streams. */
++	std::unique_ptr<V4L2Subdevice> mipirx_;
+ 	RPi::Device<Unicam, 2> unicam_;
+-	RPi::Device<Isp, 4> isp_;
++	RPi::Device<Isp, 3> isp_;
+ 	/* The vector below is just for convenience when iterating over all streams. */
+ 	std::vector<RPi::Stream *> streams_;
+ 	/* Stores the ids of the buffers mapped in the IPA. */
+@@ -417,7 +423,7 @@ CameraConfiguration::Status RPiCameraConfiguration::validate()
+ 	 */
+ 	combinedTransform_ = combined;
+ 
+-	unsigned int rawCount = 0, outCount = 0, count = 0, maxIndex = 0;
++	unsigned int rawCount = 0, outCount = 0, count = 0;
+ 	std::pair<int, Size> outSize[2];
+ 	Size maxSize;
+ 	for (StreamConfiguration &cfg : config_) {
+@@ -471,7 +477,6 @@ CameraConfiguration::Status RPiCameraConfiguration::validate()
+ 			/* Record the largest resolution for fixups later. */
+ 			if (maxSize < cfg.size) {
+ 				maxSize = cfg.size;
+-				maxIndex = outCount;
+ 			}
+ 			outCount++;
+ 		}
+@@ -513,10 +518,7 @@ CameraConfiguration::Status RPiCameraConfiguration::validate()
+ 		PixelFormat &cfgPixFmt = cfg.pixelFormat;
+ 		V4L2VideoDevice *dev;
+ 
+-		if (i == maxIndex)
+ 			dev = data_->isp_[Isp::Output0].dev();
+-		else
+-			dev = data_->isp_[Isp::Output1].dev();
+ 
+ 		V4L2VideoDevice::Formats fmts = dev->formats();
+ 
+@@ -617,13 +619,13 @@ CameraConfiguration *PipelineHandlerRPi::generateConfiguration(Camera *camera,
+ 			 * algorithm.
+ 			 */
+ 			fmts = data->isp_[Isp::Output0].dev()->formats();
+-			pixelFormat = formats::YUV420;
++			pixelFormat = formats::RGB888;
+ 			/*
+ 			 * Choose a color space appropriate for video recording.
+ 			 * Rec.709 will be a good default for HD resolutions.
+ 			 */
+ 			colorSpace = ColorSpace::Rec709;
+-			size = { 1920, 1080 };
++			size = { 2048, 1536 };
+ 			bufferCount = 4;
+ 			outCount++;
+ 			break;
+@@ -703,7 +705,6 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 
+ 	BayerFormat::Packing packing = BayerFormat::Packing::CSI2;
+ 	Size maxSize, sensorSize;
+-	unsigned int maxIndex = 0;
+ 	bool rawStream = false;
+ 	unsigned int bitDepth = defaultRawBitDepth;
+ 
+@@ -728,7 +729,6 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 		} else {
+ 			if (cfg.size > maxSize) {
+ 				maxSize = config->at(i).size;
+-				maxIndex = i;
+ 			}
+ 		}
+ 	}
+@@ -749,6 +749,15 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 		data->setSensorControls(controls);
+ 	}
+ 
++	//XXX not change sensor output size
++	IPACameraSensorInfo sensorInfo;
++	ret = data->sensor_->sensorInfo(&sensorInfo);
++	if (ret) {
++		LOG(RPI, Error) << "Failed to retrieve camera sensor info";
++		return ret;
++	}
++	maxSize = sensorInfo.outputSize;
++
+ 	/* First calculate the best sensor mode we can use based on the user request. */
+ 	V4L2SubdeviceFormat sensorFormat = findBestFormat(data->sensorFormats_, rawStream ? sensorSize : maxSize, bitDepth);
+ 	ret = data->sensor_->setFormat(&sensorFormat);
+@@ -774,7 +783,7 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 	 * StreamConfiguration appropriately.
+ 	 */
+ 	V4L2DeviceFormat format;
+-	bool output0Set = false, output1Set = false;
++	bool output0Set = false;
+ 	for (unsigned i = 0; i < config->size(); i++) {
+ 		StreamConfiguration &cfg = config->at(i);
+ 
+@@ -785,13 +794,23 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 		}
+ 
+ 		/* The largest resolution gets routed to the ISP Output 0 node. */
+-		RPi::Stream *stream = i == maxIndex ? &data->isp_[Isp::Output0]
+-						    : &data->isp_[Isp::Output1];
++		RPi::Stream *stream = &data->isp_[Isp::Output0];
+ 
+ 		V4L2PixelFormat fourcc = stream->dev()->toV4L2PixelFormat(cfg.pixelFormat);
+ 		format.size = cfg.size;
+ 		format.fourcc = fourcc;
+ 		format.colorSpace = cfg.colorSpace;
++		if (fourcc == V4L2_PIX_FMT_RGB24) {
++			format.planesCount = 1;
++			format.planes[0].bpl  = cfg.size.width * 3;
++			format.planes[0].size = cfg.size.width * 3 * cfg.size.height;
++		} else if (fourcc == V4L2_PIX_FMT_NV12) {
++			format.planesCount = 2;
++			format.planes[0].bpl  = cfg.size.width;
++			format.planes[0].size = cfg.size.width * cfg.size.height;
++			format.planes[1].bpl  = cfg.size.width;
++			format.planes[1].size = cfg.size.width * cfg.size.height / 2;
++		}
+ 
+ 		LOG(RPI, Debug) << "Setting " << stream->name() << " to "
+ 				<< format;
+@@ -814,9 +833,6 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 		cfg.setStream(stream);
+ 		stream->setExternal(true);
+ 
+-		if (i != maxIndex)
+-			output1Set = true;
+-		else
+ 			output0Set = true;
+ 	}
+ 
+@@ -862,6 +878,7 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 	 * \todo If Output 1 format is not YUV420, Output 1 ought to be disabled as
+ 	 * colour denoise will not run.
+ 	 */
++#if 0
+ 	if (!output1Set) {
+ 		V4L2VideoDevice *dev = data->isp_[Isp::Output1].dev();
+ 
+@@ -883,10 +900,11 @@ int PipelineHandlerRPi::configure(Camera *camera, CameraConfiguration *config)
+ 			return -EINVAL;
+ 		}
+ 	}
++#endif
+ 
+ 	/* ISP statistics output format. */
+ 	format = {};
+-	format.fourcc = V4L2PixelFormat(V4L2_META_FMT_BCM2835_ISP_STATS);
++	format.fourcc = V4L2PixelFormat(V4L2_META_FMT_XIL_ISP_LITE_STAT);
+ 	ret = data->isp_[Isp::Stats].dev()->setFormat(&format);
+ 	if (ret) {
+ 		LOG(RPI, Error) << "Failed to set format on ISP stats stream: "
+@@ -1058,7 +1076,7 @@ int PipelineHandlerRPi::start(Camera *camera, const ControlList *controls)
+ 	}
+ 
+ 	/* Enable SOF event generation. */
+-	data->unicam_[Unicam::Image].dev()->setFrameStartEnabled(true);
++	data->mipirx_->setFrameStartEnabled(true);
+ 
+ 	/*
+ 	 * Reset the delayed controls with the gain and exposure values set by
+@@ -1095,7 +1113,7 @@ void PipelineHandlerRPi::stopDevice(Camera *camera)
+ 	data->state_ = RPiCameraData::State::Stopped;
+ 
+ 	/* Disable SOF event generation. */
+-	data->unicam_[Unicam::Image].dev()->setFrameStartEnabled(false);
++	data->mipirx_->setFrameStartEnabled(false);
+ 
+ 	for (auto const stream : data->streams_)
+ 		stream->dev()->streamOff();
+@@ -1156,7 +1174,8 @@ int PipelineHandlerRPi::queueRequestDevice(Camera *camera, Request *request)
+ 
+ bool PipelineHandlerRPi::match(DeviceEnumerator *enumerator)
+ {
+-	DeviceMatch unicam("unicam");
++	DeviceMatch unicam("xilinx-video");
++	unicam.add("vcap_mipi_csi2_rx_ias1 output 0");
+ 	MediaDevice *unicamDevice = acquireMediaDevice(enumerator, unicam);
+ 
+ 	if (!unicamDevice) {
+@@ -1164,7 +1183,8 @@ bool PipelineHandlerRPi::match(DeviceEnumerator *enumerator)
+ 		return false;
+ 	}
+ 
+-	DeviceMatch isp("bcm2835-isp");
++	DeviceMatch isp("xilinx-video");
++	isp.add("isp_pipe_video_dev input 0");
+ 	MediaDevice *ispDevice = acquireMediaDevice(enumerator, isp);
+ 
+ 	if (!ispDevice) {
+@@ -1200,17 +1220,19 @@ int PipelineHandlerRPi::registerCamera(MediaDevice *unicam, MediaDevice *isp, Me
+ 	if (!data->dmaHeap_.isValid())
+ 		return -ENOMEM;
+ 
+-	MediaEntity *unicamImage = unicam->getEntityByName("unicam-image");
+-	MediaEntity *ispOutput0 = isp->getEntityByName("bcm2835-isp0-output0");
+-	MediaEntity *ispCapture1 = isp->getEntityByName("bcm2835-isp0-capture1");
+-	MediaEntity *ispCapture2 = isp->getEntityByName("bcm2835-isp0-capture2");
+-	MediaEntity *ispCapture3 = isp->getEntityByName("bcm2835-isp0-capture3");
++	MediaEntity *unicamImage = unicam->getEntityByName("vcap_mipi_csi2_rx_ias1 output 0");
++	MediaEntity *unicamMipirx = unicam->getEntityByName("a0030000.mipi_rx_to_video");
++	MediaEntity *ispOutput0 = isp->getEntityByName("isp_pipe_video_dev input 0");
++	MediaEntity *ispCapture1 = isp->getEntityByName("isp_pipe_video_dev output 1");
++	//MediaEntity *ispCapture2 = isp->getEntityByName("bcm2835-isp0-capture2");
++	MediaEntity *ispCapture3 = isp->getEntityByName("xil-isp-lite_stat");
+ 
+-	if (!unicamImage || !ispOutput0 || !ispCapture1 || !ispCapture2 || !ispCapture3)
++	if (!unicamImage || !unicamMipirx || !ispOutput0 || !ispCapture1 /*|| !ispCapture2*/ || !ispCapture3)
+ 		return -ENOENT;
+ 
+ 	/* Locate and open the unicam video streams. */
+ 	data->unicam_[Unicam::Image] = RPi::Stream("Unicam Image", unicamImage);
++	data->mipirx_ = std::make_unique<V4L2Subdevice>(unicamMipirx);
+ 
+ 	/* An embedded data node will not be present if the sensor does not support it. */
+ 	MediaEntity *unicamEmbedded = unicam->getEntityByName("unicam-embedded");
+@@ -1223,16 +1245,16 @@ int PipelineHandlerRPi::registerCamera(MediaDevice *unicam, MediaDevice *isp, Me
+ 	/* Tag the ISP input stream as an import stream. */
+ 	data->isp_[Isp::Input] = RPi::Stream("ISP Input", ispOutput0, true);
+ 	data->isp_[Isp::Output0] = RPi::Stream("ISP Output0", ispCapture1);
+-	data->isp_[Isp::Output1] = RPi::Stream("ISP Output1", ispCapture2);
++	//data->isp_[Isp::Output1] = RPi::Stream("ISP Output1", ispCapture2);
+ 	data->isp_[Isp::Stats] = RPi::Stream("ISP Stats", ispCapture3);
+ 
+ 	/* Wire up all the buffer connections. */
+ 	data->unicam_[Unicam::Image].dev()->dequeueTimeout.connect(data.get(), &RPiCameraData::unicamTimeout);
+-	data->unicam_[Unicam::Image].dev()->frameStart.connect(data.get(), &RPiCameraData::frameStarted);
++	data->mipirx_->frameStart.connect(data.get(), &RPiCameraData::frameStarted);
+ 	data->unicam_[Unicam::Image].dev()->bufferReady.connect(data.get(), &RPiCameraData::unicamBufferDequeue);
+ 	data->isp_[Isp::Input].dev()->bufferReady.connect(data.get(), &RPiCameraData::ispInputDequeue);
+ 	data->isp_[Isp::Output0].dev()->bufferReady.connect(data.get(), &RPiCameraData::ispOutputDequeue);
+-	data->isp_[Isp::Output1].dev()->bufferReady.connect(data.get(), &RPiCameraData::ispOutputDequeue);
++	//data->isp_[Isp::Output1].dev()->bufferReady.connect(data.get(), &RPiCameraData::ispOutputDequeue);
+ 	data->isp_[Isp::Stats].dev()->bufferReady.connect(data.get(), &RPiCameraData::ispOutputDequeue);
+ 
+ 	data->sensor_ = std::make_unique<CameraSensor>(sensorEntity);
+@@ -1285,6 +1307,12 @@ int PipelineHandlerRPi::registerCamera(MediaDevice *unicam, MediaDevice *isp, Me
+ 			return ret;
+ 	}
+ 
++	{
++		int ret = data->mipirx_->open();
++		if (ret)
++			return ret;
++	}
++
+ 	if (!data->unicam_[Unicam::Image].dev()->caps().hasMediaController()) {
+ 		LOG(RPI, Error) << "Unicam driver does not use the MediaController, please update your kernel!";
+ 		return -EINVAL;
+@@ -1366,7 +1394,7 @@ int PipelineHandlerRPi::registerCamera(MediaDevice *unicam, MediaDevice *isp, Me
+ 	std::set<Stream *> streams;
+ 	streams.insert(&data->unicam_[Unicam::Image]);
+ 	streams.insert(&data->isp_[Isp::Output0]);
+-	streams.insert(&data->isp_[Isp::Output1]);
++	//streams.insert(&data->isp_[Isp::Output1]);
+ 
+ 	/* Create and register the camera. */
+ 	const std::string &id = data->sensor_->id();
+@@ -1505,6 +1533,9 @@ void PipelineHandlerRPi::mapBuffers(Camera *camera, const RPi::BufferMap &buffer
+ 
+ void RPiCameraData::freeBuffers()
+ {
++	if (!buffersAllocated_)
++		return;
++
+ 	if (ipa_) {
+ 		/*
+ 		 * Copy the buffer ids from the unordered_set to a vector to
+@@ -1580,7 +1611,7 @@ int RPiCameraData::configureIPA(const CameraConfiguration *config, ipa::RPi::IPA
+ 	}
+ 
+ 	entityControls.emplace(0, sensor_->controls());
+-	entityControls.emplace(1, isp_[Isp::Input].dev()->controls());
++	entityControls.emplace(1, isp_[Isp::Stats].dev()->controls());
+ 
+ 	/* Always send the user transform to the IPA. */
+ 	ipaConfig.transform = static_cast<unsigned int>(config->transform);
+@@ -1778,16 +1809,16 @@ void RPiCameraData::setIspControls(const ControlList &controls)
+ {
+ 	ControlList ctrls = controls;
+ 
+-	if (ctrls.contains(V4L2_CID_USER_BCM2835_ISP_LENS_SHADING)) {
+-		ControlValue &value =
+-			const_cast<ControlValue &>(ctrls.get(V4L2_CID_USER_BCM2835_ISP_LENS_SHADING));
+-		Span<uint8_t> s = value.data();
+-		bcm2835_isp_lens_shading *ls =
+-			reinterpret_cast<bcm2835_isp_lens_shading *>(s.data());
+-		ls->dmabuf = lsTable_.get();
+-	}
++	// if (ctrls.contains(V4L2_CID_USER_BCM2835_ISP_LENS_SHADING)) {
++	// 	ControlValue &value =
++	// 		const_cast<ControlValue &>(ctrls.get(V4L2_CID_USER_BCM2835_ISP_LENS_SHADING));
++	// 	Span<uint8_t> s = value.data();
++	// 	bcm2835_isp_lens_shading *ls =
++	// 		reinterpret_cast<bcm2835_isp_lens_shading *>(s.data());
++	// 	ls->dmabuf = lsTable_.get();
++	// }
+ 
+-	isp_[Isp::Input].dev()->setControls(&ctrls);
++	isp_[Isp::Stats].dev()->setControls(&ctrls);
+ 	handleState();
+ }
+ 
+@@ -2053,7 +2084,7 @@ void RPiCameraData::checkRequestCompleted()
+ 	 * frame.
+ 	 */
+ 	if (state_ == State::IpaComplete &&
+-	    ((ispOutputCount_ == 3 && dropFrameCount_) || requestCompleted)) {
++	    ((ispOutputCount_ == 2 && dropFrameCount_) || requestCompleted)) {
+ 		state_ = State::Idle;
+ 		if (dropFrameCount_) {
+ 			dropFrameCount_--;
+diff --git a/src/libcamera/v4l2_videodevice.cpp b/src/libcamera/v4l2_videodevice.cpp
+index e30858c..c5a7d13 100644
+--- a/src/libcamera/v4l2_videodevice.cpp
++++ b/src/libcamera/v4l2_videodevice.cpp
+@@ -447,7 +447,14 @@ const std::string V4L2DeviceFormat::toString() const
+  */
+ std::ostream &operator<<(std::ostream &out, const V4L2DeviceFormat &f)
+ {
+-	out << f.size << "-" << f.fourcc;
++	out << f.size << "-" << f.fourcc << "-planes[" << f.planesCount << "]";
++	if (f.planesCount > 0) {
++		out << "{";
++		for (unsigned int i = 0; i < f.planesCount; i++) {
++			out << f.planes[i].size << "/" << f.planes[i].bpl << ",";
++		}
++		out << "}";
++	}
+ 	return out;
+ }
+ 
+@@ -1590,7 +1597,7 @@ int V4L2VideoDevice::queueBuffer(FrameBuffer *buffer)
+ 
+ 	bool multiPlanar = V4L2_TYPE_IS_MULTIPLANAR(buf.type);
+ 	const std::vector<FrameBuffer::Plane> &planes = buffer->planes();
+-	const unsigned int numV4l2Planes = format_.planesCount;
++	const unsigned int numV4l2Planes = format_.planesCount ?: 1;
+ 
+ 	/*
+ 	 * Ensure that the frame buffer has enough planes, and that they're

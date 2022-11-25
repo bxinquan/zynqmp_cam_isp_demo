@@ -1,0 +1,1464 @@
+13:39:15 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+13:39:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+13:39:17 INFO  : Registering command handlers for Vitis TCF services
+13:39:17 INFO  : Platform repository initialization has completed.
+13:39:19 INFO  : XSCT server has started successfully.
+13:39:19 INFO  : Successfully done setting XSCT server connection channel  
+13:39:19 INFO  : plnx-install-location is set to ''
+13:39:19 INFO  : Successfully done query RDI_DATADIR 
+13:39:19 INFO  : Successfully done setting workspace for the tool. 
+13:39:19 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+13:40:22 INFO  : Result from executing command 'getProjects': design_1_wrapper
+13:40:22 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+13:40:22 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:40:23 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:40:31 INFO  : Platform 'design_1_wrapper' is added to custom repositories.
+13:42:18 INFO  : Result from executing command 'getProjects': design_1_wrapper
+13:42:18 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+13:42:19 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+13:42:19 INFO  : Updating application flags with new BSP settings...
+13:42:19 INFO  : Successfully updated application flags for project zynqmp_cam_isp_demo.
+13:44:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:44:16 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+13:44:16 INFO  : 'jtag frequency' command is executed.
+13:44:16 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:44:16 INFO  : Context for 'APU' is selected.
+13:44:16 INFO  : System reset is completed.
+13:44:20 INFO  : 'after 3000' command is executed.
+13:44:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+13:44:24 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+13:44:24 INFO  : Context for 'APU' is selected.
+13:44:25 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:44:25 INFO  : 'configparams force-mem-access 1' command is executed.
+13:44:25 INFO  : Context for 'APU' is selected.
+13:44:25 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+13:44:26 INFO  : 'psu_init' command is executed.
+13:44:27 INFO  : 'after 1000' command is executed.
+13:44:27 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:44:28 INFO  : 'after 1000' command is executed.
+13:44:28 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:44:28 INFO  : 'catch {psu_protection}' command is executed.
+13:44:28 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:44:28 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:44:30 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:44:30 INFO  : 'configparams force-mem-access 0' command is executed.
+13:44:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:44:30 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:44:30 INFO  : 'con' command is executed.
+13:44:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:44:30 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+13:45:01 INFO  : Disconnected from the channel tcfchan#2.
+13:45:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:02 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+13:45:02 INFO  : 'jtag frequency' command is executed.
+13:45:02 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:45:02 INFO  : Context for 'APU' is selected.
+13:45:03 INFO  : System reset is completed.
+13:45:06 INFO  : 'after 3000' command is executed.
+13:45:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+13:45:10 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+13:45:10 INFO  : Context for 'APU' is selected.
+13:45:10 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:45:10 INFO  : 'configparams force-mem-access 1' command is executed.
+13:45:10 INFO  : Context for 'APU' is selected.
+13:45:10 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+13:45:11 INFO  : 'psu_init' command is executed.
+13:45:12 INFO  : 'after 1000' command is executed.
+13:45:12 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:45:13 INFO  : 'after 1000' command is executed.
+13:45:13 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:45:13 INFO  : 'catch {psu_protection}' command is executed.
+13:45:13 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:45:13 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:45:15 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:45:15 INFO  : 'configparams force-mem-access 0' command is executed.
+13:45:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:45:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:45:15 INFO  : 'con' command is executed.
+13:45:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:45:15 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+13:45:42 INFO  : Disconnected from the channel tcfchan#3.
+13:45:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:43 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+13:45:43 INFO  : 'jtag frequency' command is executed.
+13:45:43 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:45:43 INFO  : Context for 'APU' is selected.
+13:45:44 INFO  : System reset is completed.
+13:45:47 INFO  : 'after 3000' command is executed.
+13:45:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+13:45:51 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+13:45:51 INFO  : Context for 'APU' is selected.
+13:45:51 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:45:51 INFO  : 'configparams force-mem-access 1' command is executed.
+13:45:51 INFO  : Context for 'APU' is selected.
+13:45:51 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+13:45:52 INFO  : 'psu_init' command is executed.
+13:45:53 INFO  : 'after 1000' command is executed.
+13:45:53 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:45:54 INFO  : 'after 1000' command is executed.
+13:45:54 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:45:54 INFO  : 'catch {psu_protection}' command is executed.
+13:45:54 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:45:54 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:45:56 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:45:56 INFO  : 'configparams force-mem-access 0' command is executed.
+13:45:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:45:56 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:45:56 INFO  : 'con' command is executed.
+13:45:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:45:56 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+13:49:12 INFO  : Disconnected from the channel tcfchan#4.
+13:49:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:49:13 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+13:49:13 INFO  : 'jtag frequency' command is executed.
+13:49:13 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:49:13 INFO  : Context for 'APU' is selected.
+13:49:14 INFO  : System reset is completed.
+13:49:17 INFO  : 'after 3000' command is executed.
+13:49:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+13:49:21 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+13:49:21 INFO  : Context for 'APU' is selected.
+13:49:21 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:49:21 INFO  : 'configparams force-mem-access 1' command is executed.
+13:49:21 INFO  : Context for 'APU' is selected.
+13:49:21 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+13:49:22 INFO  : 'psu_init' command is executed.
+13:49:23 INFO  : 'after 1000' command is executed.
+13:49:23 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:49:24 INFO  : 'after 1000' command is executed.
+13:49:24 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:49:24 INFO  : 'catch {psu_protection}' command is executed.
+13:49:24 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:49:24 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:49:26 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:49:26 INFO  : 'configparams force-mem-access 0' command is executed.
+13:49:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:49:26 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:49:26 INFO  : 'con' command is executed.
+13:49:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:49:26 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+13:49:58 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+13:50:03 INFO  : Disconnected from the channel tcfchan#5.
+13:50:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:50:13 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:50:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:17 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+13:50:17 INFO  : 'jtag frequency' command is executed.
+13:50:17 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:50:17 INFO  : Context for 'APU' is selected.
+13:50:18 INFO  : System reset is completed.
+13:50:21 INFO  : 'after 3000' command is executed.
+13:50:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+13:50:25 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+13:50:25 INFO  : Context for 'APU' is selected.
+13:50:25 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:50:26 INFO  : 'configparams force-mem-access 1' command is executed.
+13:50:26 INFO  : Context for 'APU' is selected.
+13:50:26 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+13:50:26 INFO  : 'psu_init' command is executed.
+13:50:27 INFO  : 'after 1000' command is executed.
+13:50:27 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:50:28 INFO  : 'after 1000' command is executed.
+13:50:28 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:50:28 INFO  : 'catch {psu_protection}' command is executed.
+13:50:28 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:50:28 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:50:30 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:50:30 INFO  : 'configparams force-mem-access 0' command is executed.
+13:50:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:50:31 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:50:31 INFO  : 'con' command is executed.
+13:50:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:50:31 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+13:50:43 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+13:50:47 INFO  : Disconnected from the channel tcfchan#6.
+13:50:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:50:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:50:57 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:51:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:51:02 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+13:51:02 INFO  : 'jtag frequency' command is executed.
+13:51:02 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:51:02 INFO  : Context for 'APU' is selected.
+13:51:03 INFO  : System reset is completed.
+13:51:06 INFO  : 'after 3000' command is executed.
+13:51:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+13:51:10 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+13:51:10 INFO  : Context for 'APU' is selected.
+13:51:10 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+13:51:10 INFO  : 'configparams force-mem-access 1' command is executed.
+13:51:10 INFO  : Context for 'APU' is selected.
+13:51:10 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+13:51:11 INFO  : 'psu_init' command is executed.
+13:51:12 INFO  : 'after 1000' command is executed.
+13:51:12 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+13:51:13 INFO  : 'after 1000' command is executed.
+13:51:13 INFO  : 'psu_ps_pl_reset_config' command is executed.
+13:51:13 INFO  : 'catch {psu_protection}' command is executed.
+13:51:13 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:51:13 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:51:15 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:51:15 INFO  : 'configparams force-mem-access 0' command is executed.
+13:51:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:51:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:51:15 INFO  : 'con' command is executed.
+13:51:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:51:15 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+13:51:23 INFO  : Disconnected from the channel tcfchan#7.
+14:50:22 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+14:50:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+14:50:24 INFO  : XSCT server has started successfully.
+14:50:24 INFO  : Successfully done setting XSCT server connection channel  
+14:50:24 INFO  : plnx-install-location is set to ''
+14:50:24 INFO  : Successfully done setting workspace for the tool. 
+14:50:25 INFO  : Platform repository initialization has completed.
+14:50:25 INFO  : Registering command handlers for Vitis TCF services
+14:50:25 INFO  : Successfully done query RDI_DATADIR 
+14:50:25 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+14:50:58 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+14:51:35 INFO  : Result from executing command 'getProjects': design_1_wrapper
+14:51:35 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+14:51:35 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+14:51:43 INFO  : Updating application flags with new BSP settings...
+14:51:43 INFO  : Successfully updated application flags for project zynqmp_cam_isp_demo.
+14:52:04 INFO  : The hardware specification used by project 'zynqmp_cam_isp_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+14:52:04 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+14:52:04 INFO  : The updated bitstream files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream' in project 'zynqmp_cam_isp_demo'.
+14:52:04 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit\psu_init.tcl' stored in project is removed.
+14:52:04 INFO  : The updated ps init files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit' in project 'zynqmp_cam_isp_demo'.
+14:52:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:52:08 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:52:08 INFO  : 'jtag frequency' command is executed.
+14:52:08 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:52:08 INFO  : Context for 'APU' is selected.
+14:52:09 INFO  : System reset is completed.
+14:52:12 INFO  : 'after 3000' command is executed.
+14:52:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:52:17 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:52:17 INFO  : Context for 'APU' is selected.
+14:52:17 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:52:17 INFO  : 'configparams force-mem-access 1' command is executed.
+14:52:17 INFO  : Context for 'APU' is selected.
+14:52:17 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:52:18 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:52:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:52:18 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:52:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:52:37 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:52:37 INFO  : 'jtag frequency' command is executed.
+14:52:37 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:52:37 INFO  : Context for 'APU' is selected.
+14:52:37 INFO  : System reset is completed.
+14:52:40 INFO  : 'after 3000' command is executed.
+14:52:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:52:45 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:52:45 INFO  : Context for 'APU' is selected.
+14:52:45 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:52:45 INFO  : 'configparams force-mem-access 1' command is executed.
+14:52:45 INFO  : Context for 'APU' is selected.
+14:52:45 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:52:46 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:52:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:52:46 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:53:04 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+14:53:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:53:24 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:53:24 INFO  : 'jtag frequency' command is executed.
+14:53:24 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:53:24 INFO  : Context for 'APU' is selected.
+14:53:25 INFO  : System reset is completed.
+14:53:28 INFO  : 'after 3000' command is executed.
+14:53:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:53:32 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:53:32 INFO  : Context for 'APU' is selected.
+14:53:32 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:53:32 INFO  : 'configparams force-mem-access 1' command is executed.
+14:53:32 INFO  : Context for 'APU' is selected.
+14:53:32 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:53:33 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:53:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:53:33 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:54:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:07 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:54:07 INFO  : 'jtag frequency' command is executed.
+14:54:07 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:54:07 INFO  : Context for 'APU' is selected.
+14:54:07 INFO  : System reset is completed.
+14:54:10 INFO  : 'after 3000' command is executed.
+14:54:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:54:15 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:54:15 INFO  : Context for 'APU' is selected.
+14:54:15 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:54:15 INFO  : 'configparams force-mem-access 1' command is executed.
+14:54:15 INFO  : Context for 'APU' is selected.
+14:54:15 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:54:16 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:54:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:54:16 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:56:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:09 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:56:09 INFO  : 'jtag frequency' command is executed.
+14:56:09 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:56:09 INFO  : Context for 'APU' is selected.
+14:56:10 INFO  : System reset is completed.
+14:56:13 INFO  : 'after 3000' command is executed.
+14:56:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:56:17 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:56:17 INFO  : Context for 'APU' is selected.
+14:56:17 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:56:17 INFO  : 'configparams force-mem-access 1' command is executed.
+14:56:17 INFO  : Context for 'APU' is selected.
+14:56:17 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:56:18 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:56:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:56:18 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:56:32 INFO  : Result from executing command 'removePlatformRepo': 
+14:57:58 INFO  : Result from executing command 'getProjects': design_1_wrapper
+14:57:58 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+14:57:59 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+14:58:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:05 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:58:05 INFO  : 'jtag frequency' command is executed.
+14:58:05 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:58:05 INFO  : Context for 'APU' is selected.
+14:58:06 INFO  : System reset is completed.
+14:58:09 INFO  : 'after 3000' command is executed.
+14:58:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:58:13 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:58:13 INFO  : Context for 'APU' is selected.
+14:58:13 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:58:13 INFO  : 'configparams force-mem-access 1' command is executed.
+14:58:13 INFO  : Context for 'APU' is selected.
+14:58:13 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:58:14 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:58:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:58:14 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:58:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:58:53 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+14:58:53 INFO  : 'jtag frequency' command is executed.
+14:58:53 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:58:53 INFO  : Context for 'APU' is selected.
+14:58:53 INFO  : System reset is completed.
+14:58:56 INFO  : 'after 3000' command is executed.
+14:58:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+14:59:01 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+14:59:01 INFO  : Context for 'APU' is selected.
+14:59:01 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+14:59:01 INFO  : 'configparams force-mem-access 1' command is executed.
+14:59:01 INFO  : Context for 'APU' is selected.
+14:59:01 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+14:59:02 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+14:59:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+----------------End of Script----------------
+
+14:59:02 ERROR : Timeout Reached. Mask poll failed at ADDRESS: 0XFD40A3E4 MASK: 0x00000010
+15:21:28 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+15:22:02 INFO  : Result from executing command 'getProjects': design_1_wrapper
+15:22:02 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+15:22:03 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+15:22:20 INFO  : The hardware specification used by project 'zynqmp_cam_isp_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+15:22:20 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+15:22:20 INFO  : The updated bitstream files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream' in project 'zynqmp_cam_isp_demo'.
+15:22:20 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit\psu_init.tcl' stored in project is removed.
+15:22:20 INFO  : The updated ps init files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit' in project 'zynqmp_cam_isp_demo'.
+15:22:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:22:21 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+15:22:21 INFO  : 'jtag frequency' command is executed.
+15:22:21 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+15:22:21 INFO  : Context for 'APU' is selected.
+15:22:22 INFO  : System reset is completed.
+15:22:25 INFO  : 'after 3000' command is executed.
+15:22:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+15:22:29 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+15:22:29 INFO  : Context for 'APU' is selected.
+15:22:30 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:22:30 INFO  : 'configparams force-mem-access 1' command is executed.
+15:22:30 INFO  : Context for 'APU' is selected.
+15:22:30 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+15:22:31 INFO  : 'psu_init' command is executed.
+15:22:32 INFO  : 'after 1000' command is executed.
+15:22:32 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+15:22:33 INFO  : 'after 1000' command is executed.
+15:22:33 INFO  : 'psu_ps_pl_reset_config' command is executed.
+15:22:33 INFO  : 'catch {psu_protection}' command is executed.
+15:22:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:22:33 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:22:35 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:22:35 INFO  : 'configparams force-mem-access 0' command is executed.
+15:22:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:22:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:22:35 INFO  : 'con' command is executed.
+15:22:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+15:22:35 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+15:23:05 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+15:23:10 INFO  : Disconnected from the channel tcfchan#2.
+15:23:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:23:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+15:23:20 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:23:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:23:25 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+15:23:25 INFO  : 'jtag frequency' command is executed.
+15:23:25 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+15:23:25 INFO  : Context for 'APU' is selected.
+15:23:25 INFO  : System reset is completed.
+15:23:28 INFO  : 'after 3000' command is executed.
+15:23:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+15:23:33 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+15:23:33 INFO  : Context for 'APU' is selected.
+15:23:33 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:23:33 INFO  : 'configparams force-mem-access 1' command is executed.
+15:23:33 INFO  : Context for 'APU' is selected.
+15:23:33 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+15:23:34 INFO  : 'psu_init' command is executed.
+15:23:35 INFO  : 'after 1000' command is executed.
+15:23:35 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+15:23:36 INFO  : 'after 1000' command is executed.
+15:23:36 INFO  : 'psu_ps_pl_reset_config' command is executed.
+15:23:36 INFO  : 'catch {psu_protection}' command is executed.
+15:23:36 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:23:36 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:23:38 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:23:38 INFO  : 'configparams force-mem-access 0' command is executed.
+15:23:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:23:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:23:38 INFO  : 'con' command is executed.
+15:23:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+15:23:38 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+15:23:51 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+15:24:10 INFO  : Disconnected from the channel tcfchan#6.
+15:24:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:11 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+15:24:11 INFO  : 'jtag frequency' command is executed.
+15:24:11 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+15:24:11 INFO  : Context for 'APU' is selected.
+15:24:11 INFO  : System reset is completed.
+15:24:14 INFO  : 'after 3000' command is executed.
+15:24:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+15:24:19 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+15:24:19 INFO  : Context for 'APU' is selected.
+15:24:19 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+15:24:19 INFO  : 'configparams force-mem-access 1' command is executed.
+15:24:19 INFO  : Context for 'APU' is selected.
+15:24:19 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+15:24:20 INFO  : 'psu_init' command is executed.
+15:24:21 INFO  : 'after 1000' command is executed.
+15:24:21 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+15:24:22 INFO  : 'after 1000' command is executed.
+15:24:22 INFO  : 'psu_ps_pl_reset_config' command is executed.
+15:24:22 INFO  : 'catch {psu_protection}' command is executed.
+15:24:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:24:22 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:24:24 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:24:24 INFO  : 'configparams force-mem-access 0' command is executed.
+15:24:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:24:24 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:24:24 INFO  : 'con' command is executed.
+15:24:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+15:24:24 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+15:24:33 INFO  : Disconnected from the channel tcfchan#7.
+23:37:12 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+23:37:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+23:37:15 INFO  : XSCT server has started successfully.
+23:37:15 INFO  : plnx-install-location is set to ''
+23:37:15 INFO  : Successfully done setting XSCT server connection channel  
+23:37:15 INFO  : Successfully done setting workspace for the tool. 
+23:37:16 INFO  : Platform repository initialization has completed.
+23:37:16 INFO  : Successfully done query RDI_DATADIR 
+23:37:16 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+23:37:16 INFO  : Registering command handlers for Vitis TCF services
+23:38:14 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+23:38:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:38:31 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+23:38:31 INFO  : 'jtag frequency' command is executed.
+23:38:31 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+23:38:31 INFO  : Context for 'APU' is selected.
+23:38:31 INFO  : System reset is completed.
+23:38:34 INFO  : 'after 3000' command is executed.
+23:38:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+23:38:39 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+23:38:39 INFO  : Context for 'APU' is selected.
+23:38:39 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+23:38:39 INFO  : 'configparams force-mem-access 1' command is executed.
+23:38:39 INFO  : Context for 'APU' is selected.
+23:38:39 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+23:38:40 INFO  : 'psu_init' command is executed.
+23:38:41 INFO  : 'after 1000' command is executed.
+23:38:41 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+23:38:42 INFO  : 'after 1000' command is executed.
+23:38:42 INFO  : 'psu_ps_pl_reset_config' command is executed.
+23:38:42 INFO  : 'catch {psu_protection}' command is executed.
+23:38:42 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+23:38:42 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+23:38:44 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+23:38:44 INFO  : 'configparams force-mem-access 0' command is executed.
+23:38:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:38:44 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+23:38:44 INFO  : 'con' command is executed.
+23:38:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+23:38:44 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+23:39:23 INFO  : Disconnected from the channel tcfchan#1.
+21:27:55 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+21:27:58 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+21:28:24 INFO  : XSCT server has started successfully.
+21:28:52 INFO  : Successfully done setting XSCT server connection channel  
+21:28:52 INFO  : plnx-install-location is set to ''
+21:28:52 INFO  : Successfully done setting workspace for the tool. 
+21:28:59 INFO  : Registering command handlers for Vitis TCF services
+21:28:59 INFO  : Successfully done query RDI_DATADIR 
+21:29:00 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+21:29:00 INFO  : Platform repository initialization has completed.
+21:29:45 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+21:30:52 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:30:52 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+21:30:53 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:31:08 INFO  : Updating application flags with new BSP settings...
+21:31:11 INFO  : Successfully updated application flags for project zynqmp_cam_isp_demo.
+21:31:36 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:32:11 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:33:18 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:33:59 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:34:14 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:34:49 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:35:10 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:35:39 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:36:08 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:36:20 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:36:37 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:36:46 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:45:24 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:45:48 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:08:06 INFO  : Device tree generated successfully at  'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\linux_dts'.
+22:22:17 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+22:23:39 INFO  : Result from executing command 'getProjects': design_1_wrapper
+22:23:39 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+22:23:40 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:24:22 INFO  : The hardware specification used by project 'zynqmp_cam_isp_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:24:22 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+22:24:22 INFO  : The updated bitstream files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream' in project 'zynqmp_cam_isp_demo'.
+22:24:22 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit\psu_init.tcl' stored in project is removed.
+22:24:23 INFO  : The updated ps init files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit' in project 'zynqmp_cam_isp_demo'.
+22:24:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:24:28 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+22:24:28 INFO  : 'jtag frequency' command is executed.
+22:24:28 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+22:24:28 INFO  : Context for 'APU' is selected.
+22:24:29 INFO  : System reset is completed.
+22:24:32 INFO  : 'after 3000' command is executed.
+22:24:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+22:24:37 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+22:24:37 INFO  : Context for 'APU' is selected.
+22:24:37 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:24:37 INFO  : 'configparams force-mem-access 1' command is executed.
+22:24:37 INFO  : Context for 'APU' is selected.
+22:24:37 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+22:24:38 INFO  : 'psu_init' command is executed.
+22:24:39 INFO  : 'after 1000' command is executed.
+22:24:39 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:24:40 INFO  : 'after 1000' command is executed.
+22:24:40 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:24:40 INFO  : 'catch {psu_protection}' command is executed.
+22:24:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:24:41 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:24:43 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:24:43 INFO  : 'configparams force-mem-access 0' command is executed.
+22:24:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:24:43 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:24:43 INFO  : 'con' command is executed.
+22:24:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+22:24:43 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+22:25:33 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:26:01 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:26:17 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:26:28 INFO  : Disconnected from the channel tcfchan#3.
+22:26:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:26:29 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+22:26:29 INFO  : 'jtag frequency' command is executed.
+22:26:29 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+22:26:29 INFO  : Context for 'APU' is selected.
+22:26:30 INFO  : System reset is completed.
+22:26:33 INFO  : 'after 3000' command is executed.
+22:26:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+22:26:37 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+22:26:37 INFO  : Context for 'APU' is selected.
+22:26:37 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:26:37 INFO  : 'configparams force-mem-access 1' command is executed.
+22:26:37 INFO  : Context for 'APU' is selected.
+22:26:37 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+22:26:38 INFO  : 'psu_init' command is executed.
+22:26:40 INFO  : 'after 1000' command is executed.
+22:26:40 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:26:41 INFO  : 'after 1000' command is executed.
+22:26:41 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:26:41 INFO  : 'catch {psu_protection}' command is executed.
+22:26:41 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:26:41 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:26:43 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:26:43 INFO  : 'configparams force-mem-access 0' command is executed.
+22:26:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:26:43 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:26:43 INFO  : 'con' command is executed.
+22:26:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+22:26:43 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+22:35:47 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:35:54 INFO  : Disconnected from the channel tcfchan#4.
+22:35:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:36:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:36:04 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+22:36:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:36:09 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+22:36:09 INFO  : 'jtag frequency' command is executed.
+22:36:09 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+22:36:09 INFO  : Context for 'APU' is selected.
+22:36:09 INFO  : System reset is completed.
+22:36:12 INFO  : 'after 3000' command is executed.
+22:36:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+22:36:16 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+22:36:16 INFO  : Context for 'APU' is selected.
+22:36:16 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:36:16 INFO  : 'configparams force-mem-access 1' command is executed.
+22:36:16 INFO  : Context for 'APU' is selected.
+22:36:16 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+22:36:18 INFO  : 'psu_init' command is executed.
+22:36:19 INFO  : 'after 1000' command is executed.
+22:36:19 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:36:20 INFO  : 'after 1000' command is executed.
+22:36:20 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:36:20 INFO  : 'catch {psu_protection}' command is executed.
+22:36:20 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:36:20 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:36:22 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:36:22 INFO  : 'configparams force-mem-access 0' command is executed.
+22:36:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:36:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:36:22 INFO  : 'con' command is executed.
+22:36:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+22:36:22 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+22:41:51 INFO  : Device tree generated successfully at  'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\linux_dts'.
+23:53:05 INFO  : Disconnected from the channel tcfchan#5.
+22:53:15 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+22:53:15 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+22:53:18 INFO  : XSCT server has started successfully.
+22:53:18 INFO  : Successfully done setting XSCT server connection channel  
+22:53:18 INFO  : plnx-install-location is set to ''
+22:53:18 INFO  : Successfully done setting workspace for the tool. 
+22:53:19 INFO  : Platform repository initialization has completed.
+22:53:19 INFO  : Successfully done query RDI_DATADIR 
+22:53:19 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+22:53:19 INFO  : Registering command handlers for Vitis TCF services
+22:53:59 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:55:10 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:55:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:55:22 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+22:55:22 INFO  : 'jtag frequency' command is executed.
+22:55:22 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+22:55:22 INFO  : Context for 'APU' is selected.
+22:55:23 INFO  : System reset is completed.
+22:55:26 INFO  : 'after 3000' command is executed.
+22:55:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+22:55:31 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+22:55:31 INFO  : Context for 'APU' is selected.
+22:55:32 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:55:32 INFO  : 'configparams force-mem-access 1' command is executed.
+22:55:32 INFO  : Context for 'APU' is selected.
+22:55:32 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+22:55:33 INFO  : 'psu_init' command is executed.
+22:55:34 INFO  : 'after 1000' command is executed.
+22:55:34 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:55:35 INFO  : 'after 1000' command is executed.
+22:55:35 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:55:35 INFO  : 'catch {psu_protection}' command is executed.
+22:55:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:55:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:55:37 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:55:37 INFO  : 'configparams force-mem-access 0' command is executed.
+22:55:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:55:37 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:55:37 INFO  : 'con' command is executed.
+22:55:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+22:55:37 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+22:59:19 INFO  : Disconnected from the channel tcfchan#1.
+22:22:45 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+22:22:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+22:22:47 INFO  : XSCT server has started successfully.
+22:22:47 INFO  : plnx-install-location is set to ''
+22:22:47 INFO  : Successfully done setting XSCT server connection channel  
+22:22:47 INFO  : Successfully done setting workspace for the tool. 
+22:22:47 INFO  : Registering command handlers for Vitis TCF services
+22:22:48 INFO  : Platform repository initialization has completed.
+22:22:48 INFO  : Successfully done query RDI_DATADIR 
+22:22:48 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+22:23:22 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+22:23:59 INFO  : Result from executing command 'getProjects': design_1_wrapper
+22:23:59 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+22:23:59 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:24:49 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:25:11 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+22:25:16 INFO  : The hardware specification used by project 'zynqmp_cam_isp_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:25:16 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+22:25:16 INFO  : The updated bitstream files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream' in project 'zynqmp_cam_isp_demo'.
+22:25:16 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit\psu_init.tcl' stored in project is removed.
+22:25:17 INFO  : The updated ps init files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit' in project 'zynqmp_cam_isp_demo'.
+22:25:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:25:21 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+22:25:21 INFO  : 'jtag frequency' command is executed.
+22:25:21 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+22:25:21 INFO  : Context for 'APU' is selected.
+22:25:21 INFO  : System reset is completed.
+22:25:24 INFO  : 'after 3000' command is executed.
+22:25:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+22:25:29 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+22:25:29 INFO  : Context for 'APU' is selected.
+22:25:30 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:25:30 INFO  : 'configparams force-mem-access 1' command is executed.
+22:25:30 INFO  : Context for 'APU' is selected.
+22:25:30 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+22:25:31 INFO  : 'psu_init' command is executed.
+22:25:32 INFO  : 'after 1000' command is executed.
+22:25:32 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:25:33 INFO  : 'after 1000' command is executed.
+22:25:33 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:25:33 INFO  : 'catch {psu_protection}' command is executed.
+22:25:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:25:33 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:25:35 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:25:35 INFO  : 'configparams force-mem-access 0' command is executed.
+22:25:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:25:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:25:35 INFO  : 'con' command is executed.
+22:25:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+22:25:35 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+22:26:03 INFO  : Disconnected from the channel tcfchan#2.
+22:26:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:26:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:26:13 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+22:26:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:26:19 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+22:26:19 INFO  : 'jtag frequency' command is executed.
+22:26:19 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+22:26:19 INFO  : Context for 'APU' is selected.
+22:26:19 INFO  : System reset is completed.
+22:26:22 INFO  : 'after 3000' command is executed.
+22:26:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+22:26:27 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+22:26:27 INFO  : Context for 'APU' is selected.
+22:26:27 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+22:26:27 INFO  : 'configparams force-mem-access 1' command is executed.
+22:26:27 INFO  : Context for 'APU' is selected.
+22:26:27 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+22:26:28 INFO  : 'psu_init' command is executed.
+22:26:29 INFO  : 'after 1000' command is executed.
+22:26:29 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+22:26:30 INFO  : 'after 1000' command is executed.
+22:26:30 INFO  : 'psu_ps_pl_reset_config' command is executed.
+22:26:30 INFO  : 'catch {psu_protection}' command is executed.
+22:26:30 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:26:30 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+22:26:32 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+22:26:32 INFO  : 'configparams force-mem-access 0' command is executed.
+22:26:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:26:32 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+22:26:32 INFO  : 'con' command is executed.
+22:26:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+22:26:32 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+22:27:09 INFO  : Disconnected from the channel tcfchan#3.
+21:30:01 DEBUG : Logs will be stored at 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/IDE.log'.
+21:30:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+21:30:04 INFO  : Platform repository initialization has completed.
+21:30:04 INFO  : Registering command handlers for Vitis TCF services
+21:30:07 INFO  : XSCT server has started successfully.
+21:30:07 INFO  : plnx-install-location is set to ''
+21:30:07 INFO  : Successfully done setting XSCT server connection channel  
+21:30:07 INFO  : Successfully done query RDI_DATADIR 
+21:30:07 INFO  : Successfully done setting workspace for the tool. 
+21:30:07 INFO  : Restoring global repository preferences: 
+		 D:\Xilinx\device-tree-xlnx-xilinx_v2022.1_update3
+21:32:40 INFO  : Hardware specification for platform project 'design_1_wrapper' is updated.
+21:35:31 INFO  : Result from executing command 'getProjects': design_1_wrapper
+21:35:31 INFO  : Result from executing command 'getPlatforms': design_1_wrapper|D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm;xilinx_zcu102_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_202210_1/xilinx_zcu102_base_202210_1.xpfm;xilinx_zcu102_base_dfx_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu102_base_dfx_202210_1/xilinx_zcu102_base_dfx_202210_1.xpfm;xilinx_zcu104_base_202210_1|D:/Xilinx/Vitis/2022.1/base_platforms/xilinx_zcu104_base_202210_1/xilinx_zcu104_base_202210_1.xpfm
+21:35:32 INFO  : Checking for BSP changes to sync application flags for project 'zynqmp_cam_isp_demo'...
+21:35:47 INFO  : The hardware specification used by project 'zynqmp_cam_isp_demo' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:35:47 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream\design_1_wrapper.bit' stored in project is removed.
+21:35:47 INFO  : The updated bitstream files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\bitstream' in project 'zynqmp_cam_isp_demo'.
+21:35:47 INFO  : The file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit\psu_init.tcl' stored in project is removed.
+21:35:48 INFO  : The updated ps init files are copied from platform to folder 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo\_ide\psinit' in project 'zynqmp_cam_isp_demo'.
+21:35:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:35:52 INFO  : Jtag cable 'Xilinx X-MLCC-01 XFL14IR3AYK4A' is selected.
+21:35:52 INFO  : 'jtag frequency' command is executed.
+21:35:52 INFO  : Sourcing of 'D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+21:35:52 INFO  : Context for 'APU' is selected.
+21:35:53 INFO  : System reset is completed.
+21:35:56 INFO  : 'after 3000' command is executed.
+21:35:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}' command is executed.
+21:36:01 INFO  : Device configured successfully with "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit"
+21:36:01 INFO  : Context for 'APU' is selected.
+21:36:01 INFO  : Hardware design and registers information is loaded from 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+21:36:01 INFO  : 'configparams force-mem-access 1' command is executed.
+21:36:01 INFO  : Context for 'APU' is selected.
+21:36:01 INFO  : Sourcing of 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl' is done.
+21:36:02 INFO  : 'psu_init' command is executed.
+21:36:03 INFO  : 'after 1000' command is executed.
+21:36:03 INFO  : 'psu_ps_pl_isolation_removal' command is executed.
+21:36:04 INFO  : 'after 1000' command is executed.
+21:36:04 INFO  : 'psu_ps_pl_reset_config' command is executed.
+21:36:04 INFO  : 'catch {psu_protection}' command is executed.
+21:36:04 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:36:04 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+21:36:06 INFO  : The application 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf' is downloaded to processor 'psu_cortexa53_0'.
+21:36:06 INFO  : 'configparams force-mem-access 0' command is executed.
+21:36:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Xilinx/Vitis/2022.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL14IR3AYK4A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL14IR3AYK4A-04724093-0"}
+fpga -file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/_ide/psinit/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/zynqmp_cam_isp_demo/Debug/zynqmp_cam_isp_demo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:36:06 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+21:36:06 INFO  : 'con' command is executed.
+21:36:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+21:36:06 INFO  : Launch script is exported to file 'D:\zynqmp_cam_isp_demo\zynqmp_cam_isp_demo.vitis\zynqmp_cam_isp_demo_system\_ide\scripts\debugger_zynqmp_cam_isp_demo-default.tcl'
+21:36:19 INFO  : Disconnected from the channel tcfchan#2.

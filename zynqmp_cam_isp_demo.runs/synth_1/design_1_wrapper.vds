@@ -1,0 +1,665 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Nov 25 21:10:50 2022
+# Process ID: 3916
+# Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/design_1_wrapper.vds
+# Journal file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1\vivado.jou
+# Running On: LEGION-BIANXINQUAN, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 17007 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_wrapper -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2640
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1765.969 ; gain = 318.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:924]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:1428]
+WARNING: [Synth 8-7023] instance 'axi_iic' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 26 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:1428]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_intc_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_intc_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_intc_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_intc_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_smc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axi_smc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'camif_ias1_imp_1C8CI1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axis_subset_converter_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axis_subset_converter_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_rx_to_video_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_mipi_rx_to_video_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_rx_to_video_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_mipi_rx_to_video_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_frmbuf_wr_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frmbuf_wr_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_frmbuf_wr_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frmbuf_wr_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_AWREGION' of module 'design_1_v_frmbuf_wr_0_0' is unconnected for instance 'vfrm_wr_ias1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:389]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_ARREGION' of module 'design_1_v_frmbuf_wr_0_0' is unconnected for instance 'vfrm_wr_ias1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:389]
+WARNING: [Synth 8-7023] instance 'vfrm_wr_ias1' of module 'design_1_v_frmbuf_wr_0_0' has 64 connections declared, but only 62 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:389]
+INFO: [Synth 8-6157] synthesizing module 'design_1_video_to_axis_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_video_to_axis_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_video_to_axis_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_video_to_axis_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_video_to_axis_0_0' is unconnected for instance 'video_to_axis_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:452]
+WARNING: [Synth 8-7023] instance 'video_to_axis_0' of module 'design_1_video_to_axis_0_0' has 14 connections declared, but only 13 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:452]
+INFO: [Synth 8-6155] done synthesizing module 'camif_ias1_imp_1C8CI1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:12]
+INFO: [Synth 8-6157] synthesizing module 'camif_rpi_imp_1FWIAPX' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:468]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_0_2' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axis_subset_converter_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_0_2' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axis_subset_converter_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_rx_to_video_ias1_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_mipi_rx_to_video_ias1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_rx_to_video_ias1_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_mipi_rx_to_video_ias1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_frm_wr_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frm_wr_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_frm_wr_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frm_wr_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_AWREGION' of module 'design_1_v_frm_wr_0_0' is unconnected for instance 'vfrm_wr_rpi' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:845]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_ARREGION' of module 'design_1_v_frm_wr_0_0' is unconnected for instance 'vfrm_wr_rpi' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:845]
+WARNING: [Synth 8-7023] instance 'vfrm_wr_rpi' of module 'design_1_v_frm_wr_0_0' has 64 connections declared, but only 62 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:845]
+INFO: [Synth 8-6157] synthesizing module 'design_1_video_to_axis_0_1' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_video_to_axis_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_video_to_axis_0_1' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_video_to_axis_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_video_to_axis_0_1' is unconnected for instance 'video_to_axis_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:908]
+WARNING: [Synth 8-7023] instance 'video_to_axis_0' of module 'design_1_video_to_axis_0_1' has 14 connections declared, but only 13 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:908]
+INFO: [Synth 8-6155] done synthesizing module 'camif_rpi_imp_1FWIAPX' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:468]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'isp_pipe_imp_1RRJHAC' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4089]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_to_video_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axis_to_video_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_to_video_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_axis_to_video_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'vid_hsync' of module 'design_1_axis_to_video_0_0' is unconnected for instance 'axis_to_video_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4705]
+WARNING: [Synth 8-7071] port 'underflow' of module 'design_1_axis_to_video_0_0' is unconnected for instance 'axis_to_video_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4705]
+WARNING: [Synth 8-7023] instance 'axis_to_video_0' of module 'design_1_axis_to_video_0_0' has 15 connections declared, but only 13 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4705]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_isp_lite_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_isp_lite_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_frmbuf_rd_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frmbuf_rd_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_frmbuf_rd_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frmbuf_rd_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_AWREGION' of module 'design_1_v_frmbuf_rd_0_0' is unconnected for instance 'vfrm_rd_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_ARREGION' of module 'design_1_v_frmbuf_rd_0_0' is unconnected for instance 'vfrm_rd_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+WARNING: [Synth 8-7071] port 'm_axis_video_TKEEP' of module 'design_1_v_frmbuf_rd_0_0' is unconnected for instance 'vfrm_rd_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+WARNING: [Synth 8-7071] port 'm_axis_video_TSTRB' of module 'design_1_v_frmbuf_rd_0_0' is unconnected for instance 'vfrm_rd_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+WARNING: [Synth 8-7071] port 'm_axis_video_TID' of module 'design_1_v_frmbuf_rd_0_0' is unconnected for instance 'vfrm_rd_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+WARNING: [Synth 8-7071] port 'm_axis_video_TDEST' of module 'design_1_v_frmbuf_rd_0_0' is unconnected for instance 'vfrm_rd_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+WARNING: [Synth 8-7023] instance 'vfrm_rd_isp' of module 'design_1_v_frmbuf_rd_0_0' has 64 connections declared, but only 58 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4750]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_frmbuf_wr_0_1' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frmbuf_wr_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_frmbuf_wr_0_1' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_v_frmbuf_wr_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_AWREGION' of module 'design_1_v_frmbuf_wr_0_1' is unconnected for instance 'vfrm_wr_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4809]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_ARREGION' of module 'design_1_v_frmbuf_wr_0_1' is unconnected for instance 'vfrm_wr_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4809]
+WARNING: [Synth 8-7023] instance 'vfrm_wr_isp' of module 'design_1_v_frmbuf_wr_0_1' has 64 connections declared, but only 62 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4809]
+INFO: [Synth 8-6157] synthesizing module 'design_1_video_to_axis_1_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_video_to_axis_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_video_to_axis_1_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_video_to_axis_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_video_to_axis_1_0' is unconnected for instance 'video_to_axis_1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4872]
+WARNING: [Synth 8-7023] instance 'video_to_axis_1' of module 'design_1_video_to_axis_1_0' has 14 connections declared, but only 13 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4872]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_vip_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'isp_pipe_imp_1RRJHAC' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4089]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2337]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4920]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:4920]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5052]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5052]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5184]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5184]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1E9R4HW' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5316]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1E9R4HW' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5316]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_NB1YAO' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5462]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_NB1YAO' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5462]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1FZ4A9T' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5594]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1FZ4A9T' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5594]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_MPDFMR' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5740]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_MPDFMR' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5740]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1GV49DU' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5872]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1GV49DU' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:5872]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_K8X5UY' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6004]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_K8X5UY' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6004]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1AITGY3' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6150]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1AITGY3' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6150]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_11TD8LA' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6282]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_11TD8LA' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6282]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6428]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:6428]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2337]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_sys_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_rst_clk_sys_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_sys_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_rst_clk_sys_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_clk_sys_0' is unconnected for instance 'rst_clk_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2215]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_clk_sys_0' is unconnected for instance 'rst_clk_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2215]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_clk_sys_0' is unconnected for instance 'rst_clk_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2215]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_clk_sys_0' is unconnected for instance 'rst_clk_isp' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2215]
+WARNING: [Synth 8-7023] instance 'rst_clk_isp' of module 'design_1_rst_clk_sys_0' has 10 connections declared, but only 6 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2215]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_clk_wiz_150M_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_rst_clk_wiz_150M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_clk_wiz_150M_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_rst_clk_wiz_150M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_clk_wiz_150M_0' is unconnected for instance 'rst_clk_sys' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2222]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_clk_wiz_150M_0' is unconnected for instance 'rst_clk_sys' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2222]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_clk_wiz_150M_0' is unconnected for instance 'rst_clk_sys' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2222]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_clk_wiz_150M_0' is unconnected for instance 'rst_clk_sys' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2222]
+WARNING: [Synth 8-7023] instance 'rst_clk_sys' of module 'design_1_rst_clk_wiz_150M_0' has 10 connections declared, but only 6 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2222]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_1_0/synth/design_1_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_2_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_2_0/synth/design_1_xlslice_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_2_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_2_0/synth/design_1_xlslice_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_3_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_3_0/synth/design_1_xlslice_3_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_3_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_3_0/synth/design_1_xlslice_3_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_4_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_4_0/synth/design_1_xlslice_4_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_4_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xlslice_4_0/synth/design_1_xlslice_4_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/.Xil/Vivado-3916-LEGION-BIANXINQUAN/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2255]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2255]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2255]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2255]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 83 connections declared, but only 79 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:2255]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/synth/design_1.v:924]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:59734]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:59734]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.789 ; gain = 421.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.789 ; gain = 421.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1868.789 ; gain = 421.520
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1868.789 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/axis_subset_converter_0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/axis_subset_converter_0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/vfrm_wr_ias1'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/vfrm_wr_ias1'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/mipi_rx_to_video_ias1'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/mipi_rx_to_video_ias1'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_0_0/design_1_video_to_axis_0_0/design_1_video_to_axis_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/video_to_axis_0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_0_0/design_1_video_to_axis_0_0/design_1_video_to_axis_0_0_in_context.xdc] for cell 'design_1_i/camif_ias1/video_to_axis_0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_to_video_0_0/design_1_axis_to_video_0_0/design_1_axis_to_video_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/axis_to_video_0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_to_video_0_0/design_1_axis_to_video_0_0/design_1_axis_to_video_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/axis_to_video_0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/isp'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/isp'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_rd_0_0/design_1_v_frmbuf_rd_0_0/design_1_v_frmbuf_rd_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/vfrm_rd_isp'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_rd_0_0/design_1_v_frmbuf_rd_0_0/design_1_v_frmbuf_rd_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/vfrm_rd_isp'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/design_1_v_frmbuf_wr_0_1/design_1_v_frmbuf_wr_0_1_in_context.xdc] for cell 'design_1_i/isp_pipe/vfrm_wr_isp'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/design_1_v_frmbuf_wr_0_1/design_1_v_frmbuf_wr_0_1_in_context.xdc] for cell 'design_1_i/isp_pipe/vfrm_wr_isp'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_1_0/design_1_video_to_axis_1_0/design_1_video_to_axis_1_0_in_context.xdc] for cell 'design_1_i/isp_pipe/video_to_axis_1'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_1_0/design_1_video_to_axis_1_0/design_1_video_to_axis_1_0_in_context.xdc] for cell 'design_1_i/isp_pipe/video_to_axis_1'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/vip'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/isp_pipe/vip'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2_in_context.xdc] for cell 'design_1_i/camif_rpi/axis_subset_converter_0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2_in_context.xdc] for cell 'design_1_i/camif_rpi/axis_subset_converter_0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frm_wr_0_0/design_1_v_frm_wr_0_0/design_1_v_frm_wr_0_0_in_context.xdc] for cell 'design_1_i/camif_rpi/vfrm_wr_rpi'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frm_wr_0_0/design_1_v_frm_wr_0_0/design_1_v_frm_wr_0_0_in_context.xdc] for cell 'design_1_i/camif_rpi/vfrm_wr_rpi'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc] for cell 'design_1_i/camif_rpi/mipi_rx_to_video_rpi'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc] for cell 'design_1_i/camif_rpi/mipi_rx_to_video_rpi'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_0_1/design_1_video_to_axis_0_1/design_1_video_to_axis_0_1_in_context.xdc] for cell 'design_1_i/camif_rpi/video_to_axis_0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_0_1/design_1_video_to_axis_0_1/design_1_video_to_axis_0_1_in_context.xdc] for cell 'design_1_i/camif_rpi/video_to_axis_0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_150M_0/design_1_rst_clk_wiz_150M_0/design_1_rst_clk_wiz_150M_0_in_context.xdc] for cell 'design_1_i/rst_clk_sys'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_150M_0/design_1_rst_clk_wiz_150M_0/design_1_rst_clk_wiz_150M_0_in_context.xdc] for cell 'design_1_i/rst_clk_sys'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_rst_clk_sys_0/design_1_rst_clk_sys_0/design_1_rst_clk_sys_0_in_context.xdc] for cell 'design_1_i/rst_clk_isp'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_rst_clk_sys_0/design_1_rst_clk_sys_0/design_1_rst_clk_sys_0_in_context.xdc] for cell 'design_1_i/rst_clk_isp'
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'mipi_ias1_clk_bit' completely overrides clock 'mipi_rx_ias1_clk_p'.
+New: create_clock -period 2.000 -name mipi_ias1_clk_bit [get_ports mipi_rx_ias1_clk_p], [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:1]
+Previous: create_clock -period 2.000 [get_ports mipi_rx_ias1_clk_p], [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'mipi_rpi_clk_bit' completely overrides clock 'mipi_rx_rpi_clk_p'.
+New: create_clock -period 2.000 -name mipi_rpi_clk_bit [get_ports mipi_rx_rpi_clk_p], [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:2]
+Previous: create_clock -period 2.000 [get_ports mipi_rx_rpi_clk_p], [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Vivado 12-507] No nets matched 'design_1_i/camif_ias1/mipi_rx_to_video_ias1/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/u_IBUFDS_DPHY/HSRX_O'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:4]
+WARNING: [Vivado 12-627] No clocks matched 'clk_sys_design_1_clk_wiz_0_0'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+WARNING: [Vivado 12-627] No clocks matched 'clk_isp_design_1_clk_wiz_0_0'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+WARNING: [Vivado 12-627] No clocks matched 'mipi_rx_to_video_ias1_vid_clk'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+WARNING: [Vivado 12-627] No clocks matched 'mipi_rx_to_video_rpi_vid_clk_1'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_sys_design_1_clk_wiz_0_0]'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_isp_design_1_clk_wiz_0_0]'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks mipi_rx_to_video_ias1_vid_clk]'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks mipi_rx_to_video_rpi_vid_clk_1]'. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1882.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1882.586 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio' at clock pin 's_axi_aclk' is different from the actual clock period '6.663', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1883.531 ; gain = 436.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1883.531 ; gain = 436.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_clk_n. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_clk_n. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_clk_p. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_clk_p. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[2]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[2]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[3]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_n[3]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[2]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[2]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[3]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_ias1_data_p[3]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0/design_1_mipi_rx_to_video_0_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_rpi_clk_n. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_rpi_clk_n. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_rpi_clk_p. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_rpi_clk_p. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_rpi_data_n[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_rpi_data_n[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_rpi_data_n[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_rpi_data_n[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_rpi_data_p[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_rpi_data_p[0]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for mipi_rx_rpi_data_p[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for mipi_rx_rpi_data_p[1]. (constraint file  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0/design_1_mipi_rx_to_video_ias1_0_in_context.xdc, line 14).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_ias1/axis_subset_converter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_ias1/vfrm_wr_ias1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_ias1/mipi_rx_to_video_ias1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_ias1/video_to_axis_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/isp_pipe/axis_to_video_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/isp_pipe/isp. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/isp_pipe/vfrm_rd_isp. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/isp_pipe/vfrm_wr_isp. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/isp_pipe/video_to_axis_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/isp_pipe/vip. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_rpi/axis_subset_converter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_rpi/vfrm_wr_rpi. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_rpi/mipi_rx_to_video_rpi. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/camif_rpi/video_to_axis_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_intc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_iic. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_gpio. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlslice_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_sys. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_isp. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1883.531 ; gain = 436.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1883.531 ; gain = 436.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1883.531 ; gain = 436.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2427.551 ; gain = 980.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2428.695 ; gain = 981.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2449.363 ; gain = 1002.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |design_1_xbar_0                    |         1|
+|2     |design_1_auto_ds_0                 |         1|
+|3     |design_1_auto_pc_0                 |         1|
+|4     |design_1_axi_gpio_0_0              |         1|
+|5     |design_1_axi_iic_0_0               |         1|
+|6     |design_1_axi_intc_0_0              |         1|
+|7     |design_1_axi_smc_0                 |         1|
+|8     |design_1_clk_wiz_0_0               |         1|
+|9     |design_1_rst_clk_sys_0             |         1|
+|10    |design_1_rst_clk_wiz_150M_0        |         1|
+|11    |design_1_zynq_ultra_ps_e_0_0       |         1|
+|12    |design_1_axis_subset_converter_0_0 |         1|
+|13    |design_1_mipi_rx_to_video_0_0      |         1|
+|14    |design_1_v_frmbuf_wr_0_0           |         1|
+|15    |design_1_video_to_axis_0_0         |         1|
+|16    |design_1_axis_subset_converter_0_2 |         1|
+|17    |design_1_mipi_rx_to_video_ias1_0   |         1|
+|18    |design_1_v_frm_wr_0_0              |         1|
+|19    |design_1_video_to_axis_0_1         |         1|
+|20    |design_1_axis_to_video_0_0         |         1|
+|21    |design_1_xil_isp_lite_0_0          |         1|
+|22    |design_1_v_frmbuf_rd_0_0           |         1|
+|23    |design_1_v_frmbuf_wr_0_1           |         1|
+|24    |design_1_video_to_axis_1_0         |         1|
+|25    |design_1_xil_vip_0_0               |         1|
++------+-----------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |design_1_auto_ds                 |     1|
+|2     |design_1_auto_pc                 |     1|
+|3     |design_1_axi_gpio_0              |     1|
+|4     |design_1_axi_iic_0               |     1|
+|5     |design_1_axi_intc_0              |     1|
+|6     |design_1_axi_smc                 |     1|
+|7     |design_1_axis_subset_converter_0 |     2|
+|9     |design_1_axis_to_video_0         |     1|
+|10    |design_1_clk_wiz_0               |     1|
+|11    |design_1_mipi_rx_to_video_0      |     1|
+|12    |design_1_mipi_rx_to_video_ias1   |     1|
+|13    |design_1_rst_clk_sys             |     1|
+|14    |design_1_rst_clk_wiz_150M        |     1|
+|15    |design_1_v_frm_wr_0              |     1|
+|16    |design_1_v_frmbuf_rd_0           |     1|
+|17    |design_1_v_frmbuf_wr_0           |     2|
+|19    |design_1_video_to_axis_0         |     2|
+|21    |design_1_video_to_axis_1         |     1|
+|22    |design_1_xbar                    |     1|
+|23    |design_1_xil_isp_lite_0          |     1|
+|24    |design_1_xil_vip_0               |     1|
+|25    |design_1_zynq_ultra_ps_e_0       |     1|
+|26    |IOBUF                            |     2|
+|27    |OBUF                             |     3|
++------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 2453.160 ; gain = 991.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2453.160 ; gain = 1005.891
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.066 . Memory (MB): peak = 2453.160 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2503.141 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+
+Synth Design complete, checksum: b69b3844
+INFO: [Common 17-83] Releasing license: Synthesis
+138 Infos, 151 Warnings, 10 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2503.141 ; gain = 1218.020
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 21:11:36 2022...

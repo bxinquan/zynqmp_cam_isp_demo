@@ -1,0 +1,122 @@
+<stg><name>reg<unsigned short></name>
+
+
+<trans_list>
+
+<trans id="9" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="13" op_0_bw="13" op_1_bw="13">
+<![CDATA[
+entry:2 %d_read = read i13 @_ssdm_op_Read.ap_auto.i13, i13 %d
+
+]]></Node>
+<StgValue><ssdm name="d_read"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="4" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
+<![CDATA[
+entry:0 %specpipeline_ln250 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_14
+
+]]></Node>
+<StgValue><ssdm name="specpipeline_ln250"/></StgValue>
+</operation>
+
+<operation id="5" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="0">
+<![CDATA[
+entry:1 %speclatency_ln251 = speclatency void @_ssdm_op_SpecLatency, i64 1, i64 1, void @empty_14
+
+]]></Node>
+<StgValue><ssdm name="speclatency_ln251"/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="13">
+<![CDATA[
+entry:3 %ret_ln253 = ret i13 %d_read
+
+]]></Node>
+<StgValue><ssdm name="ret_ln253"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="10" name="d" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="d"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="12" from="_ssdm_op_Read.ap_auto.i13" to="d_read" fromId="11" toId="3">
+</dataflow>
+<dataflow id="13" from="d" to="d_read" fromId="10" toId="3">
+</dataflow>
+<dataflow id="15" from="_ssdm_op_SpecPipeline" to="specpipeline_ln250" fromId="14" toId="4">
+</dataflow>
+<dataflow id="17" from="StgValue_16" to="specpipeline_ln250" fromId="16" toId="4">
+</dataflow>
+<dataflow id="19" from="StgValue_18" to="specpipeline_ln250" fromId="18" toId="4">
+</dataflow>
+<dataflow id="20" from="StgValue_18" to="specpipeline_ln250" fromId="18" toId="4">
+</dataflow>
+<dataflow id="21" from="StgValue_18" to="specpipeline_ln250" fromId="18" toId="4">
+</dataflow>
+<dataflow id="23" from="empty_14" to="specpipeline_ln250" fromId="22" toId="4">
+</dataflow>
+<dataflow id="25" from="_ssdm_op_SpecLatency" to="speclatency_ln251" fromId="24" toId="5">
+</dataflow>
+<dataflow id="27" from="StgValue_26" to="speclatency_ln251" fromId="26" toId="5">
+</dataflow>
+<dataflow id="28" from="StgValue_26" to="speclatency_ln251" fromId="26" toId="5">
+</dataflow>
+<dataflow id="29" from="empty_14" to="speclatency_ln251" fromId="22" toId="5">
+</dataflow>
+<dataflow id="30" from="d_read" to="ret_ln253" fromId="3" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

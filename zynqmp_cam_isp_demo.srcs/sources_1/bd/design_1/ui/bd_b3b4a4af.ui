@@ -1,0 +1,34 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.730899",
+   "Default View_TopLeft":"-129,-67",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port mipi_rx -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port s_axi_CTRL -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
+preplace port m_axi_mm_video -pg 1 -lvl 5 -x 1190 -y 170 -defaultsOSRD
+preplace port port-id_ap_rst_n -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port port-id_ap_clk -pg 1 -lvl 0 -x -10 -y 350 -defaultsOSRD
+preplace port port-id_interrupt -pg 1 -lvl 5 -x 1190 -y 190 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 3 -x 650 -y 70 -defaultsOSRD
+preplace inst v_frm_wr_0 -pg 1 -lvl 4 -x 990 -y 180 -defaultsOSRD
+preplace inst video_to_axis_0 -pg 1 -lvl 2 -x 370 -y 260 -defaultsOSRD
+preplace inst mipi_rx_to_video_0 -pg 1 -lvl 1 -x 130 -y 250 -defaultsOSRD
+preplace netloc mipi_rx_to_video_0_vid_ce 1 1 1 240 250n
+preplace netloc mipi_rx_to_video_0_vid_clk 1 1 1 N 230
+preplace netloc mipi_rx_to_video_0_vid_locked 1 1 1 250 250n
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 4 20 350 270 370 490 210 NJ
+preplace netloc v_frmbuf_wr_0_interrupt 1 4 1 NJ 190
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 10J 360 260 380 480 190 NJ
+preplace netloc axis_subset_converter_0_M_AXIS 1 3 1 810 70n
+preplace netloc mipi_rx_0_1 1 0 1 NJ 240
+preplace netloc mipi_rx_to_video_0_video 1 1 1 N 210
+preplace netloc ps8_0_axi_periph_M02_AXI 1 0 4 NJ 150 NJ 150 NJ 150 NJ
+preplace netloc v_frmbuf_wr_0_m_axi_mm_video 1 4 1 NJ 170
+preplace netloc video_to_axis_0_m_axis 1 2 1 470 50n
+levelinfo -pg 1 -10 130 370 650 990 1190
+pagesize -pg 1 -db -bbox -sgen -140 -10 1360 390
+"
+}
+0

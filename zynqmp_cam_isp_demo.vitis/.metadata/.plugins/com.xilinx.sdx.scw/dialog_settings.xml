@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="DtGen_HWSPEC" value="D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper.xsa"/>
+	<item key="DtGen_OUTDIR" value="D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/linux_dts"/>
+</section>

@@ -1,0 +1,407 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Nov 25 21:03:19 2022
+# Process ID: 5236
+# Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1
+# Command line: vivado.exe -log design_1_mipi_rx_to_video_ias1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mipi_rx_to_video_ias1_0.tcl
+# Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/design_1_mipi_rx_to_video_ias1_0.vds
+# Journal file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1\vivado.jou
+# Running On: LEGION-BIANXINQUAN, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 17007 MB
+#-----------------------------------------------------------
+source design_1_mipi_rx_to_video_ias1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_mipi_rx_to_video_ias1_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3128
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1702.328 ; gain = 319.984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_rx_to_video_ias1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/synth/design_1_mipi_rx_to_video_ias1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'mipi_rx_to_video_v1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mipi_rx_to_video_v1_0_S00_AXI' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mipi_rx_to_video' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dphy_rx_to_byte' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:8]
+INFO: [Synth 8-6157] synthesizing module '_dphy_rx_data_io' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:151]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_DPHY' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55334]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_DPHY' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55334]
+INFO: [Synth 8-6155] done synthesizing module '_dphy_rx_data_io' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:151]
+INFO: [Synth 8-6157] synthesizing module '_dphy_rx_to_byte' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:177]
+INFO: [Synth 8-6157] synthesizing module 'IDELAYE3' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:57398]
+INFO: [Synth 8-6155] done synthesizing module 'IDELAYE3' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:57398]
+INFO: [Synth 8-6157] synthesizing module 'ISERDESE3' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:62200]
+INFO: [Synth 8-6155] done synthesizing module 'ISERDESE3' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:62200]
+INFO: [Synth 8-6155] done synthesizing module '_dphy_rx_to_byte' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:177]
+INFO: [Synth 8-6157] synthesizing module '_dphy_rx_data_byte_aligner' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:254]
+INFO: [Synth 8-6155] done synthesizing module '_dphy_rx_data_byte_aligner' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:254]
+INFO: [Synth 8-6157] synthesizing module '_dphy_rx_clk_io' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:100]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE_DIV' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1121]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE_DIV' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1121]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE_DIV__parameterized0' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1121]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE_DIV__parameterized0' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1121]
+INFO: [Synth 8-6155] done synthesizing module '_dphy_rx_clk_io' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:100]
+INFO: [Synth 8-6155] done synthesizing module 'dphy_rx_to_byte' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/dphy_rx_to_byte.v:8]
+INFO: [Synth 8-6157] synthesizing module 'csi2_rx_to_pixel' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:9]
+INFO: [Synth 8-6157] synthesizing module '_csi2_lanes_aligner' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:125]
+INFO: [Synth 8-6155] done synthesizing module '_csi2_lanes_aligner' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:125]
+INFO: [Synth 8-6157] synthesizing module '_csi2_packet_decoder' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:199]
+INFO: [Synth 8-6155] done synthesizing module '_csi2_packet_decoder' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:199]
+INFO: [Synth 8-6157] synthesizing module '_csi2_raw10_unpack' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:306]
+INFO: [Synth 8-6155] done synthesizing module '_csi2_raw10_unpack' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:306]
+INFO: [Synth 8-6155] done synthesizing module 'csi2_rx_to_pixel' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/csi2_rx_to_pixel.v:9]
+INFO: [Synth 8-6157] synthesizing module '_csi2_pixel_to_video' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video.v:94]
+INFO: [Synth 8-6155] done synthesizing module '_csi2_pixel_to_video' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'mipi_rx_to_video' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mipi_rx_to_video_v1_0_S00_AXI' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mipi_rx_to_video_v1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_rx_to_video_ias1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/synth/design_1_mipi_rx_to_video_ias1_0.v:53]
+WARNING: [Synth 8-7129] Port pkt_wc[15] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[14] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[13] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[12] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[11] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[10] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[9] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[8] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[7] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[6] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[5] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[4] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[3] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[2] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[1] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pkt_wc[0] in module _csi2_raw10_unpack is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[31] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[30] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[29] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[28] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[27] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[26] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[25] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[24] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[23] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[22] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[21] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[20] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[19] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[18] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[17] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[16] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[15] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[14] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[13] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[12] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[11] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[10] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[9] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[8] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[7] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[6] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[5] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[4] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[3] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[2] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1796.301 ; gain = 413.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1796.301 ; gain = 413.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1796.301 ; gain = 413.957
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1796.301 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/hdl/mipi_rx_to_video_v1_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1873.285 ; gain = 3.500
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/hdl/mipi_rx_to_video_v1_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1873.285 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IBUFDS_DPHY => IBUFDS_DPHY (DPHY_DIFFINBUF, IBUFCTRL): 3 instances
+
+INFO: [Timing 38-2] Deriving generated clocks
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.213 . Memory (MB): peak = 1873.559 ; gain = 0.273
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1873.559 ; gain = 491.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1873.559 ; gain = 491.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1873.559 ; gain = 491.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 1873.559 ; gain = 491.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 5     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               20 Bit    Registers := 5     
+	               16 Bit    Registers := 16    
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   20 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 21    
+	   2 Input    8 Bit        Muxes := 9     
+	   2 Input    6 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 37    
+	   8 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[31] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[30] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[29] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[28] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[27] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[26] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[25] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[24] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[23] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[22] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[21] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[20] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[19] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[18] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[17] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[16] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[15] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[14] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[13] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[12] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[11] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[10] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[9] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[8] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[7] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[6] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[5] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[4] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[3] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[2] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[3] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[2] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[1] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[0] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 1873.559 ; gain = 491.215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2373.273 ; gain = 990.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:14 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:16 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFGCE_DIV  |     2|
+|3     |CARRY8      |     6|
+|4     |IDELAYE3    |     2|
+|5     |ISERDESE3   |     2|
+|6     |LUT1        |     4|
+|7     |LUT2        |    77|
+|8     |LUT3        |   211|
+|9     |LUT4        |   112|
+|10    |LUT5        |   158|
+|11    |LUT6        |   193|
+|12    |MUXF7       |    20|
+|13    |FDCE        |   564|
+|14    |FDPE        |     2|
+|15    |FDRE        |    54|
+|16    |FDSE        |     4|
+|17    |IBUFDS_DPHY |     3|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:27 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:01:18 . Memory (MB): peak = 2457.805 ; gain = 998.203
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:28 . Memory (MB): peak = 2457.805 ; gain = 1075.461
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 2457.805 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2486.984 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IBUFDS_DPHY => IBUFDS_DPHY (DPHY_DIFFINBUF, IBUFCTRL): 3 instances
+
+Synth Design complete, checksum: a77e1217
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:40 . Memory (MB): peak = 2486.984 ; gain = 1206.023
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/design_1_mipi_rx_to_video_ias1_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_mipi_rx_to_video_ias1_0, cache-ID = 57414e1521bbbaee
+INFO: [Coretcl 2-1174] Renamed 16 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/design_1_mipi_rx_to_video_ias1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_mipi_rx_to_video_ias1_0_utilization_synth.rpt -pb design_1_mipi_rx_to_video_ias1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 21:05:10 2022...

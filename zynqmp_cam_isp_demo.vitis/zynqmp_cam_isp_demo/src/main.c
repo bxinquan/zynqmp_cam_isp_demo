@@ -1,0 +1,190 @@
+
+#include <stdio.h>
+#include <sleep.h>
+#include "xtime_l.h"
+#include "xil_printf.h"
+#include "xdpdma_video_example.h"
+#include "xgpio.h"
+
+#include "camif.h"
+#include "hw_config.h"
+#include "sys_intc.h"
+#include "isp_pipe.h"
+
+
+static XGpio axi_gpio;
+#define GPIO_ISP_PIPE_RD_RSTN	(0)
+#define GPIO_ISP_PIPE_WR_RSTN	(1)
+#define GPIO_CAMIF_IAS1_WR_RSTN	(2)
+#define GPIO_CAMIF_RPI_WR_RSTN	(3)
+#define GPIO_SENSOR_IAS1_RSTN	(5)
+#define GPIO_SENSOR_RPI_RSTN	(6)
+#define GPIO_SENSOR_RPI_LED	    (7)
+
+static void gpio_init()
+{
+	XGpio_Initialize(&axi_gpio, XPAR_AXI_GPIO_DEVICE_ID);
+	XGpio_SetDataDirection(&axi_gpio, 1, 0);
+	XGpio_DiscreteWrite(&axi_gpio, 1,
+			(1<<GPIO_ISP_PIPE_RD_RSTN) |
+			(1<<GPIO_ISP_PIPE_WR_RSTN) |
+			(1<<GPIO_CAMIF_IAS1_WR_RSTN) |
+			(1<<GPIO_CAMIF_RPI_WR_RSTN) |
+			(1<<GPIO_SENSOR_IAS1_RSTN) |
+			(1<<GPIO_SENSOR_RPI_RSTN) |
+			(1<<GPIO_SENSOR_RPI_LED)
+		);
+	usleep(5000);
+}
+
+static int raw_buf = XPAR_PSU_DDR_0_S_AXI_BASEADDR+0x4000000;
+static int rgb_buf = XPAR_PSU_DDR_0_S_AXI_BASEADDR+0x6000000;
+
+
+#if 1
+#include "ff.h"
+
+static FATFS fatfs;                         //文件系统
+
+//初始化文件系统
+static int platform_init_fs()
+{
+	FRESULT status;
+	TCHAR *Path = "0:/";
+	BYTE work[FF_MAX_SS];
+
+    //注册一个工作区(挂载分区文件系统)
+    //在使用任何其它文件函数之前，必须使用f_mount函数为每个使用卷注册一个工作区
+	status = f_mount(&fatfs, Path, 1);  //挂载SD卡
+	if (status != FR_OK) {
+		xil_printf("Volume is not FAT formated; formating FAT\r\n");
+		return -1;
+		//格式化SD卡
+		status = f_mkfs(Path, FM_FAT32, 0, work, sizeof work);
+		if (status != FR_OK) {
+			xil_printf("Unable to format FATfs\r\n");
+			return -1;
+		}
+		//格式化之后，重新挂载SD卡
+		status = f_mount(&fatfs, Path, 1);
+		if (status != FR_OK) {
+			xil_printf("Unable to mount FATfs\r\n");
+			return -1;
+		}
+	}
+	return 0;
+}
+
+//SD卡写数据
+static int sd_write_data(char *file_name,u32 src_addr,u32 byte_len)
+{
+    FIL fil;         //文件对象
+    UINT bw;         //f_write函数返回已写入的字节数
+
+    //打开一个文件,如果不存在，则创建一个文件
+    f_open(&fil,file_name,FA_CREATE_ALWAYS | FA_WRITE);
+    //移动打开的文件对象的文件读/写指针     0:指向文件开头
+    f_lseek(&fil, 0);
+    //向文件中写入数据
+    f_write(&fil,(void*) src_addr,byte_len,&bw);
+    //关闭文件
+    f_close(&fil);
+    return 0;
+}
+#endif
+
+int main()
+{
+
+    print("Hello World\n\r");
+
+    sys_intc_init();
+
+    gpio_init();
+
+    platform_init_fs();
+
+	Xil_DCacheDisable();
+	Xil_ICacheDisable();
+
+    printf(">>> %s:%d\n", __FUNCTION__, __LINE__);
+
+	DpdmaVideoExample(rgb_buf);
+    printf(">>> %s:%d\n", __FUNCTION__, __LINE__);
+
+	isp_pipe_init(raw_buf, rgb_buf);
+
+	printf(">>> %s:%d\n", __FUNCTION__, __LINE__);
+
+	camif_init(raw_buf, isp_pipe_trigger);
+
+	printf("initialize ok\r\n");
+
+	unsigned prev_camif_mipirx_int = 0;
+	unsigned prev_camif_vfrmwr_int = 0;
+	unsigned prev_isp_pipe_rd_int = 0;
+	unsigned prev_isp_pipe_isp_int = 0;
+	unsigned prev_isp_pipe_vip_int = 0;
+	unsigned prev_isp_pipe_wr_int = 0;
+	unsigned count = 0;
+
+	u64 prev_time = 0;
+	XTime_GetTime(&prev_time);
+	while(1) {
+		u64 now_time = 0;
+		do {
+			unsigned cur_isp_int = 0, now_isp_int = 0;
+			isp_pipe_get_int_num(NULL, &cur_isp_int, NULL, NULL);
+			now_isp_int = cur_isp_int;
+			XTime_GetTime(&now_time);
+			while (cur_isp_int == now_isp_int && now_time < prev_time + COUNTS_PER_SECOND)
+			{
+				XTime_GetTime(&now_time);
+				isp_pipe_get_int_num(NULL, &now_isp_int, NULL, NULL);
+			}
+			if (now_isp_int % 2 == 0) {
+				isp_pipe_handler();
+			}
+		} while (now_time < prev_time + COUNTS_PER_SECOND);
+		prev_time = now_time;
+		
+
+		count ++;
+		if (count == 10) {
+			printf("writing dump_cam_raw.bin ... ");
+			Xil_DCacheInvalidateRange(raw_buf, ALIGN((SNS_WIDTH + 2) / 3 * 4, 256) * SNS_HEIGHT);
+			sd_write_data("dump_cam_raw.bin", raw_buf, ALIGN((SNS_WIDTH + 2) / 3 * 4, 256) * SNS_HEIGHT);
+			printf("OK\n");
+			printf("writing dump_out_rgb.bin ... ");
+			Xil_DCacheInvalidateRange(rgb_buf, ALIGN(DISP_WIDTH * 3, 256) * DISP_HEIGHT);
+			sd_write_data("dump_out_rgb.bin", rgb_buf, ALIGN(DISP_WIDTH * 3, 256) * DISP_HEIGHT);
+			printf("OK\n");
+		}
+
+		unsigned mipi_width, mipi_height, mipi_di;
+		camif_get_mipi_info(&mipi_width, &mipi_height, &mipi_di);
+
+		unsigned now_camif_mipirx_int, now_camif_vfrmwr_int;
+		camif_get_int_num(&now_camif_mipirx_int, &now_camif_vfrmwr_int);
+
+		unsigned now_isp_pipe_rd_int, now_isp_pipe_isp_int, now_isp_pipe_vip_int, now_isp_pipe_wr_int;
+		isp_pipe_get_int_num(&now_isp_pipe_rd_int, &now_isp_pipe_isp_int, &now_isp_pipe_vip_int, &now_isp_pipe_wr_int);
+
+		printf("camif mipirx %u x %u di %02X, int %u, vfrmwr %u, isp_pipe rd %u, isp %u, vip %u, wr %u\n",
+				mipi_width, mipi_height, mipi_di,
+				now_camif_mipirx_int - prev_camif_mipirx_int,
+				now_camif_vfrmwr_int - prev_camif_vfrmwr_int,
+				now_isp_pipe_rd_int - prev_isp_pipe_rd_int,
+				now_isp_pipe_isp_int - prev_isp_pipe_isp_int,
+				now_isp_pipe_vip_int - prev_isp_pipe_vip_int,
+				now_isp_pipe_wr_int - prev_isp_pipe_wr_int);
+		prev_camif_mipirx_int = now_camif_mipirx_int;
+		prev_camif_vfrmwr_int = now_camif_vfrmwr_int;
+		prev_isp_pipe_rd_int = now_isp_pipe_rd_int;
+		prev_isp_pipe_isp_int = now_isp_pipe_isp_int;
+		prev_isp_pipe_vip_int = now_isp_pipe_vip_int;
+		prev_isp_pipe_wr_int = now_isp_pipe_wr_int;
+	}
+
+    return 0;
+}

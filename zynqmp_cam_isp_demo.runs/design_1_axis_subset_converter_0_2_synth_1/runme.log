@@ -1,0 +1,329 @@
+
+*** Running vivado
+    with args -log design_1_axis_subset_converter_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_subset_converter_0_2.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axis_subset_converter_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1367.707 ; gain = 612.918
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1403.535 ; gain = 35.828
+Command: synth_design -top design_1_axis_subset_converter_0_2 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15668
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1701.258 ; gain = 297.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/synth/design_1_axis_subset_converter_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/top_design_1_axis_subset_converter_0_2.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_subset_converter_v1_1_26_core' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/1676/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axis_subset_converter_v1_1_26_core' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/1676/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'tdata_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tdata_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdata_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tdata_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tuser_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tuser_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tuser_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tuser_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tid_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tid_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tid_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tid_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tdest_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tdest_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdest_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tdest_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tstrb_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tstrb_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tstrb_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tstrb_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tkeep_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tkeep_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tkeep_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tkeep_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tlast_design_1_axis_subset_converter_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tlast_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tlast_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tlast_design_1_axis_subset_converter_0_2.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'top_design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/top_design_1_axis_subset_converter_0_2.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/synth/design_1_axis_subset_converter_0_2.v:53]
+WARNING: [Synth 8-7129] Port tid[0] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[14] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[13] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[12] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[11] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[10] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[9] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[8] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[7] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[6] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[5] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[4] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[3] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[2] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[1] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[0] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdest[0] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[2] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[1] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[0] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[2] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[1] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[0] in module tlast_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[14] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[13] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[12] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[11] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[10] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[9] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[8] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[7] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[6] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[5] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[4] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[3] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[2] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[1] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[0] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tid[0] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdest[0] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[2] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[1] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[0] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[2] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[1] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[0] in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlast in module tkeep_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[23] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[22] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[21] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[20] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[19] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[18] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[17] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[16] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[15] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[14] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[13] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[12] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[11] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[10] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[9] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[8] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[7] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[6] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[5] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[4] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[3] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[2] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[1] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[0] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tid[0] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdest[0] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[2] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[1] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tkeep[0] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[2] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[1] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tstrb[0] in module tstrb_design_1_axis_subset_converter_0_2 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1790.906 ; gain = 387.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1806.211 ; gain = 402.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1806.211 ; gain = 402.676
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1806.211 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1842.688 ; gain = 0.020
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axis_subset_converter_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axis_subset_converter_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.688 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1842.688 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1842.688 ; gain = 439.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1842.688 ; gain = 439.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axis_subset_converter_0_2_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1842.688 ; gain = 439.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1842.688 ; gain = 439.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1842.688 ; gain = 439.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 2347.422 ; gain = 943.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 2347.422 ; gain = 943.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:49 . Memory (MB): peak = 2366.535 ; gain = 963.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:50 . Memory (MB): peak = 2372.285 ; gain = 932.273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:59 . Memory (MB): peak = 2372.285 ; gain = 968.750
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2372.285 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2414.398 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 52ee03bd
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:21 . Memory (MB): peak = 2420.453 ; gain = 1016.918
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axis_subset_converter_0_2_synth_1/design_1_axis_subset_converter_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axis_subset_converter_0_2, cache-ID = 09ce24f0f14921fe
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axis_subset_converter_0_2_synth_1/design_1_axis_subset_converter_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axis_subset_converter_0_2_utilization_synth.rpt -pb design_1_axis_subset_converter_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 21:03:13 2022...

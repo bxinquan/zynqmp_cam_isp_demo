@@ -1,0 +1,434 @@
+
+*** Running vivado
+    with args -log design_1_axi_intc_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_intc_0_0.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axi_intc_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_axi_intc_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 11564
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1700.227 ; gain = 318.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/synth/design_1_axi_intc_0_0.vhd:85]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_INSTANCE bound to: design_1_axi_intc_0_0 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 9 - type: integer 
+	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111111000000000 
+	Parameter C_KIND_OF_EDGE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_KIND_OF_LVL bound to: 32'b11111111111111111111111111111111 
+	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111110011000 
+	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
+	Parameter C_ENABLE_ASYNC bound to: 0 - type: integer 
+	Parameter C_HAS_IPR bound to: 1 - type: integer 
+	Parameter C_HAS_SIE bound to: 1 - type: integer 
+	Parameter C_HAS_CIE bound to: 1 - type: integer 
+	Parameter C_HAS_IVR bound to: 1 - type: integer 
+	Parameter C_HAS_ILR bound to: 0 - type: integer 
+	Parameter C_IRQ_IS_LEVEL bound to: 1 - type: integer 
+	Parameter C_IRQ_ACTIVE bound to: 1'b1 
+	Parameter C_DISABLE_SYNCHRONIZERS bound to: 0 - type: integer 
+	Parameter C_MB_CLK_NOT_CONNECTED bound to: 1 - type: integer 
+	Parameter C_HAS_FAST bound to: 0 - type: integer 
+	Parameter C_EN_CASCADE_MODE bound to: 0 - type: integer 
+	Parameter C_CASCADE_MASTER bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_intc' declared at 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/802b/hdl/axi_intc_v4_1_vh_rfs.vhd:3452' bound to instance 'U0' of component 'axi_intc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/synth/design_1_axi_intc_0_0.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'axi_intc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/802b/hdl/axi_intc_v4_1_vh_rfs.vhd:3553]
+INFO: [Synth 8-638] synthesizing module 'intc_core' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/802b/hdl/axi_intc_v4_1_vh_rfs.vhd:794]
+INFO: [Synth 8-256] done synthesizing module 'intc_core' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/802b/hdl/axi_intc_v4_1_vh_rfs.vhd:794]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_intc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/802b/hdl/axi_intc_v4_1_vh_rfs.vhd:3553]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_intc_0_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/synth/design_1_axi_intc_0_0.vhd:85]
+WARNING: [Synth 8-6014] Unused sequential element ack_or_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/802b/hdl/axi_intc_v4_1_vh_rfs.vhd:2682]
+WARNING: [Synth 8-7129] Port A[1] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[2] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[6] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[7] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[8] in module pselect_f__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[2] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[6] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[7] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[8] in module pselect_f__parameterized16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[3] in module pselect_f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[4] in module pselect_f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[5] in module pselect_f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[6] in module pselect_f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[7] in module pselect_f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[8] in module pselect_f is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[3] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[4] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[5] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[10] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[11] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[12] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[13] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[14] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[15] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[16] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[17] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_rdce[18] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[1] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[6] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[8] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[9] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[10] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[11] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[12] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[13] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[14] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[15] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[16] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[17] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Bus2ip_wrce[18] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[31] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[30] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[29] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[28] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[27] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[26] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[25] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[24] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[23] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[22] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[21] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[20] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[19] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[18] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[17] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[16] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[15] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[14] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[13] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[12] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[11] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[10] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Wr_data[9] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Processor_clk in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port processor_rst in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Processor_ack[1] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Processor_ack[0] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[31] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[30] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[29] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[28] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[27] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[26] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[25] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[24] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[23] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[22] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[21] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[20] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[19] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[18] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[17] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[16] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[15] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[14] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[13] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[12] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[11] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[10] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[9] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[8] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[7] in module intc_core is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Interrupt_address_in[6] in module intc_core is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1799.422 ; gain = 418.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1817.336 ; gain = 435.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1817.336 ; gain = 435.996
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1817.336 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_ooc.xdc] for cell 'U0'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1932.613 ; gain = 0.047
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0.xdc] for cell 'U0'
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axi_intc_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axi_intc_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_clocks.xdc] for cell 'U0'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1932.613 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1932.613 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1932.613 ; gain = 551.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1932.613 ; gain = 551.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axi_intc_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1932.613 ; gain = 551.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1932.613 ; gain = 551.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 92    
++---Muxes : 
+	   7 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 13    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 22    
+	   4 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1932.613 ; gain = 551.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 2377.711 ; gain = 996.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:57 . Memory (MB): peak = 2413.996 ; gain = 1032.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:57 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    38|
+|3     |LUT3 |    25|
+|4     |LUT4 |    28|
+|5     |LUT5 |    40|
+|6     |LUT6 |    48|
+|7     |FDRE |   135|
+|8     |FDSE |     4|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 61 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2414.523 ; gain = 917.906
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:12 . Memory (MB): peak = 2414.523 ; gain = 1033.184
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2424.387 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2447.453 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 593f343d
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:26 . Memory (MB): peak = 2447.453 ; gain = 1167.629
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_intc_0_0, cache-ID = c19000dadddb0447
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_intc_0_0_utilization_synth.rpt -pb design_1_axi_intc_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 21:04:59 2022...

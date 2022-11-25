@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="v_frmbuf_wr" xd:componentRef="v_frmbuf_wr" xd:initiationInterval="x" xd:clockPeriod="6.663" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="width" xd:originalName="width" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="height" xd:originalName="height" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="stride" xd:originalName="stride" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="video_format" xd:originalName="video_format" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(frm_buffer)" xd:originalName="frm_buffer" xd:direction="inout" xd:interfaceRef="m_axi_mm_video" xd:busTypeRef="aximm" xd:dataWidth="64" xd:bufferDirection="out"/>
+  <xd:arg xd:name="frm_buffer" xd:originalName="frm_buffer" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x30" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_mm_video"/>
+  <xd:arg xd:name="*(frm_buffer2)" xd:originalName="frm_buffer2" xd:direction="inout" xd:interfaceRef="m_axi_mm_video" xd:busTypeRef="aximm" xd:dataWidth="64" xd:bufferDirection="out"/>
+  <xd:arg xd:name="frm_buffer2" xd:originalName="frm_buffer2" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x3C" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_mm_video"/>
+  <xd:arg xd:name="*(frm_buffer3)" xd:originalName="frm_buffer3" xd:direction="inout" xd:interfaceRef="m_axi_mm_video" xd:busTypeRef="aximm" xd:dataWidth="64" xd:bufferDirection="out"/>
+  <xd:arg xd:name="frm_buffer3" xd:originalName="frm_buffer3" xd:direction="in" xd:interfaceRef="s_axi_CTRL" xd:busTypeRef="axilite" xd:offset="0x54" xd:dataWidth="32" xd:aximmInterfaceRef="m_axi_mm_video"/>
+  <xd:arg xd:name="s_axis_video" xd:originalName="s_axis_video" xd:direction="in" xd:interfaceRef="s_axis_video" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:latencyEstimates xd:best-case="13" xd:worst-case="283141447" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="8513" xd:FF="5103" xd:BRAM="0" xd:DSP="2"/>
+</xd:acceleratorMap>

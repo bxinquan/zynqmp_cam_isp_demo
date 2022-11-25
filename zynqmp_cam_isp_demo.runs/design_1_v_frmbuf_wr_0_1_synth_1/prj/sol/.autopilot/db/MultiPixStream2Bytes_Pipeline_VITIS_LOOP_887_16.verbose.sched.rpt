@@ -1,0 +1,328 @@
+
+
+================================================================
+== Vitis HLS Report for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16'
+================================================================
+* Date:           Fri Nov 25 21:03:36 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.66 ns|  4.007 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max  |   Type  |
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |        3|    21851|  19.989 ns|  0.146 ms|    3|  21851|       no|
+    +---------+---------+-----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_887_16  |        1|    21849|         9|          8|          8|  0 ~ 2731|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.37>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%x = alloca i32 1"   --->   Operation 12 'alloca' 'x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%pix_val_V = alloca i32 1"   --->   Operation 13 'alloca' 'pix_val_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%pix_val_V_1 = alloca i32 1"   --->   Operation 14 'alloca' 'pix_val_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%pix_val_V_2 = alloca i32 1"   --->   Operation 15 'alloca' 'pix_val_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i64 %bytePlanes_plane01, i64 666, i64 8, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %img, void @empty_33, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bytePlanes_plane01, void @empty_33, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%cmp497_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 19 'read' 'cmp497_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%sub494_read = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %sub494" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 20 'read' 'sub494_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%cmp497_1_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 21 'read' 'cmp497_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%cmp497_2_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497_2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 22 'read' 'cmp497_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%cmp497_3_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497_3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 23 'read' 'cmp497_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%cmp497_4_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497_4" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 24 'read' 'cmp497_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%cmp497_5_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497_5" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 25 'read' 'cmp497_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%cmp497_6_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp497_6" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 26 'read' 'cmp497_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%icmp_ln872_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %icmp_ln872" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 27 'read' 'icmp_ln872_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%cmp550_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp550" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 28 'read' 'cmp550_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%cmp550_1_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp550_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 29 'read' 'cmp550_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%cmp550_2_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %cmp550_2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 30 'read' 'cmp550_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln4_read = read i11 @_ssdm_op_Read.ap_auto.i11, i11 %trunc_ln4" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 31 'read' 'trunc_ln4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%pix_val_V_15_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %pix_val_V_15" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 32 'read' 'pix_val_V_15_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%pix_val_V_16_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %pix_val_V_16" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 33 'read' 'pix_val_V_16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%pix_val_V_17_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %pix_val_V_17" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 34 'read' 'pix_val_V_17_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.42ns)   --->   "%store_ln268 = store i8 %pix_val_V_17_read, i8 %pix_val_V_2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 35 'store' 'store_ln268' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 36 [1/1] (0.42ns)   --->   "%store_ln268 = store i8 %pix_val_V_16_read, i8 %pix_val_V_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 36 'store' 'store_ln268' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 37 [1/1] (0.42ns)   --->   "%store_ln268 = store i8 %pix_val_V_15_read, i8 %pix_val_V" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:268]   --->   Operation 37 'store' 'store_ln268' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 38 [1/1] (0.42ns)   --->   "%store_ln0 = store i11 0, i11 %x"   --->   Operation 38 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body493"   --->   Operation 39 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%x_1 = load i11 %x" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 40 'load' 'x_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.94ns)   --->   "%icmp_ln887 = icmp_eq  i11 %x_1, i11 %trunc_ln4_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 41 'icmp' 'icmp_ln887' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (0.79ns)   --->   "%x_2 = add i11 %x_1, i11 1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 42 'add' 'x_2' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln887 = br i1 %icmp_ln887, void %for.body493.split, void %for.inc566.loopexit.exitStub" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 43 'br' 'br_ln887' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln887 = zext i11 %x_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 44 'zext' 'zext_ln887' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.97ns)   --->   "%cmp495 = icmp_slt  i12 %zext_ln887, i12 %sub494_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 45 'icmp' 'cmp495' <Predicate = (!icmp_ln887)> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.28ns)   --->   "%or_ln892 = or i1 %cmp495, i1 %cmp497_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 46 'or' 'or_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.28ns)   --->   "%or_ln905 = or i1 %cmp495, i1 %cmp550_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905]   --->   Operation 47 'or' 'or_ln905' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln905 = br i1 %or_ln905, void %for.inc560, void %if.then551" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905]   --->   Operation 48 'br' 'br_ln905' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.28ns)   --->   "%or_ln905_1 = or i1 %cmp495, i1 %cmp550_1_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905]   --->   Operation 49 'or' 'or_ln905_1' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln905 = br i1 %or_ln905_1, void %for.inc560.1, void %if.then551.1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905]   --->   Operation 50 'br' 'br_ln905' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.28ns)   --->   "%or_ln905_2 = or i1 %cmp495, i1 %cmp550_2_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905]   --->   Operation 51 'or' 'or_ln905_2' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln905 = br i1 %or_ln905_2, void %for.inc560.2, void %if.then551.2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905]   --->   Operation 52 'br' 'br_ln905' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.42ns)   --->   "%store_ln887 = store i11 %x_2, i11 %x" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 53 'store' 'store_ln887' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 1.83>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%pix_val_V_3 = load i8 %pix_val_V"   --->   Operation 54 'load' 'pix_val_V_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%pix_val_V_4 = load i8 %pix_val_V_1"   --->   Operation 55 'load' 'pix_val_V_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%pix_val_V_5 = load i8 %pix_val_V_2"   --->   Operation 56 'load' 'pix_val_V_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 2731, i64 0"   --->   Operation 57 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%specpipeline_ln888 = specpipeline void @_ssdm_op_SpecPipeline, i32 8, i32 0, i32 0, i32 0, void @empty_18" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:888]   --->   Operation 58 'specpipeline' 'specpipeline_ln888' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%specloopname_ln273 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:273]   --->   Operation 59 'specloopname' 'specloopname_ln273' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892, void %for.inc527, void %if.then498" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 60 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_2 : Operation 61 [1/1] (1.83ns)   --->   "%img_read = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 61 'read' 'img_read' <Predicate = (!icmp_ln887 & or_ln892)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%pix_val_V_7 = trunc i24 %img_read" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 62 'trunc' 'pix_val_V_7' <Predicate = (!icmp_ln887 & or_ln892)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%pix_val_V_8 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 63 'partselect' 'pix_val_V_8' <Predicate = (!icmp_ln887 & or_ln892)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%pix_val_V_6 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 64 'partselect' 'pix_val_V_6' <Predicate = (!icmp_ln887 & or_ln892)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 65 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892)> <Delay = 0.42>
+ST_2 : Operation 66 [1/1] (0.28ns)   --->   "%or_ln892_1 = or i1 %cmp495, i1 %cmp497_1_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 66 'or' 'or_ln892_1' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%store_ln0 = store i8 %pix_val_V_5, i8 %pix_val_V_27_out"   --->   Operation 152 'store' 'store_ln0' <Predicate = (icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%store_ln0 = store i8 %pix_val_V_4, i8 %pix_val_V_26_out"   --->   Operation 153 'store' 'store_ln0' <Predicate = (icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%store_ln0 = store i8 %pix_val_V_3, i8 %pix_val_V_23_out"   --->   Operation 154 'store' 'store_ln0' <Predicate = (icmp_ln887)> <Delay = 0.00>
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 155 'ret' 'ret_ln0' <Predicate = (icmp_ln887)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.83>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%pix_val_V_11 = phi i8 %pix_val_V_6, void %if.then498, i8 %pix_val_V_5, void %for.body493.split"   --->   Operation 67 'phi' 'pix_val_V_11' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%pix_val_V_10 = phi i8 %pix_val_V_8, void %if.then498, i8 %pix_val_V_4, void %for.body493.split"   --->   Operation 68 'phi' 'pix_val_V_10' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%pix_val_V_9 = phi i8 %pix_val_V_7, void %if.then498, i8 %pix_val_V_3, void %for.body493.split"   --->   Operation 69 'phi' 'pix_val_V_9' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_1, void %for.inc527.1, void %if.then498.1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 70 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_3 : Operation 71 [1/1] (1.83ns)   --->   "%img_read_1 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 71 'read' 'img_read_1' <Predicate = (!icmp_ln887 & or_ln892_1)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%pix_val_V_13 = trunc i24 %img_read_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 72 'trunc' 'pix_val_V_13' <Predicate = (!icmp_ln887 & or_ln892_1)> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%pix_val_V_14 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_1, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 73 'partselect' 'pix_val_V_14' <Predicate = (!icmp_ln887 & or_ln892_1)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%pix_val_V_12 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_1, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 74 'partselect' 'pix_val_V_12' <Predicate = (!icmp_ln887 & or_ln892_1)> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527.1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 75 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_1)> <Delay = 0.42>
+ST_3 : Operation 76 [1/1] (0.28ns)   --->   "%or_ln892_2 = or i1 %cmp495, i1 %cmp497_2_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 76 'or' 'or_ln892_2' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.83>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%pix_val_V_20 = phi i8 %pix_val_V_12, void %if.then498.1, i8 %pix_val_V_11, void %for.inc527"   --->   Operation 77 'phi' 'pix_val_V_20' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%pix_val_V_19 = phi i8 %pix_val_V_14, void %if.then498.1, i8 %pix_val_V_10, void %for.inc527"   --->   Operation 78 'phi' 'pix_val_V_19' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%pix_val_V_18 = phi i8 %pix_val_V_13, void %if.then498.1, i8 %pix_val_V_9, void %for.inc527"   --->   Operation 79 'phi' 'pix_val_V_18' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_2, void %for.inc527.2, void %if.then498.2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 80 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_4 : Operation 81 [1/1] (1.83ns)   --->   "%img_read_2 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 81 'read' 'img_read_2' <Predicate = (!icmp_ln887 & or_ln892_2)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%pix_val_V_22 = trunc i24 %img_read_2" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 82 'trunc' 'pix_val_V_22' <Predicate = (!icmp_ln887 & or_ln892_2)> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%pix_val_V_23 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_2, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 83 'partselect' 'pix_val_V_23' <Predicate = (!icmp_ln887 & or_ln892_2)> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (0.00ns)   --->   "%pix_val_V_21 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_2, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 84 'partselect' 'pix_val_V_21' <Predicate = (!icmp_ln887 & or_ln892_2)> <Delay = 0.00>
+ST_4 : Operation 85 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527.2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 85 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_2)> <Delay = 0.42>
+ST_4 : Operation 86 [1/1] (0.28ns)   --->   "%or_ln892_3 = or i1 %cmp495, i1 %cmp497_3_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 86 'or' 'or_ln892_3' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (0.28ns)   --->   "%or_ln892_4 = or i1 %cmp495, i1 %cmp497_4_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 87 'or' 'or_ln892_4' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [1/1] (0.28ns)   --->   "%or_ln892_5 = or i1 %cmp495, i1 %cmp497_5_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 88 'or' 'or_ln892_5' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [1/1] (0.28ns)   --->   "%or_ln892_6 = or i1 %cmp495, i1 %cmp497_6_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 89 'or' 'or_ln892_6' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [1/1] (0.28ns)   --->   "%or_ln892_7 = or i1 %cmp495, i1 %icmp_ln872_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 90 'or' 'or_ln892_7' <Predicate = (!icmp_ln887)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.83>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%pix_val_V_26 = phi i8 %pix_val_V_21, void %if.then498.2, i8 %pix_val_V_20, void %for.inc527.1"   --->   Operation 91 'phi' 'pix_val_V_26' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%pix_val_V_25 = phi i8 %pix_val_V_23, void %if.then498.2, i8 %pix_val_V_19, void %for.inc527.1"   --->   Operation 92 'phi' 'pix_val_V_25' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%pix_val_V_24 = phi i8 %pix_val_V_22, void %if.then498.2, i8 %pix_val_V_18, void %for.inc527.1"   --->   Operation 93 'phi' 'pix_val_V_24' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_3, void %for.inc527.3, void %if.then498.3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 94 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_5 : Operation 95 [1/1] (1.83ns)   --->   "%img_read_3 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 95 'read' 'img_read_3' <Predicate = (!icmp_ln887 & or_ln892_3)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%pix_val_V_28 = trunc i24 %img_read_3" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 96 'trunc' 'pix_val_V_28' <Predicate = (!icmp_ln887 & or_ln892_3)> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%pix_val_V_29 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_3, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 97 'partselect' 'pix_val_V_29' <Predicate = (!icmp_ln887 & or_ln892_3)> <Delay = 0.00>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%pix_val_V_27 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_3, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 98 'partselect' 'pix_val_V_27' <Predicate = (!icmp_ln887 & or_ln892_3)> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527.3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 99 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_3)> <Delay = 0.42>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8, i8 %pix_val_V_25, i8 %pix_val_V_26, i8 %pix_val_V_18, i8 %pix_val_V_19, i8 %pix_val_V_20, i8 %pix_val_V_9, i8 %pix_val_V_10, i8 %pix_val_V_11"   --->   Operation 100 'bitconcatenate' 'p_s' <Predicate = (!icmp_ln887 & or_ln905)> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (1.74ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %bytePlanes_plane01, i64 %p_s" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 101 'write' 'write_ln174' <Predicate = (!icmp_ln887 & or_ln905)> <Delay = 1.74> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "%br_ln906 = br void %for.inc560" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:906]   --->   Operation 102 'br' 'br_ln906' <Predicate = (!icmp_ln887 & or_ln905)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.83>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "%pix_val_V_32 = phi i8 %pix_val_V_27, void %if.then498.3, i8 %pix_val_V_26, void %for.inc527.2"   --->   Operation 103 'phi' 'pix_val_V_32' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%pix_val_V_31 = phi i8 %pix_val_V_29, void %if.then498.3, i8 %pix_val_V_25, void %for.inc527.2"   --->   Operation 104 'phi' 'pix_val_V_31' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "%pix_val_V_30 = phi i8 %pix_val_V_28, void %if.then498.3, i8 %pix_val_V_24, void %for.inc527.2"   --->   Operation 105 'phi' 'pix_val_V_30' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_6 : Operation 106 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_4, void %for.inc527.4, void %if.then498.4" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 106 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_6 : Operation 107 [1/1] (1.83ns)   --->   "%img_read_4 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 107 'read' 'img_read_4' <Predicate = (!icmp_ln887 & or_ln892_4)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%pix_val_V_34 = trunc i24 %img_read_4" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 108 'trunc' 'pix_val_V_34' <Predicate = (!icmp_ln887 & or_ln892_4)> <Delay = 0.00>
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%pix_val_V_35 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_4, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 109 'partselect' 'pix_val_V_35' <Predicate = (!icmp_ln887 & or_ln892_4)> <Delay = 0.00>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%pix_val_V_33 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_4, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 110 'partselect' 'pix_val_V_33' <Predicate = (!icmp_ln887 & or_ln892_4)> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527.4" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 111 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_4)> <Delay = 0.42>
+
+State 7 <SV = 6> <Delay = 1.83>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%pix_val_V_38 = phi i8 %pix_val_V_33, void %if.then498.4, i8 %pix_val_V_32, void %for.inc527.3"   --->   Operation 112 'phi' 'pix_val_V_38' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_7 : Operation 113 [1/1] (0.00ns)   --->   "%pix_val_V_37 = phi i8 %pix_val_V_35, void %if.then498.4, i8 %pix_val_V_31, void %for.inc527.3"   --->   Operation 113 'phi' 'pix_val_V_37' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "%pix_val_V_36 = phi i8 %pix_val_V_34, void %if.then498.4, i8 %pix_val_V_30, void %for.inc527.3"   --->   Operation 114 'phi' 'pix_val_V_36' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_7 : Operation 115 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_5, void %for.inc527.5, void %if.then498.5" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 115 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_7 : Operation 116 [1/1] (1.83ns)   --->   "%img_read_5 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 116 'read' 'img_read_5' <Predicate = (!icmp_ln887 & or_ln892_5)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "%pix_val_V_40 = trunc i24 %img_read_5" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 117 'trunc' 'pix_val_V_40' <Predicate = (!icmp_ln887 & or_ln892_5)> <Delay = 0.00>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%pix_val_V_41 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_5, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 118 'partselect' 'pix_val_V_41' <Predicate = (!icmp_ln887 & or_ln892_5)> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%pix_val_V_39 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_5, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 119 'partselect' 'pix_val_V_39' <Predicate = (!icmp_ln887 & or_ln892_5)> <Delay = 0.00>
+ST_7 : Operation 120 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527.5" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 120 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_5)> <Delay = 0.42>
+
+State 8 <SV = 7> <Delay = 1.83>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%pix_val_V_44 = phi i8 %pix_val_V_39, void %if.then498.5, i8 %pix_val_V_38, void %for.inc527.4"   --->   Operation 121 'phi' 'pix_val_V_44' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%pix_val_V_43 = phi i8 %pix_val_V_41, void %if.then498.5, i8 %pix_val_V_37, void %for.inc527.4"   --->   Operation 122 'phi' 'pix_val_V_43' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%pix_val_V_42 = phi i8 %pix_val_V_40, void %if.then498.5, i8 %pix_val_V_36, void %for.inc527.4"   --->   Operation 123 'phi' 'pix_val_V_42' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 124 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_6, void %for.inc527.6, void %if.then498.6" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 124 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_8 : Operation 125 [1/1] (1.83ns)   --->   "%img_read_6 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 125 'read' 'img_read_6' <Predicate = (!icmp_ln887 & or_ln892_6)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_8 : Operation 126 [1/1] (0.00ns)   --->   "%pix_val_V_46 = trunc i24 %img_read_6" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 126 'trunc' 'pix_val_V_46' <Predicate = (!icmp_ln887 & or_ln892_6)> <Delay = 0.00>
+ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%pix_val_V_47 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_6, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 127 'partselect' 'pix_val_V_47' <Predicate = (!icmp_ln887 & or_ln892_6)> <Delay = 0.00>
+ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%pix_val_V_45 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_6, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 128 'partselect' 'pix_val_V_45' <Predicate = (!icmp_ln887 & or_ln892_6)> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.inc527.6" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 129 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_6)> <Delay = 0.42>
+ST_8 : Operation 130 [1/1] (0.00ns)   --->   "%p_1 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8, i8 %pix_val_V_44, i8 %pix_val_V_36, i8 %pix_val_V_37, i8 %pix_val_V_38, i8 %pix_val_V_30, i8 %pix_val_V_31, i8 %pix_val_V_32, i8 %pix_val_V_24"   --->   Operation 130 'bitconcatenate' 'p_1' <Predicate = (!icmp_ln887 & or_ln905_1)> <Delay = 0.00>
+ST_8 : Operation 131 [1/1] (1.74ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %bytePlanes_plane01, i64 %p_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 131 'write' 'write_ln174' <Predicate = (!icmp_ln887 & or_ln905_1)> <Delay = 1.74> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
+ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln906 = br void %for.inc560.1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:906]   --->   Operation 132 'br' 'br_ln906' <Predicate = (!icmp_ln887 & or_ln905_1)> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 4.00>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%pix_val_V_50 = phi i8 %pix_val_V_45, void %if.then498.6, i8 %pix_val_V_44, void %for.inc527.5"   --->   Operation 133 'phi' 'pix_val_V_50' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%pix_val_V_49 = phi i8 %pix_val_V_47, void %if.then498.6, i8 %pix_val_V_43, void %for.inc527.5"   --->   Operation 134 'phi' 'pix_val_V_49' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%pix_val_V_48 = phi i8 %pix_val_V_46, void %if.then498.6, i8 %pix_val_V_42, void %for.inc527.5"   --->   Operation 135 'phi' 'pix_val_V_48' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.42ns)   --->   "%br_ln892 = br i1 %or_ln892_7, void %for.body546, void %if.then498.7" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:892]   --->   Operation 136 'br' 'br_ln892' <Predicate = (!icmp_ln887)> <Delay = 0.42>
+ST_9 : Operation 137 [1/1] (1.83ns)   --->   "%img_read_7 = read i24 @_ssdm_op_Read.ap_fifo.volatile.i24P0A, i24 %img" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 137 'read' 'img_read_7' <Predicate = (!icmp_ln887 & or_ln892_7)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 24> <Depth = 2> <FIFO>
+ST_9 : Operation 138 [1/1] (0.00ns)   --->   "%pix_val_V_52 = trunc i24 %img_read_7" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 138 'trunc' 'pix_val_V_52' <Predicate = (!icmp_ln887 & or_ln892_7)> <Delay = 0.00>
+ST_9 : Operation 139 [1/1] (0.00ns)   --->   "%pix_val_V_53 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_7, i32 8, i32 15" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 139 'partselect' 'pix_val_V_53' <Predicate = (!icmp_ln887 & or_ln892_7)> <Delay = 0.00>
+ST_9 : Operation 140 [1/1] (0.00ns)   --->   "%pix_val_V_51 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %img_read_7, i32 16, i32 23" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 140 'partselect' 'pix_val_V_51' <Predicate = (!icmp_ln887 & or_ln892_7)> <Delay = 0.00>
+ST_9 : Operation 141 [1/1] (0.42ns)   --->   "%br_ln893 = br void %for.body546" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:893]   --->   Operation 141 'br' 'br_ln893' <Predicate = (!icmp_ln887 & or_ln892_7)> <Delay = 0.42>
+ST_9 : Operation 142 [1/1] (0.00ns)   --->   "%pix_val_V_56 = phi i8 %pix_val_V_51, void %if.then498.7, i8 %pix_val_V_50, void %for.inc527.6"   --->   Operation 142 'phi' 'pix_val_V_56' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 143 [1/1] (0.00ns)   --->   "%pix_val_V_55 = phi i8 %pix_val_V_53, void %if.then498.7, i8 %pix_val_V_49, void %for.inc527.6"   --->   Operation 143 'phi' 'pix_val_V_55' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%pix_val_V_54 = phi i8 %pix_val_V_52, void %if.then498.7, i8 %pix_val_V_48, void %for.inc527.6"   --->   Operation 144 'phi' 'pix_val_V_54' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i8.i8.i8.i8.i8.i8.i8.i8, i8 %pix_val_V_54, i8 %pix_val_V_55, i8 %pix_val_V_56, i8 %pix_val_V_48, i8 %pix_val_V_49, i8 %pix_val_V_50, i8 %pix_val_V_42, i8 %pix_val_V_43"   --->   Operation 145 'bitconcatenate' 'p_0' <Predicate = (or_ln905_2)> <Delay = 0.00>
+ST_9 : Operation 146 [1/1] (1.74ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %bytePlanes_plane01, i64 %p_0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 146 'write' 'write_ln174' <Predicate = (or_ln905_2)> <Delay = 1.74> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
+ST_9 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln906 = br void %for.inc560.2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:906]   --->   Operation 147 'br' 'br_ln906' <Predicate = (or_ln905_2)> <Delay = 0.00>
+ST_9 : Operation 148 [1/1] (0.42ns)   --->   "%store_ln887 = store i8 %pix_val_V_56, i8 %pix_val_V_2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 148 'store' 'store_ln887' <Predicate = true> <Delay = 0.42>
+ST_9 : Operation 149 [1/1] (0.42ns)   --->   "%store_ln887 = store i8 %pix_val_V_55, i8 %pix_val_V_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 149 'store' 'store_ln887' <Predicate = true> <Delay = 0.42>
+ST_9 : Operation 150 [1/1] (0.42ns)   --->   "%store_ln887 = store i8 %pix_val_V_54, i8 %pix_val_V" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 150 'store' 'store_ln887' <Predicate = true> <Delay = 0.42>
+ST_9 : Operation 151 [1/1] (0.00ns)   --->   "%br_ln887 = br void %for.body493" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887]   --->   Operation 151 'br' 'br_ln887' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.66ns, clock uncertainty: 1.8ns.
+
+ <State 1>: 1.37ns
+The critical path consists of the following:
+	'alloca' operation ('x') [22]  (0 ns)
+	'load' operation ('x', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887) on local variable 'x' [51]  (0 ns)
+	'icmp' operation ('cmp495', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887) [63]  (0.976 ns)
+	'or' operation ('or_ln905_2', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:905) [174]  (0.287 ns)
+	blocking operation 0.108 ns on control path)
+
+ <State 2>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [67]  (1.84 ns)
+
+ <State 3>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read_1', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [79]  (1.84 ns)
+
+ <State 4>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read_2', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [91]  (1.84 ns)
+
+ <State 5>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read_3', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [103]  (1.84 ns)
+
+ <State 6>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read_4', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [115]  (1.84 ns)
+
+ <State 7>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read_5', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [127]  (1.84 ns)
+
+ <State 8>: 1.84ns
+The critical path consists of the following:
+	fifo read operation ('img_read_6', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [139]  (1.84 ns)
+
+ <State 9>: 4.01ns
+The critical path consists of the following:
+	fifo read operation ('img_read_7', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [151]  (1.84 ns)
+	multiplexor before 'phi' operation ('pix.val.V') with incoming values : ('pix.val.V') ('pix.val.V', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [159]  (0.427 ns)
+	'phi' operation ('pix.val.V') with incoming values : ('pix.val.V') ('pix.val.V', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [159]  (0 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'bytePlanes_plane01' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [178]  (1.74 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

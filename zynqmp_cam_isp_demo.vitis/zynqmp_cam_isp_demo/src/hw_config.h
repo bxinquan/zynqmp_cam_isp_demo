@@ -1,0 +1,30 @@
+
+#ifndef __HW_CONFIG_H__
+#define __HW_CONFIG_H__
+
+
+#define SNS_TYPE_AR1335 1
+#define SNS_TYPE_OV5647 2
+
+#define SNS_TYPE        SNS_TYPE_AR1335
+//#define SNS_TYPE        SNS_TYPE_OV5647
+
+#if SNS_TYPE == SNS_TYPE_AR1335
+  #define SNS_WIDTH 		2048
+  #define SNS_HEIGHT 		1536
+  #define SNS_BITS          10
+  #define SNS_LANES         4
+#endif
+#if SNS_TYPE == SNS_TYPE_OV5647
+  #define SNS_WIDTH 		2592
+  #define SNS_HEIGHT 		1944
+  #define SNS_BITS          10
+  #define SNS_LANES         2
+#endif
+
+#define DISP_WIDTH    1920
+#define DISP_HEIGHT   1080
+
+#define ALIGN(a, b)  (((a) + (b) - 1) / (b) * (b))
+
+#endif

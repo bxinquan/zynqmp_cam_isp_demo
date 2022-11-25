@@ -1,0 +1,1056 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Nov 25 21:01:31 2022
+# Process ID: 10060
+# Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1
+# Command line: vivado.exe -log design_1_xil_isp_lite_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xil_isp_lite_0_0.tcl
+# Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/design_1_xil_isp_lite_0_0.vds
+# Journal file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1\vivado.jou
+# Running On: LEGION-BIANXINQUAN, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 17007 MB
+#-----------------------------------------------------------
+source design_1_xil_isp_lite_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 849.527 ; gain = 98.227
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1408.949 ; gain = 559.422
+Command: synth_design -top design_1_xil_isp_lite_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13816
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1697.688 ; gain = 238.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_isp_lite_0_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/synth/design_1_xil_isp_lite_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0_S00_AXI' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:754]
+INFO: [Synth 8-6157] synthesizing module 'isp_top' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'isp_dpc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:22]
+INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'isp_dpc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:22]
+INFO: [Synth 8-6157] synthesizing module 'isp_blc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v:13]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'isp_blc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_bnr' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'isp_bnr' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:14]
+INFO: [Synth 8-6157] synthesizing module 'isp_dgain' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dgain.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'isp_dgain' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dgain.v:14]
+INFO: [Synth 8-6157] synthesizing module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v:13]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v:136]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'isp_stat_ae' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v:13]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_x' does not match port width (12) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_y' does not match port width (11) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_w' does not match port width (12) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_h' does not match port width (11) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
+INFO: [Synth 8-6157] synthesizing module 'isp_demosaic' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:549]
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:656]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:759]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:798]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:833]
+INFO: [Synth 8-6155] done synthesizing module 'isp_demosaic' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:549]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'isp_stat_awb' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:13]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:158]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:159]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:160]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'isp_stat_awb' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_wb' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_wb.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_wb' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_wb.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_ccm' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ccm.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_ccm' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ccm.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_csc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_csc.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_csc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_csc.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_gamma' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_gamma.v:15]
+INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'isp_gamma' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_gamma.v:15]
+INFO: [Synth 8-6157] synthesizing module 'data_delay' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'data_delay' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6157] synthesizing module 'isp_2dnr' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_2dnr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'isp_2dnr' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_2dnr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'data_delay__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'data_delay__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6157] synthesizing module 'isp_ee' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ee.v:13]
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'isp_ee' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ee.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_top' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:9]
+WARNING: [Synth 8-689] width (12) of port connection 'in_raw' does not match port width (10) of module 'isp_top' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:871]
+INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0_S00_AXI' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_isp_lite_0_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/synth/design_1_xil_isp_lite_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:58]
+WARNING: [Synth 8-6014] Unused sequential element p41_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:60]
+WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:50]
+WARNING: [Synth 8-6014] Unused sequential element p41_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:52]
+WARNING: [Synth 8-6014] Unused sequential element p11_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:586]
+WARNING: [Synth 8-6014] Unused sequential element p12_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:586]
+WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:587]
+WARNING: [Synth 8-6014] Unused sequential element p22_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:587]
+WARNING: [Synth 8-6014] Unused sequential element p61_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:591]
+WARNING: [Synth 8-6014] Unused sequential element p62_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:591]
+WARNING: [Synth 8-6014] Unused sequential element p71_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:592]
+WARNING: [Synth 8-6014] Unused sequential element p72_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:592]
+WARNING: [Synth 8-6014] Unused sequential element den_tmp_reg[25] was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:458]
+WARNING: [Synth 8-7129] Port in_data[1] in module isp_gamma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_data[0] in module isp_gamma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[7] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[6] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[5] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[4] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[3] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[2] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[1] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ccm_rb[0] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_x[15] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_x[14] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_x[13] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_x[12] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_y[15] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_y[14] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_y[13] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_y[12] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_y[11] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_w[15] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_w[14] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_w[13] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_w[12] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_h[15] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_h[14] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_h[13] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_h[12] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port stat_ae_rect_h[11] in module isp_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[31] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[30] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[29] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[23] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[22] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WDATA[21] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1872.719 ; gain = 413.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1890.617 ; gain = 431.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1890.617 ; gain = 431.820
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.472 . Memory (MB): peak = 1890.617 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/hdl/xil_isp_lite_v1_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2013.875 ; gain = 0.008
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/hdl/xil_isp_lite_v1_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2013.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.520 . Memory (MB): peak = 2013.875 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2013.875 ; gain = 555.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2013.875 ; gain = 555.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2013.875 ; gain = 555.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "simple_dp_ram:/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "simple_dp_ram__parameterized0:/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "full_dp_ram:/mem_reg"
+INFO: [Synth 8-3971] The signal "full_dp_ram:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 2013.875 ; gain = 555.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   7 Input   26 Bit       Adders := 1     
+	   7 Input   23 Bit       Adders := 7     
+	   3 Input   19 Bit       Adders := 3     
+	   2 Input   19 Bit       Adders := 1     
+	   3 Input   18 Bit       Adders := 1     
+	   4 Input   18 Bit       Adders := 2     
+	   7 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
+	   8 Input   14 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 11    
+	   3 Input   14 Bit       Adders := 4     
+	   4 Input   14 Bit       Adders := 2     
+	   7 Input   13 Bit       Adders := 7     
+	   3 Input   13 Bit       Adders := 6     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 31    
+	   3 Input   12 Bit       Adders := 13    
+	   4 Input   12 Bit       Adders := 21    
+	   2 Input   11 Bit       Adders := 55    
+	   3 Input   11 Bit       Adders := 10    
+	   4 Input   11 Bit       Adders := 2     
+	   3 Input   10 Bit       Adders := 73    
+	   2 Input   10 Bit       Adders := 9     
+	   2 Input    8 Bit       Adders := 3     
++---XORs : 
+	   2 Input      2 Bit         XORs := 5     
++---Registers : 
+	              245 Bit    Registers := 2     
+	               90 Bit    Registers := 2     
+	               75 Bit    Registers := 5     
+	               74 Bit    Registers := 2     
+	               60 Bit    Registers := 7     
+	               52 Bit    Registers := 51    
+	               45 Bit    Registers := 2     
+	               37 Bit    Registers := 2     
+	               32 Bit    Registers := 19    
+	               30 Bit    Registers := 7     
+	               26 Bit    Registers := 1     
+	               23 Bit    Registers := 7     
+	               20 Bit    Registers := 49    
+	               19 Bit    Registers := 13    
+	               18 Bit    Registers := 16    
+	               16 Bit    Registers := 11    
+	               15 Bit    Registers := 2     
+	               14 Bit    Registers := 26    
+	               13 Bit    Registers := 7     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 29    
+	               10 Bit    Registers := 501   
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 37    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 49    
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 13    
+	                1 Bit    Registers := 113   
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 2     
+	              19K Bit	(2047 X 10 bit)          RAMs := 34    
+	               8K Bit	(256 X 32 bit)          RAMs := 6     
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
++---Muxes : 
+	  70 Input  245 Bit        Muxes := 1     
+	  70 Input   90 Bit        Muxes := 1     
+	   2 Input   75 Bit        Muxes := 5     
+	   4 Input   74 Bit        Muxes := 2     
+	   2 Input   60 Bit        Muxes := 1     
+	   4 Input   60 Bit        Muxes := 2     
+	   2 Input   55 Bit        Muxes := 2     
+	   2 Input   51 Bit        Muxes := 6     
+	  70 Input   45 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 13    
+	   4 Input   32 Bit        Muxes := 2     
+	   2 Input   30 Bit        Muxes := 7     
+	   2 Input   16 Bit        Muxes := 12    
+	  69 Input   16 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 29    
+	   2 Input   11 Bit        Muxes := 22    
+	   2 Input   10 Bit        Muxes := 265   
+	   4 Input   10 Bit        Muxes := 3     
+	   9 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 7     
+	  11 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 78    
+	   3 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 3     
+	  69 Input    1 Bit        Muxes := 30    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP y_g0, operation Mode is: A*(B:0x96).
+DSP Report: operator y_g0 is absorbed into DSP y_g0.
+DSP Report: Generating DSP y_b0, operation Mode is: A*(B:0x1d).
+DSP Report: operator y_b0 is absorbed into DSP y_b0.
+DSP Report: Generating DSP y_r0, operation Mode is: A*(B:0x4d).
+DSP Report: operator y_r0 is absorbed into DSP y_r0.
+DSP Report: Generating DSP u_r0, operation Mode is: A*(B:0x2b).
+DSP Report: operator u_r0 is absorbed into DSP u_r0.
+DSP Report: Generating DSP u_g0, operation Mode is: A*(B:0x55).
+DSP Report: operator u_g0 is absorbed into DSP u_g0.
+DSP Report: Generating DSP v_g0, operation Mode is: A*(B:0x6b).
+DSP Report: operator v_g0 is absorbed into DSP v_g0.
+DSP Report: Generating DSP v_b0, operation Mode is: A*(B:0x15).
+DSP Report: operator v_b0 is absorbed into DSP v_b0.
+DSP Report: Generating DSP data_rg0, operation Mode is: A*B.
+DSP Report: operator data_rg0 is absorbed into DSP data_rg0.
+DSP Report: Generating DSP data_rb0, operation Mode is: A*B.
+DSP Report: operator data_rb0 is absorbed into DSP data_rb0.
+DSP Report: Generating DSP data_rr0, operation Mode is: A*B.
+DSP Report: operator data_rr0 is absorbed into DSP data_rr0.
+DSP Report: Generating DSP data_gg0, operation Mode is: A*B.
+DSP Report: operator data_gg0 is absorbed into DSP data_gg0.
+DSP Report: Generating DSP data_gb0, operation Mode is: A*B.
+DSP Report: operator data_gb0 is absorbed into DSP data_gb0.
+DSP Report: Generating DSP data_gr0, operation Mode is: A*B.
+DSP Report: operator data_gr0 is absorbed into DSP data_gr0.
+DSP Report: Generating DSP data_bg0, operation Mode is: A*B.
+DSP Report: operator data_bg0 is absorbed into DSP data_bg0.
+DSP Report: Generating DSP data_bb0, operation Mode is: A*B.
+DSP Report: operator data_bb0 is absorbed into DSP data_bb0.
+DSP Report: Generating DSP data_br0, operation Mode is: A*B.
+DSP Report: operator data_br0 is absorbed into DSP data_br0.
+DSP Report: Generating DSP data_00, operation Mode is: A*B.
+DSP Report: operator data_00 is absorbed into DSP data_00.
+DSP Report: Generating DSP data_r_10, operation Mode is: A*B.
+DSP Report: operator data_r_10 is absorbed into DSP data_r_10.
+DSP Report: Generating DSP data_g_10, operation Mode is: A*B.
+DSP Report: operator data_g_10 is absorbed into DSP data_g_10.
+DSP Report: Generating DSP data_b_10, operation Mode is: A*B.
+DSP Report: operator data_b_10 is absorbed into DSP data_b_10.
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[31] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[30] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[29] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[23] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[22] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wdata[21] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[3] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[2] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[1] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_wstrb[0] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module xil_isp_lite_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module xil_isp_lite_v1_0 is either unconnected or has no load
+INFO: [Synth 8-7124] RAM ("inst/nr2d_y0i_0/linebuffer/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_y0i_0/linebuffer/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_y0i_0/linebuffer/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_y0i_0/linebuffer/gen_ram_inst[1].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_y0i_0/linebuffer/gen_ram_inst[2].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_y0i_0/linebuffer/gen_ram_inst[2].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_y0i_0/linebuffer/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_y0i_0/linebuffer/gen_ram_inst[3].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_y0i_0/linebuffer/gen_ram_inst[4].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_y0i_0/linebuffer/gen_ram_inst[4].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_y0i_0/linebuffer/gen_ram_inst[5].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_y0i_0/linebuffer/gen_ram_inst[5].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/ee_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/ee_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/ee_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/ee_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg"
+RAM ("inst/isp_top_i0i_5/isp_stat_ae_i0/hist_ram_raw/ping_ram/mem_reg") is too shallow (depth = 1024) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "inst/isp_top_i0i_5/isp_stat_ae_i0/hist_ram_raw/ping_ram/mem_reg"
+RAM ("inst/isp_top_i0i_5/isp_stat_ae_i0/hist_ram_raw/pong_ram/mem_reg") is too shallow (depth = 1024) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "inst/isp_top_i0i_5/isp_stat_ae_i0/hist_ram_raw/pong_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[4].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[4].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[5].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_5/demosaic_i0/linebuffer/gen_ram_inst[5].u_ram/mem_reg"
+RAM ("inst/isp_top_i0i_5/isp_stat_awb_i0/hist_ram_r/ping_ram/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+RAM ("inst/isp_top_i0i_5/isp_stat_awb_i0/hist_ram_r/pong_ram/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+RAM ("inst/isp_top_i0i_5/isp_stat_awb_i0/hist_ram_g/ping_ram/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+RAM ("inst/isp_top_i0i_5/isp_stat_awb_i0/hist_ram_g/pong_ram/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+RAM ("inst/isp_top_i0i_5/isp_stat_awb_i0/hist_ram_b/ping_ram/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+RAM ("inst/isp_top_i0i_5/isp_stat_awb_i0/hist_ram_b/pong_ram/mem_reg") is too shallow (depth = 256) to use URAM. Choosing BRAM instead of URAM 
+INFO: [Synth 8-7124] RAM ("inst/bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg"
+WARNING: [Synth 8-6014] Unused sequential element gamma_i0/table_ram/mem_reg was removed. 
+INFO: [Synth 8-6904] The RAM "inst/gamma_i0/table_ram/mem_reg" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg"
+INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg"
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 2013.875 ; gain = 555.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                               | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[0].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[1].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[2].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[3].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[4].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[5].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/ee_i0                  | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/ee_i0                  | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/isp_stat_ae_i0         | hist_ram_raw/ping_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/isp_stat_ae_i0         | hist_ram_raw/pong_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[0].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[1].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[2].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[3].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[4].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[5].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_r/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_r/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_g/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_g/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_b/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_b/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[2].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[3].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+----------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object                 | Inference | Size (Depth x Width) | Primitives     | 
++------------+----------------------------+-----------+----------------------+----------------+
+|inst        | gamma_i0/table_ram/mem_reg | Implied   | 256 x 8              | RAM256X1D x 8  | 
++------------+----------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_2dnr    | A*B         | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x96)  | 10     | 8      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x1d)  | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x4d)  | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x2b)  | 10     | 6      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x55)  | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x6b)  | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_csc     | A*(B:0x15)  | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_ccm     | A*B         | 11     | 8      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_dgain   | A*B         | 10     | 8      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_wb      | A*B         | 10     | 8      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_wb      | A*B         | 10     | 8      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|isp_wb      | A*B         | 10     | 8      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:10 ; elapsed = 00:02:35 . Memory (MB): peak = 2477.277 ; gain = 1018.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:33 ; elapsed = 00:03:04 . Memory (MB): peak = 2615.309 ; gain = 1156.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                               | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[0].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[1].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[2].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[3].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[4].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/nr2d_y0i_0/linebuffer                | gen_ram_inst[5].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/ee_i0                  | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/ee_i0                  | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/isp_stat_ae_i0         | hist_ram_raw/ping_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/isp_stat_ae_i0         | hist_ram_raw/pong_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[0].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[1].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[2].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[3].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[4].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/demosaic_i0/linebuffer | gen_ram_inst[5].u_ram/mem_reg                   | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_r/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_r/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_g/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_g/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_b/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst/isp_top_i0i_5/isp_stat_awb_i0        | hist_ram_b/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      |                 | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg      | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[2].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
+|inst/isp_top_i0i_6/dpc_i0                 | linebuffer/gen_ram_inst[3].u_ram/mem_reg        | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 1      | 1               | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+
+Distributed RAM: Final Mapping Report
++------------+----------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object                 | Inference | Size (Depth x Width) | Primitives     | 
++------------+----------------------------+-----------+----------------------+----------------+
+|inst        | gamma_i0/table_ram/mem_reg | Implied   | 256 x 8              | RAM256X1D x 8  | 
++------------+----------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/linebuffer/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/linebuffer/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/linebuffer/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/linebuffer/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/linebuffer/gen_ram_inst[4].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/linebuffer/gen_ram_inst[5].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/ping_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/pong_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/linebuffer/gen_ram_inst[4].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/linebuffer/gen_ram_inst[5].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_g/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_g/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:03 ; elapsed = 00:03:38 . Memory (MB): peak = 2803.281 ; gain = 1344.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:12 ; elapsed = 00:03:50 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:12 ; elapsed = 00:03:50 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:18 ; elapsed = 00:03:59 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:18 ; elapsed = 00:03:59 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:19 ; elapsed = 00:04:00 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:20 ; elapsed = 00:04:01 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/href_dly_reg[36]          | 37     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/vsync_dly_reg[36]         | 37     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg[5]             | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/vsync_dly_reg[5]            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/u_dly_reg[5][9]             | 6      | 10    | YES          | NO                 | YES               | 10     | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/v_dly_reg[5][9]             | 6      | 10    | YES          | NO                 | YES               | 10     | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/href_dly_reg[3]            | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/vsync_dly_reg[3]           | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/href_dly_reg[8]       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/vsync_dly_reg[8]      | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p75_reg[9]            | 4      | 10    | YES          | NO                 | YES               | 10     | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/href_dly_reg[9]            | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg[9]           | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/href_dly_reg[6]            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/vsync_dly_reg[6]           | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_v/data_buff_reg[36][9] | 37     | 10    | YES          | NO                 | YES               | 0      | 20      | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_u/data_buff_reg[36][9] | 37     | 10    | YES          | NO                 | YES               | 0      | 20      | 
++------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_ccm     | (A*B')'     | 10     | 18     | -      | -      | 19     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 8      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 6      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_csc     | (A*B)'      | 10     | 5      | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_dgain   | (A*B')'     | 10     | 8      | -      | -      | 18     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_2dnr    | (A*B)'      | 10     | 10     | -      | -      | 20     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|isp_wb      | (A*B')'     | 10     | 8      | -      | -      | 18     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_wb      | (A*B')'     | 10     | 8      | -      | -      | 18     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|isp_wb      | (A*B')'     | 10     | 8      | -      | -      | 18     | 0    | 1    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |  1428|
+|2     |DSP_ALU         |    69|
+|3     |DSP_A_B_DATA    |    69|
+|5     |DSP_C_DATA      |    69|
+|6     |DSP_MULTIPLIER  |    69|
+|7     |DSP_M_DATA      |    69|
+|8     |DSP_OUTPUT      |    69|
+|9     |DSP_PREADD      |    69|
+|10    |DSP_PREADD_DATA |    69|
+|11    |LUT1            |   114|
+|12    |LUT2            |  3966|
+|13    |LUT3            |  2991|
+|14    |LUT4            |  8121|
+|15    |LUT5            |  1356|
+|16    |LUT6            |  3415|
+|17    |MUXF7           |    54|
+|18    |MUXF8           |    14|
+|19    |RAM256X1D       |     8|
+|20    |RAMB18E2        |     6|
+|21    |RAMB36E2        |    36|
+|23    |SRL16E          |    40|
+|24    |SRLC32E         |    44|
+|25    |FDCE            |  8414|
+|26    |FDRE            |  1144|
+|27    |FDSE            |   332|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:20 ; elapsed = 00:04:01 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:53 ; elapsed = 00:03:47 . Memory (MB): peak = 2809.438 ; gain = 1227.383
+Synthesis Optimization Complete : Time (s): cpu = 00:03:20 ; elapsed = 00:04:02 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.617 . Memory (MB): peak = 2821.531 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1573 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2839.520 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 77 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 69 instances
+  RAM256X1D => RAM256X1D (MUXF7(x4), MUXF8(x2), RAMD64E(x8)): 8 instances
+
+Synth Design complete, checksum: 7f1039ea
+INFO: [Common 17-83] Releasing license: Synthesis
+205 Infos, 85 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:44 ; elapsed = 00:04:42 . Memory (MB): peak = 2839.520 ; gain = 1399.559
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/design_1_xil_isp_lite_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_isp_lite_0_0, cache-ID = e8a160a5e1e4d669
+INFO: [Coretcl 2-1174] Renamed 87 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/design_1_xil_isp_lite_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_xil_isp_lite_0_0_utilization_synth.rpt -pb design_1_xil_isp_lite_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 21:06:51 2022...
