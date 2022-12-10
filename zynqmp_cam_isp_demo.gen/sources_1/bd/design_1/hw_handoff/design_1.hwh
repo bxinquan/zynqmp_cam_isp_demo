@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov 25 21:01:13 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Dec 10 20:26:10 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kv260_som:part0:1.3" DEVICE="xck26" NAME="design_1" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -7003,11 +7003,11 @@
         <PORT CLKFREQUENCY="150074602" DIR="O" NAME="clk_sys" SIGIS="clk" SIGNAME="clk_wiz_clk_sys">
           <CONNECTIONS>
             <CONNECTION INSTANCE="isp_pipe_axis_to_video_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="isp_pipe_isp" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="isp_pipe_vfrm_rd_isp" PORT="ap_clk"/>
             <CONNECTION INSTANCE="isp_pipe_vfrm_wr_isp" PORT="ap_clk"/>
             <CONNECTION INSTANCE="isp_pipe_video_to_axis_1" PORT="aclk"/>
             <CONNECTION INSTANCE="isp_pipe_vip" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="isp_pipe_isp" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="camif_ias1_axis_subset_converter_0" PORT="aclk"/>
             <CONNECTION INSTANCE="camif_ias1_vfrm_wr_ias1" PORT="ap_clk"/>
             <CONNECTION INSTANCE="camif_ias1_mipi_rx_to_video_ias1" PORT="s00_axi_aclk"/>
@@ -7041,8 +7041,8 @@
         <PORT CLKFREQUENCY="124493704" DIR="O" NAME="clk_isp" SIGIS="clk" SIGNAME="clk_wiz_clk_isp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="isp_pipe_axis_to_video_0" PORT="vid_clk"/>
-            <CONNECTION INSTANCE="isp_pipe_isp" PORT="pclk"/>
             <CONNECTION INSTANCE="isp_pipe_vip" PORT="pclk"/>
+            <CONNECTION INSTANCE="isp_pipe_isp" PORT="pclk"/>
             <CONNECTION INSTANCE="rst_clk_isp" PORT="slowest_sync_clk"/>
           </CONNECTIONS>
         </PORT>
@@ -7131,10 +7131,10 @@
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="isp_pipe_axis_to_video_0_locked">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="isp_pipe_isp" PORT="rst_n"/>
             <CONNECTION INSTANCE="isp_pipe_video_to_axis_1" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="isp_pipe_video_to_axis_1" PORT="vid_ce"/>
             <CONNECTION INSTANCE="isp_pipe_vip" PORT="rst_n"/>
+            <CONNECTION INSTANCE="isp_pipe_isp" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="underflow" SIGIS="undef"/>
@@ -7172,7 +7172,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="90" FULLNAME="/isp_pipe/isp" HWVERSION="1.0" INSTANCE="isp_pipe_isp" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_isp_lite" VLNV="bxq.com:user:xil_isp_lite:1.0">
+    <MODULE COREREVISION="93" FULLNAME="/isp_pipe/isp" HWVERSION="1.0" INSTANCE="isp_pipe_isp" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_isp_lite" VLNV="bxq.com:user:xil_isp_lite:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="16384" USAGE="register"/>
@@ -10837,9 +10837,9 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_sys_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="isp_pipe_axis_to_video_0" PORT="aresetn"/>
-            <CONNECTION INSTANCE="isp_pipe_isp" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="isp_pipe_video_to_axis_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="isp_pipe_vip" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="isp_pipe_isp" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="camif_ias1_axis_subset_converter_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="camif_ias1_mipi_rx_to_video_ias1" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="camif_ias1_video_to_axis_0" PORT="aresetn"/>

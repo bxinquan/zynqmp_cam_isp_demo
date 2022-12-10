@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'AXIvideo2MultiPixStream_Pipeline_loop_width'
 ================================================================
-* Date:           Fri Nov 25 21:03:35 2022
+* Date:           Sat Dec 10 20:38:27 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -158,7 +158,7 @@ The critical path consists of the following:
  <State 2>: 2.23ns
 The critical path consists of the following:
 	'load' operation ('axi.data.V') on local variable 'axi.data.V' [57]  (0 ns)
-	'select' operation ('select_ln235', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:235) [63]  (0.393 ns)
+	'select' operation ('select_ln235_2', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:235) [61]  (0.393 ns)
 	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [66]  (1.84 ns)
 
 

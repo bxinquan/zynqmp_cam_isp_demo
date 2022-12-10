@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Nov 25 21:01:31 2022
-# Process ID: 10060
+# Start of session at: Sat Dec 10 20:36:12 2022
+# Process ID: 12760
 # Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1
 # Command line: vivado.exe -log design_1_xil_isp_lite_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xil_isp_lite_0_0.tcl
 # Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/design_1_xil_isp_lite_0_0.vds
@@ -11,11 +11,10 @@
 # Running On: LEGION-BIANXINQUAN, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 17007 MB
 #-----------------------------------------------------------
 source design_1_xil_isp_lite_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 849.527 ; gain = 98.227
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1359.609 ; gain = 103.789
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1408.949 ; gain = 559.422
 Command: synth_design -top design_1_xil_isp_lite_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
@@ -23,104 +22,102 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13816
+INFO: [Synth 8-7075] Helper process launched with PID 25188
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1697.688 ; gain = 238.891
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1700.117 ; gain = 318.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_xil_isp_lite_0_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/synth/design_1_xil_isp_lite_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0_S00_AXI' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:754]
-INFO: [Synth 8-6157] synthesizing module 'isp_top' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:9]
-INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6157] synthesizing module 'isp_dpc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:22]
-INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:117]
-INFO: [Synth 8-6155] done synthesizing module 'isp_dpc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:22]
-INFO: [Synth 8-6157] synthesizing module 'isp_blc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v:13]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v:88]
-INFO: [Synth 8-6155] done synthesizing module 'isp_blc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_bnr' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'isp_bnr' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:14]
-INFO: [Synth 8-6157] synthesizing module 'isp_dgain' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dgain.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'isp_dgain' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dgain.v:14]
-INFO: [Synth 8-6157] synthesizing module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v:13]
-WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v:136]
-INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6155] done synthesizing module 'isp_stat_ae' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v:13]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_x' does not match port width (12) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_y' does not match port width (11) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_w' does not match port width (12) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_h' does not match port width (11) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:149]
-INFO: [Synth 8-6157] synthesizing module 'isp_demosaic' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:549]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:656]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:759]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:798]
-INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:833]
-INFO: [Synth 8-6155] done synthesizing module 'isp_demosaic' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:549]
-INFO: [Synth 8-6157] synthesizing module 'vid_mux__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6155] done synthesizing module 'vid_mux__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6157] synthesizing module 'isp_stat_awb' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:13]
-WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:158]
-WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:159]
-WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:160]
-INFO: [Synth 8-6157] synthesizing module 'hist_stat__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'hist_stat__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6155] done synthesizing module 'isp_stat_awb' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_wb' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_wb.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_wb' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_wb.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_ccm' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ccm.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_ccm' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ccm.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_csc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_csc.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_csc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_csc.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_gamma' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_gamma.v:15]
-INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'isp_gamma' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_gamma.v:15]
-INFO: [Synth 8-6157] synthesizing module 'data_delay' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6155] done synthesizing module 'data_delay' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6157] synthesizing module 'isp_2dnr' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_2dnr.v:16]
-INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:433]
-INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:433]
-INFO: [Synth 8-6155] done synthesizing module 'isp_2dnr' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_2dnr.v:16]
-INFO: [Synth 8-6157] synthesizing module 'data_delay__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6155] done synthesizing module 'data_delay__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6157] synthesizing module 'isp_ee' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ee.v:13]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'isp_ee' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ee.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_top' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v:9]
-WARNING: [Synth 8-689] width (12) of port connection 'in_raw' does not match port width (10) of module 'isp_top' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:871]
-INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0_S00_AXI' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0_S00_AXI' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0_S00_AXI.v:754]
+INFO: [Synth 8-6157] synthesizing module 'isp_top' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'isp_dpc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dpc.v:22]
+INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dpc.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'isp_dpc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dpc.v:22]
+INFO: [Synth 8-6157] synthesizing module 'isp_blc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_blc.v:13]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_blc.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'isp_blc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_blc.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_bnr' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_bnr.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'isp_bnr' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_bnr.v:14]
+INFO: [Synth 8-6157] synthesizing module 'isp_dgain' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dgain.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'isp_dgain' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dgain.v:14]
+INFO: [Synth 8-6157] synthesizing module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_ae.v:13]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_ae.v:136]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'isp_stat_ae' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_ae.v:13]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_x' does not match port width (12) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_y' does not match port width (11) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_w' does not match port width (12) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_h' does not match port width (11) of module 'isp_stat_ae' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:149]
+INFO: [Synth 8-6157] synthesizing module 'isp_demosaic' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:549]
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:656]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:759]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:798]
+INFO: [Synth 8-226] default block is never used [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:833]
+INFO: [Synth 8-6155] done synthesizing module 'isp_demosaic' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:549]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'isp_stat_awb' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_awb.v:13]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_awb.v:158]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_awb.v:159]
+WARNING: [Synth 8-4447] negative replication count -2 - replication ignored [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_awb.v:160]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'isp_stat_awb' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_awb.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_wb' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_wb.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_wb' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_wb.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_ccm' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_ccm.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_ccm' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_ccm.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_csc' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_csc.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_csc' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_csc.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_gamma' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_gamma.v:15]
+INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'isp_gamma' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_gamma.v:15]
+INFO: [Synth 8-6157] synthesizing module 'data_delay' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'data_delay' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6157] synthesizing module 'isp_2dnr' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_2dnr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'isp_2dnr' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_2dnr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'data_delay__parameterized0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'data_delay__parameterized0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6157] synthesizing module 'isp_ee' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_ee.v:13]
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized1' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized1' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'isp_ee' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_ee.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_top' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v:9]
+WARNING: [Synth 8-689] width (12) of port connection 'in_raw' does not match port width (10) of module 'isp_top' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0_S00_AXI.v:871]
+INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0_S00_AXI' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_isp_lite_0_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/synth/design_1_xil_isp_lite_0_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:58]
-WARNING: [Synth 8-6014] Unused sequential element p41_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v:60]
-WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:50]
-WARNING: [Synth 8-6014] Unused sequential element p41_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v:52]
-WARNING: [Synth 8-6014] Unused sequential element p11_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:586]
-WARNING: [Synth 8-6014] Unused sequential element p12_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:586]
-WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:587]
-WARNING: [Synth 8-6014] Unused sequential element p22_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:587]
-WARNING: [Synth 8-6014] Unused sequential element p61_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:591]
-WARNING: [Synth 8-6014] Unused sequential element p62_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:591]
-WARNING: [Synth 8-6014] Unused sequential element p71_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:592]
-WARNING: [Synth 8-6014] Unused sequential element p72_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v:592]
-WARNING: [Synth 8-6014] Unused sequential element den_tmp_reg[25] was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_utils.v:458]
-WARNING: [Synth 8-7129] Port in_data[1] in module isp_gamma is either unconnected or has no load
-WARNING: [Synth 8-7129] Port in_data[0] in module isp_gamma is either unconnected or has no load
+WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dpc.v:58]
+WARNING: [Synth 8-6014] Unused sequential element p41_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_dpc.v:60]
+WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_bnr.v:50]
+WARNING: [Synth 8-6014] Unused sequential element p41_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_bnr.v:52]
+WARNING: [Synth 8-6014] Unused sequential element p11_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:586]
+WARNING: [Synth 8-6014] Unused sequential element p12_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:586]
+WARNING: [Synth 8-6014] Unused sequential element p21_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:587]
+WARNING: [Synth 8-6014] Unused sequential element p22_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:587]
+WARNING: [Synth 8-6014] Unused sequential element p61_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:591]
+WARNING: [Synth 8-6014] Unused sequential element p62_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:591]
+WARNING: [Synth 8-6014] Unused sequential element p71_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:592]
+WARNING: [Synth 8-6014] Unused sequential element p72_reg was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v:592]
+WARNING: [Synth 8-6014] Unused sequential element den_tmp_reg[25] was removed.  [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/f095/hdl/isp_lite/isp_utils.v:458]
 WARNING: [Synth 8-7129] Port ccm_rb[7] in module isp_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ccm_rb[6] in module isp_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ccm_rb[5] in module isp_top is either unconnected or has no load
@@ -164,37 +161,37 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module xil_isp_lite_v1_0_S00_AXI
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module xil_isp_lite_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1872.719 ; gain = 413.922
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:36 . Memory (MB): peak = 1875.223 ; gain = 493.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1890.617 ; gain = 431.820
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 1875.223 ; gain = 493.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1890.617 ; gain = 431.820
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:37 . Memory (MB): peak = 1875.223 ; gain = 493.266
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.472 . Memory (MB): peak = 1890.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.420 . Memory (MB): peak = 1875.223 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/hdl/xil_isp_lite_v1_0_ooc.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2013.875 ; gain = 0.008
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1967.996 ; gain = 2.582
 Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/hdl/xil_isp_lite_v1_0_ooc.xdc] for cell 'inst'
 Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2013.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1967.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.520 . Memory (MB): peak = 2013.875 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.480 . Memory (MB): peak = 1968.094 ; gain = 0.098
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2013.875 ; gain = 555.078
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 1968.094 ; gain = 586.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -202,21 +199,21 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2013.875 ; gain = 555.078
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 1968.094 ; gain = 586.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 2013.875 ; gain = 555.078
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 1968.094 ; gain = 586.137
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "simple_dp_ram:/mem_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "simple_dp_ram__parameterized0:/mem_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "full_dp_ram:/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 6 for RAM "full_dp_ram:/mem_reg"
 INFO: [Synth 8-3971] The signal "full_dp_ram:/mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 2013.875 ; gain = 555.078
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:01:05 . Memory (MB): peak = 1968.094 ; gain = 586.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -248,6 +245,8 @@ Detailed RTL Component Info :
 	   3 Input   10 Bit       Adders := 73    
 	   2 Input   10 Bit       Adders := 9     
 	   2 Input    8 Bit       Adders := 3     
+	   3 Input    6 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      2 Bit         XORs := 5     
 +---Registers : 
@@ -272,21 +271,21 @@ Detailed RTL Component Info :
 	               13 Bit    Registers := 7     
 	               12 Bit    Registers := 1     
 	               11 Bit    Registers := 29    
-	               10 Bit    Registers := 501   
+	               10 Bit    Registers := 502   
 	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 37    
+	                8 Bit    Registers := 35    
 	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 2     
+	                6 Bit    Registers := 9     
 	                5 Bit    Registers := 49    
-	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 6     
-	                2 Bit    Registers := 13    
-	                1 Bit    Registers := 113   
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 115   
 +---RAMs : 
 	              32K Bit	(1024 X 32 bit)          RAMs := 2     
 	              19K Bit	(2047 X 10 bit)          RAMs := 34    
 	               8K Bit	(256 X 32 bit)          RAMs := 6     
-	               2K Bit	(256 X 8 bit)          RAMs := 1     
+	              384 Bit	(64 X 6 bit)          RAMs := 2     
 +---Muxes : 
 	  70 Input  245 Bit        Muxes := 1     
 	  70 Input   90 Bit        Muxes := 1     
@@ -307,7 +306,8 @@ Detailed RTL Component Info :
 	   2 Input   10 Bit        Muxes := 265   
 	   4 Input   10 Bit        Muxes := 3     
 	   9 Input   10 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 7     
+	   2 Input    8 Bit        Muxes := 6     
+	   2 Input    6 Bit        Muxes := 2     
 	  11 Input    4 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 78    
 	   3 Input    1 Bit        Muxes := 4     
@@ -529,8 +529,10 @@ INFO: [Synth 8-7124] RAM ("inst/bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg"
 INFO: [Synth 8-7124] RAM ("inst/bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg"
-WARNING: [Synth 8-6014] Unused sequential element gamma_i0/table_ram/mem_reg was removed. 
-INFO: [Synth 8-6904] The RAM "inst/gamma_i0/table_ram/mem_reg" of size (depth=256 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-6014] Unused sequential element gamma_i0/gamma_table/mem_reg was removed. 
+INFO: [Synth 8-6904] The RAM "inst/gamma_i0/gamma_table/mem_reg" of size (depth=64 x width=6) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-6014] Unused sequential element gamma_i0/gamma_table_backup/mem_reg was removed. 
+INFO: [Synth 8-6904] The RAM "inst/gamma_i0/gamma_table_backup/mem_reg" of size (depth=64 x width=6) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
 INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg"
 INFO: [Synth 8-7124] RAM ("inst/nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
@@ -564,7 +566,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7124] RAM ("inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 10 for RAM "inst/isp_top_i0i_6/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:10 . Memory (MB): peak = 2013.875 ; gain = 555.078
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:02:18 . Memory (MB): peak = 1968.094 ; gain = 586.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -621,11 +623,12 @@ Block RAM: Preliminary Mapping Report (see note below)
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+------------+----------------------------+-----------+----------------------+----------------+
-|Module Name | RTL Object                 | Inference | Size (Depth x Width) | Primitives     | 
-+------------+----------------------------+-----------+----------------------+----------------+
-|inst        | gamma_i0/table_ram/mem_reg | Implied   | 256 x 8              | RAM256X1D x 8  | 
-+------------+----------------------------+-----------+----------------------+----------------+
++------------+-------------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                          | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------------+-----------+----------------------+---------------+
+|inst        | gamma_i0/gamma_table/mem_reg        | Implied   | 64 x 6               | RAM64X1D x 6  | 
+|inst        | gamma_i0/gamma_table_backup/mem_reg | Implied   | 64 x 6               | RAM64M8 x 1   | 
++------------+-------------------------------------+-----------+----------------------+---------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
@@ -712,13 +715,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:10 ; elapsed = 00:02:35 . Memory (MB): peak = 2477.277 ; gain = 1018.480
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:38 . Memory (MB): peak = 2486.727 ; gain = 1104.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:33 ; elapsed = 00:03:04 . Memory (MB): peak = 2615.309 ; gain = 1156.512
+Finished Timing Optimization : Time (s): cpu = 00:02:22 ; elapsed = 00:02:55 . Memory (MB): peak = 2623.711 ; gain = 1241.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -774,11 +777,12 @@ Block RAM: Final Mapping Report
 
 
 Distributed RAM: Final Mapping Report
-+------------+----------------------------+-----------+----------------------+----------------+
-|Module Name | RTL Object                 | Inference | Size (Depth x Width) | Primitives     | 
-+------------+----------------------------+-----------+----------------------+----------------+
-|inst        | gamma_i0/table_ram/mem_reg | Implied   | 256 x 8              | RAM256X1D x 8  | 
-+------------+----------------------------+-----------+----------------------+----------------+
++------------+-------------------------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object                          | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------------------------+-----------+----------------------+---------------+
+|inst        | gamma_i0/gamma_table/mem_reg        | Implied   | 64 x 6               | RAM64X1D x 6  | 
+|inst        | gamma_i0/gamma_table_backup/mem_reg | Implied   | 64 x 6               | RAM64M8 x 1   | 
++------------+-------------------------------------+-----------+----------------------+---------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -829,7 +833,7 @@ INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_
 INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:03 ; elapsed = 00:03:38 . Memory (MB): peak = 2803.281 ; gain = 1344.484
+Finished Technology Mapping : Time (s): cpu = 00:02:42 ; elapsed = 00:03:15 . Memory (MB): peak = 2812.371 ; gain = 1430.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -847,37 +851,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:12 ; elapsed = 00:03:50 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished IO Insertion : Time (s): cpu = 00:02:48 ; elapsed = 00:03:21 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:12 ; elapsed = 00:03:50 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:48 ; elapsed = 00:03:21 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:18 ; elapsed = 00:03:59 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:52 ; elapsed = 00:03:25 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:18 ; elapsed = 00:03:59 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:52 ; elapsed = 00:03:25 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:19 ; elapsed = 00:04:00 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:53 ; elapsed = 00:03:26 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:20 ; elapsed = 00:04:01 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:53 ; elapsed = 00:03:26 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -999,7 +1003,7 @@ Report Cell Usage:
 +------+----------------+------+
 |      |Cell            |Count |
 +------+----------------+------+
-|1     |CARRY8          |  1428|
+|1     |CARRY8          |  1432|
 |2     |DSP_ALU         |    69|
 |3     |DSP_A_B_DATA    |    69|
 |5     |DSP_C_DATA      |    69|
@@ -1009,48 +1013,50 @@ Report Cell Usage:
 |9     |DSP_PREADD      |    69|
 |10    |DSP_PREADD_DATA |    69|
 |11    |LUT1            |   114|
-|12    |LUT2            |  3966|
-|13    |LUT3            |  2991|
-|14    |LUT4            |  8121|
-|15    |LUT5            |  1356|
-|16    |LUT6            |  3415|
-|17    |MUXF7           |    54|
-|18    |MUXF8           |    14|
-|19    |RAM256X1D       |     8|
-|20    |RAMB18E2        |     6|
-|21    |RAMB36E2        |    36|
-|23    |SRL16E          |    40|
-|24    |SRLC32E         |    44|
-|25    |FDCE            |  8414|
-|26    |FDRE            |  1144|
-|27    |FDSE            |   332|
+|12    |LUT2            |  4002|
+|13    |LUT3            |  2995|
+|14    |LUT4            |  8115|
+|15    |LUT5            |  1344|
+|16    |LUT6            |  3444|
+|17    |MUXF7           |    47|
+|18    |MUXF8           |    10|
+|19    |RAM64M8         |     1|
+|20    |RAM64X1D        |     6|
+|21    |RAMB18E2        |     6|
+|22    |RAMB36E2        |    36|
+|24    |SRL16E          |    40|
+|25    |SRLC32E         |    44|
+|26    |FDCE            |  8456|
+|27    |FDRE            |  1144|
+|28    |FDSE            |   332|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:20 ; elapsed = 00:04:01 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:53 ; elapsed = 00:03:26 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:53 ; elapsed = 00:03:47 . Memory (MB): peak = 2809.438 ; gain = 1227.383
-Synthesis Optimization Complete : Time (s): cpu = 00:03:20 ; elapsed = 00:04:02 . Memory (MB): peak = 2809.438 ; gain = 1350.641
+Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:27 ; elapsed = 00:03:13 . Memory (MB): peak = 2816.500 ; gain = 1341.672
+Synthesis Optimization Complete : Time (s): cpu = 00:02:53 ; elapsed = 00:03:26 . Memory (MB): peak = 2816.500 ; gain = 1434.543
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.617 . Memory (MB): peak = 2821.531 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1573 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.376 . Memory (MB): peak = 2828.512 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1565 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2839.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2849.484 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 77 instances were transformed.
+  A total of 76 instances were transformed.
   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 69 instances
-  RAM256X1D => RAM256X1D (MUXF7(x4), MUXF8(x2), RAMD64E(x8)): 8 instances
+  RAM64M8 => RAM64M8 (RAMD64E(x8)): 1 instance 
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 6 instances
 
-Synth Design complete, checksum: 7f1039ea
+Synth Design complete, checksum: 28d2e07b
 INFO: [Common 17-83] Releasing license: Synthesis
-205 Infos, 85 Warnings, 0 Critical Warnings and 0 Errors encountered.
+206 Infos, 84 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:44 ; elapsed = 00:04:42 . Memory (MB): peak = 2839.520 ; gain = 1399.559
+synth_design: Time (s): cpu = 00:03:09 ; elapsed = 00:03:53 . Memory (MB): peak = 2849.484 ; gain = 1489.875
 INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/design_1_xil_isp_lite_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_isp_lite_0_0, cache-ID = e8a160a5e1e4d669
-INFO: [Coretcl 2-1174] Renamed 87 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_isp_lite_0_0, cache-ID = 50bf6760f456c1ef
+INFO: [Coretcl 2-1174] Renamed 88 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_xil_isp_lite_0_0_synth_1/design_1_xil_isp_lite_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_xil_isp_lite_0_0_utilization_synth.rpt -pb design_1_xil_isp_lite_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 21:06:51 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 20:40:34 2022...

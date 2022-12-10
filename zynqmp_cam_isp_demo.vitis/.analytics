@@ -66,3 +66,23 @@ timestamp=[2022-11-25 21:30:04], mode=WORKBENCH_UI_INIT, duration=0:00:00.603, d
 timestamp=[2022-11-25 21:30:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.212, duration_ms=212, data={}
 timestamp=[2022-11-25 21:35:32], mode=PLATFORM_GENERATION, duration=0:00:12.742, duration_ms=12742, data={name=design_1_wrapper}
 timestamp=[2022-11-25 21:35:41], mode=BUILD, duration=0:00:02.143, duration_ms=2143, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 15:54:17], mode=WORKBENCH_START, duration=0:00:10.443, duration_ms=10443, data={}
+timestamp=[2022-12-10 15:54:18], mode=WORKBENCH_UI_INIT, duration=0:00:00.615, duration_ms=615, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,zynqmp_cam_isp_demo,zynqmp_cam_isp_demo_system}
+timestamp=[2022-12-10 15:54:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.203, duration_ms=203, data={}
+timestamp=[2022-12-10 15:55:46], mode=PLATFORM_GENERATION, duration=0:00:13.246, duration_ms=13246, data={name=design_1_wrapper}
+timestamp=[2022-12-10 15:55:55], mode=BUILD, duration=0:00:02.238, duration_ms=2238, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 15:56:39], mode=BUILD, duration=0:00:00.165, duration_ms=165, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 21:03:42], mode=WORKBENCH_START, duration=0:00:06.211, duration_ms=6211, data={}
+timestamp=[2022-12-10 21:03:42], mode=WORKBENCH_UI_INIT, duration=0:00:00.575, duration_ms=575, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,zynqmp_cam_isp_demo,zynqmp_cam_isp_demo_system}
+timestamp=[2022-12-10 21:03:42], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.204, duration_ms=204, data={}
+timestamp=[2022-12-10 21:04:47], mode=PLATFORM_GENERATION, duration=0:00:11.622, duration_ms=11622, data={name=design_1_wrapper}
+timestamp=[2022-12-10 21:04:56], mode=BUILD, duration=0:00:01.635, duration_ms=1635, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 21:09:02], mode=WORKBENCH_START, duration=0:00:05.290, duration_ms=5290, data={}
+timestamp=[2022-12-10 21:09:03], mode=WORKBENCH_UI_INIT, duration=0:00:00.633, duration_ms=633, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,zynqmp_cam_isp_demo,zynqmp_cam_isp_demo_system}
+timestamp=[2022-12-10 21:09:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.181, duration_ms=181, data={}
+timestamp=[2022-12-10 21:09:46], mode=BUILD, duration=0:00:00.655, duration_ms=655, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 21:11:23], mode=BUILD, duration=0:00:00.555, duration_ms=555, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 21:12:19], mode=BUILD, duration=0:00:00.553, duration_ms=553, data={name=zynqmp_cam_isp_demo, configuration=Debug, clean_build=false}
+timestamp=[2022-12-10 21:21:34], mode=WORKBENCH_START, duration=0:00:05.611, duration_ms=5611, data={}
+timestamp=[2022-12-10 21:21:35], mode=WORKBENCH_UI_INIT, duration=0:00:00.608, duration_ms=608, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,design_1_wrapper,zynqmp_cam_isp_demo,zynqmp_cam_isp_demo_system}
+timestamp=[2022-12-10 21:21:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.181, duration_ms=181, data={}

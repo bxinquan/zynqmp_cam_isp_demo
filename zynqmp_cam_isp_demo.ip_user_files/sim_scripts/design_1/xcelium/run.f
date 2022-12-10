@@ -97,23 +97,6 @@
   "../../../bd/design_1/ipshared/2133/hdl/video_timing_gen.v" \
   "../../../bd/design_1/ipshared/2133/hdl/axis_to_video_v1_0.v" \
   "../../../bd/design_1/ip/design_1_axis_to_video_0_0/sim/design_1_axis_to_video_0_0.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_2dnr.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_blc.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_bnr.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ccm.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_csc.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_demosaic.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dgain.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_dpc.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_ee.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_gamma.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_ae.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_stat_awb.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_top.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/isp_lite/isp_wb.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/bf0a/hdl/xil_isp_lite_v1_0.v" \
-  "../../../bd/design_1/ip/design_1_xil_isp_lite_0_0/sim/design_1_xil_isp_lite_0_0.v" \
 -endlib
 -makelib xcelium_lib/v_frmbuf_rd_v2_4_0 \
   "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_rd_0_0/hdl/v_frmbuf_rd_v2_4_rfs.v" \
@@ -133,6 +116,23 @@
   "../../../bd/design_1/ipshared/3450/hdl/xil_vip_v1_0_S00_AXI.v" \
   "../../../bd/design_1/ipshared/3450/hdl/xil_vip_v1_0.v" \
   "../../../bd/design_1/ip/design_1_xil_vip_0_0/sim/design_1_xil_vip_0_0.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_2dnr.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_blc.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_bnr.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_ccm.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_csc.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_demosaic.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_dgain.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_dpc.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_ee.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_gamma.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_ae.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_stat_awb.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_top.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/isp_lite/isp_wb.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/f095/hdl/xil_isp_lite_v1_0.v" \
+  "../../../bd/design_1/ip/design_1_xil_isp_lite_0_0/sim/design_1_xil_isp_lite_0_0.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tdata_design_1_axis_subset_converter_0_2.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tuser_design_1_axis_subset_converter_0_2.v" \
   "../../../bd/design_1/ip/design_1_axis_subset_converter_0_2/hdl/tstrb_design_1_axis_subset_converter_0_2.v" \
@@ -181,22 +181,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
--endlib
--makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
-  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axi_clock_converter_v2_1_25 \
-  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/e893/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/blk_mem_gen_v8_4_5 \
-  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
--endlib
--makelib xcelium_lib/axi_dwidth_converter_v2_1_26 \
-  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/b3c7/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
-  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 -endlib
 -makelib xcelium_lib/lib_pkg_v1_0_2 \
   "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -351,7 +335,21 @@
   "../../../bd/design_1/ip/design_1_rst_clk_wiz_150M_0/sim/design_1_rst_clk_wiz_150M_0.vhd" \
   "../../../bd/design_1/ip/design_1_rst_clk_sys_0/sim/design_1_rst_clk_sys_0.vhd" \
 -endlib
+-makelib xcelium_lib/axi_protocol_converter_v2_1_26 \
+  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/90c8/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_clock_converter_v2_1_25 \
+  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/e893/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/blk_mem_gen_v8_4_5 \
+  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib xcelium_lib/axi_dwidth_converter_v2_1_26 \
+  "../../../../zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/b3c7/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_auto_ds_0/sim/design_1_auto_ds_0.v" \
+  "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
   "../../../bd/design_1/sim/design_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Nov 25 21:23:51 2022
+| Date         : Sat Dec 10 20:54:50 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -6728,22 +6728,22 @@ Related violations: <none>
 
 LUTAR-1#17 Warning
 LUT drives async reset alert  
-LUT cell design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_u/href_dly[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_v/data_buff_reg[1][7]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_v/data_buff_reg[1][8]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_v/data_buff_reg[1][9]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[2]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[3]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[4]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[5]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[6]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[7]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[8]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_r_reg[9]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/href_dly_reg[0]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/href_dly_reg[1]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/vsync_dly_reg[0]/CLR,
-design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/vsync_dly_reg[1]/CLR
- (the first 15 of 52 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/in_href_r_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_3_reg[7]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_3_reg[8]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_3_reg[9]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_lo_2_reg[4]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_lo_2_reg[5]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_lo_2_reg[6]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_lo_2_reg[7]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_lo_2_reg[8]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_data_lo_2_reg[9]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_href_dly_reg[0]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_href_dly_reg[1]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_href_dly_reg[2]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_vsync_dly_reg[0]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_vsync_dly_reg[1]/CLR,
+design_1_i/isp_pipe/isp/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/out_vsync_dly_reg[2]/CLR
+ (the first 15 of 94 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#18 Warning

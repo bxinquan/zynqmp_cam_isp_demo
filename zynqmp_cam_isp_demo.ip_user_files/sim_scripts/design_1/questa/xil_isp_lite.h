@@ -82,7 +82,7 @@
 #define ISP_REG_STAT_AWB_HIST_ADDR    	(2*1024*4)
 #define ISP_REG_STAT_AWB_HIST_SIZE 		(3*256*4)
 #define ISP_REG_GAMMA_TABLE_ADDR      	(3*1024*4)
-#define ISP_REG_GAMMA_TABLE_SIZE      	(1*256*4)
+#define ISP_REG_GAMMA_TABLE_SIZE      	(1*64*4)
 
 
 #define ISP_REG_TOP_EN_BIT_DPC_EN           (1<<0)

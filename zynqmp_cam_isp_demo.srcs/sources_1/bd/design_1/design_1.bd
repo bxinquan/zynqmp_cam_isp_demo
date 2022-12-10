@@ -20,11 +20,11 @@
       },
       "isp_pipe": {
         "axis_to_video_0": "",
-        "isp": "",
         "vfrm_rd_isp": "",
         "vfrm_wr_isp": "",
         "video_to_axis_1": "",
-        "vip": ""
+        "vip": "",
+        "isp": ""
       },
       "camif_rpi": {
         "axis_subset_converter_0": "",
@@ -496,26 +496,6 @@
               }
             }
           },
-          "isp": {
-            "vlnv": "bxq.com:user:xil_isp_lite:1.0",
-            "xci_name": "design_1_xil_isp_lite_0_0",
-            "xci_path": "ip\\design_1_xil_isp_lite_0_0\\design_1_xil_isp_lite_0_0.xci",
-            "inst_hier_path": "isp_pipe/isp",
-            "parameters": {
-              "BAYER": {
-                "value": "1"
-              },
-              "HEIGHT": {
-                "value": "1536"
-              },
-              "IO_BITS": {
-                "value": "10"
-              },
-              "WIDTH": {
-                "value": "2048"
-              }
-            }
-          },
           "vfrm_rd_isp": {
             "vlnv": "xilinx.com:ip:v_frmbuf_rd:2.4",
             "xci_name": "design_1_v_frmbuf_rd_0_0",
@@ -666,6 +646,26 @@
                 "value": "2048"
               }
             }
+          },
+          "isp": {
+            "vlnv": "bxq.com:user:xil_isp_lite:1.0",
+            "xci_name": "design_1_xil_isp_lite_0_0",
+            "xci_path": "ip\\design_1_xil_isp_lite_0_0\\design_1_xil_isp_lite_0_0.xci",
+            "inst_hier_path": "isp_pipe/isp",
+            "parameters": {
+              "BAYER": {
+                "value": "1"
+              },
+              "HEIGHT": {
+                "value": "1536"
+              },
+              "IO_BITS": {
+                "value": "10"
+              },
+              "WIDTH": {
+                "value": "2048"
+              }
+            }
           }
         },
         "interface_nets": {
@@ -752,10 +752,10 @@
           "axis_to_video_0_locked": {
             "ports": [
               "axis_to_video_0/locked",
-              "isp/rst_n",
               "video_to_axis_1/vid_rstn",
               "video_to_axis_1/vid_ce",
-              "vip/rst_n"
+              "vip/rst_n",
+              "isp/rst_n"
             ]
           },
           "isp_irq": {
@@ -768,9 +768,9 @@
             "ports": [
               "ap_rst_n",
               "axis_to_video_0/aresetn",
-              "isp/s00_axi_aresetn",
               "video_to_axis_1/aresetn",
-              "vip/s00_axi_aresetn"
+              "vip/s00_axi_aresetn",
+              "isp/s00_axi_aresetn"
             ]
           },
           "v_frm_rd_0_interrupt": {
@@ -807,19 +807,19 @@
             "ports": [
               "ap_clk",
               "axis_to_video_0/aclk",
-              "isp/s00_axi_aclk",
               "vfrm_rd_isp/ap_clk",
               "vfrm_wr_isp/ap_clk",
               "video_to_axis_1/aclk",
-              "vip/s00_axi_aclk"
+              "vip/s00_axi_aclk",
+              "isp/s00_axi_aclk"
             ]
           },
           "zynq_ultra_ps_e_0_pl_clk1": {
             "ports": [
               "pclk",
               "axis_to_video_0/vid_clk",
-              "isp/pclk",
-              "vip/pclk"
+              "vip/pclk",
+              "isp/pclk"
             ]
           }
         }

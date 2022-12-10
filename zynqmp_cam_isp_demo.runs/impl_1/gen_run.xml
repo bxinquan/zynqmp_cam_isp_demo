@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1669381848">
+<GenRun Id="impl_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1670675767">
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="design_1_wrapper.mmi"/>
@@ -135,7 +135,8 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_isp_lite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_vip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_video_to_axis_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_frmbuf_wr_0_0"/>
@@ -146,18 +147,17 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_frmbuf_wr_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_video_to_axis_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_video_to_axis_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_vip_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_isp_lite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_mipi_rx_to_video_ias1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_clk_wiz_150M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_clk_sys_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
 </GenRun>

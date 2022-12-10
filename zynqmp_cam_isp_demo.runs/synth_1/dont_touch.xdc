@@ -24,9 +24,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_vi
 # IP: bd/design_1/ip/design_1_axis_to_video_0_0/design_1_axis_to_video_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axis_to_video_0_0 || ORIG_REF_NAME==design_1_axis_to_video_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xil_isp_lite_0_0 || ORIG_REF_NAME==design_1_xil_isp_lite_0_0} -quiet] -quiet
-
 # IP: bd/design_1/ip/design_1_v_frmbuf_rd_0_0/design_1_v_frmbuf_rd_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_v_frmbuf_rd_0_0 || ORIG_REF_NAME==design_1_v_frmbuf_rd_0_0} -quiet] -quiet
 
@@ -38,6 +35,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_vi
 
 # IP: bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xil_vip_0_0 || ORIG_REF_NAME==design_1_xil_vip_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xil_isp_lite_0_0 || ORIG_REF_NAME==design_1_xil_isp_lite_0_0} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_axis_subset_converter_0_2/design_1_axis_subset_converter_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axis_subset_converter_0_2 || ORIG_REF_NAME==design_1_axis_subset_converter_0_2} -quiet] -quiet

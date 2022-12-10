@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'v_frmbuf_wr'
 ================================================================
-* Date:           Fri Nov 25 21:03:35 2022
+* Date:           Sat Dec 10 20:38:27 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -177,7 +177,8 @@ Target clock period: 6.66ns, clock uncertainty: 1.8ns.
  <State 1>: 2.07ns
 The critical path consists of the following:
 	s_axi read operation ('video_format') on port 'video_format' [19]  (1 ns)
-	'icmp' operation ('empty_70') [66]  (0.785 ns)
+	'icmp' operation ('empty_68') [64]  (0.785 ns)
+	'or' operation ('empty_69') [65]  (0 ns)
 	'or' operation ('empty_71') [67]  (0.287 ns)
 
  <State 2>: 3.01ns

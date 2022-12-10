@@ -58,3 +58,13 @@ platform config -updatehw {D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/desi
 bsp reload
 catch {bsp regenerate}
 platform generate -domains standalone_psu_cortexa53_0 
+platform active {design_1_wrapper}
+platform config -updatehw {D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper.xsa}
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_psu_cortexa53_0 
+platform active {design_1_wrapper}
+platform config -updatehw {D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper.xsa}
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_psu_cortexa53_0 
