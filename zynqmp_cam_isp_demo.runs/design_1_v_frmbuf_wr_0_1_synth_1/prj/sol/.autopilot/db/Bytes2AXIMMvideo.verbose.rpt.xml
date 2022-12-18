@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Bytes2AXIMMvideo'" level="0">
-<item name = "Date">Sat Dec 10 20:38:41 2022
+<item name = "Date">Sat Dec 17 00:27:28 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 4.864 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,15 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 71733601, 6.663 ns, 0.478 sec, 1, 71733601, no</column>
+<column name="">2, 71733602, 6.666 ns, 0.239 sec, 2, 71733602, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202">Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1, 4, 8195, 26.652 ns, 54.603 us, 4, 8195, no</column>
-<column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212">Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2, 4, 8195, 26.652 ns, 54.603 us, 4, 8195, no</column>
+<column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202">Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1, 4, 8195, 13.332 ns, 27.314 us, 4, 8195, no</column>
+<column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212">Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2, 4, 8195, 13.332 ns, 27.314 us, 4, 8195, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -54,8 +54,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 166, 188, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 1574, -</column>
-<column name="Register">-, -, 522, -, -</column>
+<column name="Multiplexer">-, -, -, 1579, -</column>
+<column name="Register">-, -, 536, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
 </table>
@@ -82,40 +82,40 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln1117_fu_347_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln1123_fu_372_p2">+, 0, 0, 32, 25, 25</column>
-<column name="add_ln1125_fu_280_p2">+, 0, 0, 14, 7, 7</column>
-<column name="add_ln1127_fu_492_p2">+, 0, 0, 39, 32, 32</column>
-<column name="offsetUV_1_fu_517_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln1117_fu_342_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln1123_fu_367_p2">+, 0, 0, 32, 25, 25</column>
+<column name="add_ln1125_fu_290_p2">+, 0, 0, 14, 7, 7</column>
+<column name="add_ln1127_fu_487_p2">+, 0, 0, 39, 32, 32</column>
+<column name="offsetUV_1_fu_512_p2">+, 0, 0, 39, 32, 32</column>
 <column name="sub_fu_232_p2">+, 0, 0, 23, 16, 3</column>
-<column name="y_16_fu_329_p2">+, 0, 0, 19, 12, 1</column>
-<column name="ap_block_state109">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_state216">and, 0, 0, 2, 1, 1</column>
-<column name="cmp33_fu_270_p2">icmp, 0, 0, 12, 13, 1</column>
-<column name="empty_144_fu_377_p2">icmp, 0, 0, 10, 6, 6</column>
-<column name="empty_145_fu_382_p2">icmp, 0, 0, 10, 6, 7</column>
-<column name="empty_147_fu_393_p2">icmp, 0, 0, 10, 6, 5</column>
-<column name="empty_149_fu_404_p2">icmp, 0, 0, 10, 6, 5</column>
-<column name="empty_151_fu_415_p2">icmp, 0, 0, 10, 6, 5</column>
-<column name="empty_153_fu_426_p2">icmp, 0, 0, 10, 6, 5</column>
-<column name="empty_155_fu_437_p2">icmp, 0, 0, 10, 6, 6</column>
-<column name="empty_156_fu_442_p2">icmp, 0, 0, 10, 6, 6</column>
-<column name="empty_158_fu_453_p2">icmp, 0, 0, 10, 6, 5</column>
-<column name="empty_160_fu_464_p2">icmp, 0, 0, 10, 6, 5</column>
-<column name="empty_162_fu_475_p2">icmp, 0, 0, 10, 6, 2</column>
-<column name="icmp_ln1113_fu_324_p2">icmp, 0, 0, 12, 12, 12</column>
-<column name="icmp_ln1125_fu_296_p2">icmp, 0, 0, 10, 6, 1</column>
+<column name="y_16_fu_324_p2">+, 0, 0, 19, 12, 1</column>
+<column name="ap_block_state110">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state217">and, 0, 0, 2, 1, 1</column>
+<column name="cmp33_fu_282_p2">icmp, 0, 0, 12, 13, 1</column>
+<column name="empty_144_fu_372_p2">icmp, 0, 0, 10, 6, 6</column>
+<column name="empty_145_fu_377_p2">icmp, 0, 0, 10, 6, 7</column>
+<column name="empty_147_fu_388_p2">icmp, 0, 0, 10, 6, 5</column>
+<column name="empty_149_fu_399_p2">icmp, 0, 0, 10, 6, 5</column>
+<column name="empty_151_fu_410_p2">icmp, 0, 0, 10, 6, 5</column>
+<column name="empty_153_fu_421_p2">icmp, 0, 0, 10, 6, 5</column>
+<column name="empty_155_fu_432_p2">icmp, 0, 0, 10, 6, 6</column>
+<column name="empty_156_fu_437_p2">icmp, 0, 0, 10, 6, 6</column>
+<column name="empty_158_fu_448_p2">icmp, 0, 0, 10, 6, 5</column>
+<column name="empty_160_fu_459_p2">icmp, 0, 0, 10, 6, 5</column>
+<column name="empty_162_fu_470_p2">icmp, 0, 0, 10, 6, 2</column>
+<column name="icmp_ln1113_fu_319_p2">icmp, 0, 0, 12, 12, 12</column>
+<column name="icmp_ln1125_fu_306_p2">icmp, 0, 0, 10, 6, 1</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op519_writeresp_state216">or, 0, 0, 2, 1, 1</column>
-<column name="empty_146_fu_387_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_148_fu_398_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_150_fu_409_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_152_fu_420_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_154_fu_431_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_157_fu_447_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_159_fu_458_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_161_fu_469_p2">or, 0, 0, 2, 1, 1</column>
-<column name="empty_163_fu_480_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op520_writeresp_state217">or, 0, 0, 2, 1, 1</column>
+<column name="empty_146_fu_382_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_148_fu_393_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_150_fu_404_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_152_fu_415_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_154_fu_426_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_157_fu_442_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_159_fu_453_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_161_fu_464_p2">or, 0, 0, 2, 1, 1</column>
+<column name="empty_163_fu_475_p2">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -124,7 +124,7 @@
 <column name="StrideInBytes_blk_n">9, 2, 1, 2</column>
 <column name="VideoFormat_blk_n">9, 2, 1, 2</column>
 <column name="WidthInBytes_blk_n">9, 2, 1, 2</column>
-<column name="ap_NS_fsm">1152, 217, 1, 217</column>
+<column name="ap_NS_fsm">1157, 218, 1, 218</column>
 <column name="ap_done">9, 2, 1, 2</column>
 <column name="bytePlanes_plane01_read">9, 2, 1, 2</column>
 <column name="bytePlanes_plane12_read">9, 2, 1, 2</column>
@@ -158,30 +158,31 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="Height_read_reg_571">12, 0, 12, 0</column>
-<column name="VideoFormat_read_reg_556">6, 0, 6, 0</column>
-<column name="add_ln1123_reg_639">25, 0, 25, 0</column>
-<column name="ap_CS_fsm">216, 0, 216, 0</column>
+<column name="Height_read_reg_567">12, 0, 12, 0</column>
+<column name="VideoFormat_read_reg_551">6, 0, 6, 0</column>
+<column name="add_ln1123_reg_643">25, 0, 25, 0</column>
+<column name="ap_CS_fsm">217, 0, 217, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="cmp33_reg_603">1, 0, 1, 0</column>
-<column name="div8_cast3_reg_598">13, 0, 32, 19</column>
-<column name="div_cast2_reg_592">13, 0, 32, 19</column>
-<column name="div_reg_586">13, 0, 13, 0</column>
-<column name="dstImg2_read_reg_576">32, 0, 32, 0</column>
-<column name="dstImg_read_reg_581">32, 0, 32, 0</column>
-<column name="empty_154_reg_644">1, 0, 1, 0</column>
-<column name="empty_163_reg_648">1, 0, 1, 0</column>
+<column name="cmp33_reg_607">1, 0, 1, 0</column>
+<column name="div8_cast3_reg_602">13, 0, 32, 19</column>
+<column name="div8_reg_590">13, 0, 13, 0</column>
+<column name="div_cast2_reg_596">13, 0, 32, 19</column>
+<column name="div_reg_582">13, 0, 13, 0</column>
+<column name="dstImg2_read_reg_572">32, 0, 32, 0</column>
+<column name="dstImg_read_reg_577">32, 0, 32, 0</column>
+<column name="empty_154_reg_648">1, 0, 1, 0</column>
+<column name="empty_163_reg_652">1, 0, 1, 0</column>
 <column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212_ap_start_reg">1, 0, 1, 0</column>
-<column name="icmp_ln1125_reg_612">1, 0, 1, 0</column>
+<column name="icmp_ln1125_reg_616">1, 0, 1, 0</column>
 <column name="offsetUV_fu_148">32, 0, 32, 0</column>
 <column name="offsetY_fu_144">25, 0, 25, 0</column>
-<column name="trunc_ln1113_reg_616">1, 0, 1, 0</column>
-<column name="trunc_ln7_reg_628">29, 0, 29, 0</column>
-<column name="trunc_ln8_reg_652">29, 0, 29, 0</column>
-<column name="y_16_reg_623">12, 0, 12, 0</column>
+<column name="trunc_ln1113_reg_620">1, 0, 1, 0</column>
+<column name="trunc_ln7_reg_632">29, 0, 29, 0</column>
+<column name="trunc_ln8_reg_656">29, 0, 29, 0</column>
+<column name="y_16_reg_627">12, 0, 12, 0</column>
 <column name="y_fu_140">12, 0, 12, 0</column>
-<column name="zext_ln1125_reg_607">13, 0, 25, 12</column>
+<column name="zext_ln1125_reg_611">13, 0, 25, 12</column>
 </table>
 </item>
 </section>

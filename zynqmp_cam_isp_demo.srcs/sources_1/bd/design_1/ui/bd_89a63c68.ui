@@ -1,40 +1,44 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.14255",
-   "Default View_TopLeft":"19,0",
+   "Default View_ScaleFactor":"0.975096",
+   "Default View_TopLeft":"-164,-303",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port mipi_rx -pg 1 -lvl 0 -x -10 -y 110 -defaultsOSRD
-preplace port s_axi_vfrm_wr -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
-preplace port m_axi_mm_video -pg 1 -lvl 5 -x 1240 -y 260 -defaultsOSRD
-preplace port s_axi_mipi_rx -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
-preplace port port-id_irq_vfrm_wr -pg 1 -lvl 5 -x 1240 -y 280 -defaultsOSRD
-preplace port port-id_aclk -pg 1 -lvl 0 -x -10 -y 130 -defaultsOSRD
-preplace port port-id_aresetn -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
-preplace port port-id_irq_mipi_rx -pg 1 -lvl 5 -x 1240 -y 360 -defaultsOSRD
-preplace port port-id_ap_rst_n_wr -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
-preplace inst axis_subset_converter_0 -pg 1 -lvl 3 -x 690 -y 140 -defaultsOSRD
-preplace inst vfrm_wr_rpi -pg 1 -lvl 4 -x 1040 -y 270 -defaultsOSRD
-preplace inst mipi_rx_to_video_rpi -pg 1 -lvl 1 -x 150 -y 120 -defaultsOSRD
-preplace inst video_to_axis_0 -pg 1 -lvl 2 -x 420 -y 130 -defaultsOSRD
-preplace netloc aclk_0_1 1 0 4 10 10 320 10 530 60 850J
-preplace netloc ap_rst_n_1 1 0 4 NJ 300 NJ 300 NJ 300 NJ
-preplace netloc aresetn_1 1 0 3 20 20 290 20 520
-preplace netloc mipi_rx_to_video_rpi_irq 1 1 4 280J 360 NJ 360 NJ 360 NJ
-preplace netloc mipi_rx_to_video_rpi_vid_ce 1 1 1 300 120n
-preplace netloc mipi_rx_to_video_rpi_vid_clk 1 1 1 N 100
-preplace netloc mipi_rx_to_video_rpi_vid_locked 1 1 1 310 120n
+preplace port mipi_rx_dphy_if -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port s_axi_ctrl_wr -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace port m_axi_mm_wr -pg 1 -lvl 5 -x 1260 -y 260 -defaultsOSRD
+preplace port s_axi_ctrl_mipi_rx -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_irq_wr -pg 1 -lvl 5 -x 1260 -y 280 -defaultsOSRD
+preplace port port-id_axi_mm_aclk -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port port-id_axi_mm_arstn -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_irq_mipi_rx -pg 1 -lvl 5 -x 1260 -y 360 -defaultsOSRD
+preplace port port-id_axi_arstn_wr -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port port-id_axi_ctrl_aclk -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port port-id_axi_ctrl_arstn -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace inst axis_subset_converter -pg 1 -lvl 3 -x 700 -y 140 -defaultsOSRD
+preplace inst v_frm_wr -pg 1 -lvl 4 -x 1060 -y 270 -defaultsOSRD
+preplace inst mipi_rx_to_video -pg 1 -lvl 1 -x 150 -y 100 -defaultsOSRD
+preplace inst video_to_axis -pg 1 -lvl 2 -x 420 -y 130 -defaultsOSRD
+preplace netloc aclk_0_1 1 0 4 20J 210 300 20 520 220 870J
+preplace netloc ap_rst_n_1 1 0 4 30J 200 280J 10 530J 230 860J
+preplace netloc aresetn_1 1 0 3 NJ 220 320 370 540
+preplace netloc mipi_rx_to_video_rpi_irq 1 1 4 270J 360 NJ 360 NJ 360 NJ
 preplace netloc v_frmbuf_wr_0_interrupt 1 4 1 NJ 280
-preplace netloc Conn1 1 0 1 NJ 90
-preplace netloc axis_subset_converter_0_M_AXIS 1 3 1 840 140n
-preplace netloc mipi_rx_0_1 1 0 1 NJ 110
-preplace netloc mipi_rx_to_video_rpi_video 1 1 1 N 80
+preplace netloc s00_axi_aclk_0_1 1 0 1 NJ 110
+preplace netloc s00_axi_aresetn_0_1 1 0 1 NJ 130
+preplace netloc mipi_rx_to_video_vid_clk 1 1 1 310 80n
+preplace netloc mipi_rx_to_video_vid_ce 1 1 1 290 100n
+preplace netloc mipi_rx_to_video_vid_locked 1 1 1 N 120
+preplace netloc Conn1 1 0 1 NJ 70
+preplace netloc mipi_rx_0_1 1 0 1 NJ 90
 preplace netloc ps8_0_axi_periph_M02_AXI 1 0 4 NJ 240 NJ 240 NJ 240 NJ
 preplace netloc v_frmbuf_wr_0_m_axi_mm_video 1 4 1 NJ 260
-preplace netloc video_to_axis_0_m_axis 1 2 1 N 120
-levelinfo -pg 1 -10 150 420 690 1040 1240
-pagesize -pg 1 -db -bbox -sgen -160 0 1390 390
+preplace netloc mipi_rx_to_video_video 1 1 1 320 60n
+preplace netloc video_to_axis_m_axis 1 2 1 N 120
+preplace netloc axis_subset_converter_M_AXIS 1 3 1 880 140n
+levelinfo -pg 1 0 150 420 700 1060 1260
+pagesize -pg 1 -db -bbox -sgen -170 0 1410 380
 "
 }
 0

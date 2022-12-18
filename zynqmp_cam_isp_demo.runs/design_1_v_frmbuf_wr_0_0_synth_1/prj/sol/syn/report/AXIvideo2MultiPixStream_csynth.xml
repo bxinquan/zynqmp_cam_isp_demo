@@ -9,8 +9,8 @@
 <ProductFamily>zynquplus</ProductFamily>
 <Part>xck26-sfvc784-2LV-c</Part>
 <TopModelName>AXIvideo2MultiPixStream</TopModelName>
-<TargetClockPeriod>6.66</TargetClockPeriod>
-<ClockUncertainty>1.80</ClockUncertainty>
+<TargetClockPeriod>3.33</TargetClockPeriod>
+<ClockUncertainty>0.90</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -25,9 +25,9 @@
 <Best-caseLatency>6</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
 <Worst-caseLatency>3313446</Worst-caseLatency>
-<Best-caseRealTimeLatency>39.978 ns</Best-caseRealTimeLatency>
+<Best-caseRealTimeLatency>19.998 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>22.077 ms</Worst-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>11.044 ms</Worst-caseRealTimeLatency>
 <Interval-min>6</Interval-min>
 <Interval-max>3313446</Interval-max>
 </SummaryOfOverallLatency>
@@ -48,7 +48,7 @@
 <AbsoluteTimeLatency>
 <range>
 <min>0</min>
-<max>22077451</max>
+<max>11043695</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>

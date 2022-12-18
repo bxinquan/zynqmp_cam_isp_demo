@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Sat Dec 10 20:55:12 2022
+| Date             : Sat Dec 17 10:58:29 2022
 | Host             : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.249        |
+| Total On-Chip Power (W)  | 4.150        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.923        |
-| Device Static (W)        | 0.327        |
+| Dynamic (W)              | 3.817        |
+| Device Static (W)        | 0.333        |
 | Effective TJA (C/W)      | 2.3          |
-| Max Ambient (C)          | 77.5         |
-| Junction Temperature (C) | 32.5         |
+| Max Ambient (C)          | 75.4         |
+| Junction Temperature (C) | 34.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,26 +52,29 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.112 |       10 |       --- |             --- |
-| CLB Logic                |     0.109 |    92107 |       --- |             --- |
-|   LUT as Distributed RAM |     0.057 |     1890 |     57600 |            3.28 |
-|   LUT as Logic           |     0.040 |    32121 |    117120 |           27.43 |
-|   LUT as Shift Register  |     0.006 |     1367 |     57600 |            2.37 |
-|   Register               |     0.004 |    38355 |    234240 |           16.37 |
-|   CARRY8                 |     0.002 |     1923 |     14640 |           13.14 |
-|   BUFG                   |    <0.001 |        7 |        32 |           21.88 |
-|   Others                 |     0.000 |     1597 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |      665 |    117120 |            0.57 |
-| Signals                  |     0.057 |    60773 |       --- |             --- |
-| Block RAM                |     0.058 |     69.5 |       144 |           48.26 |
-| MMCM                     |     0.000 |        0 |       --- |             --- |
-| DSPs                     |     0.010 |       84 |      1248 |            6.73 |
+| Clocks                   |     0.280 |       12 |       --- |             --- |
+| CLB Logic                |     0.435 |   148747 |       --- |             --- |
+|   LUT as Distributed RAM |     0.287 |     4418 |     57600 |            7.67 |
+|   LUT as Logic           |     0.120 |    47018 |    117120 |           40.15 |
+|   Register               |     0.016 |    66510 |    234240 |           28.39 |
+|   LUT as Shift Register  |     0.009 |     2050 |     57600 |            3.56 |
+|   CARRY8                 |     0.003 |     2252 |     14640 |           15.38 |
+|   BUFG                   |    <0.001 |        9 |        32 |           28.13 |
+|   Others                 |     0.000 |     2787 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |     1302 |    117120 |            1.11 |
+| Signals                  |     0.201 |   102579 |       --- |             --- |
+| Block RAM                |     0.121 |     81.5 |       144 |           56.60 |
+| URAM                     |     0.038 |       12 |        64 |           18.75 |
+| MMCM                     |     0.114 |        0 |       --- |             --- |
+| DSPs                     |     0.012 |       94 |      1248 |            7.53 |
 | I/O                      |     0.029 |       21 |       189 |           11.11 |
-| PS8                      |     2.548 |        1 |       --- |             --- |
-| Static Power             |     0.327 |          |           |                 |
+| PS8                      |     2.574 |        1 |       --- |             --- |
+| Hard IPs                 |     0.013 |        1 |       --- |             --- |
+|   VCU                    |     0.013 |        1 |         1 |          100.00 |
+| Static Power             |     0.333 |          |           |                 |
 |   PS Static              |     0.000 |          |           |                 |
-|   PL Static              |     0.327 |          |           |                 |
-| Total                    |     3.249 |          |           |                 |
+|   PL Static              |     0.333 |          |           |                 |
+| Total                    |     4.150 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -81,10 +84,10 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     0.564 |       0.472 |      0.091 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     1.598 |       1.496 |      0.101 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.041 |       0.004 |      0.037 |       NA    | Unspecified | NA         |
-| Vccbram         |       0.850 |     0.009 |       0.007 |      0.001 |       NA    | Unspecified | NA         |
-| Vccaux          |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.014 |       0.012 |      0.002 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.138 |       0.063 |      0.074 |       NA    | Unspecified | NA         |
 | Vccaux_io       |       1.800 |     0.043 |       0.012 |      0.031 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.007 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -94,11 +97,11 @@ Table of Contents
 | Vcco12          |       1.200 |     0.003 |       0.003 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
-| VCC_PSINTFP     |       0.850 |     0.965 |       0.965 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.995 |       0.995 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSINTLP     |       0.850 |     0.249 |       0.249 |      0.000 |       NA    | Unspecified | NA         |
 | VPS_MGTRAVCC    |       0.850 |     0.067 |       0.067 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSINTFP_DDR |       0.850 |     0.726 |       0.726 |      0.000 |       NA    | Unspecified | NA         |
-| VCC_PSPLL       |       1.200 |     0.071 |       0.071 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.082 |       0.082 |      0.000 |       NA    | Unspecified | NA         |
 | VPS_MGTRAVTT    |       1.800 |     0.025 |       0.025 |      0.000 |       NA    | Unspecified | NA         |
 | VCCO_PSDDR_504  |       1.200 |     0.592 |       0.592 |      0.000 |       NA    | Unspecified | NA         |
 | VCC_PSAUX       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -152,18 +155,20 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| Clock                          | Domain                                                                                                                                                   | Constraint (ns) |
-+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
-| clk_isp_design_1_clk_wiz_0_0   | design_1_i/clk_wiz/inst/clk_isp_design_1_clk_wiz_0_0                                                                                                     |             8.0 |
-| clk_pl_0                       | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                |            10.0 |
-| clk_pl_0                       | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]                                                                                                   |            10.0 |
-| clk_sys_design_1_clk_wiz_0_0   | design_1_i/clk_wiz/inst/clk_sys_design_1_clk_wiz_0_0                                                                                                     |             6.7 |
-| mipi_ias1_clk_bit              | mipi_rx_ias1_clk_p                                                                                                                                       |             2.0 |
-| mipi_rpi_clk_bit               | mipi_rx_rpi_clk_p                                                                                                                                        |             2.0 |
-| mipi_rx_to_video_ias1_vid_clk  | design_1_i/camif_ias1/mipi_rx_to_video_ias1/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/clk_hs_byte |             8.0 |
-| mipi_rx_to_video_rpi_vid_clk_1 | design_1_i/camif_rpi/mipi_rx_to_video_rpi/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/clk_hs_byte   |             8.0 |
-+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
++-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                         | Domain                                                                                                                                              | Constraint (ns) |
++-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| clk_ctrl_design_1_clk_wiz_0_0 | design_1_i/clk_wiz/inst/clk_ctrl_design_1_clk_wiz_0_0                                                                                               |            10.0 |
+| clk_isp_design_1_clk_wiz_0_0  | design_1_i/clk_wiz/inst/clk_isp_design_1_clk_wiz_0_0                                                                                                |             8.0 |
+| clk_mm_design_1_clk_wiz_0_0   | design_1_i/clk_wiz/inst/clk_mm_design_1_clk_wiz_0_0                                                                                                 |             3.3 |
+| clk_pl_0                      | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                           |            10.0 |
+| clk_pl_0                      | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]                                                                                              |            10.0 |
+| clk_vcu_design_1_clk_wiz_0_0  | design_1_i/clk_wiz/inst/clk_vcu_design_1_clk_wiz_0_0                                                                                                |            30.0 |
+| mipi_ias1_clk_bit             | mipi_rx_ias1_clk_p                                                                                                                                  |             2.0 |
+| mipi_rpi_clk_bit              | mipi_rx_rpi_clk_p                                                                                                                                   |             2.0 |
+| mipi_rx_to_video_vid_clk_1    | design_1_i/camif_ias1/mipi_rx_to_video/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/clk_hs_byte |             8.0 |
+| mipi_rx_to_video_vid_clk_2    | design_1_i/camif_rpi/mipi_rx_to_video/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/clk_hs_byte  |             8.0 |
++-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -172,35 +177,50 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------------+-----------+
-| Name                        | Power (W) |
-+-----------------------------+-----------+
-| design_1_wrapper            |     2.923 |
-|   design_1_i                |     2.922 |
-|     axi_iic                 |     0.001 |
-|       U0                    |     0.001 |
-|     axi_smc                 |     0.120 |
-|       inst                  |     0.120 |
-|     camif_ias1              |     0.061 |
-|       mipi_rx_to_video_ias1 |     0.024 |
-|       vfrm_wr_ias1          |     0.035 |
-|       video_to_axis_0       |     0.002 |
-|     camif_rpi               |     0.038 |
-|       mipi_rx_to_video_rpi  |     0.016 |
-|       vfrm_wr_rpi           |     0.021 |
-|       video_to_axis_0       |     0.001 |
-|     isp_pipe                |     0.138 |
-|       axis_to_video_0       |     0.001 |
-|       isp                   |     0.075 |
-|       vfrm_rd_isp           |     0.017 |
-|       vfrm_wr_isp           |     0.022 |
-|       video_to_axis_1       |     0.002 |
-|       vip                   |     0.021 |
-|     ps8_0_axi_periph        |     0.014 |
-|       s00_couplers          |     0.012 |
-|       xbar                  |     0.002 |
-|     zynq_ultra_ps_e_0       |     2.549 |
-|       inst                  |     2.549 |
-+-----------------------------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| design_1_wrapper       |     3.817 |
+|   design_1_i           |     3.817 |
+|     axi_iic            |     0.001 |
+|       U0               |     0.001 |
+|     axi_smc_cam        |     0.273 |
+|       inst             |     0.273 |
+|     axi_smc_vcu_0      |     0.063 |
+|       inst             |     0.063 |
+|     axi_smc_vcu_1      |     0.159 |
+|       inst             |     0.159 |
+|     axi_smc_vcu_2      |     0.170 |
+|       inst             |     0.170 |
+|     camif_ias1         |     0.086 |
+|       mipi_rx_to_video |     0.024 |
+|       v_frm_wr         |     0.060 |
+|       video_to_axis    |     0.001 |
+|     camif_rpi          |     0.051 |
+|       mipi_rx_to_video |     0.016 |
+|       v_frm_wr         |     0.035 |
+|     clk_wiz            |     0.115 |
+|       inst             |     0.115 |
+|     isp_pipe           |     0.216 |
+|       axis_to_video    |     0.002 |
+|       isp              |     0.072 |
+|       v_frm_rd         |     0.025 |
+|       v_frm_wr_1       |     0.038 |
+|       v_frm_wr_2       |     0.034 |
+|       video_to_axis_1  |     0.001 |
+|       video_to_axis_2  |     0.002 |
+|       vip_1            |     0.020 |
+|       vip_2            |     0.021 |
+|     ps8_0_axi_periph   |     0.008 |
+|       s00_couplers     |     0.007 |
+|       xbar             |     0.001 |
+|     ps8_0_axi_periph_1 |     0.016 |
+|       s00_couplers     |     0.013 |
+|       xbar             |     0.003 |
+|     vcu                |     0.076 |
+|       inst             |     0.076 |
+|     zynq_ultra_ps_e_0  |     2.581 |
+|       inst             |     2.581 |
++------------------------+-----------+
 
 

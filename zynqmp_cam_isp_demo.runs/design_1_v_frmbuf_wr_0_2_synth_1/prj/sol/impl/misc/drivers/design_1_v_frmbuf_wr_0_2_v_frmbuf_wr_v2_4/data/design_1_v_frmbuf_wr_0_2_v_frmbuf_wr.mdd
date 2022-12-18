@@ -1,0 +1,17 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+# Tool Version Limit: 2022.04
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver design_1_v_frmbuf_wr_0_2_v_frmbuf_wr
+
+ OPTION supported_peripherals = (design_1_v_frmbuf_wr_0_2_v_frmbuf_wr_v2_4 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = design_1_v_frmbuf_wr_0_2_v_frmbuf_wr;
+ OPTION version = 2.4;
+
+END driver
+

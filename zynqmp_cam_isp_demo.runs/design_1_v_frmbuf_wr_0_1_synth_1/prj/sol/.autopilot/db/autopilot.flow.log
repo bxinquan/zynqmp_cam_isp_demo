@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol opened at Sat Dec 10 20:36:59 +0800 2022
+INFO-FLOW: Workspace D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol opened at Sat Dec 17 00:25:56 +0800 2022
 Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute       get_config_interface -m_axi_latency 
@@ -16,26 +16,24 @@ DBG:HLSDevice: Trying to load device library: D:/Xilinx/Vitis_HLS/2022.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 9.391 sec.
+Command       create_platform done; 0.68 sec.
 Execute       source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command         ap_source done; 0.244 sec.
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command         ap_source done; 0.19 sec.
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 1.12 sec.
+Command         ap_source done; 0.123 sec.
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 2.293 sec.
+Command       ap_source done; 0.167 sec.
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 11.912 sec.
+Command     set_part done; 0.859 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/v_frmbuf_wr_config.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/v_frmbuf_wr_config.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/v_frmbuf_wr_config.h' to the project
@@ -54,26 +52,21 @@ INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_dem
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_axi_io.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_axi_io.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_axi_io.h' to the project
-Command     add_files done; 0.102 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_arithm.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_arithm.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_arithm.h' to the project
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_core.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_core.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_core.h' to the project
-Command     add_files done; 0.232 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_fast.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_fast.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_fast.h' to the project
-Command     add_files done; 0.593 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_haar.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_haar.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_haar.h' to the project
-Command     add_files done; 0.328 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_harris.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_harris.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_harris.h' to the project
-Command     add_files done; 0.189 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_histogram.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_histogram.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_histogram.h' to the project
@@ -86,6 +79,7 @@ INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_dem
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_imgproc.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_imgproc.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_imgproc.h' to the project
+Command     add_files done; 1.658 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_io.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_io.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_io.h' to the project
@@ -95,18 +89,16 @@ INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_dem
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_stereobm.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_stereobm.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_stereobm.h' to the project
-Command     add_files done; 0.234 sec.
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_types.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_types.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_types.h' to the project
 Execute     add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_undistort.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src  d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_undistort.h 
 INFO: [HLS 200-10] Adding design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls/hls_video_undistort.h' to the project
-Execute     create_clock -period 6.663 -name ap_clk 
-INFO: [HLS 200-1510] Running: create_clock -period 6.663 -name ap_clk 
-Execute       ap_set_clock -name ap_clk -period 6.663 -default=false 
-INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 6.663ns.
-Command     create_clock done; 0.115 sec.
+Execute     create_clock -period 3.333 -name ap_clk 
+INFO: [HLS 200-1510] Running: create_clock -period 3.333 -name ap_clk 
+Execute       ap_set_clock -name ap_clk -period 3.333 -default=false 
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 3.333ns.
 Execute     config_interface -m_axi_flush_mode 
 INFO: [HLS 200-1510] Running: config_interface -m_axi_flush_mode 
 Execute     config_interface -m_axi_conservative_mode 
@@ -131,7 +123,7 @@ Execute       get_config_compile -skip_transform
 Execute       get_config_compile -pre_tcl 
 Execute       get_config_compile -keep_printf 
 Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1.102 GB.
 INFO: [HLS 200-10] Analyzing design file 'd:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/v_frmbuf_wr.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute         get_config_compile -pragma_strict_mode 
@@ -140,41 +132,41 @@ Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp -foptimization-record-file=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot D:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -Id:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -Id:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp.clang.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp.clang.err.log 
-Command         ap_eval done; 0.63 sec.
-INFO-FLOW: Done: GCC PP 39 time: 2 seconds per iteration
+Command         ap_eval done; 0.244 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1.3 seconds per iteration
 Execute         set_directive_top v_frmbuf_wr -name=v_frmbuf_wr 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/clang.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/clang.err.log 
-Command         ap_eval done; 6.683 sec.
+Command         ap_eval done; 5.315 sec.
 Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/.systemc_flag -fix-errors D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 5.531 sec.
+Command         clang_tidy done; 14.905 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/all.directive.json 
 INFO-FLOW: exec D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/all.directive.json -fix-errors D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 6.248 sec.
+Command         clang_tidy done; 6.203 sec.
 Execute         clang_tidy xilinx-remove-assert -desc remove-assert D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 5.474 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 11.7 seconds per iteration
+Command         clang_tidy done; 5.308 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 11.5 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp std=gnu++14 -target fpga  
 Execute           ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.clang-tidy.loop-label.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command           ap_eval done; 12.849 sec.
+Command           ap_eval done; 12.619 sec.
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command         clang_tidy done; 14.752 sec.
+Command         clang_tidy done; 14.454 sec.
 Execute         get_config_dataflow -strict_mode 
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command         ap_eval done; 5.124 sec.
+Command         ap_eval done; 4.658 sec.
 Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp -Id:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src/hls -Id:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_1/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.bc -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.clang.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.pp.0.cpp.clang.err.log 
-Command         ap_eval done; 5.37 sec.
+Command         ap_eval done; 5.084 sec.
 WARNING: [HLS 207-5292] unused parameter 'dstImg3' (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1100:15)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 52.369 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 58.412 seconds; current allocated memory: 1.102 GB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute         run_link_or_opt -out D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc -args  "D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.g.bc"  
@@ -186,24 +178,22 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute         run_link_or_opt -out D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc -args D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
 Execute           ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command           ap_eval done; 4.234 sec.
+Command           ap_eval done; 3.369 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 4.236 sec.
+Command         run_link_or_opt done; 3.371 sec.
 Execute         run_link_or_opt -opt -out D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc -args D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=v_frmbuf_wr -reflow-float-conversion 
 Execute           ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=v_frmbuf_wr -reflow-float-conversion -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command           ap_eval done; 1.528 sec.
+Command           ap_eval done; 1.309 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 1.53 sec.
+Command         run_link_or_opt done; 1.312 sec.
 Execute         run_link_or_opt -out D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc -args D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
 Execute           ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
-Command           ap_eval done; 0.209 sec.
+Command           ap_eval done; 0.138 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 0.211 sec.
+Command         run_link_or_opt done; 0.14 sec.
 Execute         run_link_or_opt -opt -out D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc -args D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=v_frmbuf_wr 
 Execute           ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=v_frmbuf_wr -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
-Command           ap_eval done; 0.161 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 0.164 sec.
 Execute         get_solution -flow_target 
 Execute         get_config_export -xo 
 Execute         get_config_export -format 
@@ -247,7 +237,7 @@ Execute         is_m_axi_addr64
 Execute         get_clock_period -ns -default 
 INFO-FLOW: Doing LTO.
 Execute         ap_eval exec -ignorestderr D:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=v_frmbuf_wr -mllvm -hls-db-dir -mllvm D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -hls-top-function-prefix=design_1_v_frmbuf_wr_0_1_ -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -reflow-enable-maxi-addr-32bits -x ir D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.lto.bc -hls-platform-db-name=D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 > D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command         ap_eval done; 1.308 sec.
+Command         ap_eval done; 1.152 sec.
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:283:50)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:286:25)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_uint<24>, 1ul, 1ul, 1ul>&)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_axi_sdata.h:285:67)
@@ -391,22 +381,22 @@ INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i24.a3s_struct.ap_ui
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.bits.s_class.hls::Scalar<3, ap_uint<8> >s.i24.1' into 'MultiPixStream2Bytes(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, STREAM_PLANES&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145:9)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.s_struct.ap_uint<64>s' into 'MultiPixStream2Bytes(hls::stream<hls::Scalar<3, ap_uint<8> >, 0>&, STREAM_PLANES&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174:9)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 18.139 seconds; current allocated memory: 916.480 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 15.936 seconds; current allocated memory: 1.102 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 1.102 GB.
 Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute           cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top v_frmbuf_wr -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.0.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command           transform done; 0.198 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 916.480 MB.
+Command           transform done; 0.148 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 1.102 GB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.1.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.2.prechk.bc -f 
-Command           transform done; 0.205 sec.
+Command           transform done; 0.192 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute           transform -syn-check D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.2.prechk.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.283 seconds; current allocated memory: 1.102 GB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.g.1.bc to D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -417,23 +407,23 @@ INFO: [XFORM 203-712] Applying dataflow to function 'FrmbufWrHlsDataFlow' (D:/zy
 	 'AXIvideo2MultiPixStream'
 	 'MultiPixStream2Bytes'
 	 'Bytes2AXIMMvideo'.
-Command           transform done; 0.566 sec.
+Command           transform done; 0.473 sec.
 INFO-FLOW: Presyn 2...
 Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.o.1.tmp.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:743:46) to (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:760:19) in function 'MultiPixStream2Bytes'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:866:46) to (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:884:14) in function 'MultiPixStream2Bytes'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:207:15) in function 'AXIvideo2MultiPixStream'... converting 4 basic blocks.
-Command           transform done; 0.304 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.874 seconds; current allocated memory: 916.480 MB.
+Command           transform done; 0.262 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.738 seconds; current allocated memory: 1.102 GB.
 Execute           get_config_compile -enable_auto_rewind 
 Execute           get_config_compile -enable_loop_extract 
 INFO-FLOW: Building ssdm...
 Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.o.2.bc -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command           transform done; 0.767 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.77 seconds; current allocated memory: 916.480 MB.
+Command           transform done; 0.562 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.565 seconds; current allocated memory: 1.102 GB.
 INFO-FLOW: Finish building internal data model.
-Command         opt_and_import_c done; 2.175 sec.
-Command       elaborate done; 72.771 sec.
+Command         opt_and_import_c done; 1.759 sec.
+Command       elaborate done; 76.138 sec.
 Execute       ap_eval exec zip -j D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute       autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -589,7 +579,7 @@ Execute         set_default_model entry_proc
 Execute         schedule -model entry_proc 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/entry_proc.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -602,7 +592,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/entry_proc.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -617,7 +607,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'reg<unsigned short>'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<unsigned short>'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -630,7 +620,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -645,7 +635,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_start'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.049 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -658,7 +648,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.038 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.026 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -673,7 +663,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_width'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -686,7 +676,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -701,7 +691,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_eol'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -714,7 +704,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -727,7 +717,7 @@ Execute         set_default_model AXIvideo2MultiPixStream
 Execute         schedule -model AXIvideo2MultiPixStream 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -740,7 +730,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -753,10 +743,10 @@ Execute         set_default_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_1
 Execute         schedule -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_887_16'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 8, Final II = 8, Depth = 9, loop 'VITIS_LOOP_887_16'
+INFO: [HLS 200-1470] Pipelining result : Target II = 8, Final II = 8, Depth = 10, loop 'VITIS_LOOP_887_16'
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.17 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 916.480 MB.
+Command         schedule done; 0.129 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -769,7 +759,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -782,10 +772,10 @@ Execute         set_default_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_1
 Execute         schedule -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_763_11'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 8, Final II = 8, Depth = 9, loop 'VITIS_LOOP_763_11'
+INFO: [HLS 200-1470] Pipelining result : Target II = 8, Final II = 8, Depth = 10, loop 'VITIS_LOOP_763_11'
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.162 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 916.480 MB.
+Command         schedule done; 0.127 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -798,7 +788,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -811,10 +801,10 @@ Execute         set_default_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8
 Execute         schedule -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_586_8'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 8, Final II = 8, Depth = 9, loop 'VITIS_LOOP_586_8'
+INFO: [HLS 200-1470] Pipelining result : Target II = 8, Final II = 8, Depth = 10, loop 'VITIS_LOOP_586_8'
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.125 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 916.480 MB.
+Command         schedule done; 0.149 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -827,7 +817,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -840,9 +830,9 @@ Execute         set_default_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5
 Execute         schedule -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_549_5'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 5, loop 'VITIS_LOOP_549_5'
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 6, loop 'VITIS_LOOP_549_5'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.175 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -855,7 +845,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -868,10 +858,9 @@ Execute         set_default_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1
 Execute         schedule -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_511_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 5, loop 'VITIS_LOOP_511_1'
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 6, loop 'VITIS_LOOP_511_1'
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.106 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -884,7 +873,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -899,12 +888,12 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [HLS 200-486] Changing DSP latency (root=mul_ln868) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=mul_ln745) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.289 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.387 seconds; current allocated memory: 916.480 MB.
+Command         schedule done; 0.222 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.143 sec.
+Command         syn_report done; 0.101 sec.
 Execute         db_write -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.sched.adb -f 
 INFO-FLOW: Finish scheduling MultiPixStream2Bytes.
 Execute         set_default_model MultiPixStream2Bytes 
@@ -914,12 +903,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.222 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.424 seconds; current allocated memory: 916.480 MB.
+Command         bind done; 0.178 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.316 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.554 sec.
+Command         syn_report done; 0.414 sec.
 Execute         db_write -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.bind.adb -f 
 INFO-FLOW: Finish binding MultiPixStream2Bytes.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -931,7 +920,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1117_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_1117_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.702 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.517 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -944,7 +933,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -959,7 +948,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1127_2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_1127_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -972,7 +961,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -985,12 +974,12 @@ Execute         set_default_model Bytes2AXIMMvideo
 Execute         schedule -model Bytes2AXIMMvideo 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.494 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.538 seconds; current allocated memory: 916.480 MB.
+Command         schedule done; 0.408 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.447 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.7 sec.
+Command         syn_report done; 0.672 sec.
 Execute         db_write -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.sched.adb -f 
 INFO-FLOW: Finish scheduling Bytes2AXIMMvideo.
 Execute         set_default_model Bytes2AXIMMvideo 
@@ -1000,12 +989,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.496 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.223 seconds; current allocated memory: 916.480 MB.
+Command         bind done; 0.462 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.157 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.286 sec.
+Command         syn_report done; 0.279 sec.
 Execute         db_write -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.bind.adb -f 
 INFO-FLOW: Finish binding Bytes2AXIMMvideo.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1015,7 +1004,7 @@ Execute         set_default_model FrmbufWrHlsDataFlow
 Execute         schedule -model FrmbufWrHlsDataFlow 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.423 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.408 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/FrmbufWrHlsDataFlow.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -1028,12 +1017,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.244 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 916.480 MB.
+Command         bind done; 0.238 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/FrmbufWrHlsDataFlow.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.601 sec.
+Command         syn_report done; 0.559 sec.
 Execute         db_write -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/FrmbufWrHlsDataFlow.bind.adb -f 
 INFO-FLOW: Finish binding FrmbufWrHlsDataFlow.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1043,7 +1032,7 @@ Execute         set_default_model v_frmbuf_wr
 Execute         schedule -model v_frmbuf_wr 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.691 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.651 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -1056,12 +1045,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.259 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.279 seconds; current allocated memory: 916.480 MB.
+Command         bind done; 0.209 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 1.102 GB.
 Execute         syn_report -verbosereport -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.653 sec.
+Command         syn_report done; 0.557 sec.
 Execute         db_write -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.bind.adb -f 
 INFO-FLOW: Finish binding v_frmbuf_wr.
 Execute         get_model_list v_frmbuf_wr -filter all-wo-channel 
@@ -1091,7 +1080,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_prefix 
 Execute         create_rtl_model entry_proc -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/entry_proc.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.756 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.623 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl entry_proc -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_entry_proc 
 Execute         gen_rtl entry_proc -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_entry_proc 
@@ -1114,7 +1103,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_prefix 
 Execute         create_rtl_model reg<unsigned short> -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl reg<unsigned short> -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_reg_unsigned_short_s 
 Execute         gen_rtl reg<unsigned short> -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_reg_unsigned_short_s 
@@ -1137,7 +1126,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_prefix 
 Execute         create_rtl_model AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start 
@@ -1161,7 +1150,7 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model AXIvideo2MultiPixStream_Pipeline_loop_width -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIvideo2MultiPixStream_Pipeline_loop_width' pipeline 'loop_width' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_width'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_width -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream_Pipeline_loop_width 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_width -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream_Pipeline_loop_width 
@@ -1184,7 +1173,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_prefix 
 Execute         create_rtl_model AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.247 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.223 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol 
@@ -1207,7 +1196,7 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_prefix 
 Execute         create_rtl_model AXIvideo2MultiPixStream -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream 
 Execute         gen_rtl AXIvideo2MultiPixStream -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_AXIvideo2MultiPixStream 
@@ -1231,21 +1220,21 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16' pipeline 'VITIS_LOOP_887_16' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 
 Execute         syn_report -csynth -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.117 sec.
+Command         syn_report done; 0.133 sec.
 Execute         syn_report -rtlxml -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_csynth.xml 
 Execute           get_solution -flow_target
 Execute             get_solution -flow_target 
 Execute         syn_report -verbosereport -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.124 sec.
+Command         syn_report done; 0.15 sec.
 Execute         db_write -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16.adb 
 Execute         db_write -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 
@@ -1257,21 +1246,21 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11' pipeline 'VITIS_LOOP_763_11' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.554 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.631 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 
 Execute         syn_report -csynth -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.121 sec.
+Command         syn_report done; 0.131 sec.
 Execute         syn_report -rtlxml -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_csynth.xml 
 Execute           get_solution -flow_target
 Execute             get_solution -flow_target 
 Execute         syn_report -verbosereport -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.13 sec.
+Command         syn_report done; 0.144 sec.
 Execute         db_write -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11.adb 
 Execute         db_write -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 
@@ -1283,19 +1272,21 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8' pipeline 'VITIS_LOOP_586_8' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.573 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.636 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 
 Execute         syn_report -csynth -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
+Command         syn_report done; 0.107 sec.
 Execute         syn_report -rtlxml -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_csynth.xml 
 Execute           get_solution -flow_target
 Execute             get_solution -flow_target 
 Execute         syn_report -verbosereport -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
+Command         syn_report done; 0.106 sec.
 Execute         db_write -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8.adb 
 Execute         db_write -model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 
@@ -1307,7 +1298,7 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5' pipeline 'VITIS_LOOP_549_5' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.45 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.468 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 
@@ -1331,7 +1322,7 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1' pipeline 'VITIS_LOOP_511_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.318 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 
 Execute         gen_rtl MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 
@@ -1355,23 +1346,23 @@ Execute         get_config_rtl -module_prefix
 Execute         create_rtl_model MultiPixStream2Bytes -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'mul_mul_13ns_14ns_27_4_1': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2Bytes'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.344 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.332 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2Bytes -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes 
 Execute         gen_rtl MultiPixStream2Bytes -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_MultiPixStream2Bytes 
 Execute         syn_report -csynth -model MultiPixStream2Bytes -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.142 sec.
+Command         syn_report done; 0.137 sec.
 Execute         syn_report -rtlxml -model MultiPixStream2Bytes -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/MultiPixStream2Bytes_csynth.xml 
 Execute           get_solution -flow_target
 Execute             get_solution -flow_target 
 Execute         syn_report -verbosereport -model MultiPixStream2Bytes -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.516 sec.
+Command         syn_report done; 0.493 sec.
 Execute         db_write -model MultiPixStream2Bytes -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes.adb 
-Command         db_write done; 0.138 sec.
+Command         db_write done; 0.134 sec.
 Execute         db_write -model MultiPixStream2Bytes -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info MultiPixStream2Bytes -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/MultiPixStream2Bytes 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1395,8 +1386,8 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'Bytes2AXIMMvideo_Pipeline_VI
 WARNING: [RTGEN 206-101] Setting dangling out port 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1/m_axi_mm_video_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1/m_axi_mm_video_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1'.
-Command         create_rtl_model done; 0.139 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.195 seconds; current allocated memory: 916.480 MB.
+Command         create_rtl_model done; 0.137 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.175 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 
 Execute         gen_rtl Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 
@@ -1433,8 +1424,8 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'Bytes2AXIMMvideo_Pipeline_VI
 WARNING: [RTGEN 206-101] Setting dangling out port 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2/m_axi_mm_video_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2/m_axi_mm_video_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2'.
-Command         create_rtl_model done; 0.155 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.277 seconds; current allocated memory: 916.480 MB.
+Command         create_rtl_model done; 0.125 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.244 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 
 Execute         gen_rtl Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 
@@ -1457,8 +1448,8 @@ Execute         get_config_rtl -module_prefix
 Execute         get_config_rtl -module_prefix 
 Execute         create_rtl_model Bytes2AXIMMvideo -top_prefix design_1_v_frmbuf_wr_0_1_ -sub_prefix design_1_v_frmbuf_wr_0_1_ -mg_file D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'Bytes2AXIMMvideo'.
-Command         create_rtl_model done; 0.14 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 916.480 MB.
+Command         create_rtl_model done; 0.102 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.227 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl Bytes2AXIMMvideo -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_Bytes2AXIMMvideo 
 Execute         gen_rtl Bytes2AXIMMvideo -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_Bytes2AXIMMvideo 
@@ -1471,7 +1462,7 @@ Execute             get_solution -flow_target
 Execute         syn_report -verbosereport -model Bytes2AXIMMvideo -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.336 sec.
+Command         syn_report done; 0.304 sec.
 Execute         db_write -model Bytes2AXIMMvideo -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo.adb 
 Execute         db_write -model Bytes2AXIMMvideo -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info Bytes2AXIMMvideo -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/Bytes2AXIMMvideo 
@@ -1495,8 +1486,8 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'FrmbufWrHlsDataFlow/m_axi_mm
 WARNING: [RTGEN 206-101] Setting dangling out port 'FrmbufWrHlsDataFlow/m_axi_mm_video_ARUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'FrmbufWrHlsDataFlow/m_axi_mm_video_RREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FrmbufWrHlsDataFlow'.
-Command         create_rtl_model done; 0.151 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.814 seconds; current allocated memory: 916.480 MB.
+Command         create_rtl_model done; 0.144 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.767 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl FrmbufWrHlsDataFlow -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_FrmbufWrHlsDataFlow 
 Execute         gen_rtl FrmbufWrHlsDataFlow -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_FrmbufWrHlsDataFlow 
@@ -1509,7 +1500,7 @@ Execute             get_solution -flow_target
 Execute         syn_report -verbosereport -model FrmbufWrHlsDataFlow -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/FrmbufWrHlsDataFlow.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.622 sec.
+Command         syn_report done; 0.535 sec.
 Execute         db_write -model FrmbufWrHlsDataFlow -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/FrmbufWrHlsDataFlow.adb 
 Execute         db_write -model FrmbufWrHlsDataFlow -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info FrmbufWrHlsDataFlow -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/FrmbufWrHlsDataFlow 
@@ -1539,8 +1530,8 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'v_frmbuf_wr' to 's_axi
 INFO: [RTGEN 206-100] Bundling port 'width', 'height', 'stride', 'video_format', 'frm_buffer', 'frm_buffer2', 'frm_buffer3' and 'return' to AXI-Lite port CTRL.
 INFO: [RTGEN 206-100] Generating core module 'mul_12ns_3ns_15_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'v_frmbuf_wr'.
-Command         create_rtl_model done; 0.211 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.953 seconds; current allocated memory: 916.480 MB.
+Command         create_rtl_model done; 0.202 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.874 seconds; current allocated memory: 1.102 GB.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute         gen_rtl v_frmbuf_wr -istop -style xilinx -f -lang vhdl -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/vhdl/design_1_v_frmbuf_wr_0_1_v_frmbuf_wr 
 Execute         gen_rtl v_frmbuf_wr -istop -style xilinx -f -lang vlog -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/verilog/design_1_v_frmbuf_wr_0_1_v_frmbuf_wr 
@@ -1553,13 +1544,13 @@ Execute             get_solution -flow_target
 Execute         syn_report -verbosereport -model v_frmbuf_wr -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.verbose.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
-Command         syn_report done; 0.62 sec.
+Command         syn_report done; 0.516 sec.
 Execute         db_write -model v_frmbuf_wr -f -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.adb 
 Execute         db_write -model v_frmbuf_wr -bindview -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info v_frmbuf_wr -p D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr 
 Execute         export_constraint_db -f -tool general -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.constraint.tcl 
 Execute         syn_report -designview -model v_frmbuf_wr -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.design.xml 
-Command         syn_report done; 0.974 sec.
+Command         syn_report done; 0.723 sec.
 Execute         syn_report -csynthDesign -model v_frmbuf_wr -o D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/syn/report/csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute             get_solution -flow_target 
@@ -1788,11 +1779,11 @@ Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/int
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.375 sec.
+Command           ap_source done; 0.112 sec.
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute           source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command         ap_source done; 0.52 sec.
-INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=6.663 (was NA)
+Command         ap_source done; 0.158 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=3.333 (was NA)
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/vhdl' dstVlogDir='D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/vlog' tclDir='D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db' modelList='design_1_v_frmbuf_wr_0_1_flow_control_loop_pipe_sequential_init
 design_1_v_frmbuf_wr_0_1_flow_control_loop_pipe_sequential_init
 design_1_v_frmbuf_wr_0_1_flow_control_loop_pipe_sequential_init
@@ -1917,7 +1908,7 @@ INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPixStream2Bytes_U0_U(desi
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_Bytes2AXIMMvideo_U0_U(design_1_v_frmbuf_wr_0_1_start_for_Bytes2AXIMMvideo_U0)' using Shift Registers.
-Command         ap_source done; 0.581 sec.
+Command         ap_source done; 0.404 sec.
 Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.compgen.tcl 
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
@@ -1934,8 +1925,8 @@ Execute           ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
 Execute           source ./design_1_v_frmbuf_wr_0_1_CTRL.slave.tcl 
-Command         ap_source done; 0.203 sec.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.473 seconds; current allocated memory: 916.480 MB.
+Command         ap_source done; 0.141 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.358 seconds; current allocated memory: 1.102 GB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='design_1_v_frmbuf_wr_0_1_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -2228,22 +2219,22 @@ Execute         source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_
 Execute         get_config_export -ip_xdc_file 
 Execute         get_config_export -ip_xdc_ooc_file 
 Execute         get_config_debug -directory 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME CTRL_s_axi_U SOURCE {} VARIABLE {} MODULE v_frmbuf_wr LOOP {} BUNDLEDNAME CTRL DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME mm_video_m_axi_U SOURCE {} VARIABLE {} MODULE v_frmbuf_wr LOOP {} BUNDLEDNAME mm_video DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST v_frmbuf_wr MODULE2INSTS {v_frmbuf_wr v_frmbuf_wr FrmbufWrHlsDataFlow grp_FrmbufWrHlsDataFlow_fu_162 AXIvideo2MultiPixStream AXIvideo2MultiPixStream_U0 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 reg_unsigned_short_s {grp_reg_unsigned_short_s_fu_289 grp_reg_unsigned_short_s_fu_294} AXIvideo2MultiPixStream_Pipeline_loop_width grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242 entry_proc entry_proc_U0 MultiPixStream2Bytes MultiPixStream2Bytes_U0 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427 Bytes2AXIMMvideo Bytes2AXIMMvideo_U0 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212} INST2MODULE {v_frmbuf_wr v_frmbuf_wr grp_FrmbufWrHlsDataFlow_fu_162 FrmbufWrHlsDataFlow AXIvideo2MultiPixStream_U0 AXIvideo2MultiPixStream grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start grp_reg_unsigned_short_s_fu_289 reg_unsigned_short_s grp_reg_unsigned_short_s_fu_294 reg_unsigned_short_s grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 AXIvideo2MultiPixStream_Pipeline_loop_width grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol entry_proc_U0 entry_proc MultiPixStream2Bytes_U0 MultiPixStream2Bytes grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 Bytes2AXIMMvideo_U0 Bytes2AXIMMvideo grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2} INSTDATA {v_frmbuf_wr {DEPTH 1 CHILDREN grp_FrmbufWrHlsDataFlow_fu_162} grp_FrmbufWrHlsDataFlow_fu_162 {DEPTH 2 CHILDREN {AXIvideo2MultiPixStream_U0 entry_proc_U0 MultiPixStream2Bytes_U0 Bytes2AXIMMvideo_U0}} AXIvideo2MultiPixStream_U0 {DEPTH 3 CHILDREN {grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 grp_reg_unsigned_short_s_fu_289 grp_reg_unsigned_short_s_fu_294 grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242}} grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 {DEPTH 4 CHILDREN {}} grp_reg_unsigned_short_s_fu_289 {DEPTH 4 CHILDREN {}} grp_reg_unsigned_short_s_fu_294 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242 {DEPTH 4 CHILDREN {}} entry_proc_U0 {DEPTH 3 CHILDREN {}} MultiPixStream2Bytes_U0 {DEPTH 3 CHILDREN {grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427 {DEPTH 4 CHILDREN {}} Bytes2AXIMMvideo_U0 {DEPTH 3 CHILDREN {grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212}} grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 {DEPTH 4 CHILDREN {}} grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212 {DEPTH 4 CHILDREN {}}} MODULEDATA {AXIvideo2MultiPixStream_Pipeline_loop_width {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME j_2_fu_219_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:207 VARIABLE j_2 LOOP loop_width BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_320_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:205 VARIABLE i_2 LOOP loop_height BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_2_fu_563_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887 VARIABLE x_2 LOOP VITIS_LOOP_887_16 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_4_fu_563_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:763 VARIABLE x_4 LOOP VITIS_LOOP_763_11 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_5_fu_424_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:586 VARIABLE x_5 LOOP VITIS_LOOP_586_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_6_fu_280_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:549 VARIABLE x_6 LOOP VITIS_LOOP_549_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_8_fu_280_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:511 VARIABLE x_8 LOOP VITIS_LOOP_511_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln866_fu_470_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:866 VARIABLE add_ln866 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln868_fu_486_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:868 VARIABLE add_ln868 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_13ns_14ns_27_4_1_U145 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:868 VARIABLE mul_ln868 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub494_fu_875_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:868 VARIABLE sub494 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_14_fu_979_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:884 VARIABLE y_14 LOOP loop_BGR8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln743_fu_505_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:743 VARIABLE add_ln743 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln745_fu_521_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:745 VARIABLE add_ln745 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_13ns_14ns_27_4_1_U146 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:745 VARIABLE mul_ln745 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub357_fu_1103_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:745 VARIABLE sub357 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_12_fu_1007_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:760 VARIABLE y_12 LOOP loop_RGB8_YUV8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln571_fu_544_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:571 VARIABLE add_ln571 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub209_fu_578_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:571 VARIABLE sub209 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_10_fu_1211_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:583 VARIABLE y_10 LOOP loop_Y_UV8_Y_UV8_420 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln534_fu_661_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:534 VARIABLE add_ln534 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub118_fu_689_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:534 VARIABLE sub118 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_8_fu_1247_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:546 VARIABLE y_8 LOOP loop_UYVY8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln496_fu_732_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:496 VARIABLE add_ln496 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub40_fu_760_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:496 VARIABLE sub40 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_6_fu_1272_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:508 VARIABLE y_6 LOOP loop_YUYV8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1117_fu_118_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1117 VARIABLE add_ln1117 LOOP VITIS_LOOP_1117_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1127_fu_118_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1127 VARIABLE add_ln1127 LOOP VITIS_LOOP_1127_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} Bytes2AXIMMvideo {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub_fu_232_p2 SOURCE {} VARIABLE sub LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1125_fu_280_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1125 VARIABLE add_ln1125 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_16_fu_329_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1113 VARIABLE y_16 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1117_fu_347_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1117 VARIABLE add_ln1117 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1123_fu_372_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1123 VARIABLE add_ln1123 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1127_fu_492_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1127 VARIABLE add_ln1127 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME offsetUV_1_fu_517_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1135 VARIABLE offsetUV_1 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} FrmbufWrHlsDataFlow {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME video_format_c11_U SOURCE {} VARIABLE video_format_c11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME video_format_c_U SOURCE {} VARIABLE video_format_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME stride_c_U SOURCE {} VARIABLE stride_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME height_c10_U SOURCE {} VARIABLE height_c10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME height_c_U SOURCE {} VARIABLE height_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME width_c_U SOURCE {} VARIABLE width_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME WidthInBytes_c9_U SOURCE {} VARIABLE WidthInBytes_c9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME WidthInBytes_c_U SOURCE {} VARIABLE WidthInBytes_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME HwReg_frm_buffer2_c_U SOURCE {} VARIABLE HwReg_frm_buffer2_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME HwReg_frm_buffer_c_U SOURCE {} VARIABLE HwReg_frm_buffer_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME img_U SOURCE {} VARIABLE img LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL bram LATENCY 0 OPTYPE fifo PRAGMA yes RTLNAME bytePlanes_plane0_U SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:35 VARIABLE bytePlanes_plane0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL bram LATENCY 0 OPTYPE fifo PRAGMA yes RTLNAME bytePlanes_plane1_U SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:35 VARIABLE bytePlanes_plane1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 2 BRAM 8 URAM 0}} v_frmbuf_wr {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_12ns_3ns_15_1_1_U206 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150 VARIABLE WidthInBytes LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME BYTES_PER_PIXEL_U SOURCE {} VARIABLE BYTES_PER_PIXEL LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME MEMORY2LIVE_U SOURCE {} VARIABLE MEMORY2LIVE LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 2 BRAM 8 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} reg_unsigned_short_s {AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start {AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol {AREA {DSP 0 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME CTRL_s_axi_U SOURCE {} VARIABLE {} MODULE v_frmbuf_wr LOOP {} BUNDLEDNAME CTRL DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME mm_video_m_axi_U SOURCE {} VARIABLE {} MODULE v_frmbuf_wr LOOP {} BUNDLEDNAME mm_video DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST v_frmbuf_wr MODULE2INSTS {v_frmbuf_wr v_frmbuf_wr FrmbufWrHlsDataFlow grp_FrmbufWrHlsDataFlow_fu_162 AXIvideo2MultiPixStream AXIvideo2MultiPixStream_U0 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 reg_unsigned_short_s {grp_reg_unsigned_short_s_fu_289 grp_reg_unsigned_short_s_fu_294} AXIvideo2MultiPixStream_Pipeline_loop_width grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242 entry_proc entry_proc_U0 MultiPixStream2Bytes MultiPixStream2Bytes_U0 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427 Bytes2AXIMMvideo Bytes2AXIMMvideo_U0 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212} INST2MODULE {v_frmbuf_wr v_frmbuf_wr grp_FrmbufWrHlsDataFlow_fu_162 FrmbufWrHlsDataFlow AXIvideo2MultiPixStream_U0 AXIvideo2MultiPixStream grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start grp_reg_unsigned_short_s_fu_289 reg_unsigned_short_s grp_reg_unsigned_short_s_fu_294 reg_unsigned_short_s grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 AXIvideo2MultiPixStream_Pipeline_loop_width grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol entry_proc_U0 entry_proc MultiPixStream2Bytes_U0 MultiPixStream2Bytes grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427 MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 Bytes2AXIMMvideo_U0 Bytes2AXIMMvideo grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212 Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2} INSTDATA {v_frmbuf_wr {DEPTH 1 CHILDREN grp_FrmbufWrHlsDataFlow_fu_162} grp_FrmbufWrHlsDataFlow_fu_162 {DEPTH 2 CHILDREN {AXIvideo2MultiPixStream_U0 entry_proc_U0 MultiPixStream2Bytes_U0 Bytes2AXIMMvideo_U0}} AXIvideo2MultiPixStream_U0 {DEPTH 3 CHILDREN {grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 grp_reg_unsigned_short_s_fu_289 grp_reg_unsigned_short_s_fu_294 grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242}} grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194 {DEPTH 4 CHILDREN {}} grp_reg_unsigned_short_s_fu_289 {DEPTH 4 CHILDREN {}} grp_reg_unsigned_short_s_fu_294 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242 {DEPTH 4 CHILDREN {}} entry_proc_U0 {DEPTH 3 CHILDREN {}} MultiPixStream2Bytes_U0 {DEPTH 3 CHILDREN {grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16_fu_330 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11_fu_357 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8_fu_384 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5_fu_409 {DEPTH 4 CHILDREN {}} grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1_fu_427 {DEPTH 4 CHILDREN {}} Bytes2AXIMMvideo_U0 {DEPTH 3 CHILDREN {grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212}} grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1_fu_202 {DEPTH 4 CHILDREN {}} grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2_fu_212 {DEPTH 4 CHILDREN {}}} MODULEDATA {AXIvideo2MultiPixStream_Pipeline_loop_width {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME j_2_fu_219_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:207 VARIABLE j_2 LOOP loop_width BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_320_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:205 VARIABLE i_2 LOOP loop_height BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_887_16 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_2_fu_569_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:887 VARIABLE x_2 LOOP VITIS_LOOP_887_16 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_763_11 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_4_fu_569_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:763 VARIABLE x_4 LOOP VITIS_LOOP_763_11 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_586_8 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_5_fu_427_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:586 VARIABLE x_5 LOOP VITIS_LOOP_586_8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_549_5 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_6_fu_273_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:549 VARIABLE x_6 LOOP VITIS_LOOP_549_5 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME x_8_fu_273_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:511 VARIABLE x_8 LOOP VITIS_LOOP_511_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2Bytes {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln866_fu_479_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:866 VARIABLE add_ln866 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln868_fu_495_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:868 VARIABLE add_ln868 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_13ns_14ns_27_4_1_U145 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:868 VARIABLE mul_ln868 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub494_fu_586_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:868 VARIABLE sub494 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_14_fu_690_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:884 VARIABLE y_14 LOOP loop_BGR8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln743_fu_741_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:743 VARIABLE add_ln743 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln745_fu_757_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:745 VARIABLE add_ln745 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_13ns_14ns_27_4_1_U146 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:745 VARIABLE mul_ln745 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub357_fu_848_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:745 VARIABLE sub357 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_12_fu_718_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:760 VARIABLE y_12 LOOP loop_RGB8_YUV8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln571_fu_950_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:571 VARIABLE add_ln571 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub209_fu_984_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:571 VARIABLE sub209 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_10_fu_1064_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:583 VARIABLE y_10 LOOP loop_Y_UV8_Y_UV8_420 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln534_fu_1095_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:534 VARIABLE add_ln534 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub118_fu_1123_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:534 VARIABLE sub118 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_8_fu_1240_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:546 VARIABLE y_8 LOOP loop_UYVY8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln496_fu_1165_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:496 VARIABLE add_ln496 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub40_fu_1193_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:496 VARIABLE sub40 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_6_fu_1265_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:508 VARIABLE y_6 LOOP loop_YUYV8 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 2 BRAM 0 URAM 0}} Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1117_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1117_fu_118_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1117 VARIABLE add_ln1117 LOOP VITIS_LOOP_1117_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1127_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1127_fu_118_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1127 VARIABLE add_ln1127 LOOP VITIS_LOOP_1127_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} Bytes2AXIMMvideo {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub_fu_232_p2 SOURCE {} VARIABLE sub LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1125_fu_290_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1125 VARIABLE add_ln1125 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME y_16_fu_324_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1113 VARIABLE y_16 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1117_fu_342_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1117 VARIABLE add_ln1117 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1123_fu_367_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1123 VARIABLE add_ln1123 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1127_fu_487_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1127 VARIABLE add_ln1127 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME offsetUV_1_fu_512_p2 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1135 VARIABLE offsetUV_1 LOOP loop_Bytes2AXIMMvideo_2planes BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} FrmbufWrHlsDataFlow {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME video_format_c11_U SOURCE {} VARIABLE video_format_c11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME video_format_c_U SOURCE {} VARIABLE video_format_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME stride_c_U SOURCE {} VARIABLE stride_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME height_c10_U SOURCE {} VARIABLE height_c10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME height_c_U SOURCE {} VARIABLE height_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME width_c_U SOURCE {} VARIABLE width_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME WidthInBytes_c9_U SOURCE {} VARIABLE WidthInBytes_c9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME WidthInBytes_c_U SOURCE {} VARIABLE WidthInBytes_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME HwReg_frm_buffer2_c_U SOURCE {} VARIABLE HwReg_frm_buffer2_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME HwReg_frm_buffer_c_U SOURCE {} VARIABLE HwReg_frm_buffer_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME img_U SOURCE {} VARIABLE img LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL bram LATENCY 0 OPTYPE fifo PRAGMA yes RTLNAME bytePlanes_plane0_U SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:35 VARIABLE bytePlanes_plane0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL bram LATENCY 0 OPTYPE fifo PRAGMA yes RTLNAME bytePlanes_plane1_U SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:35 VARIABLE bytePlanes_plane1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 2 BRAM 8 URAM 0}} v_frmbuf_wr {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_12ns_3ns_15_1_1_U206 SOURCE D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150 VARIABLE WidthInBytes LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME BYTES_PER_PIXEL_U SOURCE {} VARIABLE BYTES_PER_PIXEL LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME MEMORY2LIVE_U SOURCE {} VARIABLE MEMORY2LIVE LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 2 BRAM 8 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} reg_unsigned_short_s {AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start {AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol {AREA {DSP 0 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 Execute         send_msg_by_id INFO @200-1603@%s  and missed bursts 
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
 INFO-FLOW: Running: gen_csynth_sec_pragma
-INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.7 seconds per iteration
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.5 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.136 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.516 seconds; current allocated memory: 1.102 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for v_frmbuf_wr with prefix design_1_v_frmbuf_wr_0_1_.
 INFO: [VLOG 209-307] Generating Verilog RTL for v_frmbuf_wr with prefix design_1_v_frmbuf_wr_0_1_.
 Execute         syn_report -model v_frmbuf_wr -printsummary 
-INFO: [HLS 200-789] **** Estimated Fmax: 205.59 MHz
-Command       autosyn done; 23.361 sec.
-Command     csynth_design done; 96.264 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 29 seconds. CPU system time: 3 seconds. Elapsed time: 96.264 seconds; current allocated memory: 916.480 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.00 MHz
+Command       autosyn done; 20.406 sec.
+Command     csynth_design done; 96.632 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 25 seconds. CPU system time: 2 seconds. Elapsed time: 96.632 seconds; current allocated memory: 0.000 MB.
 Execute     export_design -format ip_catalog 
 INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
 Execute       get_config_export -description 
@@ -2302,7 +2293,7 @@ Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/ut
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.136 sec.
+Command       ap_source done; 0.118 sec.
 INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=v_frmbuf_wr xml_exists=0
 Execute       source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
 Execute       source D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.rtl_wrap.cfg.tcl 
@@ -2500,15 +2491,14 @@ Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/inter
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.103 sec.
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source D:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.141 sec.
+Command       ap_source done; 0.118 sec.
 INFO-FLOW: DBG:PUTS:     IP package: exec D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/impl/ip/pack.bat
 INFO-FLOW: DBG:PUTS:     IP package: success D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/impl/ip/pack.bat
 Execute       get_config_export -output 
 Execute       send_msg_by_id INFO @200-802@%s prj/sol/impl/export.zip 
 INFO: [HLS 200-802] Generated output file prj/sol/impl/export.zip
-Command     export_design done; 17.249 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 6 seconds. CPU system time: 0 seconds. Elapsed time: 17.249 seconds; current allocated memory: 0.000 MB.
+Command     export_design done; 15.529 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 15.529 seconds; current allocated memory: 0.000 MB.
 Execute     cleanup_all 

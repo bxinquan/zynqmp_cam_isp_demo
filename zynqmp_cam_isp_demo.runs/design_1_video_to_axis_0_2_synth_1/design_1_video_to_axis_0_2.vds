@@ -1,0 +1,276 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Dec 17 00:30:05 2022
+# Process ID: 23960
+# Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_video_to_axis_0_2_synth_1
+# Command line: vivado.exe -log design_1_video_to_axis_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_video_to_axis_0_2.tcl
+# Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_video_to_axis_0_2_synth_1/design_1_video_to_axis_0_2.vds
+# Journal file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_video_to_axis_0_2_synth_1\vivado.jou
+# Running On: LEGION-BIANXINQUAN, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 17007 MB
+#-----------------------------------------------------------
+source design_1_video_to_axis_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_video_to_axis_0_2 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24780
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1701.016 ; gain = 318.195
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_video_to_axis_0_2' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_0_2/synth/design_1_video_to_axis_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'video_to_axis_v1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/8829/hdl/video_to_axis_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'video_to_axis' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/8829/hdl/video_to_axis.v:4]
+INFO: [Synth 8-6157] synthesizing module 'async_fifo' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:212]
+INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:212]
+INFO: [Synth 8-6155] done synthesizing module 'video_to_axis' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/8829/hdl/video_to_axis.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'video_to_axis_v1_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/8829/hdl/video_to_axis_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_video_to_axis_0_2' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_video_to_axis_0_2/synth/design_1_video_to_axis_0_2.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1789.172 ; gain = 406.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1807.074 ; gain = 424.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1807.074 ; gain = 424.254
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1807.074 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1898.391 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1916.230 ; gain = 17.840
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1916.230 ; gain = 533.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1916.230 ; gain = 533.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1916.230 ; gain = 533.410
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "full_dp_ram:/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "full_dp_ram:/mem_reg"
+INFO: [Synth 8-3971] The signal "full_dp_ram:/mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1916.230 ; gain = 533.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 2     
++---XORs : 
+	   2 Input     12 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               26 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              52K Bit	(2048 X 26 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6014] Unused sequential element inst/video_to_axis_inst/fifo/ram/mem_reg was removed. 
+INFO: [Synth 8-7124] RAM ("design_1_video_to_axis_0_2/inst/video_to_axis_inst/fifo/ram/mem_reg") is implemented using BRAM instead of URAM. Memory would be severely underutilized if URAMs are used
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 18 for RAM "design_1_video_to_axis_0_2/inst/video_to_axis_inst/fifo/ram/mem_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 8 for RAM "design_1_video_to_axis_0_2/inst/video_to_axis_inst/fifo/ram/mem_reg"
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1916.230 ; gain = 533.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|design_1_video_to_axis_0_2 | inst/video_to_axis_inst/fifo/ram/mem_reg | 2 K x 26(NO_CHANGE)    | W |   | 2 K x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 1,1             | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 2375.797 ; gain = 992.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 2376.051 ; gain = 993.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name                | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|design_1_video_to_axis_0_2 | inst/video_to_axis_inst/fifo/ram/mem_reg | 2 K x 26(NO_CHANGE)    | W |   | 2 K x 26(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 1,1             | 
++---------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/video_to_axis_inst/fifo/ram/mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/video_to_axis_inst/fifo/ram/mem_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:38 . Memory (MB): peak = 2395.152 ; gain = 1012.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |     4|
+|2     |LUT1     |     4|
+|3     |LUT2     |    23|
+|4     |LUT3     |     2|
+|5     |LUT4     |     4|
+|6     |LUT5     |     9|
+|7     |LUT6     |     5|
+|8     |RAMB18E2 |     1|
+|9     |RAMB36E2 |     1|
+|10    |FDCE     |   100|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 2402.332 ; gain = 910.355
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2402.332 ; gain = 1019.512
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2414.371 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2437.789 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ff68d93a
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 2437.789 ; gain = 1157.102
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_video_to_axis_0_2_synth_1/design_1_video_to_axis_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_video_to_axis_0_2, cache-ID = 268c0e2762c6cb37
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_video_to_axis_0_2_synth_1/design_1_video_to_axis_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_video_to_axis_0_2_utilization_synth.rpt -pb design_1_video_to_axis_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 00:31:06 2022...

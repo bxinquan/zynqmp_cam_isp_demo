@@ -48,12 +48,12 @@
       </RtlPort>
   </CTypeInfo>
   <DesignConstraint>
-    <clk_period>6.663</clk_period>
+    <clk_period>3.333</clk_period>
   </DesignConstraint>
   <Machine>64</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>29</latency>
-    <II>30 ~ 70804811</II>
+    <latency>32</latency>
+    <II>33 ~ 70809131</II>
   </modelParameters>
 </AdditionalInfo>

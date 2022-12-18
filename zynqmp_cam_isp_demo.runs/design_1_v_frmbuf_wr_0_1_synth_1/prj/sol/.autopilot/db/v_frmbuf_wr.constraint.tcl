@@ -2,8 +2,8 @@ set clock_constraint { \
     name clk \
     module v_frmbuf_wr \
     port ap_clk \
-    period 6.663 \
-    uncertainty 1.79901 \
+    period 3.333 \
+    uncertainty 0.89991 \
 }
 
 set all_path {}

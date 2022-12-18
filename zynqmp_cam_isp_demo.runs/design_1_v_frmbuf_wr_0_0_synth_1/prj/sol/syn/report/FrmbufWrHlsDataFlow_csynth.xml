@@ -9,8 +9,8 @@
 <ProductFamily>zynquplus</ProductFamily>
 <Part>xck26-sfvc784-2LV-c</Part>
 <TopModelName>FrmbufWrHlsDataFlow</TopModelName>
-<TargetClockPeriod>6.66</TargetClockPeriod>
-<ClockUncertainty>1.80</ClockUncertainty>
+<TargetClockPeriod>3.33</TargetClockPeriod>
+<ClockUncertainty>0.90</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,32 +18,32 @@
 <PipelineType>dataflow</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.864</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.433</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>25</Best-caseLatency>
+<Best-caseLatency>27</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>70804805</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.167 us</Best-caseRealTimeLatency>
+<Worst-caseLatency>70809125</Worst-caseLatency>
+<Best-caseRealTimeLatency>89.991 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.472 sec</Worst-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.236 sec</Worst-caseRealTimeLatency>
 <DataflowPipelineThroughput>
 <range>
 <min>7</min>
-<max>70804803</max>
+<max>70809124</max>
 </range>
 </DataflowPipelineThroughput>
 <Interval-min>7</Interval-min>
-<Interval-max>70804803</Interval-max>
+<Interval-max>70809124</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>15</BRAM_18K>
-<FF>4007</FF>
-<LUT>4148</LUT>
+<FF>4216</FF>
+<LUT>4216</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>

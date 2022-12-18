@@ -1,6 +1,6 @@
 
 set TopModule "v_frmbuf_wr"
-set ClockPeriod 6.663
+set ClockPeriod 3.333
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0

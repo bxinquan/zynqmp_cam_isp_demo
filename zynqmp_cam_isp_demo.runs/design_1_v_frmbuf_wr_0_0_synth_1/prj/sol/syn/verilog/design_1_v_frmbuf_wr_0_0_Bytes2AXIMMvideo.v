@@ -88,115 +88,116 @@ module design_1_v_frmbuf_wr_0_0_Bytes2AXIMMvideo (
         StrideInBytes_read
 );
 
-parameter    ap_ST_fsm_state1 = 109'd1;
-parameter    ap_ST_fsm_state2 = 109'd2;
-parameter    ap_ST_fsm_state3 = 109'd4;
-parameter    ap_ST_fsm_state4 = 109'd8;
-parameter    ap_ST_fsm_state5 = 109'd16;
-parameter    ap_ST_fsm_state6 = 109'd32;
-parameter    ap_ST_fsm_state7 = 109'd64;
-parameter    ap_ST_fsm_state8 = 109'd128;
-parameter    ap_ST_fsm_state9 = 109'd256;
-parameter    ap_ST_fsm_state10 = 109'd512;
-parameter    ap_ST_fsm_state11 = 109'd1024;
-parameter    ap_ST_fsm_state12 = 109'd2048;
-parameter    ap_ST_fsm_state13 = 109'd4096;
-parameter    ap_ST_fsm_state14 = 109'd8192;
-parameter    ap_ST_fsm_state15 = 109'd16384;
-parameter    ap_ST_fsm_state16 = 109'd32768;
-parameter    ap_ST_fsm_state17 = 109'd65536;
-parameter    ap_ST_fsm_state18 = 109'd131072;
-parameter    ap_ST_fsm_state19 = 109'd262144;
-parameter    ap_ST_fsm_state20 = 109'd524288;
-parameter    ap_ST_fsm_state21 = 109'd1048576;
-parameter    ap_ST_fsm_state22 = 109'd2097152;
-parameter    ap_ST_fsm_state23 = 109'd4194304;
-parameter    ap_ST_fsm_state24 = 109'd8388608;
-parameter    ap_ST_fsm_state25 = 109'd16777216;
-parameter    ap_ST_fsm_state26 = 109'd33554432;
-parameter    ap_ST_fsm_state27 = 109'd67108864;
-parameter    ap_ST_fsm_state28 = 109'd134217728;
-parameter    ap_ST_fsm_state29 = 109'd268435456;
-parameter    ap_ST_fsm_state30 = 109'd536870912;
-parameter    ap_ST_fsm_state31 = 109'd1073741824;
-parameter    ap_ST_fsm_state32 = 109'd2147483648;
-parameter    ap_ST_fsm_state33 = 109'd4294967296;
-parameter    ap_ST_fsm_state34 = 109'd8589934592;
-parameter    ap_ST_fsm_state35 = 109'd17179869184;
-parameter    ap_ST_fsm_state36 = 109'd34359738368;
-parameter    ap_ST_fsm_state37 = 109'd68719476736;
-parameter    ap_ST_fsm_state38 = 109'd137438953472;
-parameter    ap_ST_fsm_state39 = 109'd274877906944;
-parameter    ap_ST_fsm_state40 = 109'd549755813888;
-parameter    ap_ST_fsm_state41 = 109'd1099511627776;
-parameter    ap_ST_fsm_state42 = 109'd2199023255552;
-parameter    ap_ST_fsm_state43 = 109'd4398046511104;
-parameter    ap_ST_fsm_state44 = 109'd8796093022208;
-parameter    ap_ST_fsm_state45 = 109'd17592186044416;
-parameter    ap_ST_fsm_state46 = 109'd35184372088832;
-parameter    ap_ST_fsm_state47 = 109'd70368744177664;
-parameter    ap_ST_fsm_state48 = 109'd140737488355328;
-parameter    ap_ST_fsm_state49 = 109'd281474976710656;
-parameter    ap_ST_fsm_state50 = 109'd562949953421312;
-parameter    ap_ST_fsm_state51 = 109'd1125899906842624;
-parameter    ap_ST_fsm_state52 = 109'd2251799813685248;
-parameter    ap_ST_fsm_state53 = 109'd4503599627370496;
-parameter    ap_ST_fsm_state54 = 109'd9007199254740992;
-parameter    ap_ST_fsm_state55 = 109'd18014398509481984;
-parameter    ap_ST_fsm_state56 = 109'd36028797018963968;
-parameter    ap_ST_fsm_state57 = 109'd72057594037927936;
-parameter    ap_ST_fsm_state58 = 109'd144115188075855872;
-parameter    ap_ST_fsm_state59 = 109'd288230376151711744;
-parameter    ap_ST_fsm_state60 = 109'd576460752303423488;
-parameter    ap_ST_fsm_state61 = 109'd1152921504606846976;
-parameter    ap_ST_fsm_state62 = 109'd2305843009213693952;
-parameter    ap_ST_fsm_state63 = 109'd4611686018427387904;
-parameter    ap_ST_fsm_state64 = 109'd9223372036854775808;
-parameter    ap_ST_fsm_state65 = 109'd18446744073709551616;
-parameter    ap_ST_fsm_state66 = 109'd36893488147419103232;
-parameter    ap_ST_fsm_state67 = 109'd73786976294838206464;
-parameter    ap_ST_fsm_state68 = 109'd147573952589676412928;
-parameter    ap_ST_fsm_state69 = 109'd295147905179352825856;
-parameter    ap_ST_fsm_state70 = 109'd590295810358705651712;
-parameter    ap_ST_fsm_state71 = 109'd1180591620717411303424;
-parameter    ap_ST_fsm_state72 = 109'd2361183241434822606848;
-parameter    ap_ST_fsm_state73 = 109'd4722366482869645213696;
-parameter    ap_ST_fsm_state74 = 109'd9444732965739290427392;
-parameter    ap_ST_fsm_state75 = 109'd18889465931478580854784;
-parameter    ap_ST_fsm_state76 = 109'd37778931862957161709568;
-parameter    ap_ST_fsm_state77 = 109'd75557863725914323419136;
-parameter    ap_ST_fsm_state78 = 109'd151115727451828646838272;
-parameter    ap_ST_fsm_state79 = 109'd302231454903657293676544;
-parameter    ap_ST_fsm_state80 = 109'd604462909807314587353088;
-parameter    ap_ST_fsm_state81 = 109'd1208925819614629174706176;
-parameter    ap_ST_fsm_state82 = 109'd2417851639229258349412352;
-parameter    ap_ST_fsm_state83 = 109'd4835703278458516698824704;
-parameter    ap_ST_fsm_state84 = 109'd9671406556917033397649408;
-parameter    ap_ST_fsm_state85 = 109'd19342813113834066795298816;
-parameter    ap_ST_fsm_state86 = 109'd38685626227668133590597632;
-parameter    ap_ST_fsm_state87 = 109'd77371252455336267181195264;
-parameter    ap_ST_fsm_state88 = 109'd154742504910672534362390528;
-parameter    ap_ST_fsm_state89 = 109'd309485009821345068724781056;
-parameter    ap_ST_fsm_state90 = 109'd618970019642690137449562112;
-parameter    ap_ST_fsm_state91 = 109'd1237940039285380274899124224;
-parameter    ap_ST_fsm_state92 = 109'd2475880078570760549798248448;
-parameter    ap_ST_fsm_state93 = 109'd4951760157141521099596496896;
-parameter    ap_ST_fsm_state94 = 109'd9903520314283042199192993792;
-parameter    ap_ST_fsm_state95 = 109'd19807040628566084398385987584;
-parameter    ap_ST_fsm_state96 = 109'd39614081257132168796771975168;
-parameter    ap_ST_fsm_state97 = 109'd79228162514264337593543950336;
-parameter    ap_ST_fsm_state98 = 109'd158456325028528675187087900672;
-parameter    ap_ST_fsm_state99 = 109'd316912650057057350374175801344;
-parameter    ap_ST_fsm_state100 = 109'd633825300114114700748351602688;
-parameter    ap_ST_fsm_state101 = 109'd1267650600228229401496703205376;
-parameter    ap_ST_fsm_state102 = 109'd2535301200456458802993406410752;
-parameter    ap_ST_fsm_state103 = 109'd5070602400912917605986812821504;
-parameter    ap_ST_fsm_state104 = 109'd10141204801825835211973625643008;
-parameter    ap_ST_fsm_state105 = 109'd20282409603651670423947251286016;
-parameter    ap_ST_fsm_state106 = 109'd40564819207303340847894502572032;
-parameter    ap_ST_fsm_state107 = 109'd81129638414606681695789005144064;
-parameter    ap_ST_fsm_state108 = 109'd162259276829213363391578010288128;
-parameter    ap_ST_fsm_state109 = 109'd324518553658426726783156020576256;
+parameter    ap_ST_fsm_state1 = 110'd1;
+parameter    ap_ST_fsm_state2 = 110'd2;
+parameter    ap_ST_fsm_state3 = 110'd4;
+parameter    ap_ST_fsm_state4 = 110'd8;
+parameter    ap_ST_fsm_state5 = 110'd16;
+parameter    ap_ST_fsm_state6 = 110'd32;
+parameter    ap_ST_fsm_state7 = 110'd64;
+parameter    ap_ST_fsm_state8 = 110'd128;
+parameter    ap_ST_fsm_state9 = 110'd256;
+parameter    ap_ST_fsm_state10 = 110'd512;
+parameter    ap_ST_fsm_state11 = 110'd1024;
+parameter    ap_ST_fsm_state12 = 110'd2048;
+parameter    ap_ST_fsm_state13 = 110'd4096;
+parameter    ap_ST_fsm_state14 = 110'd8192;
+parameter    ap_ST_fsm_state15 = 110'd16384;
+parameter    ap_ST_fsm_state16 = 110'd32768;
+parameter    ap_ST_fsm_state17 = 110'd65536;
+parameter    ap_ST_fsm_state18 = 110'd131072;
+parameter    ap_ST_fsm_state19 = 110'd262144;
+parameter    ap_ST_fsm_state20 = 110'd524288;
+parameter    ap_ST_fsm_state21 = 110'd1048576;
+parameter    ap_ST_fsm_state22 = 110'd2097152;
+parameter    ap_ST_fsm_state23 = 110'd4194304;
+parameter    ap_ST_fsm_state24 = 110'd8388608;
+parameter    ap_ST_fsm_state25 = 110'd16777216;
+parameter    ap_ST_fsm_state26 = 110'd33554432;
+parameter    ap_ST_fsm_state27 = 110'd67108864;
+parameter    ap_ST_fsm_state28 = 110'd134217728;
+parameter    ap_ST_fsm_state29 = 110'd268435456;
+parameter    ap_ST_fsm_state30 = 110'd536870912;
+parameter    ap_ST_fsm_state31 = 110'd1073741824;
+parameter    ap_ST_fsm_state32 = 110'd2147483648;
+parameter    ap_ST_fsm_state33 = 110'd4294967296;
+parameter    ap_ST_fsm_state34 = 110'd8589934592;
+parameter    ap_ST_fsm_state35 = 110'd17179869184;
+parameter    ap_ST_fsm_state36 = 110'd34359738368;
+parameter    ap_ST_fsm_state37 = 110'd68719476736;
+parameter    ap_ST_fsm_state38 = 110'd137438953472;
+parameter    ap_ST_fsm_state39 = 110'd274877906944;
+parameter    ap_ST_fsm_state40 = 110'd549755813888;
+parameter    ap_ST_fsm_state41 = 110'd1099511627776;
+parameter    ap_ST_fsm_state42 = 110'd2199023255552;
+parameter    ap_ST_fsm_state43 = 110'd4398046511104;
+parameter    ap_ST_fsm_state44 = 110'd8796093022208;
+parameter    ap_ST_fsm_state45 = 110'd17592186044416;
+parameter    ap_ST_fsm_state46 = 110'd35184372088832;
+parameter    ap_ST_fsm_state47 = 110'd70368744177664;
+parameter    ap_ST_fsm_state48 = 110'd140737488355328;
+parameter    ap_ST_fsm_state49 = 110'd281474976710656;
+parameter    ap_ST_fsm_state50 = 110'd562949953421312;
+parameter    ap_ST_fsm_state51 = 110'd1125899906842624;
+parameter    ap_ST_fsm_state52 = 110'd2251799813685248;
+parameter    ap_ST_fsm_state53 = 110'd4503599627370496;
+parameter    ap_ST_fsm_state54 = 110'd9007199254740992;
+parameter    ap_ST_fsm_state55 = 110'd18014398509481984;
+parameter    ap_ST_fsm_state56 = 110'd36028797018963968;
+parameter    ap_ST_fsm_state57 = 110'd72057594037927936;
+parameter    ap_ST_fsm_state58 = 110'd144115188075855872;
+parameter    ap_ST_fsm_state59 = 110'd288230376151711744;
+parameter    ap_ST_fsm_state60 = 110'd576460752303423488;
+parameter    ap_ST_fsm_state61 = 110'd1152921504606846976;
+parameter    ap_ST_fsm_state62 = 110'd2305843009213693952;
+parameter    ap_ST_fsm_state63 = 110'd4611686018427387904;
+parameter    ap_ST_fsm_state64 = 110'd9223372036854775808;
+parameter    ap_ST_fsm_state65 = 110'd18446744073709551616;
+parameter    ap_ST_fsm_state66 = 110'd36893488147419103232;
+parameter    ap_ST_fsm_state67 = 110'd73786976294838206464;
+parameter    ap_ST_fsm_state68 = 110'd147573952589676412928;
+parameter    ap_ST_fsm_state69 = 110'd295147905179352825856;
+parameter    ap_ST_fsm_state70 = 110'd590295810358705651712;
+parameter    ap_ST_fsm_state71 = 110'd1180591620717411303424;
+parameter    ap_ST_fsm_state72 = 110'd2361183241434822606848;
+parameter    ap_ST_fsm_state73 = 110'd4722366482869645213696;
+parameter    ap_ST_fsm_state74 = 110'd9444732965739290427392;
+parameter    ap_ST_fsm_state75 = 110'd18889465931478580854784;
+parameter    ap_ST_fsm_state76 = 110'd37778931862957161709568;
+parameter    ap_ST_fsm_state77 = 110'd75557863725914323419136;
+parameter    ap_ST_fsm_state78 = 110'd151115727451828646838272;
+parameter    ap_ST_fsm_state79 = 110'd302231454903657293676544;
+parameter    ap_ST_fsm_state80 = 110'd604462909807314587353088;
+parameter    ap_ST_fsm_state81 = 110'd1208925819614629174706176;
+parameter    ap_ST_fsm_state82 = 110'd2417851639229258349412352;
+parameter    ap_ST_fsm_state83 = 110'd4835703278458516698824704;
+parameter    ap_ST_fsm_state84 = 110'd9671406556917033397649408;
+parameter    ap_ST_fsm_state85 = 110'd19342813113834066795298816;
+parameter    ap_ST_fsm_state86 = 110'd38685626227668133590597632;
+parameter    ap_ST_fsm_state87 = 110'd77371252455336267181195264;
+parameter    ap_ST_fsm_state88 = 110'd154742504910672534362390528;
+parameter    ap_ST_fsm_state89 = 110'd309485009821345068724781056;
+parameter    ap_ST_fsm_state90 = 110'd618970019642690137449562112;
+parameter    ap_ST_fsm_state91 = 110'd1237940039285380274899124224;
+parameter    ap_ST_fsm_state92 = 110'd2475880078570760549798248448;
+parameter    ap_ST_fsm_state93 = 110'd4951760157141521099596496896;
+parameter    ap_ST_fsm_state94 = 110'd9903520314283042199192993792;
+parameter    ap_ST_fsm_state95 = 110'd19807040628566084398385987584;
+parameter    ap_ST_fsm_state96 = 110'd39614081257132168796771975168;
+parameter    ap_ST_fsm_state97 = 110'd79228162514264337593543950336;
+parameter    ap_ST_fsm_state98 = 110'd158456325028528675187087900672;
+parameter    ap_ST_fsm_state99 = 110'd316912650057057350374175801344;
+parameter    ap_ST_fsm_state100 = 110'd633825300114114700748351602688;
+parameter    ap_ST_fsm_state101 = 110'd1267650600228229401496703205376;
+parameter    ap_ST_fsm_state102 = 110'd2535301200456458802993406410752;
+parameter    ap_ST_fsm_state103 = 110'd5070602400912917605986812821504;
+parameter    ap_ST_fsm_state104 = 110'd10141204801825835211973625643008;
+parameter    ap_ST_fsm_state105 = 110'd20282409603651670423947251286016;
+parameter    ap_ST_fsm_state106 = 110'd40564819207303340847894502572032;
+parameter    ap_ST_fsm_state107 = 110'd81129638414606681695789005144064;
+parameter    ap_ST_fsm_state108 = 110'd162259276829213363391578010288128;
+parameter    ap_ST_fsm_state109 = 110'd324518553658426726783156020576256;
+parameter    ap_ST_fsm_state110 = 110'd649037107316853453566312041152512;
 
 input   ap_clk;
 input   ap_rst;
@@ -301,31 +302,32 @@ reg WidthInBytes_read;
 reg StrideInBytes_read;
 
 reg    ap_done_reg;
-(* fsm_encoding = "none" *) reg   [108:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [109:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    mm_video_blk_n_AW;
-wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_state4;
 reg    mm_video_blk_n_B;
-wire    ap_CS_fsm_state109;
-reg   [0:0] cmp32_reg_311;
+wire    ap_CS_fsm_state110;
+reg   [0:0] cmp32_reg_315;
 reg    dstImg_blk_n;
 reg    Height_blk_n;
 reg    WidthInBytes_blk_n;
 reg    StrideInBytes_blk_n;
-reg   [11:0] Height_read_reg_291;
-reg   [31:0] dstImg_read_reg_296;
-wire   [10:0] loopWidth_fu_168_p4;
-reg   [10:0] loopWidth_reg_301;
-wire   [31:0] zext_ln1076_1_fu_178_p1;
-reg   [31:0] zext_ln1076_1_reg_306;
-wire   [0:0] cmp32_fu_192_p2;
-wire   [22:0] zext_ln1082_fu_198_p1;
-reg   [22:0] zext_ln1082_reg_315;
-wire   [11:0] y_7_fu_220_p2;
-reg   [11:0] y_7_reg_323;
+reg   [11:0] Height_read_reg_288;
+reg   [31:0] dstImg_read_reg_293;
+reg   [10:0] loopWidth_reg_298;
+reg   [10:0] div8_reg_305;
+wire   [31:0] zext_ln1076_1_fu_198_p1;
+reg   [31:0] zext_ln1076_1_reg_310;
 wire    ap_CS_fsm_state2;
-reg   [26:0] trunc_ln5_reg_328;
-wire   [0:0] icmp_ln1082_fu_215_p2;
+wire   [0:0] cmp32_fu_201_p2;
+wire   [22:0] zext_ln1082_fu_206_p1;
+reg   [22:0] zext_ln1082_reg_319;
+wire   [11:0] y_7_fu_217_p2;
+reg   [11:0] y_7_reg_327;
+wire    ap_CS_fsm_state3;
+reg   [26:0] trunc_ln5_reg_332;
+wire   [0:0] icmp_ln1082_fu_212_p2;
 wire    grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start;
 wire    grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_done;
 wire    grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_idle;
@@ -364,27 +366,26 @@ wire   [0:0] grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_vid
 wire    grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_RREADY;
 wire    grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_BREADY;
 reg    grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg;
-wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state5;
-wire  signed [31:0] sext_ln1086_fu_253_p1;
-reg    ap_block_state109;
+wire    ap_CS_fsm_state6;
+wire  signed [31:0] sext_ln1086_fu_250_p1;
+reg    ap_block_state110;
 reg   [11:0] y_fu_106;
 reg    ap_block_state1;
 reg   [22:0] yoffset_fu_110;
-wire   [22:0] add_ln1092_fu_263_p2;
+wire   [22:0] add_ln1092_fu_260_p2;
 wire   [15:0] zext_ln1076_fu_158_p1;
 wire   [15:0] add_ln1076_fu_162_p2;
-wire   [10:0] div8_fu_182_p4;
-wire   [27:0] shl_ln_fu_226_p3;
-wire   [31:0] zext_ln1086_fu_234_p1;
-wire   [31:0] add_ln1086_fu_238_p2;
-reg   [108:0] ap_NS_fsm;
+wire   [27:0] shl_ln_fu_223_p3;
+wire   [31:0] zext_ln1086_fu_231_p1;
+wire   [31:0] add_ln1086_fu_235_p2;
+reg   [109:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
-reg    ap_ST_fsm_state3_blk;
-wire    ap_ST_fsm_state4_blk;
-reg    ap_ST_fsm_state5_blk;
-wire    ap_ST_fsm_state6_blk;
+wire    ap_ST_fsm_state3_blk;
+reg    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state5_blk;
+reg    ap_ST_fsm_state6_blk;
 wire    ap_ST_fsm_state7_blk;
 wire    ap_ST_fsm_state8_blk;
 wire    ap_ST_fsm_state9_blk;
@@ -487,13 +488,14 @@ wire    ap_ST_fsm_state105_blk;
 wire    ap_ST_fsm_state106_blk;
 wire    ap_ST_fsm_state107_blk;
 wire    ap_ST_fsm_state108_blk;
-reg    ap_ST_fsm_state109_blk;
+wire    ap_ST_fsm_state109_blk;
+reg    ap_ST_fsm_state110_blk;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
 #0 ap_done_reg = 1'b0;
-#0 ap_CS_fsm = 109'd1;
+#0 ap_CS_fsm = 110'd1;
 #0 grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg = 1'b0;
 end
 
@@ -555,8 +557,8 @@ design_1_v_frmbuf_wr_0_0_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1 grp_Bytes2A
     .m_axi_mm_video_BRESP(m_axi_mm_video_BRESP),
     .m_axi_mm_video_BID(m_axi_mm_video_BID),
     .m_axi_mm_video_BUSER(m_axi_mm_video_BUSER),
-    .sext_ln1086(trunc_ln5_reg_328),
-    .loopWidth(loopWidth_reg_301)
+    .sext_ln1086(trunc_ln5_reg_332),
+    .loopWidth(loopWidth_reg_298)
 );
 
 always @ (posedge ap_clk) begin
@@ -573,7 +575,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((icmp_ln1082_fu_215_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+        end else if (((icmp_ln1082_fu_212_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -583,7 +585,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state4)) begin
+        if ((1'b1 == ap_CS_fsm_state5)) begin
             grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg <= 1'b1;
         end else if ((grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_ready == 1'b1)) begin
             grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg <= 1'b0;
@@ -594,39 +596,45 @@ end
 always @ (posedge ap_clk) begin
     if ((~((1'b0 == StrideInBytes_empty_n) | (1'b0 == WidthInBytes_empty_n) | (1'b0 == Height_empty_n) | (dstImg_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
         y_fu_106 <= 12'd0;
-    end else if ((~((cmp32_reg_311 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state109))) begin
-        y_fu_106 <= y_7_reg_323;
+    end else if ((~((cmp32_reg_315 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state110))) begin
+        y_fu_106 <= y_7_reg_327;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((~((1'b0 == StrideInBytes_empty_n) | (1'b0 == WidthInBytes_empty_n) | (1'b0 == Height_empty_n) | (dstImg_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
         yoffset_fu_110 <= 23'd0;
-    end else if ((~((cmp32_reg_311 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state109))) begin
-        yoffset_fu_110 <= add_ln1092_fu_263_p2;
+    end else if ((~((cmp32_reg_315 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state110))) begin
+        yoffset_fu_110 <= add_ln1092_fu_260_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        Height_read_reg_291 <= Height_dout;
-        cmp32_reg_311 <= cmp32_fu_192_p2;
-        dstImg_read_reg_296 <= dstImg_dout;
-        loopWidth_reg_301 <= {{add_ln1076_fu_162_p2[15:5]}};
-        zext_ln1076_1_reg_306[10 : 0] <= zext_ln1076_1_fu_178_p1[10 : 0];
-        zext_ln1082_reg_315[10 : 0] <= zext_ln1082_fu_198_p1[10 : 0];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((icmp_ln1082_fu_215_p2 == 1'd0) & (cmp32_reg_311 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        trunc_ln5_reg_328 <= {{add_ln1086_fu_238_p2[31:5]}};
+        Height_read_reg_288 <= Height_dout;
+        div8_reg_305 <= {{StrideInBytes_dout[15:5]}};
+        dstImg_read_reg_293 <= dstImg_dout;
+        loopWidth_reg_298 <= {{add_ln1076_fu_162_p2[15:5]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        y_7_reg_323 <= y_7_fu_220_p2;
+        cmp32_reg_315 <= cmp32_fu_201_p2;
+        zext_ln1076_1_reg_310[10 : 0] <= zext_ln1076_1_fu_198_p1[10 : 0];
+        zext_ln1082_reg_319[10 : 0] <= zext_ln1082_fu_206_p1[10 : 0];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((icmp_ln1082_fu_212_p2 == 1'd0) & (cmp32_reg_315 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+        trunc_ln5_reg_332 <= {{add_ln1086_fu_235_p2[31:5]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        y_7_reg_327 <= y_7_fu_217_p2;
     end
 end
 
@@ -696,15 +704,17 @@ assign ap_ST_fsm_state107_blk = 1'b0;
 
 assign ap_ST_fsm_state108_blk = 1'b0;
 
-always @ (*) begin
-    if (((cmp32_reg_311 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0))) begin
-        ap_ST_fsm_state109_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state109_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state109_blk = 1'b0;
 
 assign ap_ST_fsm_state10_blk = 1'b0;
+
+always @ (*) begin
+    if (((cmp32_reg_315 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0))) begin
+        ap_ST_fsm_state110_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state110_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state11_blk = 1'b0;
 
@@ -774,13 +784,7 @@ assign ap_ST_fsm_state38_blk = 1'b0;
 
 assign ap_ST_fsm_state39_blk = 1'b0;
 
-always @ (*) begin
-    if ((m_axi_mm_video_AWREADY == 1'b0)) begin
-        ap_ST_fsm_state3_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state3_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state3_blk = 1'b0;
 
 assign ap_ST_fsm_state40_blk = 1'b0;
 
@@ -802,7 +806,13 @@ assign ap_ST_fsm_state48_blk = 1'b0;
 
 assign ap_ST_fsm_state49_blk = 1'b0;
 
-assign ap_ST_fsm_state4_blk = 1'b0;
+always @ (*) begin
+    if ((m_axi_mm_video_AWREADY == 1'b0)) begin
+        ap_ST_fsm_state4_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state4_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state50_blk = 1'b0;
 
@@ -824,13 +834,7 @@ assign ap_ST_fsm_state58_blk = 1'b0;
 
 assign ap_ST_fsm_state59_blk = 1'b0;
 
-always @ (*) begin
-    if ((grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_done == 1'b0)) begin
-        ap_ST_fsm_state5_blk = 1'b1;
-    end else begin
-        ap_ST_fsm_state5_blk = 1'b0;
-    end
-end
+assign ap_ST_fsm_state5_blk = 1'b0;
 
 assign ap_ST_fsm_state60_blk = 1'b0;
 
@@ -852,7 +856,13 @@ assign ap_ST_fsm_state68_blk = 1'b0;
 
 assign ap_ST_fsm_state69_blk = 1'b0;
 
-assign ap_ST_fsm_state6_blk = 1'b0;
+always @ (*) begin
+    if ((grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_done == 1'b0)) begin
+        ap_ST_fsm_state6_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state6_blk = 1'b0;
+    end
+end
 
 assign ap_ST_fsm_state70_blk = 1'b0;
 
@@ -921,7 +931,7 @@ assign ap_ST_fsm_state99_blk = 1'b0;
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if (((icmp_ln1082_fu_215_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((icmp_ln1082_fu_212_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -937,7 +947,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln1082_fu_215_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((icmp_ln1082_fu_212_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -945,7 +955,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
+    if ((1'b1 == ap_CS_fsm_state6)) begin
         bytePlanes1_read = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_bytePlanes1_read;
     end else begin
         bytePlanes1_read = 1'b0;
@@ -969,9 +979,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (m_axi_mm_video_AWREADY == 1'b1))) begin
-        m_axi_mm_video_AWADDR = sext_ln1086_fu_253_p1;
-    end else if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state4) & (m_axi_mm_video_AWREADY == 1'b1))) begin
+        m_axi_mm_video_AWADDR = sext_ln1086_fu_250_p1;
+    end else if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWADDR = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWADDR;
     end else begin
         m_axi_mm_video_AWADDR = 'bx;
@@ -979,7 +989,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWBURST = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWBURST;
     end else begin
         m_axi_mm_video_AWBURST = 2'd0;
@@ -987,7 +997,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWCACHE = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWCACHE;
     end else begin
         m_axi_mm_video_AWCACHE = 4'd0;
@@ -995,7 +1005,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWID = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWID;
     end else begin
         m_axi_mm_video_AWID = 1'd0;
@@ -1003,9 +1013,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (m_axi_mm_video_AWREADY == 1'b1))) begin
-        m_axi_mm_video_AWLEN = zext_ln1076_1_reg_306;
-    end else if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state4) & (m_axi_mm_video_AWREADY == 1'b1))) begin
+        m_axi_mm_video_AWLEN = zext_ln1076_1_reg_310;
+    end else if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWLEN = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWLEN;
     end else begin
         m_axi_mm_video_AWLEN = 'bx;
@@ -1013,7 +1023,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWLOCK = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWLOCK;
     end else begin
         m_axi_mm_video_AWLOCK = 2'd0;
@@ -1021,7 +1031,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWPROT = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWPROT;
     end else begin
         m_axi_mm_video_AWPROT = 3'd0;
@@ -1029,7 +1039,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWQOS = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWQOS;
     end else begin
         m_axi_mm_video_AWQOS = 4'd0;
@@ -1037,7 +1047,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWREGION = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWREGION;
     end else begin
         m_axi_mm_video_AWREGION = 4'd0;
@@ -1045,7 +1055,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWSIZE = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWSIZE;
     end else begin
         m_axi_mm_video_AWSIZE = 3'd0;
@@ -1053,7 +1063,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWUSER = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWUSER;
     end else begin
         m_axi_mm_video_AWUSER = 1'd0;
@@ -1061,9 +1071,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) & (m_axi_mm_video_AWREADY == 1'b1))) begin
+    if (((1'b1 == ap_CS_fsm_state4) & (m_axi_mm_video_AWREADY == 1'b1))) begin
         m_axi_mm_video_AWVALID = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    end else if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_AWVALID = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_AWVALID;
     end else begin
         m_axi_mm_video_AWVALID = 1'b0;
@@ -1071,9 +1081,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((cmp32_reg_311 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (cmp32_reg_311 == 1'd0) & (1'b1 == ap_CS_fsm_state109))) begin
+    if ((~((cmp32_reg_315 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (cmp32_reg_315 == 1'd0) & (1'b1 == ap_CS_fsm_state110))) begin
         m_axi_mm_video_BREADY = 1'b1;
-    end else if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    end else if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_BREADY = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_BREADY;
     end else begin
         m_axi_mm_video_BREADY = 1'b0;
@@ -1081,7 +1091,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+    if (((1'b1 == ap_CS_fsm_state6) | (1'b1 == ap_CS_fsm_state5))) begin
         m_axi_mm_video_WVALID = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_WVALID;
     end else begin
         m_axi_mm_video_WVALID = 1'b0;
@@ -1089,7 +1099,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
         mm_video_blk_n_AW = m_axi_mm_video_AWREADY;
     end else begin
         mm_video_blk_n_AW = 1'b1;
@@ -1097,7 +1107,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((cmp32_reg_311 == 1'd0) & (1'b1 == ap_CS_fsm_state109))) begin
+    if (((cmp32_reg_315 == 1'd0) & (1'b1 == ap_CS_fsm_state110))) begin
         mm_video_blk_n_B = m_axi_mm_video_BVALID;
     end else begin
         mm_video_blk_n_B = 1'b1;
@@ -1114,33 +1124,33 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((icmp_ln1082_fu_215_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state1;
-            end else if (((icmp_ln1082_fu_215_p2 == 1'd0) & (cmp32_reg_311 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state109;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state3;
-            end
+            ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b1 == ap_CS_fsm_state3) & (m_axi_mm_video_AWREADY == 1'b1))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
+            if (((icmp_ln1082_fu_212_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else if (((icmp_ln1082_fu_212_p2 == 1'd0) & (cmp32_reg_315 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+                ap_NS_fsm = ap_ST_fsm_state110;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state3;
+                ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state4 : begin
-            ap_NS_fsm = ap_ST_fsm_state5;
-        end
-        ap_ST_fsm_state5 : begin
-            if (((grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
-                ap_NS_fsm = ap_ST_fsm_state6;
-            end else begin
+            if (((1'b1 == ap_CS_fsm_state4) & (m_axi_mm_video_AWREADY == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state5;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
+        ap_ST_fsm_state5 : begin
+            ap_NS_fsm = ap_ST_fsm_state6;
+        end
         ap_ST_fsm_state6 : begin
-            ap_NS_fsm = ap_ST_fsm_state7;
+            if (((grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state6))) begin
+                ap_NS_fsm = ap_ST_fsm_state7;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state6;
+            end
         end
         ap_ST_fsm_state7 : begin
             ap_NS_fsm = ap_ST_fsm_state8;
@@ -1449,10 +1459,13 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state109;
         end
         ap_ST_fsm_state109 : begin
-            if ((~((cmp32_reg_311 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state109))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
+            ap_NS_fsm = ap_ST_fsm_state110;
+        end
+        ap_ST_fsm_state110 : begin
+            if ((~((cmp32_reg_315 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state110))) begin
+                ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state109;
+                ap_NS_fsm = ap_ST_fsm_state110;
             end
         end
         default : begin
@@ -1463,13 +1476,13 @@ end
 
 assign add_ln1076_fu_162_p2 = (zext_ln1076_fu_158_p1 + 16'd31);
 
-assign add_ln1086_fu_238_p2 = (dstImg_read_reg_296 + zext_ln1086_fu_234_p1);
+assign add_ln1086_fu_235_p2 = (dstImg_read_reg_293 + zext_ln1086_fu_231_p1);
 
-assign add_ln1092_fu_263_p2 = (zext_ln1082_reg_315 + yoffset_fu_110);
+assign add_ln1092_fu_260_p2 = (zext_ln1082_reg_319 + yoffset_fu_110);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state109 = ap_CS_fsm[32'd108];
+assign ap_CS_fsm_state110 = ap_CS_fsm[32'd109];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
@@ -1479,23 +1492,21 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
+assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
+
 always @ (*) begin
     ap_block_state1 = ((1'b0 == StrideInBytes_empty_n) | (1'b0 == WidthInBytes_empty_n) | (1'b0 == Height_empty_n) | (dstImg_empty_n == 1'b0) | (ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state109 = ((cmp32_reg_311 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0));
+    ap_block_state110 = ((cmp32_reg_315 == 1'd0) & (m_axi_mm_video_BVALID == 1'b0));
 end
 
-assign cmp32_fu_192_p2 = ((loopWidth_fu_168_p4 == 11'd0) ? 1'b1 : 1'b0);
-
-assign div8_fu_182_p4 = {{StrideInBytes_dout[15:5]}};
+assign cmp32_fu_201_p2 = ((loopWidth_reg_298 == 11'd0) ? 1'b1 : 1'b0);
 
 assign grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg;
 
-assign icmp_ln1082_fu_215_p2 = ((y_fu_106 == Height_read_reg_291) ? 1'b1 : 1'b0);
-
-assign loopWidth_fu_168_p4 = {{add_ln1076_fu_162_p2[15:5]}};
+assign icmp_ln1082_fu_212_p2 = ((y_fu_106 == Height_read_reg_288) ? 1'b1 : 1'b0);
 
 assign m_axi_mm_video_ARADDR = 32'd0;
 
@@ -1533,23 +1544,23 @@ assign m_axi_mm_video_WSTRB = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu
 
 assign m_axi_mm_video_WUSER = grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_m_axi_mm_video_WUSER;
 
-assign sext_ln1086_fu_253_p1 = $signed(trunc_ln5_reg_328);
+assign sext_ln1086_fu_250_p1 = $signed(trunc_ln5_reg_332);
 
-assign shl_ln_fu_226_p3 = {{yoffset_fu_110}, {5'd0}};
+assign shl_ln_fu_223_p3 = {{yoffset_fu_110}, {5'd0}};
 
-assign y_7_fu_220_p2 = (y_fu_106 + 12'd1);
+assign y_7_fu_217_p2 = (y_fu_106 + 12'd1);
 
-assign zext_ln1076_1_fu_178_p1 = loopWidth_fu_168_p4;
+assign zext_ln1076_1_fu_198_p1 = loopWidth_reg_298;
 
 assign zext_ln1076_fu_158_p1 = WidthInBytes_dout;
 
-assign zext_ln1082_fu_198_p1 = div8_fu_182_p4;
+assign zext_ln1082_fu_206_p1 = div8_reg_305;
 
-assign zext_ln1086_fu_234_p1 = shl_ln_fu_226_p3;
+assign zext_ln1086_fu_231_p1 = shl_ln_fu_223_p3;
 
 always @ (posedge ap_clk) begin
-    zext_ln1076_1_reg_306[31:11] <= 21'b000000000000000000000;
-    zext_ln1082_reg_315[22:11] <= 12'b000000000000;
+    zext_ln1076_1_reg_310[31:11] <= 21'b000000000000000000000;
+    zext_ln1082_reg_319[22:11] <= 12'b000000000000;
 end
 
 endmodule //design_1_v_frmbuf_wr_0_0_Bytes2AXIMMvideo

@@ -2,5 +2,5 @@
 # OOC Synthesis and Hierarchical Designs. For best results the frequencies should be modified
 # to match the target frequencies. 
 # This constraints file is not used in normal top-down synthesis (the default flow of Vivado)
-create_clock -name ap_clk -period 6.663 [get_ports ap_clk]
+create_clock -name ap_clk -period 3.333 [get_ports ap_clk]
 

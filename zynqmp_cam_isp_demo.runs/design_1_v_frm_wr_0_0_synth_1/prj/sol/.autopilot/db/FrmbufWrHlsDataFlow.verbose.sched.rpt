@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vitis HLS Report for 'FrmbufWrHlsDataFlow'
+================================================================
+* Date:           Sat Dec 17 00:28:19 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+----------+-----------+-----+-----------+----------+
+    |   Latency (cycles)  |  Latency (absolute)  |     Interval    | Pipeline |
+    |   min   |    max    |    min   |    max    | min |    max    |   Type   |
+    +---------+-----------+----------+-----------+-----+-----------+----------+
+    |       24|  141583685|  0.240 us|  1.416 sec|    7|  141583683|  dataflow|
+    +---------+-----------+----------+-----------+-----+-----------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.83>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_6 = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %p_read3"   --->   Operation 7 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read26 = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %p_read2"   --->   Operation 8 'read' 'p_read26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read15 = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %p_read1"   --->   Operation 9 'read' 'p_read15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%video_format_c = alloca i32 1"   --->   Operation 10 'alloca' 'video_format_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 6> <Depth = 3> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%stride_c = alloca i32 1"   --->   Operation 11 'alloca' 'stride_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 4> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%height_c10 = alloca i32 1"   --->   Operation 12 'alloca' 'height_c10' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%height_c = alloca i32 1"   --->   Operation 13 'alloca' 'height_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%width_c = alloca i32 1"   --->   Operation 14 'alloca' 'width_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%WidthInBytes_c9 = alloca i32 1"   --->   Operation 15 'alloca' 'WidthInBytes_c9' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 15> <Depth = 3> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%WidthInBytes_c = alloca i32 1"   --->   Operation 16 'alloca' 'WidthInBytes_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 15> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%HwReg_frm_buffer_c = alloca i32 1"   --->   Operation 17 'alloca' 'HwReg_frm_buffer_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%img = alloca i32 1"   --->   Operation 18 'alloca' 'img' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 60> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%bytePlanes_plane0 = alloca i32 1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:35]   --->   Operation 19 'alloca' 'bytePlanes_plane0' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 480> <FIFO>
+ST_1 : Operation 20 [2/2] (1.83ns)   --->   "%call_ln57 = call void @AXIvideo2MultiPixStream, i64 %s_axis_video_V_data_V, i8 %s_axis_video_V_keep_V, i8 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i60 %img, i12 %p_read_6, i12 %p_read26, i3 %p_read15, i12 %width_c, i12 %height_c10" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:57]   --->   Operation 20 'call' 'call_ln57' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 1.83>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_4 = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %p_read25"   --->   Operation 21 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_5 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read14"   --->   Operation 22 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_7 = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %p_read"   --->   Operation 23 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%HwReg_frm_buffer_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %HwReg_frm_buffer"   --->   Operation 24 'read' 'HwReg_frm_buffer_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.83ns)   --->   "%call_ln0 = call void @entry_proc, i32 %HwReg_frm_buffer_read, i32 %HwReg_frm_buffer_c, i15 %p_read_7, i15 %WidthInBytes_c9, i16 %p_read_5, i16 %stride_c, i6 %p_read_4, i6 %video_format_c"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln57 = call void @AXIvideo2MultiPixStream, i64 %s_axis_video_V_data_V, i8 %s_axis_video_V_keep_V, i8 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i60 %img, i12 %p_read_6, i12 %p_read26, i3 %p_read15, i12 %width_c, i12 %height_c10" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:57]   --->   Operation 26 'call' 'call_ln57' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 27 [2/2] (0.00ns)   --->   "%call_ln60 = call void @MultiPixStream2Bytes, i60 %img, i128 %bytePlanes_plane0, i12 %height_c10, i12 %width_c, i15 %WidthInBytes_c9, i6 %video_format_c, i15 %WidthInBytes_c, i12 %height_c" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:60]   --->   Operation 27 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 28 [1/2] (0.00ns)   --->   "%call_ln60 = call void @MultiPixStream2Bytes, i60 %img, i128 %bytePlanes_plane0, i12 %height_c10, i12 %width_c, i15 %WidthInBytes_c9, i6 %video_format_c, i15 %WidthInBytes_c, i12 %height_c" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:60]   --->   Operation 28 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 29 [2/2] (0.00ns)   --->   "%call_ln63 = call void @Bytes2AXIMMvideo, i128 %bytePlanes_plane0, i128 %mm_video, i32 %HwReg_frm_buffer_c, i12 %height_c, i15 %WidthInBytes_c, i16 %stride_c" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:63]   --->   Operation 29 'call' 'call_ln63' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specstablecontent_ln0 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %p_read14, void "   --->   Operation 30 'specstablecontent' 'specstablecontent_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @video_format_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i6 %video_format_c, i6 %video_format_c"   --->   Operation 31 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %video_format_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%empty_180 = specchannel i32 @_ssdm_op_SpecChannel, void @stride_c_str, i32 1, void @p_str, void @p_str, i32 4, i32 0, i16 %stride_c, i16 %stride_c"   --->   Operation 33 'specchannel' 'empty_180' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stride_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%empty_181 = specchannel i32 @_ssdm_op_SpecChannel, void @height_c10_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i12 %height_c10, i12 %height_c10"   --->   Operation 35 'specchannel' 'empty_181' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %height_c10, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%empty_182 = specchannel i32 @_ssdm_op_SpecChannel, void @height_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i12 %height_c, i12 %height_c"   --->   Operation 37 'specchannel' 'empty_182' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %height_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%empty_183 = specchannel i32 @_ssdm_op_SpecChannel, void @width_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i12 %width_c, i12 %width_c"   --->   Operation 39 'specchannel' 'empty_183' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %width_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%empty_184 = specchannel i32 @_ssdm_op_SpecChannel, void @WidthInBytes_c9_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i15 %WidthInBytes_c9, i15 %WidthInBytes_c9"   --->   Operation 41 'specchannel' 'empty_184' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %WidthInBytes_c9, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%empty_185 = specchannel i32 @_ssdm_op_SpecChannel, void @WidthInBytes_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i15 %WidthInBytes_c, i15 %WidthInBytes_c"   --->   Operation 43 'specchannel' 'empty_185' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i15 %WidthInBytes_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%empty_186 = specchannel i32 @_ssdm_op_SpecChannel, void @HwReg_frm_buffer_c_str, i32 1, void @p_str, void @p_str, i32 4, i32 0, i32 %HwReg_frm_buffer_c, i32 %HwReg_frm_buffer_c"   --->   Operation 45 'specchannel' 'empty_186' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %HwReg_frm_buffer_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_14"   --->   Operation 47 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_video_V_dest_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_user_V, i8 %s_axis_video_V_strb_V, i8 %s_axis_video_V_keep_V, i64 %s_axis_video_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %mm_video, void @empty_13, i32 0, i32 0, void @empty_14, i32 100, i32 2073600, void @empty_15, void @empty_11, void @empty_14, i32 16, i32 4, i32 16, i32 16, void @empty_14, void @empty_14, i32 4294967295, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%empty_187 = specchannel i32 @_ssdm_op_SpecChannel, void @img_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i60 %img, i60 %img"   --->   Operation 50 'specchannel' 'empty_187' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i60 %img, void @empty_1, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0"   --->   Operation 51 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%empty_188 = specchannel i32 @_ssdm_op_SpecChannel, void @bytePlanes_OC_plane0_str, i32 1, void @p_str, void @p_str, i32 480, i32 480, i128 %bytePlanes_plane0, i128 %bytePlanes_plane0"   --->   Operation 52 'specchannel' 'empty_188' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%specmemcore_ln51 = specmemcore void @_ssdm_op_SpecMemCore, i128 %bytePlanes_plane0, i64 666, i64 8, i64 18446744073709551615" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:51]   --->   Operation 53 'specmemcore' 'specmemcore_ln51' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %bytePlanes_plane0, void @empty_1, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/2] (0.00ns)   --->   "%call_ln63 = call void @Bytes2AXIMMvideo, i128 %bytePlanes_plane0, i128 %mm_video, i32 %HwReg_frm_buffer_c, i12 %height_c, i15 %WidthInBytes_c, i16 %stride_c" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:63]   --->   Operation 55 'call' 'call_ln63' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln65 = ret" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:65]   --->   Operation 56 'ret' 'ret_ln65' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.84ns
+The critical path consists of the following:
+	wire read operation ('p_read_6') on port 'p_read3' [19]  (0 ns)
+	'call' operation ('call_ln57', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frm_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:57) to 'AXIvideo2MultiPixStream' [59]  (1.84 ns)
+
+ <State 2>: 1.84ns
+The critical path consists of the following:
+	wire read operation ('p_read_4') on port 'p_read25' [17]  (0 ns)
+	'call' operation ('call_ln0') to 'entry_proc' [58]  (1.84 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

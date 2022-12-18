@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sat Dec 10 20:40:34 2022
+| Date         : Sat Dec 17 00:29:32 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_v_frmbuf_wr_0_0_utilization_synth.rpt -pb design_1_v_frmbuf_wr_0_0_utilization_synth.pb
 | Design       : design_1_v_frmbuf_wr_0_0
@@ -32,13 +32,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 2858 |     0 |          0 |    117120 |  2.44 |
-|   LUT as Logic             | 2320 |     0 |          0 |    117120 |  1.98 |
-|   LUT as Memory            |  538 |     0 |          0 |     57600 |  0.93 |
+| CLB LUTs*                  | 2866 |     0 |          0 |    117120 |  2.45 |
+|   LUT as Logic             | 2323 |     0 |          0 |    117120 |  1.98 |
+|   LUT as Memory            |  543 |     0 |          0 |     57600 |  0.94 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |  538 |     0 |            |           |       |
-| CLB Registers              | 3560 |     0 |          0 |    234240 |  1.52 |
-|   Register as Flip Flop    | 3560 |     0 |          0 |    234240 |  1.52 |
+|     LUT as Shift Register  |  543 |     0 |            |           |       |
+| CLB Registers              | 3776 |     0 |          0 |    234240 |  1.61 |
+|   Register as Flip Flop    | 3776 |     0 |          0 |    234240 |  1.61 |
 |   Register as Latch        |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                     |   39 |     0 |          0 |     14640 |  0.27 |
 | F7 Muxes                   |   76 |     0 |          0 |     58560 |  0.13 |
@@ -62,8 +62,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 49    |          Yes |         Set |            - |
-| 3511  |          Yes |       Reset |            - |
+| 47    |          Yes |         Set |            - |
+| 3729  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -160,17 +160,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 3511 |            Register |
-| LUT6     |  943 |                 CLB |
-| LUT3     |  574 |                 CLB |
-| LUT5     |  544 |                 CLB |
-| LUT4     |  429 |                 CLB |
-| SRL16E   |  386 |                 CLB |
-| LUT2     |  209 |                 CLB |
-| SRLC32E  |  152 |                 CLB |
+| FDRE     | 3729 |            Register |
+| LUT6     |  865 |                 CLB |
+| LUT3     |  569 |                 CLB |
+| LUT4     |  537 |                 CLB |
+| LUT5     |  508 |                 CLB |
+| SRL16E   |  387 |                 CLB |
+| LUT2     |  214 |                 CLB |
+| SRLC32E  |  156 |                 CLB |
 | MUXF7    |   76 |                 CLB |
 | LUT1     |   57 |                 CLB |
-| FDSE     |   49 |            Register |
+| FDSE     |   47 |            Register |
 | CARRY8   |   39 |                 CLB |
 | MUXF8    |   38 |                 CLB |
 | RAMB36E2 |    8 |            BLOCKRAM |

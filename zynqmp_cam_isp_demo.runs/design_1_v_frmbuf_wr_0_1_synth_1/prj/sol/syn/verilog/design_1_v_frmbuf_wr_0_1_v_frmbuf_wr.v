@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="design_1_v_frmbuf_wr_0_1_v_frmbuf_wr,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=6.663000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.863990,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=8,HLS_SYN_DSP=0,HLS_SYN_FF=5103,HLS_SYN_LUT=8513,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="design_1_v_frmbuf_wr_0_1_v_frmbuf_wr,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=3.333000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=2.433090,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=8,HLS_SYN_DSP=0,HLS_SYN_FF=5340,HLS_SYN_LUT=8622,HLS_VERSION=2022_1}" *)
 
 module design_1_v_frmbuf_wr_0_1_v_frmbuf_wr (
         ap_clk,
@@ -86,9 +86,11 @@ module design_1_v_frmbuf_wr_0_1_v_frmbuf_wr (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 3'd1;
-parameter    ap_ST_fsm_state2 = 3'd2;
-parameter    ap_ST_fsm_state3 = 3'd4;
+parameter    ap_ST_fsm_state1 = 5'd1;
+parameter    ap_ST_fsm_state2 = 5'd2;
+parameter    ap_ST_fsm_state3 = 5'd4;
+parameter    ap_ST_fsm_state4 = 5'd8;
+parameter    ap_ST_fsm_state5 = 5'd16;
 parameter    C_S_AXI_CTRL_DATA_WIDTH = 32;
 parameter    C_S_AXI_CTRL_ADDR_WIDTH = 7;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -189,7 +191,7 @@ output   interrupt;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [4:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
 wire   [15:0] width;
@@ -205,19 +207,21 @@ wire   [2:0] BYTES_PER_PIXEL_q0;
 wire   [5:0] MEMORY2LIVE_address0;
 reg    MEMORY2LIVE_ce0;
 wire   [2:0] MEMORY2LIVE_q0;
-reg   [31:0] frm_buffer2_read_reg_223;
-reg   [31:0] frm_buffer_read_reg_228;
-reg   [15:0] stride_read_reg_233;
-wire   [11:0] empty_fu_191_p1;
-reg   [11:0] empty_reg_238;
-wire   [5:0] empty_64_fu_195_p1;
-reg   [5:0] empty_64_reg_244;
-wire   [11:0] empty_65_fu_199_p1;
-reg   [11:0] empty_65_reg_249;
-wire   [14:0] WidthInBytes_fu_216_p2;
-reg   [14:0] WidthInBytes_reg_264;
+reg   [31:0] frm_buffer2_read_reg_220;
+reg   [31:0] frm_buffer_read_reg_225;
+reg   [15:0] stride_read_reg_230;
+wire   [11:0] empty_fu_190_p1;
+reg   [11:0] empty_reg_235;
+wire   [5:0] empty_64_fu_194_p1;
+reg   [5:0] empty_64_reg_241;
+wire   [11:0] empty_65_fu_198_p1;
+reg   [11:0] empty_65_reg_246;
+reg   [2:0] BYTES_PER_PIXEL_load_reg_261;
 wire    ap_CS_fsm_state2;
-reg   [2:0] colorFormat_reg_269;
+reg   [2:0] colorFormat_reg_266;
+wire   [14:0] WidthInBytes_fu_214_p2;
+reg   [14:0] WidthInBytes_reg_271;
+wire    ap_CS_fsm_state3;
 wire    grp_FrmbufWrHlsDataFlow_fu_162_m_axi_mm_video_AWVALID;
 wire   [31:0] grp_FrmbufWrHlsDataFlow_fu_162_m_axi_mm_video_AWADDR;
 wire   [0:0] grp_FrmbufWrHlsDataFlow_fu_162_m_axi_mm_video_AWID;
@@ -270,19 +274,22 @@ wire   [8:0] mm_video_RFIFONUM;
 wire    mm_video_BVALID;
 reg    mm_video_BREADY;
 reg    grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg;
-wire    ap_CS_fsm_state3;
+wire    ap_CS_fsm_state4;
+wire    ap_CS_fsm_state5;
 wire    ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready;
 wire    ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_done;
-reg    ap_block_state3_on_subcall_done;
+reg    ap_block_state5_on_subcall_done;
 reg    ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready;
 reg    ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_done;
-wire   [31:0] zext_ln150_fu_203_p1;
-wire   [11:0] WidthInBytes_fu_216_p0;
-wire   [2:0] WidthInBytes_fu_216_p1;
-reg   [2:0] ap_NS_fsm;
+wire   [31:0] zext_ln150_fu_202_p1;
+wire   [11:0] WidthInBytes_fu_214_p0;
+wire   [2:0] WidthInBytes_fu_214_p1;
+reg   [4:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
-reg    ap_ST_fsm_state3_blk;
+wire    ap_ST_fsm_state3_blk;
+wire    ap_ST_fsm_state4_blk;
+reg    ap_ST_fsm_state5_blk;
 wire    regslice_both_s_axis_video_V_data_V_U_apdone_blk;
 wire   [23:0] s_axis_video_TDATA_int_regslice;
 wire    s_axis_video_TVALID_int_regslice;
@@ -312,13 +319,13 @@ wire    regslice_both_s_axis_video_V_dest_V_U_apdone_blk;
 wire   [0:0] s_axis_video_TDEST_int_regslice;
 wire    regslice_both_s_axis_video_V_dest_V_U_vld_out;
 wire    regslice_both_s_axis_video_V_dest_V_U_ack_in;
-wire   [14:0] WidthInBytes_fu_216_p00;
-wire   [14:0] WidthInBytes_fu_216_p10;
+wire   [14:0] WidthInBytes_fu_214_p00;
+wire   [14:0] WidthInBytes_fu_214_p10;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 3'd1;
+#0 ap_CS_fsm = 5'd1;
 #0 grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg = 1'b0;
 #0 ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready = 1'b0;
 #0 ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_done = 1'b0;
@@ -402,14 +409,14 @@ design_1_v_frmbuf_wr_0_1_FrmbufWrHlsDataFlow grp_FrmbufWrHlsDataFlow_fu_162(
     .m_axi_mm_video_BRESP(2'd0),
     .m_axi_mm_video_BID(1'd0),
     .m_axi_mm_video_BUSER(1'd0),
-    .HwReg_frm_buffer(frm_buffer_read_reg_228),
-    .HwReg_frm_buffer2(frm_buffer2_read_reg_223),
-    .p_read(WidthInBytes_reg_264),
-    .p_read1(colorFormat_reg_269),
-    .p_read2(empty_reg_238),
-    .p_read3(empty_65_reg_249),
-    .p_read14(stride_read_reg_233),
-    .p_read25(empty_64_reg_244),
+    .HwReg_frm_buffer(frm_buffer_read_reg_225),
+    .HwReg_frm_buffer2(frm_buffer2_read_reg_220),
+    .p_read(WidthInBytes_reg_271),
+    .p_read1(colorFormat_reg_266),
+    .p_read2(empty_reg_235),
+    .p_read3(empty_65_reg_246),
+    .p_read14(stride_read_reg_230),
+    .p_read25(empty_64_reg_241),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
     .HwReg_frm_buffer_ap_vld(1'b1),
@@ -568,9 +575,9 @@ design_1_v_frmbuf_wr_0_1_mul_12ns_3ns_15_1_1 #(
     .din1_WIDTH( 3 ),
     .dout_WIDTH( 15 ))
 mul_12ns_3ns_15_1_1_U206(
-    .din0(WidthInBytes_fu_216_p0),
-    .din1(WidthInBytes_fu_216_p1),
-    .dout(WidthInBytes_fu_216_p2)
+    .din0(WidthInBytes_fu_214_p0),
+    .din1(WidthInBytes_fu_214_p1),
+    .dout(WidthInBytes_fu_214_p2)
 );
 
 design_1_v_frmbuf_wr_0_1_regslice_both #(
@@ -683,7 +690,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_done <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+        if (((1'b0 == ap_block_state5_on_subcall_done) & (1'b1 == ap_CS_fsm_state5))) begin
             ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_done <= 1'b0;
         end else if ((grp_FrmbufWrHlsDataFlow_fu_162_ap_done == 1'b1)) begin
             ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_done <= 1'b1;
@@ -695,7 +702,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+        if (((1'b0 == ap_block_state5_on_subcall_done) & (1'b1 == ap_CS_fsm_state5))) begin
             ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready <= 1'b0;
         end else if ((grp_FrmbufWrHlsDataFlow_fu_162_ap_ready == 1'b1)) begin
             ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready <= 1'b1;
@@ -707,7 +714,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state2) | ((ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready == 1'b0) & (1'b1 == ap_CS_fsm_state3)))) begin
+        if (((1'b1 == ap_CS_fsm_state4) | ((ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready == 1'b0) & (1'b1 == ap_CS_fsm_state5)))) begin
             grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg <= 1'b1;
         end else if ((grp_FrmbufWrHlsDataFlow_fu_162_ap_ready == 1'b1)) begin
             grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg <= 1'b0;
@@ -721,19 +728,25 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        WidthInBytes_reg_264 <= WidthInBytes_fu_216_p2;
-        colorFormat_reg_269 <= MEMORY2LIVE_q0;
+        BYTES_PER_PIXEL_load_reg_261 <= BYTES_PER_PIXEL_q0;
+        colorFormat_reg_266 <= MEMORY2LIVE_q0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        WidthInBytes_reg_271 <= WidthInBytes_fu_214_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state1)) begin
-        empty_64_reg_244 <= empty_64_fu_195_p1;
-        empty_65_reg_249 <= empty_65_fu_199_p1;
-        empty_reg_238 <= empty_fu_191_p1;
-        frm_buffer2_read_reg_223 <= frm_buffer2;
-        frm_buffer_read_reg_228 <= frm_buffer;
-        stride_read_reg_233 <= stride;
+        empty_64_reg_241 <= empty_64_fu_194_p1;
+        empty_65_reg_246 <= empty_65_fu_198_p1;
+        empty_reg_235 <= empty_fu_190_p1;
+        frm_buffer2_read_reg_220 <= frm_buffer2;
+        frm_buffer_read_reg_225 <= frm_buffer;
+        stride_read_reg_230 <= stride;
     end
 end
 
@@ -763,16 +776,20 @@ end
 
 assign ap_ST_fsm_state2_blk = 1'b0;
 
+assign ap_ST_fsm_state3_blk = 1'b0;
+
+assign ap_ST_fsm_state4_blk = 1'b0;
+
 always @ (*) begin
-    if ((1'b1 == ap_block_state3_on_subcall_done)) begin
-        ap_ST_fsm_state3_blk = 1'b1;
+    if ((1'b1 == ap_block_state5_on_subcall_done)) begin
+        ap_ST_fsm_state5_blk = 1'b1;
     end else begin
-        ap_ST_fsm_state3_blk = 1'b0;
+        ap_ST_fsm_state5_blk = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state5_on_subcall_done) & (1'b1 == ap_CS_fsm_state5))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -788,7 +805,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state5_on_subcall_done) & (1'b1 == ap_CS_fsm_state5))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -796,7 +813,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'b0 == ap_block_state5_on_subcall_done) & (1'b1 == ap_CS_fsm_state5))) begin
         grp_FrmbufWrHlsDataFlow_fu_162_ap_continue = 1'b1;
     end else begin
         grp_FrmbufWrHlsDataFlow_fu_162_ap_continue = 1'b0;
@@ -804,7 +821,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
         mm_video_AWVALID = grp_FrmbufWrHlsDataFlow_fu_162_m_axi_mm_video_AWVALID;
     end else begin
         mm_video_AWVALID = 1'b0;
@@ -812,7 +829,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
         mm_video_BREADY = grp_FrmbufWrHlsDataFlow_fu_162_m_axi_mm_video_BREADY;
     end else begin
         mm_video_BREADY = 1'b0;
@@ -820,7 +837,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
         mm_video_WVALID = grp_FrmbufWrHlsDataFlow_fu_162_m_axi_mm_video_WVALID;
     end else begin
         mm_video_WVALID = 1'b0;
@@ -828,7 +845,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
         s_axis_video_TREADY_int_regslice = grp_FrmbufWrHlsDataFlow_fu_162_s_axis_video_TREADY;
     end else begin
         s_axis_video_TREADY_int_regslice = 1'b0;
@@ -848,10 +865,16 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state3;
         end
         ap_ST_fsm_state3 : begin
-            if (((1'b0 == ap_block_state3_on_subcall_done) & (1'b1 == ap_CS_fsm_state3))) begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
+            if (((1'b0 == ap_block_state5_on_subcall_done) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
-                ap_NS_fsm = ap_ST_fsm_state3;
+                ap_NS_fsm = ap_ST_fsm_state5;
             end
         end
         default : begin
@@ -860,17 +883,17 @@ always @ (*) begin
     endcase
 end
 
-assign BYTES_PER_PIXEL_address0 = zext_ln150_fu_203_p1;
+assign BYTES_PER_PIXEL_address0 = zext_ln150_fu_202_p1;
 
-assign MEMORY2LIVE_address0 = zext_ln150_fu_203_p1;
+assign MEMORY2LIVE_address0 = zext_ln150_fu_202_p1;
 
-assign WidthInBytes_fu_216_p0 = WidthInBytes_fu_216_p00;
+assign WidthInBytes_fu_214_p0 = WidthInBytes_fu_214_p00;
 
-assign WidthInBytes_fu_216_p00 = empty_reg_238;
+assign WidthInBytes_fu_214_p00 = empty_reg_235;
 
-assign WidthInBytes_fu_216_p1 = WidthInBytes_fu_216_p10;
+assign WidthInBytes_fu_214_p1 = WidthInBytes_fu_214_p10;
 
-assign WidthInBytes_fu_216_p10 = BYTES_PER_PIXEL_q0;
+assign WidthInBytes_fu_214_p10 = BYTES_PER_PIXEL_load_reg_261;
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -878,8 +901,12 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
+assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
+
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
+
 always @ (*) begin
-    ap_block_state3_on_subcall_done = ((ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready & ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_done) == 1'b0);
+    ap_block_state5_on_subcall_done = ((ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready & ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_done) == 1'b0);
 end
 
 always @ (*) begin
@@ -890,16 +917,16 @@ assign ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_done = (grp_FrmbufWrHlsDataFlow
 
 assign ap_sync_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready = (grp_FrmbufWrHlsDataFlow_fu_162_ap_ready | ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready);
 
-assign empty_64_fu_195_p1 = video_format[5:0];
+assign empty_64_fu_194_p1 = video_format[5:0];
 
-assign empty_65_fu_199_p1 = height[11:0];
+assign empty_65_fu_198_p1 = height[11:0];
 
-assign empty_fu_191_p1 = width[11:0];
+assign empty_fu_190_p1 = width[11:0];
 
 assign grp_FrmbufWrHlsDataFlow_fu_162_ap_start = grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg;
 
 assign s_axis_video_TREADY = regslice_both_s_axis_video_V_data_V_U_ack_in;
 
-assign zext_ln150_fu_203_p1 = video_format;
+assign zext_ln150_fu_202_p1 = video_format;
 
 endmodule //design_1_v_frmbuf_wr_0_1_v_frmbuf_wr

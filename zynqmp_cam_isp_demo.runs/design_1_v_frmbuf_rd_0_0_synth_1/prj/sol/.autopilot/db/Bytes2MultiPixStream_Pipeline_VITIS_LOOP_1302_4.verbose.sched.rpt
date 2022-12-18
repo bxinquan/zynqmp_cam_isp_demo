@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4'
 ================================================================
-* Date:           Sat Dec 10 20:38:22 2022
+* Date:           Sat Dec 17 00:27:11 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,17 +20,17 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  3.580 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+----------+-----+-------+---------+
-    |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
-    |   min   |   max   |    min    |    max   | min |  max  |   Type  |
-    +---------+---------+-----------+----------+-----+-------+---------+
-    |        2|    49154|  13.326 ns|  0.328 ms|    2|  49154|       no|
-    +---------+---------+-----------+----------+-----+-------+---------+
+    +---------+---------+----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   | min |  max  |   Type  |
+    +---------+---------+----------+----------+-----+-------+---------+
+    |        2|    49154|  6.666 ns|  0.164 ms|    2|  49154|       no|
+    +---------+---------+----------+----------+-----+-------+---------+
 
     + Detail: 
         * Instance: 
@@ -128,13 +128,13 @@ ST_1 : Operation 44 [1/1] (0.42ns)   --->   "%store_ln1302 = store i13 %x_2, i13
 ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln1302 = br void %for.inc219" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1302]   --->   Operation 45 'br' 'br_ln1302' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
 ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 73 'ret' 'ret_ln0' <Predicate = (icmp_ln1302)> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 3.57>
+State 2 <SV = 1> <Delay = 2.43>
 ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%specpipeline_ln1304 = specpipeline void @_ssdm_op_SpecPipeline, i32 6, i32 0, i32 0, i32 0, void @empty_8" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1304]   --->   Operation 46 'specpipeline' 'specpipeline_ln1304' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
 ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%specloopname_ln1302 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1302]   --->   Operation 47 'specloopname' 'specloopname_ln1302' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
-ST_2 : Operation 48 [1/1] (1.74ns)   --->   "%rd_raw_V = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %bytePlanes1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 48 'read' 'rd_raw_V' <Predicate = (!icmp_ln1302)> <Delay = 1.74> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
+ST_2 : Operation 48 [1/1] (1.21ns)   --->   "%rd_raw_V = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %bytePlanes1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 48 'read' 'rd_raw_V' <Predicate = (!icmp_ln1302)> <Delay = 1.21> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
 ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln674 = trunc i64 %rd_raw_V"   --->   Operation 49 'trunc' 'trunc_ln674' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
 ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%p_s = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i20.i10, i20 524800, i10 %trunc_ln674" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 50 'bitconcatenate' 'p_s' <Predicate = (!icmp_ln1302 & or_ln1323)> <Delay = 0.00>
-ST_2 : Operation 51 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_s" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 51 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_2 : Operation 51 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_s" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 51 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
 ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln1324 = br void %for.inc219.1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1324]   --->   Operation 52 'br' 'br_ln1324' <Predicate = (!icmp_ln1302 & or_ln1323)> <Delay = 0.00>
 ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i10 @_ssdm_op_PartSelect.i10.i64.i32.i32, i64 %rd_raw_V, i32 10, i32 19"   --->   Operation 53 'partselect' 'tmp_6' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
 ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i10 @_ssdm_op_PartSelect.i10.i64.i32.i32, i64 %rd_raw_V, i32 20, i32 29"   --->   Operation 54 'partselect' 'tmp_3' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
@@ -142,36 +142,36 @@ ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i10 @_ssdm_op_P
 ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_8 = partselect i10 @_ssdm_op_PartSelect.i10.i64.i32.i32, i64 %rd_raw_V, i32 42, i32 51"   --->   Operation 56 'partselect' 'tmp_8' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
 ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_s = partselect i10 @_ssdm_op_PartSelect.i10.i64.i32.i32, i64 %rd_raw_V, i32 52, i32 61"   --->   Operation 57 'partselect' 'tmp_s' <Predicate = (!icmp_ln1302)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 1.83>
+State 3 <SV = 2> <Delay = 1.21>
 ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%p_1 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i20.i10, i20 524800, i10 %tmp_6" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 58 'bitconcatenate' 'p_1' <Predicate = (!icmp_ln1302 & or_ln1323_1)> <Delay = 0.00>
-ST_3 : Operation 59 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 59 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_1)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_3 : Operation 59 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 59 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_1)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
 ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln1324 = br void %for.inc219.2" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1324]   --->   Operation 60 'br' 'br_ln1324' <Predicate = (!icmp_ln1302 & or_ln1323_1)> <Delay = 0.00>
 
-State 4 <SV = 3> <Delay = 1.83>
+State 4 <SV = 3> <Delay = 1.21>
 ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%p_2 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i20.i10, i20 524800, i10 %tmp_3" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 61 'bitconcatenate' 'p_2' <Predicate = (!icmp_ln1302 & or_ln1323_2)> <Delay = 0.00>
-ST_4 : Operation 62 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_2" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 62 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_2)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_4 : Operation 62 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_2" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 62 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_2)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
 ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%br_ln1324 = br void %for.inc219.3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1324]   --->   Operation 63 'br' 'br_ln1324' <Predicate = (!icmp_ln1302 & or_ln1323_2)> <Delay = 0.00>
 
-State 5 <SV = 4> <Delay = 1.83>
+State 5 <SV = 4> <Delay = 1.21>
 ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%p_3 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i20.i10, i20 524800, i10 %tmp_5" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 64 'bitconcatenate' 'p_3' <Predicate = (!icmp_ln1302 & or_ln1323_3)> <Delay = 0.00>
-ST_5 : Operation 65 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_3" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 65 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_3)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_5 : Operation 65 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_3" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 65 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_3)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
 ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln1324 = br void %for.inc219.4" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1324]   --->   Operation 66 'br' 'br_ln1324' <Predicate = (!icmp_ln1302 & or_ln1323_3)> <Delay = 0.00>
 
-State 6 <SV = 5> <Delay = 1.83>
+State 6 <SV = 5> <Delay = 1.21>
 ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%p_4 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i20.i10, i20 524800, i10 %tmp_8" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 67 'bitconcatenate' 'p_4' <Predicate = (!icmp_ln1302 & or_ln1323_4)> <Delay = 0.00>
-ST_6 : Operation 68 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_4" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 68 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_4)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_6 : Operation 68 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_4" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 68 'write' 'write_ln174' <Predicate = (!icmp_ln1302 & or_ln1323_4)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
 ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln1324 = br void %for.inc219.5" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1324]   --->   Operation 69 'br' 'br_ln1324' <Predicate = (!icmp_ln1302 & or_ln1323_4)> <Delay = 0.00>
 
-State 7 <SV = 6> <Delay = 1.83>
+State 7 <SV = 6> <Delay = 1.21>
 ST_7 : Operation 70 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i20.i10, i20 524800, i10 %tmp_s" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 70 'bitconcatenate' 'p_0' <Predicate = (or_ln1323_5)> <Delay = 0.00>
-ST_7 : Operation 71 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 71 'write' 'write_ln174' <Predicate = (or_ln1323_5)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_7 : Operation 71 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %img, i30 %p_0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 71 'write' 'write_ln174' <Predicate = (or_ln1323_5)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
 ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln1324 = br void %for.inc229.5" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1324]   --->   Operation 72 'br' 'br_ln1324' <Predicate = (or_ln1323_5)> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 6.66ns, clock uncertainty: 1.8ns.
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
 
  <State 1>: 1.43ns
 The critical path consists of the following:
@@ -181,30 +181,30 @@ The critical path consists of the following:
 	'or' operation ('or_ln1323_5', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:1323) [79]  (0.287 ns)
 	blocking operation 0.14 ns on control path)
 
- <State 2>: 3.58ns
+ <State 2>: 2.43ns
 The critical path consists of the following:
-	fifo read operation ('rd_raw.V', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'bytePlanes1' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [36]  (1.74 ns)
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [43]  (1.84 ns)
+	fifo read operation ('rd_raw.V', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'bytePlanes1' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [36]  (1.22 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [43]  (1.22 ns)
 
- <State 3>: 1.84ns
+ <State 3>: 1.22ns
 The critical path consists of the following:
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [51]  (1.84 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [51]  (1.22 ns)
 
- <State 4>: 1.84ns
+ <State 4>: 1.22ns
 The critical path consists of the following:
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [59]  (1.84 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [59]  (1.22 ns)
 
- <State 5>: 1.84ns
+ <State 5>: 1.22ns
 The critical path consists of the following:
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [67]  (1.84 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [67]  (1.22 ns)
 
- <State 6>: 1.84ns
+ <State 6>: 1.22ns
 The critical path consists of the following:
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [75]  (1.84 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [75]  (1.22 ns)
 
- <State 7>: 1.84ns
+ <State 7>: 1.22ns
 The critical path consists of the following:
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [83]  (1.84 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'img' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [83]  (1.22 ns)
 
 
 ============================================================

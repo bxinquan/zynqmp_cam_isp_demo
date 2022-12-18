@@ -138,7 +138,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "283132802",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "283132803",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -149,12 +149,12 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "bytePlanes1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "960", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4_fu_218", "Port" : "bytePlanes1", "Inst_start_state" : "17", "Inst_end_state" : "18"},
-					{"ID" : "3", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1262_1_fu_234", "Port" : "bytePlanes1", "Inst_start_state" : "19", "Inst_end_state" : "20"}]},
+					{"ID" : "3", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1262_1_fu_234", "Port" : "bytePlanes1", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "1", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4_fu_218", "Port" : "bytePlanes1", "Inst_start_state" : "19", "Inst_end_state" : "20"}]},
 			{"Name" : "img", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4_fu_218", "Port" : "img", "Inst_start_state" : "17", "Inst_end_state" : "18"},
-					{"ID" : "3", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1262_1_fu_234", "Port" : "img", "Inst_start_state" : "19", "Inst_end_state" : "20"}]},
+					{"ID" : "3", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1262_1_fu_234", "Port" : "img", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "1", "SubInstance" : "grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4_fu_218", "Port" : "img", "Inst_start_state" : "19", "Inst_end_state" : "20"}]},
 			{"Name" : "Height", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "2",
 				"BlockSignal" : [
 					{"Name" : "Height_blk_n", "Type" : "RtlSignal"}]},
@@ -175,9 +175,9 @@ set RtlHierarchyInfo {[
 					{"Name" : "height_c_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "loop_Y8", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "20", "FirstState" : "ap_ST_fsm_state19", "LastState" : ["ap_ST_fsm_state20"], "QuitState" : ["ap_ST_fsm_state19"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state17"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
+				"LoopDec" : {"FSMBitwidth" : "23", "FirstState" : "ap_ST_fsm_state22", "LastState" : ["ap_ST_fsm_state23"], "QuitState" : ["ap_ST_fsm_state22"], "PreState" : ["ap_ST_fsm_state21"], "PostState" : ["ap_ST_fsm_state19"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
 			{"Name" : "loop_Y10", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "20", "FirstState" : "ap_ST_fsm_state17", "LastState" : ["ap_ST_fsm_state18"], "QuitState" : ["ap_ST_fsm_state17"], "PreState" : ["ap_ST_fsm_state1", "ap_ST_fsm_state16", "ap_ST_fsm_state19"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+				"LoopDec" : {"FSMBitwidth" : "23", "FirstState" : "ap_ST_fsm_state19", "LastState" : ["ap_ST_fsm_state20"], "QuitState" : ["ap_ST_fsm_state19"], "PreState" : ["ap_ST_fsm_state1", "ap_ST_fsm_state18", "ap_ST_fsm_state22"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4_fu_218", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "Bytes2MultiPixStream_Pipeline_VITIS_LOOP_1302_4",
 		"Protocol" : "ap_ctrl_hs",
@@ -287,8 +287,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "283132802"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "283132802"}
+	{"Name" : "Latency", "Min" : "1", "Max" : "283132803"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "283132803"}
 ]}
 
 set PipelineEnableSignalInfo {[

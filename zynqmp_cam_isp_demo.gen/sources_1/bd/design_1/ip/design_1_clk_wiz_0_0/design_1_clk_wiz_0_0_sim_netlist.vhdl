@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Sat Dec 10 20:38:04 2022
+-- Date        : Sat Dec 17 00:30:46 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl
@@ -16,16 +16,20 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_clk_wiz_0_0_clk_wiz is
   port (
-    clk_sys : out STD_LOGIC;
+    clk_ctrl : out STD_LOGIC;
+    clk_mm : out STD_LOGIC;
     clk_isp : out STD_LOGIC;
+    clk_vcu : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
 end design_1_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of design_1_clk_wiz_0_0_clk_wiz is
+  signal clk_ctrl_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clk_in1_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clk_isp_design_1_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_sys_design_1_clk_wiz_0_0 : STD_LOGIC;
+  signal clk_mm_design_1_clk_wiz_0_0 : STD_LOGIC;
+  signal clk_vcu_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CDDCDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKFBIN_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKFBOUT_UNCONNECTED : STD_LOGIC;
@@ -34,9 +38,7 @@ architecture STRUCTURE of design_1_clk_wiz_0_0_clk_wiz is
   signal NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcme4_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcme4_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
@@ -61,6 +63,12 @@ architecture STRUCTURE of design_1_clk_wiz_0_0_clk_wiz is
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM of clkout2_buf : label is "BUFG";
   attribute XILINX_TRANSFORM_PINMAP of clkout2_buf : label is "VCC:CE";
+  attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
+  attribute XILINX_LEGACY_PRIM of clkout3_buf : label is "BUFG";
+  attribute XILINX_TRANSFORM_PINMAP of clkout3_buf : label is "VCC:CE";
+  attribute BOX_TYPE of clkout4_buf : label is "PRIMITIVE";
+  attribute XILINX_LEGACY_PRIM of clkout4_buf : label is "BUFG";
+  attribute XILINX_TRANSFORM_PINMAP of clkout4_buf : label is "VCC:CE";
   attribute BOX_TYPE of mmcme4_adv_inst : label is "PRIMITIVE";
   attribute OPT_MODIFIED : string;
   attribute OPT_MODIFIED of mmcme4_adv_inst : label is "MLO";
@@ -80,10 +88,20 @@ clkout1_buf: unisim.vcomponents.BUFGCE
     )
         port map (
       CE => '1',
-      I => clk_sys_design_1_clk_wiz_0_0,
-      O => clk_sys
+      I => clk_ctrl_design_1_clk_wiz_0_0,
+      O => clk_ctrl
     );
 clkout2_buf: unisim.vcomponents.BUFGCE
+    generic map(
+      CE_TYPE => "ASYNC",
+      SIM_DEVICE => "ULTRASCALE_PLUS"
+    )
+        port map (
+      CE => '1',
+      I => clk_mm_design_1_clk_wiz_0_0,
+      O => clk_mm
+    );
+clkout3_buf: unisim.vcomponents.BUFGCE
     generic map(
       CE_TYPE => "ASYNC",
       SIM_DEVICE => "ULTRASCALE_PLUS"
@@ -93,27 +111,37 @@ clkout2_buf: unisim.vcomponents.BUFGCE
       I => clk_isp_design_1_clk_wiz_0_0,
       O => clk_isp
     );
+clkout4_buf: unisim.vcomponents.BUFGCE
+    generic map(
+      CE_TYPE => "ASYNC",
+      SIM_DEVICE => "ULTRASCALE_PLUS"
+    )
+        port map (
+      CE => '1',
+      I => clk_vcu_design_1_clk_wiz_0_0,
+      O => clk_vcu
+    );
 mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 123.250000,
+      CLKFBOUT_MULT_F => 15.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => "FALSE",
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 9.125000,
+      CLKOUT0_DIVIDE_F => 15.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => "FALSE",
-      CLKOUT1_DIVIDE => 11,
+      CLKOUT1_DIVIDE => 5,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => "FALSE",
-      CLKOUT2_DIVIDE => 1,
+      CLKOUT2_DIVIDE => 12,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => "FALSE",
-      CLKOUT3_DIVIDE => 1,
+      CLKOUT3_DIVIDE => 45,
       CLKOUT3_DUTY_CYCLE => 0.500000,
       CLKOUT3_PHASE => 0.000000,
       CLKOUT3_USE_FINE_PS => "FALSE",
@@ -131,7 +159,7 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => "FALSE",
       COMPENSATION => "INTERNAL",
-      DIVCLK_DIVIDE => 9,
+      DIVCLK_DIVIDE => 1,
       IS_CLKFBIN_INVERTED => '0',
       IS_CLKIN1_INVERTED => '0',
       IS_CLKIN2_INVERTED => '0',
@@ -158,13 +186,13 @@ mmcme4_adv_inst: unisim.vcomponents.MMCME4_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcme4_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => clk_sys_design_1_clk_wiz_0_0,
+      CLKOUT0 => clk_ctrl_design_1_clk_wiz_0_0,
       CLKOUT0B => NLW_mmcme4_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => clk_isp_design_1_clk_wiz_0_0,
+      CLKOUT1 => clk_mm_design_1_clk_wiz_0_0,
       CLKOUT1B => NLW_mmcme4_adv_inst_CLKOUT1B_UNCONNECTED,
-      CLKOUT2 => NLW_mmcme4_adv_inst_CLKOUT2_UNCONNECTED,
+      CLKOUT2 => clk_isp_design_1_clk_wiz_0_0,
       CLKOUT2B => NLW_mmcme4_adv_inst_CLKOUT2B_UNCONNECTED,
-      CLKOUT3 => NLW_mmcme4_adv_inst_CLKOUT3_UNCONNECTED,
+      CLKOUT3 => clk_vcu_design_1_clk_wiz_0_0,
       CLKOUT3B => NLW_mmcme4_adv_inst_CLKOUT3B_UNCONNECTED,
       CLKOUT4 => NLW_mmcme4_adv_inst_CLKOUT4_UNCONNECTED,
       CLKOUT5 => NLW_mmcme4_adv_inst_CLKOUT5_UNCONNECTED,
@@ -191,8 +219,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_clk_wiz_0_0 is
   port (
-    clk_sys : out STD_LOGIC;
+    clk_ctrl : out STD_LOGIC;
+    clk_mm : out STD_LOGIC;
     clk_isp : out STD_LOGIC;
+    clk_vcu : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -203,8 +233,10 @@ architecture STRUCTURE of design_1_clk_wiz_0_0 is
 begin
 inst: entity work.design_1_clk_wiz_0_0_clk_wiz
      port map (
+      clk_ctrl => clk_ctrl,
       clk_in1 => clk_in1,
       clk_isp => clk_isp,
-      clk_sys => clk_sys
+      clk_mm => clk_mm,
+      clk_vcu => clk_vcu
     );
 end STRUCTURE;

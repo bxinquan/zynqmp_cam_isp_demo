@@ -1,0 +1,495 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Dec 17 00:30:11 2022
+# Process ID: 25368
+# Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1
+# Command line: vivado.exe -log design_1_vcu_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_vcu_0_0.tcl
+# Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1/design_1_vcu_0_0.vds
+# Journal file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1\vivado.jou
+# Running On: LEGION-BIANXINQUAN, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 6, Host memory: 17007 MB
+#-----------------------------------------------------------
+source design_1_vcu_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_vcu_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8256
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'lc_pl_rdata_axi_lite_apb' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:203]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'lc_pl_rresp_axi_lite_apb' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:204]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'lc_pl_rvalid_axi_lite_apb' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:205]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'lc_vcu_rready_axi_lite_apb' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:206]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'lc_vcu_arvalid_axi_lite_apb' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:207]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'lc_pl_arready_axi_lite_apb' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:208]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'vcu_gasket_enable' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:254]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'vcu_pll_test_sel' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:266]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'vcu_pll_test_ck_sel' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:267]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'vcu_pll_test_fract_en' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:268]
+WARNING: [Synth 8-9971] redeclaration of ansi port 'vcu_pll_test_fract_clk_sel' is not allowed [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/ea05/hdl/vcu_v1_2_syn_rfs.v:269]
+WARNING: [Synth 8-9887] parameter declaration becomes local in 'vcu_v1_2_6_vcu' with formal parameter declaration list [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:608]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1702.137 ; gain = 318.855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_vcu_0_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'vcu_v1_2_6_vcu' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:68]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8650]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (0#1) [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8650]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in1' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:742]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in2' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:743]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in3' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:744]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in4' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:745]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in5' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:746]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in6' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:747]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in7' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:748]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in8' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:749]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in9' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:750]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in10' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:751]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in11' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:752]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in12' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:753]
+WARNING: [Synth 8-6104] Input port 'pl_vcu_spare_port_in13' has an internal driver [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:754]
+INFO: [Synth 8-6157] synthesizing module 'VCU' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:109697]
+INFO: [Synth 8-6155] done synthesizing module 'VCU' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:109697]
+WARNING: [Synth 8-689] width (14) of port connection 'VCUPLENCALL2CADDR' does not match port width (17) of module 'VCU' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:1508]
+INFO: [Synth 8-6155] done synthesizing module 'vcu_v1_2_6_vcu' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:68]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in1' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in2' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in3' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in4' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in5' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in6' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in7' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in8' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in9' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in10' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in11' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in12' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'pl_vcu_spare_port_in13' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out1' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out2' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out3' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out4' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out5' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out6' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out7' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out8' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out9' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out10' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out11' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out12' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pl_spare_port_out13' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7071] port 'vcu_pwr_stable' of module 'vcu_v1_2_6_vcu' is unconnected for instance 'inst' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+WARNING: [Synth 8-7023] instance 'inst' of module 'vcu_v1_2_6_vcu' has 310 connections declared, but only 283 given [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:812]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_vcu_0_0' (0#1) [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/synth/design_1_vcu_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_a.gen_douta_pipe.ena_pipe_reg[4] was removed.  [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2379]
+WARNING: [Synth 8-3848] Net refclk in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:397]
+WARNING: [Synth 8-3848] Net sys1xclk in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:398]
+WARNING: [Synth 8-3848] Net systemrst_refclk_b in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:399]
+WARNING: [Synth 8-3848] Net systemrst_b in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:400]
+WARNING: [Synth 8-3848] Net CONFIG_LOOP_OUT in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:404]
+WARNING: [Synth 8-3848] Net ENCB11_CORE42_OUT_P in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:406]
+WARNING: [Synth 8-3848] Net ENCB11_CORE42_OUT_N in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:407]
+WARNING: [Synth 8-3848] Net ENCA33_CORE39_P in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:408]
+WARNING: [Synth 8-3848] Net ENCA33_CORE39_N in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:409]
+WARNING: [Synth 8-3848] Net ENCA12_CORE18_P in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:410]
+WARNING: [Synth 8-3848] Net ENCA12_CORE18_N in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:411]
+WARNING: [Synth 8-3848] Net ENCA31_CORE37_P in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:412]
+WARNING: [Synth 8-3848] Net ENCA31_CORE37_N in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:413]
+WARNING: [Synth 8-3848] Net CORE41_DEC34_P in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:414]
+WARNING: [Synth 8-3848] Net CORE41_DEC34_N in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:415]
+WARNING: [Synth 8-3848] Net CORE20_DEC36_P in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:416]
+WARNING: [Synth 8-3848] Net CORE20_DEC36_N in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:417]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out1 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:446]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out2 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:447]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out3 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:448]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out4 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:449]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out5 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:450]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out6 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:451]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out7 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:452]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out8 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:453]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out9 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:454]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out10 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:455]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out11 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:456]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out12 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:457]
+WARNING: [Synth 8-3848] Net vcu_pl_spare_port_out13 in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:458]
+WARNING: [Synth 8-3848] Net vcu_pl_mcu_venc_debug_tdo in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:494]
+WARNING: [Synth 8-3848] Net vcu_pl_mcu_vdec_debug_tdo in module/entity vcu_v1_2_6_vcu does not have driver. [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/vcu_v1_2_6_vcu.v:505]
+WARNING: [Synth 8-7129] Port capture_vld_data[1] in module vcu_v1_2_6_fsm_addr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pl_vcu_arprot_axi_lite_apb[2] in module vcu_v1_2_6_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pl_vcu_arprot_axi_lite_apb[1] in module vcu_v1_2_6_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pl_vcu_arprot_axi_lite_apb[0] in module vcu_v1_2_6_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rstb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port web[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[13] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[12] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[11] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[9] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addrb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[255] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[254] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[253] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[252] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[251] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[250] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[249] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[248] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[247] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[246] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[245] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[244] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[243] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[242] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[241] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[240] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[239] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[238] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[237] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[236] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[235] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[234] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[233] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[232] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[231] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[230] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[229] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[228] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[227] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[226] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[225] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[224] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[223] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[222] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[221] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[220] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[219] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[218] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[217] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[216] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[215] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[214] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[213] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[212] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[211] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[210] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[209] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[208] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[207] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[206] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[205] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[204] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[203] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[202] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[201] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[200] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[199] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[198] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[197] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[196] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[195] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[194] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[193] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[192] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[191] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[190] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[189] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[188] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[187] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[186] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[185] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[184] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[183] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[182] in module xpm_memory_base is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1851.562 ; gain = 468.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1851.562 ; gain = 468.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1851.562 ; gain = 468.281
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1851.562 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/design_1_vcu_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/design_1_vcu_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/constraints/vcu.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_vcu_0_0/constraints/vcu.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1885.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.148 . Memory (MB): peak = 1885.336 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1885.336 ; gain = 502.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1885.336 ; gain = 502.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1885.336 ; gain = 502.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'vcu_v1_2_6_fsm_addr'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'vcu_v1_2_6_fsm_data'
+INFO: [Synth 8-5780] Default cascade height of 8 will be used for URAM '"xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg"'.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                TRANSFER |                               01 |                               01
+                ACK_WAIT |                               10 |                               10
+                     ACK |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'vcu_v1_2_6_fsm_addr'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                TRANSFER |                               01 |                               01
+                ACK_WAIT |                               10 |                               10
+                     ACK |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'vcu_v1_2_6_fsm_data'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1885.336 ; gain = 502.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              320 Bit    Registers := 4     
+	              256 Bit    Registers := 6     
+	               36 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 26    
++---RAMs : 
+	            2792K Bit	(11168 X 256 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  320 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	  14 Input   32 Bit        Muxes := 1     
+	  17 Input   32 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 26    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-5780] Default cascade height of 8 will be used for URAM '"inst/\mem_uram_8bps/xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-5780] Default cascade height of 8 will be used for URAM '"inst/\mem_uram_8bps/xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"'.
+INFO: [Synth 8-6776] UltraRAM "inst/\mem_uram_8bps/xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg": Pipeline stages found = 4; Recommended pipeline stages =2, Maximum pipeline stages = 4
+INFO: [Synth 8-5814] Pipeline result for URAM ("inst/\mem_uram_8bps/xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg"): Matrix size= (1 cols x 3 rows) | Pipeline stages => ( available = 4, absorbed = 4 )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1885.336 ; gain = 502.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Ultra RAM: Preliminary Mapping Report (see note below)
++------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|Module Name                               | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | URAM288 | Matrix Shape | FF provided for Pipeline | FF absorbed | 
++------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|inst/\mem_uram_8bps/xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 10 K x 256             | W |   | 10 K x 256             |   | R | Port A and B     | 12      | 3x1          | 4                        | 4           | 
++------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Ultra RAMs at the current stage of the synthesis flow. Some Ultra RAMs may be reimplemented as non Ultra RAM primitives later in the synthesis flow. Multiple instantiated Ultra RAMs are reported only once. Fields "FF provided for Pipeline" and "FF absorbed" respectively indicate number of registers available for pipelining and number of registers absorbed in the URAM matrix for pipelining. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 2561.992 ; gain = 1178.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2583.039 ; gain = 1199.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Ultra RAM: Final Mapping Report (see note below)
++------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|Module Name                               | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | URAM288 | Matrix Shape | FF provided for Pipeline | FF absorbed | 
++------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+|inst/\mem_uram_8bps/xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 10 K x 256             | W |   | 10 K x 256             |   | R | Port A and B     | 12      | 3x1          | 4                        | 4           | 
++------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+---------+--------------+--------------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2601.465 ; gain = 1218.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |LUT1    |     4|
+|2     |LUT2    |    87|
+|3     |LUT3    |    34|
+|4     |LUT4    |    16|
+|5     |LUT5    |    18|
+|6     |LUT6    |    28|
+|7     |URAM288 |    12|
+|10    |VCU     |     1|
+|11    |FDRE    |  1475|
+|12    |FDSE    |     3|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 972 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 2606.246 ; gain = 1189.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2606.246 ; gain = 1222.965
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 2606.246 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2643.176 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 466f3122
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 189 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 2643.176 ; gain = 1362.855
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1/design_1_vcu_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_vcu_0_0, cache-ID = 27ad7575f33fea47
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_vcu_0_0_synth_1/design_1_vcu_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_vcu_0_0_utilization_synth.rpt -pb design_1_vcu_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 00:31:33 2022...

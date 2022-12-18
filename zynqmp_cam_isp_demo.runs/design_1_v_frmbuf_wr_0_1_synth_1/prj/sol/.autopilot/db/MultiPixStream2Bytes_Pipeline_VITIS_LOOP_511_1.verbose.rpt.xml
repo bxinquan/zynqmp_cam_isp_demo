@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_511_1'" level="0">
-<item name = "Date">Sat Dec 10 20:38:39 2022
+<item name = "Date">Sat Dec 17 00:27:26 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 4.007 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 1.644 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3, 32771, 19.989 ns, 0.218 ms, 3, 32771, no</column>
+<column name="">4, 32772, 13.332 ns, 0.109 ms, 4, 32772, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_511_1">1, 32769, 5, 4, 4, 0 ~ 8192, yes</column>
+<column name="- VITIS_LOOP_511_1">2, 32770, 6, 4, 4, 0 ~ 8192, yes</column>
 </table>
 </item>
 </section>
@@ -52,8 +52,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 208, -</column>
-<column name="Register">-, -, 122, -, -</column>
+<column name="Multiplexer">-, -, -, 216, -</column>
+<column name="Register">-, -, 155, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -78,28 +78,28 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="x_8_fu_280_p2">+, 0, 0, 20, 13, 1</column>
-<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
-<column name="ap_block_pp0_stage1_11001">and, 0, 0, 2, 1, 1</column>
+<column name="x_8_fu_273_p2">+, 0, 0, 20, 13, 1</column>
+<column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage2_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage3_11001">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state2_pp0_stage1_iter0">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state3_pp0_stage2_iter0">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_state4_pp0_stage3_iter0">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_171">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_422">and, 0, 0, 2, 1, 1</column>
-<column name="ap_condition_427">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op41_read_state2">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op51_read_state3">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op58_read_state4">and, 0, 0, 2, 1, 1</column>
-<column name="ap_predicate_op65_read_state5">and, 0, 0, 2, 1, 1</column>
-<column name="cmp41_fu_290_p2">icmp, 0, 0, 12, 14, 14</column>
-<column name="icmp_ln511_fu_274_p2">icmp, 0, 0, 12, 13, 13</column>
-<column name="ap_block_state5_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln516_1_fu_317_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln516_2_fu_321_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln516_3_fu_325_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln516_fu_296_p2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state5_pp0_stage0_iter1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_241">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_443">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_446">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op36_read_state2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op49_read_state3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op56_read_state4">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op63_read_state5">and, 0, 0, 2, 1, 1</column>
+<column name="cmp41_fu_283_p2">icmp, 0, 0, 12, 14, 14</column>
+<column name="icmp_ln511_fu_267_p2">icmp, 0, 0, 12, 13, 13</column>
+<column name="ap_block_pp0_stage1_01001">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln516_1_fu_304_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln516_2_fu_308_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln516_3_fu_312_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln516_fu_289_p2">or, 0, 0, 2, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -110,14 +110,16 @@
 <column name="ap_enable_reg_pp0_iter0">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter0_reg">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_phi_mux_pix_val_V_74_phi_fu_228_p4">14, 3, 8, 24</column>
-<column name="ap_phi_mux_pix_val_V_75_phi_fu_218_p4">14, 3, 8, 24</column>
+<column name="ap_phi_mux_pix_val_V_74_phi_fu_228_p4">9, 2, 8, 16</column>
+<column name="ap_phi_mux_pix_val_V_75_phi_fu_218_p4">9, 2, 8, 16</column>
 <column name="ap_phi_reg_pp0_iter0_pix_val_V_20_reg_163">9, 2, 8, 16</column>
 <column name="ap_phi_reg_pp0_iter0_pix_val_V_21_reg_153">9, 2, 8, 16</column>
-<column name="ap_phi_reg_pp0_iter0_pix_val_V_32_reg_184">9, 2, 8, 16</column>
-<column name="ap_phi_reg_pp0_iter0_pix_val_V_33_reg_173">9, 2, 8, 16</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_32_reg_184">9, 2, 8, 16</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_33_reg_173">9, 2, 8, 16</column>
 <column name="ap_phi_reg_pp0_iter1_pix_val_V_50_reg_205">14, 3, 8, 24</column>
 <column name="ap_phi_reg_pp0_iter1_pix_val_V_51_reg_195">14, 3, 8, 24</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_74_reg_225">9, 2, 8, 16</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_75_reg_215">9, 2, 8, 16</column>
 <column name="ap_sig_allocacmp_x_7">9, 2, 13, 26</column>
 <column name="bytePlanes_plane01_blk_n">9, 2, 1, 2</column>
 <column name="img_blk_n">9, 2, 1, 2</column>
@@ -136,14 +138,19 @@
 <column name="ap_phi_reg_pp0_iter0_pix_val_V_21_reg_153">8, 0, 8, 0</column>
 <column name="ap_phi_reg_pp0_iter0_pix_val_V_32_reg_184">8, 0, 8, 0</column>
 <column name="ap_phi_reg_pp0_iter0_pix_val_V_33_reg_173">8, 0, 8, 0</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_32_reg_184">8, 0, 8, 0</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_33_reg_173">8, 0, 8, 0</column>
 <column name="ap_phi_reg_pp0_iter1_pix_val_V_50_reg_205">8, 0, 8, 0</column>
 <column name="ap_phi_reg_pp0_iter1_pix_val_V_51_reg_195">8, 0, 8, 0</column>
-<column name="cmp41_reg_425">1, 0, 1, 0</column>
-<column name="icmp_ln511_reg_421">1, 0, 1, 0</column>
-<column name="or_ln516_1_reg_451">1, 0, 1, 0</column>
-<column name="or_ln516_2_reg_455">1, 0, 1, 0</column>
-<column name="or_ln516_3_reg_459">1, 0, 1, 0</column>
-<column name="or_ln516_reg_432">1, 0, 1, 0</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_74_reg_225">8, 0, 8, 0</column>
+<column name="ap_phi_reg_pp0_iter1_pix_val_V_75_reg_215">8, 0, 8, 0</column>
+<column name="cmp41_reg_417">1, 0, 1, 0</column>
+<column name="icmp_ln511_reg_413">1, 0, 1, 0</column>
+<column name="icmp_ln511_reg_413_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="or_ln516_1_reg_438">1, 0, 1, 0</column>
+<column name="or_ln516_2_reg_442">1, 0, 1, 0</column>
+<column name="or_ln516_3_reg_446">1, 0, 1, 0</column>
+<column name="or_ln516_reg_424">1, 0, 1, 0</column>
 <column name="pix_val_V_20_reg_163">8, 0, 8, 0</column>
 <column name="pix_val_V_21_reg_153">8, 0, 8, 0</column>
 <column name="pix_val_V_32_reg_184">8, 0, 8, 0</column>

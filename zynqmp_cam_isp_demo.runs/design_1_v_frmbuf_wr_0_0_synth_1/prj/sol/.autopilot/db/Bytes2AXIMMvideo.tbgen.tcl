@@ -196,7 +196,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "9326881",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "9326882",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -207,13 +207,13 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "bytePlanes1", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "264", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145", "Port" : "bytePlanes1", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145", "Port" : "bytePlanes1", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
 			{"Name" : "mm_video", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
 					{"Name" : "mm_video_blk_n_AW", "Type" : "RtlSignal"},
 					{"Name" : "mm_video_blk_n_B", "Type" : "RtlSignal"}],
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145", "Port" : "mm_video", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145", "Port" : "mm_video", "Inst_start_state" : "5", "Inst_end_state" : "6"}]},
 			{"Name" : "dstImg", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "4", "DependentChanType" : "2",
 				"BlockSignal" : [
 					{"Name" : "dstImg_blk_n", "Type" : "RtlSignal"}]},
@@ -228,7 +228,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "StrideInBytes_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
 			{"Name" : "loop_Bytes2AXIMMvideo_1plane", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "109", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state109"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+				"LoopDec" : {"FSMBitwidth" : "110", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state110"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1",
 		"Protocol" : "ap_ctrl_hs",
@@ -261,7 +261,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	Bytes2AXIMMvideo {
 		bytePlanes1 {Type I LastRead 1 FirstWrite -1}
-		mm_video {Type O LastRead 5 FirstWrite 2}
+		mm_video {Type O LastRead 6 FirstWrite 2}
 		dstImg {Type I LastRead 0 FirstWrite -1}
 		Height {Type I LastRead 0 FirstWrite -1}
 		WidthInBytes {Type I LastRead 0 FirstWrite -1}
@@ -275,8 +275,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "9326881"}
-	, {"Name" : "Interval", "Min" : "1", "Max" : "9326881"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "9326882"}
+	, {"Name" : "Interval", "Min" : "2", "Max" : "9326882"}
 ]}
 
 set PipelineEnableSignalInfo {[

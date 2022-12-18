@@ -109,106 +109,109 @@ wire    ap_CS_fsm_pp0_stage0;
 reg    ap_enable_reg_pp0_iter0;
 reg    ap_enable_reg_pp0_iter1;
 reg    ap_idle_pp0;
-wire    ap_CS_fsm_pp0_stage1;
-reg   [0:0] icmp_ln930_reg_1262;
-reg   [0:0] or_ln934_reg_1277;
-reg    ap_predicate_op57_read_state2;
-reg    ap_block_state2_pp0_stage1_iter0;
-reg    ap_block_pp0_stage1_subdone;
-reg    ap_condition_exit_pp0_iter0_stage1;
+wire    ap_CS_fsm_pp0_stage2;
+reg   [0:0] icmp_ln930_reg_1270;
+reg   [0:0] or_ln934_1_reg_1294;
+reg    ap_predicate_op65_read_state3;
+reg    ap_block_state3_pp0_stage2_iter0;
+reg    ap_block_pp0_stage2_subdone;
+reg    ap_condition_exit_pp0_iter0_stage2;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_CS_fsm_pp0_stage7;
-reg   [0:0] or_ln934_6_reg_1376;
-reg    ap_predicate_op154_read_state8;
+reg   [0:0] or_ln934_6_reg_1389;
+reg    ap_predicate_op146_read_state8;
 reg    ap_block_state8_pp0_stage7_iter0;
 reg    ap_block_pp0_stage7_subdone;
 reg    bytePlanes1_blk_n;
-wire    ap_block_pp0_stage0;
-reg    img_blk_n;
+wire    ap_CS_fsm_pp0_stage1;
 wire    ap_block_pp0_stage1;
-wire    ap_CS_fsm_pp0_stage2;
+reg    img_blk_n;
+reg   [0:0] or_ln934_reg_1285;
 wire    ap_block_pp0_stage2;
-reg   [0:0] or_ln934_1_reg_1306;
 wire    ap_CS_fsm_pp0_stage3;
 wire    ap_block_pp0_stage3;
-reg   [0:0] or_ln934_2_reg_1335;
+reg   [0:0] or_ln934_2_reg_1323;
 wire    ap_CS_fsm_pp0_stage4;
 wire    ap_block_pp0_stage4;
-reg   [0:0] or_ln934_3_reg_1364;
+reg   [0:0] or_ln934_3_reg_1352;
 wire    ap_CS_fsm_pp0_stage5;
 wire    ap_block_pp0_stage5;
-reg   [0:0] or_ln934_4_reg_1368;
+reg   [0:0] or_ln934_4_reg_1381;
 wire    ap_CS_fsm_pp0_stage6;
 wire    ap_block_pp0_stage6;
-reg   [0:0] or_ln934_5_reg_1372;
+reg   [0:0] or_ln934_5_reg_1385;
 wire    ap_block_pp0_stage7;
-reg   [0:0] or_ln934_7_reg_1380;
+wire    ap_block_pp0_stage0;
+reg   [0:0] or_ln934_7_reg_1393;
+reg    ap_predicate_op50_read_state2;
+reg    ap_block_state2_pp0_stage1_iter0;
+reg    ap_block_state10_pp0_stage1_iter1;
 reg    ap_block_pp0_stage1_11001;
-reg    ap_predicate_op89_read_state4;
-reg    ap_block_state4_pp0_stage3_iter0;
-reg    ap_block_pp0_stage3_11001;
-reg    ap_predicate_op124_read_state6;
-reg    ap_block_state6_pp0_stage5_iter0;
-reg    ap_block_pp0_stage5_11001;
-reg    ap_block_pp0_stage7_11001;
-reg    ap_predicate_op73_read_state3;
-reg    ap_block_state3_pp0_stage2_iter0;
-reg    ap_block_pp0_stage2_11001;
-reg    ap_predicate_op109_read_state5;
+reg    ap_predicate_op97_read_state5;
 reg    ap_block_state5_pp0_stage4_iter0;
 reg    ap_block_pp0_stage4_11001;
-reg    ap_predicate_op139_read_state7;
-reg    ap_block_state7_pp0_stage6_iter0;
-reg    ap_block_pp0_stage6_11001;
+reg    ap_block_pp0_stage2_11001;
+reg    ap_predicate_op116_read_state6;
+reg    ap_block_state6_pp0_stage5_iter0;
+reg    ap_block_pp0_stage5_11001;
 wire    ap_block_state1_pp0_stage0_iter0;
-reg    ap_predicate_op169_read_state9;
+reg    ap_predicate_op161_read_state9;
 reg    ap_block_state9_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_11001;
-wire   [0:0] icmp_ln930_fu_677_p2;
-wire   [0:0] cmp101_fu_693_p2;
-reg   [0:0] cmp101_reg_1266;
-wire   [0:0] or_ln934_fu_699_p2;
-wire   [9:0] pix_val_V_80_fu_722_p1;
-wire   [0:0] or_ln934_1_fu_726_p2;
-reg   [7:0] trunc_ln4_reg_1310;
-reg   [7:0] trunc_ln414_1_reg_1315;
-reg   [7:0] trunc_ln414_2_reg_1320;
-reg   [7:0] trunc_ln414_3_reg_1325;
-wire   [9:0] pix_val_V_86_fu_770_p1;
-wire   [0:0] or_ln934_2_fu_774_p2;
-reg   [7:0] trunc_ln414_4_reg_1339;
-reg   [7:0] trunc_ln414_5_reg_1344;
-reg   [7:0] trunc_ln414_6_reg_1349;
-reg   [7:0] trunc_ln414_7_reg_1354;
-wire   [9:0] pix_val_V_92_fu_818_p1;
-wire   [0:0] or_ln934_3_fu_822_p2;
-wire   [0:0] or_ln934_4_fu_826_p2;
-wire   [0:0] or_ln934_5_fu_830_p2;
-wire   [0:0] or_ln934_6_fu_834_p2;
-wire   [0:0] or_ln934_7_fu_838_p2;
-reg   [7:0] trunc_ln414_8_reg_1384;
-reg   [7:0] trunc_ln414_9_reg_1389;
-reg   [7:0] trunc_ln414_s_reg_1394;
-reg   [7:0] trunc_ln414_10_reg_1399;
-wire   [9:0] pix_val_V_104_fu_882_p1;
-reg   [7:0] trunc_ln414_11_reg_1409;
-reg   [7:0] trunc_ln414_12_reg_1414;
-reg   [7:0] trunc_ln414_13_reg_1419;
-reg   [7:0] trunc_ln414_14_reg_1424;
-wire   [9:0] pix_val_V_106_fu_926_p1;
-reg   [7:0] trunc_ln414_15_reg_1434;
-reg   [7:0] trunc_ln414_16_reg_1439;
-reg   [7:0] trunc_ln414_17_reg_1444;
-reg   [7:0] trunc_ln414_18_reg_1449;
-wire   [9:0] pix_val_V_108_fu_970_p1;
-reg   [7:0] trunc_ln414_19_reg_1459;
-reg   [7:0] trunc_ln414_20_reg_1464;
-reg   [7:0] trunc_ln414_21_reg_1469;
-reg   [7:0] trunc_ln414_22_reg_1474;
-wire   [9:0] pix_val_V_110_fu_1014_p1;
+reg    ap_predicate_op81_read_state4;
+reg    ap_block_state4_pp0_stage3_iter0;
+reg    ap_block_pp0_stage3_11001;
+reg    ap_predicate_op131_read_state7;
+reg    ap_block_state7_pp0_stage6_iter0;
+reg    ap_block_pp0_stage6_11001;
+wire   [0:0] icmp_ln930_fu_686_p2;
+reg   [0:0] icmp_ln930_reg_1270_pp0_iter1_reg;
+wire   [0:0] cmp101_fu_702_p2;
+reg   [0:0] cmp101_reg_1274;
+wire   [0:0] or_ln934_fu_708_p2;
+wire   [9:0] pix_val_V_80_fu_719_p1;
+wire   [0:0] or_ln934_1_fu_723_p2;
+wire   [9:0] pix_val_V_86_fu_739_p1;
+wire   [0:0] or_ln934_2_fu_743_p2;
+reg   [7:0] trunc_ln4_reg_1327;
+reg   [7:0] trunc_ln414_1_reg_1332;
+reg   [7:0] trunc_ln414_2_reg_1337;
+reg   [7:0] trunc_ln414_3_reg_1342;
+wire   [9:0] pix_val_V_92_fu_787_p1;
+wire   [0:0] or_ln934_3_fu_791_p2;
+reg   [7:0] trunc_ln414_4_reg_1356;
+reg   [7:0] trunc_ln414_5_reg_1361;
+reg   [7:0] trunc_ln414_6_reg_1366;
+reg   [7:0] trunc_ln414_7_reg_1371;
+wire   [9:0] pix_val_V_104_fu_835_p1;
+wire   [0:0] or_ln934_4_fu_839_p2;
+wire   [0:0] or_ln934_5_fu_843_p2;
+wire   [0:0] or_ln934_6_fu_847_p2;
+wire   [0:0] or_ln934_7_fu_851_p2;
+reg   [7:0] trunc_ln414_8_reg_1397;
+reg   [7:0] trunc_ln414_9_reg_1402;
+reg   [7:0] trunc_ln414_s_reg_1407;
+reg   [7:0] trunc_ln414_10_reg_1412;
+wire   [9:0] pix_val_V_106_fu_895_p1;
+reg   [7:0] trunc_ln414_11_reg_1422;
+reg   [7:0] trunc_ln414_12_reg_1427;
+reg   [7:0] trunc_ln414_13_reg_1432;
+reg   [7:0] trunc_ln414_14_reg_1437;
+wire   [9:0] pix_val_V_108_fu_939_p1;
+reg   [7:0] trunc_ln414_15_reg_1447;
+reg    ap_block_pp0_stage7_11001;
+reg   [7:0] trunc_ln414_16_reg_1452;
+reg   [7:0] trunc_ln414_17_reg_1457;
+reg   [7:0] trunc_ln414_18_reg_1462;
+wire   [9:0] pix_val_V_110_fu_983_p1;
+reg   [7:0] trunc_ln414_19_reg_1487;
+reg   [7:0] trunc_ln414_20_reg_1492;
+reg   [7:0] trunc_ln414_21_reg_1497;
+reg   [7:0] trunc_ln414_22_reg_1502;
+wire   [9:0] pix_val_V_112_fu_1027_p1;
 reg    ap_enable_reg_pp0_iter0_reg;
-reg    ap_block_pp0_stage0_subdone;
+reg    ap_block_pp0_stage1_subdone;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_23_reg_227;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_22_reg_237;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_21_reg_247;
@@ -230,9 +233,13 @@ reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_85_reg_443;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_84_reg_454;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_83_reg_465;
 reg   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_82_reg_476;
 wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_97_reg_487;
 reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487;
 wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_96_reg_497;
@@ -242,52 +249,59 @@ reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507;
 wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_94_reg_517;
 reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517;
 reg   [9:0] ap_phi_mux_pix_val_V_103_phi_fu_530_p4;
-wire   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527;
+wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_103_reg_527;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527;
 reg   [9:0] ap_phi_mux_pix_val_V_102_phi_fu_540_p4;
-wire   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537;
+wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_102_reg_537;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537;
 reg   [9:0] ap_phi_mux_pix_val_V_101_phi_fu_550_p4;
-wire   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547;
+wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_101_reg_547;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547;
 reg   [9:0] ap_phi_mux_pix_val_V_100_phi_fu_560_p4;
-wire   [9:0] pix_val_V_112_fu_1058_p1;
-wire   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557;
+wire   [9:0] ap_phi_reg_pp0_iter0_pix_val_V_100_reg_557;
+reg   [9:0] ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557;
 reg   [10:0] x_fu_110;
-wire   [10:0] x_4_fu_683_p2;
+wire   [10:0] x_4_fu_692_p2;
 wire    ap_loop_init;
 reg   [10:0] ap_sig_allocacmp_x_3;
 reg   [9:0] pix_val_V_8_fu_114;
 reg   [9:0] pix_val_V_9_fu_118;
 reg   [9:0] pix_val_V_10_fu_122;
 reg   [9:0] pix_val_V_11_fu_126;
-reg    ap_block_pp0_stage0_01001;
-wire   [11:0] zext_ln930_fu_689_p1;
-wire  signed [11:0] sub100_cast72_cast_fu_645_p1;
-wire   [7:0] trunc_ln414_30_fu_1093_p4;
-wire   [7:0] trunc_ln414_29_fu_1083_p4;
-wire   [7:0] trunc_ln414_28_fu_1073_p4;
-wire   [7:0] trunc_ln414_27_fu_1063_p4;
-wire   [7:0] trunc_ln414_26_fu_1048_p4;
-wire   [7:0] trunc_ln414_25_fu_1038_p4;
-wire   [7:0] trunc_ln414_24_fu_1028_p4;
-wire   [7:0] trunc_ln414_23_fu_1018_p4;
+reg    ap_block_pp0_stage1_01001;
+wire   [11:0] zext_ln930_fu_698_p1;
+wire  signed [11:0] sub100_cast72_cast_fu_654_p1;
+wire   [7:0] trunc_ln414_30_fu_1101_p4;
+wire   [7:0] trunc_ln414_29_fu_1091_p4;
+wire   [7:0] trunc_ln414_28_fu_1081_p4;
+wire   [7:0] trunc_ln414_27_fu_1071_p4;
+wire   [7:0] trunc_ln414_26_fu_1061_p4;
+wire   [7:0] trunc_ln414_25_fu_1051_p4;
+wire   [7:0] trunc_ln414_24_fu_1041_p4;
+wire   [7:0] trunc_ln414_23_fu_1031_p4;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
 reg   [7:0] ap_NS_fsm;
+reg    ap_block_pp0_stage0_subdone;
 reg    ap_idle_pp0_1to1;
-reg    ap_block_pp0_stage2_subdone;
 reg    ap_block_pp0_stage3_subdone;
 reg    ap_block_pp0_stage4_subdone;
 reg    ap_block_pp0_stage5_subdone;
 reg    ap_block_pp0_stage6_subdone;
 wire    ap_enable_pp0;
 wire    ap_start_int;
-reg    ap_condition_999;
-reg    ap_condition_1004;
-reg    ap_condition_1008;
-reg    ap_condition_1012;
-reg    ap_condition_1016;
-reg    ap_condition_1020;
-reg    ap_condition_315;
+reg    ap_condition_1035;
+reg    ap_condition_1038;
+reg    ap_condition_1042;
+reg    ap_condition_1046;
+reg    ap_condition_1049;
+reg    ap_condition_1052;
+reg    ap_condition_1055;
+reg    ap_condition_1058;
+reg    ap_condition_1061;
+reg    ap_condition_1064;
+reg    ap_condition_502;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -307,7 +321,7 @@ design_1_v_frmbuf_wr_0_0_flow_control_loop_pipe_sequential_init flow_control_loo
     .ap_start_int(ap_start_int),
     .ap_loop_init(ap_loop_init),
     .ap_ready_int(ap_ready_int),
-    .ap_loop_exit_ready(ap_condition_exit_pp0_iter0_stage1),
+    .ap_loop_exit_ready(ap_condition_exit_pp0_iter0_stage2),
     .ap_loop_exit_done(ap_done_int),
     .ap_continue_int(ap_continue_int),
     .ap_done_int(ap_done_int)
@@ -327,7 +341,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue_int == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((ap_loop_exit_ready == 1'b1) & (1'b0 == ap_block_pp0_stage1_subdone) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        end else if (((ap_loop_exit_ready == 1'b1) & (1'b0 == ap_block_pp0_stage2_subdone) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -337,7 +351,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter0_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_condition_exit_pp0_iter0_stage1)) begin
+        if ((1'b1 == ap_condition_exit_pp0_iter0_stage2)) begin
             ap_enable_reg_pp0_iter0_reg <= 1'b0;
         end else if ((1'b1 == ap_CS_fsm_pp0_stage0)) begin
             ap_enable_reg_pp0_iter0_reg <= ap_start_int;
@@ -349,7 +363,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        if (((1'b0 == ap_block_pp0_stage1_subdone) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
             ap_enable_reg_pp0_iter1 <= 1'b0;
         end else if (((1'b0 == ap_block_pp0_stage7_subdone) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
             ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
@@ -358,337 +372,353 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_999)) begin
-        if ((or_ln934_reg_1277 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1038)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_20_reg_257 <= pix_val_V_8_fu_114;
-        end else if ((or_ln934_reg_1277 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_20_reg_257 <= pix_val_V_80_fu_722_p1;
+        end else if ((1'b1 == ap_condition_1035)) begin
+            ap_phi_reg_pp0_iter0_pix_val_V_20_reg_257 <= pix_val_V_80_fu_719_p1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_999)) begin
-        if ((or_ln934_reg_1277 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1038)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_21_reg_247 <= pix_val_V_9_fu_118;
-        end else if ((or_ln934_reg_1277 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1035)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_21_reg_247 <= {{img_dout[39:30]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_999)) begin
-        if ((or_ln934_reg_1277 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1038)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_22_reg_237 <= pix_val_V_10_fu_122;
-        end else if ((or_ln934_reg_1277 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1035)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_22_reg_237 <= {{img_dout[69:60]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_999)) begin
-        if ((or_ln934_reg_1277 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1038)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_23_reg_227 <= pix_val_V_11_fu_126;
-        end else if ((or_ln934_reg_1277 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1035)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_23_reg_227 <= {{img_dout[99:90]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1004)) begin
-        if ((or_ln934_1_reg_1306 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1046)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_34_reg_300 <= ap_phi_reg_pp0_iter0_pix_val_V_20_reg_257;
-        end else if ((or_ln934_1_reg_1306 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_34_reg_300 <= pix_val_V_86_fu_770_p1;
+        end else if ((1'b1 == ap_condition_1042)) begin
+            ap_phi_reg_pp0_iter0_pix_val_V_34_reg_300 <= pix_val_V_86_fu_739_p1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1004)) begin
-        if ((or_ln934_1_reg_1306 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1046)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_35_reg_289 <= ap_phi_reg_pp0_iter0_pix_val_V_21_reg_247;
-        end else if ((or_ln934_1_reg_1306 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1042)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_35_reg_289 <= {{img_dout[39:30]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1004)) begin
-        if ((or_ln934_1_reg_1306 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1046)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_36_reg_278 <= ap_phi_reg_pp0_iter0_pix_val_V_22_reg_237;
-        end else if ((or_ln934_1_reg_1306 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1042)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_36_reg_278 <= {{img_dout[69:60]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1004)) begin
-        if ((or_ln934_1_reg_1306 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1046)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_37_reg_267 <= ap_phi_reg_pp0_iter0_pix_val_V_23_reg_227;
-        end else if ((or_ln934_1_reg_1306 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1042)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_37_reg_267 <= {{img_dout[99:90]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1008)) begin
-        if ((or_ln934_2_reg_1335 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1052)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_46_reg_344 <= ap_phi_reg_pp0_iter0_pix_val_V_34_reg_300;
-        end else if ((or_ln934_2_reg_1335 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_46_reg_344 <= pix_val_V_92_fu_818_p1;
+        end else if ((1'b1 == ap_condition_1049)) begin
+            ap_phi_reg_pp0_iter0_pix_val_V_46_reg_344 <= pix_val_V_92_fu_787_p1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1008)) begin
-        if ((or_ln934_2_reg_1335 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1052)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_47_reg_333 <= ap_phi_reg_pp0_iter0_pix_val_V_35_reg_289;
-        end else if ((or_ln934_2_reg_1335 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1049)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_47_reg_333 <= {{img_dout[39:30]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1008)) begin
-        if ((or_ln934_2_reg_1335 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1052)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_48_reg_322 <= ap_phi_reg_pp0_iter0_pix_val_V_36_reg_278;
-        end else if ((or_ln934_2_reg_1335 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1049)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_48_reg_322 <= {{img_dout[69:60]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1008)) begin
-        if ((or_ln934_2_reg_1335 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1052)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_49_reg_311 <= ap_phi_reg_pp0_iter0_pix_val_V_37_reg_267;
-        end else if ((or_ln934_2_reg_1335 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1049)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_49_reg_311 <= {{img_dout[99:90]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1012)) begin
-        if ((or_ln934_3_reg_1364 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1058)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_58_reg_388 <= ap_phi_reg_pp0_iter0_pix_val_V_46_reg_344;
-        end else if ((or_ln934_3_reg_1364 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_58_reg_388 <= pix_val_V_104_fu_882_p1;
+        end else if ((1'b1 == ap_condition_1055)) begin
+            ap_phi_reg_pp0_iter0_pix_val_V_58_reg_388 <= pix_val_V_104_fu_835_p1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1012)) begin
-        if ((or_ln934_3_reg_1364 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1058)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_59_reg_377 <= ap_phi_reg_pp0_iter0_pix_val_V_47_reg_333;
-        end else if ((or_ln934_3_reg_1364 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1055)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_59_reg_377 <= {{img_dout[39:30]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1012)) begin
-        if ((or_ln934_3_reg_1364 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1058)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_60_reg_366 <= ap_phi_reg_pp0_iter0_pix_val_V_48_reg_322;
-        end else if ((or_ln934_3_reg_1364 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1055)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_60_reg_366 <= {{img_dout[69:60]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1012)) begin
-        if ((or_ln934_3_reg_1364 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1058)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_61_reg_355 <= ap_phi_reg_pp0_iter0_pix_val_V_49_reg_311;
-        end else if ((or_ln934_3_reg_1364 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1055)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_61_reg_355 <= {{img_dout[99:90]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1016)) begin
-        if ((or_ln934_4_reg_1368 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1064)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432 <= ap_phi_reg_pp0_iter0_pix_val_V_58_reg_388;
-        end else if ((or_ln934_4_reg_1368 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432 <= pix_val_V_106_fu_926_p1;
+        end else if ((1'b1 == ap_condition_1061)) begin
+            ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432 <= pix_val_V_106_fu_895_p1;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1016)) begin
-        if ((or_ln934_4_reg_1368 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1064)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421 <= ap_phi_reg_pp0_iter0_pix_val_V_59_reg_377;
-        end else if ((or_ln934_4_reg_1368 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1061)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421 <= {{img_dout[39:30]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1016)) begin
-        if ((or_ln934_4_reg_1368 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1064)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410 <= ap_phi_reg_pp0_iter0_pix_val_V_60_reg_366;
-        end else if ((or_ln934_4_reg_1368 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1061)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410 <= {{img_dout[69:60]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1016)) begin
-        if ((or_ln934_4_reg_1368 == 1'd0)) begin
+    if (((icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+        if ((1'b1 == ap_condition_1064)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_73_reg_399 <= ap_phi_reg_pp0_iter0_pix_val_V_61_reg_355;
-        end else if ((or_ln934_4_reg_1368 == 1'd1)) begin
+        end else if ((1'b1 == ap_condition_1061)) begin
             ap_phi_reg_pp0_iter0_pix_val_V_73_reg_399 <= {{img_dout[99:90]}};
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1020)) begin
-        if ((or_ln934_5_reg_1372 == 1'd0)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476 <= ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432;
-        end else if ((or_ln934_5_reg_1372 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476 <= pix_val_V_108_fu_970_p1;
-        end
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (or_ln934_7_reg_1393 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557 <= pix_val_V_112_fu_1027_p1;
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557 <= ap_phi_reg_pp0_iter0_pix_val_V_100_reg_557;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1020)) begin
-        if ((or_ln934_5_reg_1372 == 1'd0)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465 <= ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421;
-        end else if ((or_ln934_5_reg_1372 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465 <= {{img_dout[39:30]}};
-        end
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (or_ln934_7_reg_1393 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547 <= {{img_dout[39:30]}};
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547 <= ap_phi_reg_pp0_iter0_pix_val_V_101_reg_547;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1020)) begin
-        if ((or_ln934_5_reg_1372 == 1'd0)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454 <= ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410;
-        end else if ((or_ln934_5_reg_1372 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454 <= {{img_dout[69:60]}};
-        end
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (or_ln934_7_reg_1393 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537 <= {{img_dout[69:60]}};
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537 <= ap_phi_reg_pp0_iter0_pix_val_V_102_reg_537;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_1020)) begin
-        if ((or_ln934_5_reg_1372 == 1'd0)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443 <= ap_phi_reg_pp0_iter0_pix_val_V_73_reg_399;
-        end else if ((or_ln934_5_reg_1372 == 1'd1)) begin
-            ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443 <= {{img_dout[99:90]}};
-        end
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (or_ln934_7_reg_1393 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527 <= {{img_dout[99:90]}};
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527 <= ap_phi_reg_pp0_iter0_pix_val_V_103_reg_527;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_315)) begin
-        if (((or_ln934_6_reg_1376 == 1'd0) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517 <= ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476;
-        end else if (((or_ln934_6_reg_1376 == 1'd1) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517 <= pix_val_V_110_fu_1014_p1;
+    if ((1'b1 == ap_condition_502)) begin
+        if (((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_5_reg_1385 == 1'd0))) begin
+            ap_phi_reg_pp0_iter1_pix_val_V_82_reg_476 <= ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432;
         end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517 <= ap_phi_reg_pp0_iter0_pix_val_V_94_reg_517;
+            ap_phi_reg_pp0_iter1_pix_val_V_82_reg_476 <= ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_315)) begin
-        if (((or_ln934_6_reg_1376 == 1'd0) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507 <= ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465;
-        end else if (((or_ln934_6_reg_1376 == 1'd1) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507 <= {{img_dout[39:30]}};
+    if ((1'b1 == ap_condition_502)) begin
+        if (((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_5_reg_1385 == 1'd0))) begin
+            ap_phi_reg_pp0_iter1_pix_val_V_83_reg_465 <= ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421;
         end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507 <= ap_phi_reg_pp0_iter0_pix_val_V_95_reg_507;
+            ap_phi_reg_pp0_iter1_pix_val_V_83_reg_465 <= ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_315)) begin
-        if (((or_ln934_6_reg_1376 == 1'd0) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497 <= ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454;
-        end else if (((or_ln934_6_reg_1376 == 1'd1) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497 <= {{img_dout[69:60]}};
+    if ((1'b1 == ap_condition_502)) begin
+        if (((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_5_reg_1385 == 1'd0))) begin
+            ap_phi_reg_pp0_iter1_pix_val_V_84_reg_454 <= ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410;
         end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497 <= ap_phi_reg_pp0_iter0_pix_val_V_96_reg_497;
+            ap_phi_reg_pp0_iter1_pix_val_V_84_reg_454 <= ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_315)) begin
-        if (((or_ln934_6_reg_1376 == 1'd0) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487 <= ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443;
-        end else if (((or_ln934_6_reg_1376 == 1'd1) & (icmp_ln930_reg_1262 == 1'd0))) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487 <= {{img_dout[99:90]}};
+    if ((1'b1 == ap_condition_502)) begin
+        if (((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_5_reg_1385 == 1'd0))) begin
+            ap_phi_reg_pp0_iter1_pix_val_V_85_reg_443 <= ap_phi_reg_pp0_iter0_pix_val_V_73_reg_399;
         end else if ((1'b1 == 1'b1)) begin
-            ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487 <= ap_phi_reg_pp0_iter0_pix_val_V_97_reg_487;
+            ap_phi_reg_pp0_iter1_pix_val_V_85_reg_443 <= ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if ((ap_loop_init == 1'b1)) begin
-            pix_val_V_10_fu_122 <= pix_val_V_2;
-        end else if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
-            pix_val_V_10_fu_122 <= ap_phi_mux_pix_val_V_102_phi_fu_540_p4;
-        end
+    if (((or_ln934_6_reg_1389 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517 <= ap_phi_reg_pp0_iter1_pix_val_V_82_reg_476;
+    end else if (((or_ln934_6_reg_1389 == 1'd1) & (1'b0 == ap_block_pp0_stage7_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517 <= pix_val_V_110_fu_983_p1;
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517 <= ap_phi_reg_pp0_iter0_pix_val_V_94_reg_517;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((or_ln934_6_reg_1389 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507 <= ap_phi_reg_pp0_iter1_pix_val_V_83_reg_465;
+    end else if (((or_ln934_6_reg_1389 == 1'd1) & (1'b0 == ap_block_pp0_stage7_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507 <= {{img_dout[39:30]}};
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507 <= ap_phi_reg_pp0_iter0_pix_val_V_95_reg_507;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((or_ln934_6_reg_1389 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497 <= ap_phi_reg_pp0_iter1_pix_val_V_84_reg_454;
+    end else if (((or_ln934_6_reg_1389 == 1'd1) & (1'b0 == ap_block_pp0_stage7_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497 <= {{img_dout[69:60]}};
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497 <= ap_phi_reg_pp0_iter0_pix_val_V_96_reg_497;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((or_ln934_6_reg_1389 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487 <= ap_phi_reg_pp0_iter1_pix_val_V_85_reg_443;
+    end else if (((or_ln934_6_reg_1389 == 1'd1) & (1'b0 == ap_block_pp0_stage7_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487 <= {{img_dout[99:90]}};
+    end else if (((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487 <= ap_phi_reg_pp0_iter0_pix_val_V_97_reg_487;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        pix_val_V_10_fu_122 <= pix_val_V_2;
+    end else if (((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        pix_val_V_10_fu_122 <= ap_phi_mux_pix_val_V_102_phi_fu_540_p4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        pix_val_V_11_fu_126 <= pix_val_V_3;
+    end else if (((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        pix_val_V_11_fu_126 <= ap_phi_mux_pix_val_V_103_phi_fu_530_p4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        pix_val_V_8_fu_114 <= pix_val_V;
+    end else if (((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        pix_val_V_8_fu_114 <= ap_phi_mux_pix_val_V_100_phi_fu_560_p4;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        pix_val_V_9_fu_118 <= pix_val_V_1;
+    end else if (((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        pix_val_V_9_fu_118 <= ap_phi_mux_pix_val_V_101_phi_fu_550_p4;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if ((ap_loop_init == 1'b1)) begin
-            pix_val_V_11_fu_126 <= pix_val_V_3;
-        end else if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
-            pix_val_V_11_fu_126 <= ap_phi_mux_pix_val_V_103_phi_fu_530_p4;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if ((ap_loop_init == 1'b1)) begin
-            pix_val_V_8_fu_114 <= pix_val_V;
-        end else if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
-            pix_val_V_8_fu_114 <= ap_phi_mux_pix_val_V_100_phi_fu_560_p4;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if ((ap_loop_init == 1'b1)) begin
-            pix_val_V_9_fu_118 <= pix_val_V_1;
-        end else if ((ap_enable_reg_pp0_iter1 == 1'b1)) begin
-            pix_val_V_9_fu_118 <= ap_phi_mux_pix_val_V_101_phi_fu_550_p4;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln930_fu_677_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            x_fu_110 <= x_4_fu_683_p2;
+        if (((icmp_ln930_fu_686_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            x_fu_110 <= x_4_fu_692_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             x_fu_110 <= 11'd0;
         end
@@ -696,94 +726,109 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_fu_677_p2 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        cmp101_reg_1266 <= cmp101_fu_693_p2;
-        or_ln934_reg_1277 <= or_ln934_fu_699_p2;
+    if (((1'b0 == ap_block_pp0_stage6_11001) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6) & (or_ln934_5_reg_1385 == 1'd1))) begin
+        ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476 <= pix_val_V_108_fu_939_p1;
+        ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465 <= {{img_dout[39:30]}};
+        ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454 <= {{img_dout[69:60]}};
+        ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443 <= {{img_dout[99:90]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_fu_686_p2 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        cmp101_reg_1274 <= cmp101_fu_702_p2;
+        or_ln934_reg_1285 <= or_ln934_fu_708_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        icmp_ln930_reg_1262 <= icmp_ln930_fu_677_p2;
+        icmp_ln930_reg_1270 <= icmp_ln930_fu_686_p2;
+        icmp_ln930_reg_1270_pp0_iter1_reg <= icmp_ln930_reg_1270;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        or_ln934_1_reg_1306 <= or_ln934_1_fu_726_p2;
+    if (((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+        or_ln934_1_reg_1294 <= or_ln934_1_fu_723_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
-        or_ln934_2_reg_1335 <= or_ln934_2_fu_774_p2;
-        trunc_ln414_1_reg_1315 <= {{ap_phi_reg_pp0_iter0_pix_val_V_21_reg_247[9:2]}};
-        trunc_ln414_2_reg_1320 <= {{ap_phi_reg_pp0_iter0_pix_val_V_22_reg_237[9:2]}};
-        trunc_ln414_3_reg_1325 <= {{ap_phi_reg_pp0_iter0_pix_val_V_23_reg_227[9:2]}};
-        trunc_ln4_reg_1310 <= {{ap_phi_reg_pp0_iter0_pix_val_V_20_reg_257[9:2]}};
+    if (((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
+        or_ln934_2_reg_1323 <= or_ln934_2_fu_743_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage3_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
-        or_ln934_3_reg_1364 <= or_ln934_3_fu_822_p2;
-        or_ln934_4_reg_1368 <= or_ln934_4_fu_826_p2;
-        or_ln934_5_reg_1372 <= or_ln934_5_fu_830_p2;
-        or_ln934_6_reg_1376 <= or_ln934_6_fu_834_p2;
-        or_ln934_7_reg_1380 <= or_ln934_7_fu_838_p2;
-        trunc_ln414_4_reg_1339 <= {{ap_phi_reg_pp0_iter0_pix_val_V_34_reg_300[9:2]}};
-        trunc_ln414_5_reg_1344 <= {{ap_phi_reg_pp0_iter0_pix_val_V_35_reg_289[9:2]}};
-        trunc_ln414_6_reg_1349 <= {{ap_phi_reg_pp0_iter0_pix_val_V_36_reg_278[9:2]}};
-        trunc_ln414_7_reg_1354 <= {{ap_phi_reg_pp0_iter0_pix_val_V_37_reg_267[9:2]}};
+    if (((1'b0 == ap_block_pp0_stage3_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage3))) begin
+        or_ln934_3_reg_1352 <= or_ln934_3_fu_791_p2;
+        trunc_ln414_1_reg_1332 <= {{ap_phi_reg_pp0_iter0_pix_val_V_21_reg_247[9:2]}};
+        trunc_ln414_2_reg_1337 <= {{ap_phi_reg_pp0_iter0_pix_val_V_22_reg_237[9:2]}};
+        trunc_ln414_3_reg_1342 <= {{ap_phi_reg_pp0_iter0_pix_val_V_23_reg_227[9:2]}};
+        trunc_ln4_reg_1327 <= {{ap_phi_reg_pp0_iter0_pix_val_V_20_reg_257[9:2]}};
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage4_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
-        trunc_ln414_10_reg_1399 <= {{ap_phi_reg_pp0_iter0_pix_val_V_49_reg_311[9:2]}};
-        trunc_ln414_8_reg_1384 <= {{ap_phi_reg_pp0_iter0_pix_val_V_46_reg_344[9:2]}};
-        trunc_ln414_9_reg_1389 <= {{ap_phi_reg_pp0_iter0_pix_val_V_47_reg_333[9:2]}};
-        trunc_ln414_s_reg_1394 <= {{ap_phi_reg_pp0_iter0_pix_val_V_48_reg_322[9:2]}};
+    if (((1'b0 == ap_block_pp0_stage4_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage4))) begin
+        or_ln934_4_reg_1381 <= or_ln934_4_fu_839_p2;
+        or_ln934_5_reg_1385 <= or_ln934_5_fu_843_p2;
+        or_ln934_6_reg_1389 <= or_ln934_6_fu_847_p2;
+        or_ln934_7_reg_1393 <= or_ln934_7_fu_851_p2;
+        trunc_ln414_4_reg_1356 <= {{ap_phi_reg_pp0_iter0_pix_val_V_34_reg_300[9:2]}};
+        trunc_ln414_5_reg_1361 <= {{ap_phi_reg_pp0_iter0_pix_val_V_35_reg_289[9:2]}};
+        trunc_ln414_6_reg_1366 <= {{ap_phi_reg_pp0_iter0_pix_val_V_36_reg_278[9:2]}};
+        trunc_ln414_7_reg_1371 <= {{ap_phi_reg_pp0_iter0_pix_val_V_37_reg_267[9:2]}};
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage5_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
-        trunc_ln414_11_reg_1409 <= {{ap_phi_reg_pp0_iter0_pix_val_V_58_reg_388[9:2]}};
-        trunc_ln414_12_reg_1414 <= {{ap_phi_reg_pp0_iter0_pix_val_V_59_reg_377[9:2]}};
-        trunc_ln414_13_reg_1419 <= {{ap_phi_reg_pp0_iter0_pix_val_V_60_reg_366[9:2]}};
-        trunc_ln414_14_reg_1424 <= {{ap_phi_reg_pp0_iter0_pix_val_V_61_reg_355[9:2]}};
+    if (((1'b0 == ap_block_pp0_stage5_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage5))) begin
+        trunc_ln414_10_reg_1412 <= {{ap_phi_reg_pp0_iter0_pix_val_V_49_reg_311[9:2]}};
+        trunc_ln414_8_reg_1397 <= {{ap_phi_reg_pp0_iter0_pix_val_V_46_reg_344[9:2]}};
+        trunc_ln414_9_reg_1402 <= {{ap_phi_reg_pp0_iter0_pix_val_V_47_reg_333[9:2]}};
+        trunc_ln414_s_reg_1407 <= {{ap_phi_reg_pp0_iter0_pix_val_V_48_reg_322[9:2]}};
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage6_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
-        trunc_ln414_15_reg_1434 <= {{ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432[9:2]}};
-        trunc_ln414_16_reg_1439 <= {{ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421[9:2]}};
-        trunc_ln414_17_reg_1444 <= {{ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410[9:2]}};
-        trunc_ln414_18_reg_1449 <= {{ap_phi_reg_pp0_iter0_pix_val_V_73_reg_399[9:2]}};
+    if (((1'b0 == ap_block_pp0_stage6_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage6))) begin
+        trunc_ln414_11_reg_1422 <= {{ap_phi_reg_pp0_iter0_pix_val_V_58_reg_388[9:2]}};
+        trunc_ln414_12_reg_1427 <= {{ap_phi_reg_pp0_iter0_pix_val_V_59_reg_377[9:2]}};
+        trunc_ln414_13_reg_1432 <= {{ap_phi_reg_pp0_iter0_pix_val_V_60_reg_366[9:2]}};
+        trunc_ln414_14_reg_1437 <= {{ap_phi_reg_pp0_iter0_pix_val_V_61_reg_355[9:2]}};
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage7_11001) & (icmp_ln930_reg_1262 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
-        trunc_ln414_19_reg_1459 <= {{ap_phi_reg_pp0_iter0_pix_val_V_82_reg_476[9:2]}};
-        trunc_ln414_20_reg_1464 <= {{ap_phi_reg_pp0_iter0_pix_val_V_83_reg_465[9:2]}};
-        trunc_ln414_21_reg_1469 <= {{ap_phi_reg_pp0_iter0_pix_val_V_84_reg_454[9:2]}};
-        trunc_ln414_22_reg_1474 <= {{ap_phi_reg_pp0_iter0_pix_val_V_85_reg_443[9:2]}};
+    if (((1'b0 == ap_block_pp0_stage7_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage7))) begin
+        trunc_ln414_15_reg_1447 <= {{ap_phi_reg_pp0_iter0_pix_val_V_70_reg_432[9:2]}};
+        trunc_ln414_16_reg_1452 <= {{ap_phi_reg_pp0_iter0_pix_val_V_71_reg_421[9:2]}};
+        trunc_ln414_17_reg_1457 <= {{ap_phi_reg_pp0_iter0_pix_val_V_72_reg_410[9:2]}};
+        trunc_ln414_18_reg_1462 <= {{ap_phi_reg_pp0_iter0_pix_val_V_73_reg_399[9:2]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln930_reg_1270 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        trunc_ln414_19_reg_1487 <= {{ap_phi_reg_pp0_iter1_pix_val_V_82_reg_476[9:2]}};
+        trunc_ln414_20_reg_1492 <= {{ap_phi_reg_pp0_iter1_pix_val_V_83_reg_465[9:2]}};
+        trunc_ln414_21_reg_1497 <= {{ap_phi_reg_pp0_iter1_pix_val_V_84_reg_454[9:2]}};
+        trunc_ln414_22_reg_1502 <= {{ap_phi_reg_pp0_iter1_pix_val_V_85_reg_443[9:2]}};
     end
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage1_subdone) & (icmp_ln930_reg_1262 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
-        ap_condition_exit_pp0_iter0_stage1 = 1'b1;
+    if (((1'b0 == ap_block_pp0_stage2_subdone) & (icmp_ln930_reg_1270 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
+        ap_condition_exit_pp0_iter0_stage2 = 1'b1;
     end else begin
-        ap_condition_exit_pp0_iter0_stage1 = 1'b0;
+        ap_condition_exit_pp0_iter0_stage2 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((ap_loop_exit_ready == 1'b1) & (1'b0 == ap_block_pp0_stage1_subdone) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((ap_loop_exit_ready == 1'b1) & (1'b0 == ap_block_pp0_stage2_subdone) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
         ap_done_int = 1'b1;
     end else begin
         ap_done_int = ap_done_reg;
@@ -799,7 +844,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_start_int == 1'b0) & (ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_start_int == 1'b0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -823,56 +868,32 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((icmp_ln930_reg_1262 == 1'd0)) begin
-        if ((or_ln934_7_reg_1380 == 1'd0)) begin
-            ap_phi_mux_pix_val_V_100_phi_fu_560_p4 = ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517;
-        end else if ((or_ln934_7_reg_1380 == 1'd1)) begin
-            ap_phi_mux_pix_val_V_100_phi_fu_560_p4 = pix_val_V_112_fu_1058_p1;
-        end else begin
-            ap_phi_mux_pix_val_V_100_phi_fu_560_p4 = ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557;
-        end
+    if (((icmp_ln930_reg_1270_pp0_iter1_reg == 1'd0) & (or_ln934_7_reg_1393 == 1'd0))) begin
+        ap_phi_mux_pix_val_V_100_phi_fu_560_p4 = ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517;
     end else begin
         ap_phi_mux_pix_val_V_100_phi_fu_560_p4 = ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557;
     end
 end
 
 always @ (*) begin
-    if ((icmp_ln930_reg_1262 == 1'd0)) begin
-        if ((or_ln934_7_reg_1380 == 1'd0)) begin
-            ap_phi_mux_pix_val_V_101_phi_fu_550_p4 = ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507;
-        end else if ((or_ln934_7_reg_1380 == 1'd1)) begin
-            ap_phi_mux_pix_val_V_101_phi_fu_550_p4 = {{img_dout[39:30]}};
-        end else begin
-            ap_phi_mux_pix_val_V_101_phi_fu_550_p4 = ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547;
-        end
+    if (((icmp_ln930_reg_1270_pp0_iter1_reg == 1'd0) & (or_ln934_7_reg_1393 == 1'd0))) begin
+        ap_phi_mux_pix_val_V_101_phi_fu_550_p4 = ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507;
     end else begin
         ap_phi_mux_pix_val_V_101_phi_fu_550_p4 = ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547;
     end
 end
 
 always @ (*) begin
-    if ((icmp_ln930_reg_1262 == 1'd0)) begin
-        if ((or_ln934_7_reg_1380 == 1'd0)) begin
-            ap_phi_mux_pix_val_V_102_phi_fu_540_p4 = ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497;
-        end else if ((or_ln934_7_reg_1380 == 1'd1)) begin
-            ap_phi_mux_pix_val_V_102_phi_fu_540_p4 = {{img_dout[69:60]}};
-        end else begin
-            ap_phi_mux_pix_val_V_102_phi_fu_540_p4 = ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537;
-        end
+    if (((icmp_ln930_reg_1270_pp0_iter1_reg == 1'd0) & (or_ln934_7_reg_1393 == 1'd0))) begin
+        ap_phi_mux_pix_val_V_102_phi_fu_540_p4 = ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497;
     end else begin
         ap_phi_mux_pix_val_V_102_phi_fu_540_p4 = ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537;
     end
 end
 
 always @ (*) begin
-    if ((icmp_ln930_reg_1262 == 1'd0)) begin
-        if ((or_ln934_7_reg_1380 == 1'd0)) begin
-            ap_phi_mux_pix_val_V_103_phi_fu_530_p4 = ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487;
-        end else if ((or_ln934_7_reg_1380 == 1'd1)) begin
-            ap_phi_mux_pix_val_V_103_phi_fu_530_p4 = {{img_dout[99:90]}};
-        end else begin
-            ap_phi_mux_pix_val_V_103_phi_fu_530_p4 = ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527;
-        end
+    if (((icmp_ln930_reg_1270_pp0_iter1_reg == 1'd0) & (or_ln934_7_reg_1393 == 1'd0))) begin
+        ap_phi_mux_pix_val_V_103_phi_fu_530_p4 = ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487;
     end else begin
         ap_phi_mux_pix_val_V_103_phi_fu_530_p4 = ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527;
     end
@@ -895,7 +916,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         bytePlanes1_blk_n = bytePlanes1_full_n;
     end else begin
         bytePlanes1_blk_n = 1'b1;
@@ -903,7 +924,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         bytePlanes1_write = 1'b1;
     end else begin
         bytePlanes1_write = 1'b0;
@@ -911,7 +932,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((ap_predicate_op154_read_state8 == 1'b1) & (1'b0 == ap_block_pp0_stage7) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage6) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (or_ln934_5_reg_1372 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage6)) | ((1'b0 == ap_block_pp0_stage5) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5) & (or_ln934_4_reg_1368 == 1'd1)) | ((1'b0 == ap_block_pp0_stage4) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4) & (or_ln934_3_reg_1364 == 1'd1)) | ((1'b0 == ap_block_pp0_stage3) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3) & (or_ln934_2_reg_1335 == 1'd1)) | ((1'b0 == ap_block_pp0_stage2) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2) & (or_ln934_1_reg_1306 == 1'd1)) | ((1'b0 == ap_block_pp0_stage1) & (ap_predicate_op57_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (or_ln934_7_reg_1380 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0)))) begin
+    if ((((ap_predicate_op146_read_state8 == 1'b1) & (1'b0 == ap_block_pp0_stage7) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage0) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (or_ln934_7_reg_1393 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((1'b0 == ap_block_pp0_stage6) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6) & (or_ln934_5_reg_1385 == 1'd1)) | ((1'b0 == ap_block_pp0_stage5) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5) & (or_ln934_4_reg_1381 == 1'd1)) | ((1'b0 == ap_block_pp0_stage4) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4) & (or_ln934_3_reg_1352 == 1'd1)) | ((1'b0 == ap_block_pp0_stage3) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3) & (or_ln934_2_reg_1323 == 1'd1)) | ((1'b0 == ap_block_pp0_stage2) & (ap_predicate_op65_read_state3 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2)) | ((1'b0 == ap_block_pp0_stage1) & (icmp_ln930_reg_1270 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1) & (or_ln934_reg_1285 == 1'd1)))) begin
         img_blk_n = img_empty_n;
     end else begin
         img_blk_n = 1'b1;
@@ -919,7 +940,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((ap_predicate_op154_read_state8 == 1'b1) & (1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op169_read_state9 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((1'b0 == ap_block_pp0_stage6_11001) & (ap_predicate_op139_read_state7 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6)) | ((1'b0 == ap_block_pp0_stage4_11001) & (ap_predicate_op109_read_state5 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4)) | ((1'b0 == ap_block_pp0_stage2_11001) & (ap_predicate_op73_read_state3 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2)) | ((1'b0 == ap_block_pp0_stage5_11001) & (ap_predicate_op124_read_state6 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5)) | ((1'b0 == ap_block_pp0_stage3_11001) & (ap_predicate_op89_read_state4 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3)) | ((1'b0 == ap_block_pp0_stage1_11001) & (ap_predicate_op57_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
+    if ((((ap_predicate_op146_read_state8 == 1'b1) & (1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7)) | ((1'b0 == ap_block_pp0_stage6_11001) & (ap_predicate_op131_read_state7 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6)) | ((1'b0 == ap_block_pp0_stage3_11001) & (ap_predicate_op81_read_state4 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3)) | ((1'b0 == ap_block_pp0_stage0_11001) & (ap_predicate_op161_read_state9 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)) | ((1'b0 == ap_block_pp0_stage5_11001) & (ap_predicate_op116_read_state6 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5)) | ((1'b0 == ap_block_pp0_stage2_11001) & (ap_predicate_op65_read_state3 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2)) | ((1'b0 == ap_block_pp0_stage4_11001) & (ap_predicate_op97_read_state5 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4)) | ((1'b0 == ap_block_pp0_stage1_11001) & (ap_predicate_op50_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1)))) begin
         img_read = 1'b1;
     end else begin
         img_read = 1'b0;
@@ -927,7 +948,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1262 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1270 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
         pix_val_V_10_out_ap_vld = 1'b1;
     end else begin
         pix_val_V_10_out_ap_vld = 1'b0;
@@ -935,7 +956,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1262 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1270 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
         pix_val_V_11_out_ap_vld = 1'b1;
     end else begin
         pix_val_V_11_out_ap_vld = 1'b0;
@@ -943,7 +964,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1262 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1270 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
         pix_val_V_8_out_ap_vld = 1'b1;
     end else begin
         pix_val_V_8_out_ap_vld = 1'b0;
@@ -951,7 +972,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1262 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
+    if (((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1270 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage2))) begin
         pix_val_V_9_out_ap_vld = 1'b1;
     end else begin
         pix_val_V_9_out_ap_vld = 1'b0;
@@ -961,23 +982,23 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_pp0_stage0 : begin
-            if ((~((ap_start_int == 1'b0) & (ap_idle_pp0_1to1 == 1'b1)) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+            if ((~((ap_idle_pp0_1to1 == 1'b1) & (ap_start_int == 1'b0)) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end
         end
         ap_ST_fsm_pp0_stage1 : begin
-            if ((1'b1 == ap_condition_exit_pp0_iter0_stage1)) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else if ((1'b0 == ap_block_pp0_stage1_subdone)) begin
+            if ((1'b0 == ap_block_pp0_stage1_subdone)) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage1;
             end
         end
         ap_ST_fsm_pp0_stage2 : begin
-            if ((1'b0 == ap_block_pp0_stage2_subdone)) begin
+            if ((1'b1 == ap_condition_exit_pp0_iter0_stage2)) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
+            end else if ((1'b0 == ap_block_pp0_stage2_subdone)) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage2;
@@ -1043,152 +1064,180 @@ assign ap_CS_fsm_pp0_stage7 = ap_CS_fsm[32'd7];
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & ((bytePlanes1_full_n == 1'b0) | ((img_empty_n == 1'b0) & (ap_predicate_op169_read_state9 == 1'b1))));
+    ap_block_pp0_stage0_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op161_read_state9 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & ((bytePlanes1_full_n == 1'b0) | ((img_empty_n == 1'b0) & (ap_predicate_op169_read_state9 == 1'b1))));
-end
-
-always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_enable_reg_pp0_iter1 == 1'b1) & ((bytePlanes1_full_n == 1'b0) | ((img_empty_n == 1'b0) & (ap_predicate_op169_read_state9 == 1'b1))));
+    ap_block_pp0_stage0_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op161_read_state9 == 1'b1) & (ap_enable_reg_pp0_iter1 == 1'b1));
 end
 
 assign ap_block_pp0_stage1 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage1_11001 = ((ap_predicate_op57_read_state2 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage1_01001 = (((img_empty_n == 1'b0) & (ap_predicate_op50_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1)) | ((bytePlanes1_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage1_subdone = ((ap_predicate_op57_read_state2 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage1_11001 = (((img_empty_n == 1'b0) & (ap_predicate_op50_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1)) | ((bytePlanes1_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
+end
+
+always @ (*) begin
+    ap_block_pp0_stage1_subdone = (((img_empty_n == 1'b0) & (ap_predicate_op50_read_state2 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1)) | ((bytePlanes1_full_n == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b1)));
 end
 
 assign ap_block_pp0_stage2 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage2_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op73_read_state3 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage2_11001 = ((ap_predicate_op65_read_state3 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage2_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op73_read_state3 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage2_subdone = ((ap_predicate_op65_read_state3 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 assign ap_block_pp0_stage3 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage3_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op89_read_state4 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage3_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op81_read_state4 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage3_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op89_read_state4 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage3_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op81_read_state4 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 assign ap_block_pp0_stage4 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage4_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op109_read_state5 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage4_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op97_read_state5 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage4_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op109_read_state5 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage4_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op97_read_state5 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 assign ap_block_pp0_stage5 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage5_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op124_read_state6 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage5_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op116_read_state6 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage5_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op124_read_state6 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage5_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op116_read_state6 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 assign ap_block_pp0_stage6 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage6_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op139_read_state7 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage6_11001 = ((img_empty_n == 1'b0) & (ap_predicate_op131_read_state7 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage6_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op139_read_state7 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage6_subdone = ((img_empty_n == 1'b0) & (ap_predicate_op131_read_state7 == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 assign ap_block_pp0_stage7 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage7_11001 = ((ap_predicate_op154_read_state8 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage7_11001 = ((ap_predicate_op146_read_state8 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage7_subdone = ((ap_predicate_op154_read_state8 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
+    ap_block_pp0_stage7_subdone = ((ap_predicate_op146_read_state8 == 1'b1) & (img_empty_n == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b1));
+end
+
+always @ (*) begin
+    ap_block_state10_pp0_stage1_iter1 = (bytePlanes1_full_n == 1'b0);
 end
 
 assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state2_pp0_stage1_iter0 = ((ap_predicate_op57_read_state2 == 1'b1) & (img_empty_n == 1'b0));
+    ap_block_state2_pp0_stage1_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op50_read_state2 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state3_pp0_stage2_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op73_read_state3 == 1'b1));
+    ap_block_state3_pp0_stage2_iter0 = ((ap_predicate_op65_read_state3 == 1'b1) & (img_empty_n == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state4_pp0_stage3_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op89_read_state4 == 1'b1));
+    ap_block_state4_pp0_stage3_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op81_read_state4 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state5_pp0_stage4_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op109_read_state5 == 1'b1));
+    ap_block_state5_pp0_stage4_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op97_read_state5 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state6_pp0_stage5_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op124_read_state6 == 1'b1));
+    ap_block_state6_pp0_stage5_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op116_read_state6 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state7_pp0_stage6_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op139_read_state7 == 1'b1));
+    ap_block_state7_pp0_stage6_iter0 = ((img_empty_n == 1'b0) & (ap_predicate_op131_read_state7 == 1'b1));
 end
 
 always @ (*) begin
-    ap_block_state8_pp0_stage7_iter0 = ((ap_predicate_op154_read_state8 == 1'b1) & (img_empty_n == 1'b0));
+    ap_block_state8_pp0_stage7_iter0 = ((ap_predicate_op146_read_state8 == 1'b1) & (img_empty_n == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state9_pp0_stage0_iter1 = ((bytePlanes1_full_n == 1'b0) | ((img_empty_n == 1'b0) & (ap_predicate_op169_read_state9 == 1'b1)));
+    ap_block_state9_pp0_stage0_iter1 = ((img_empty_n == 1'b0) & (ap_predicate_op161_read_state9 == 1'b1));
 end
 
 always @ (*) begin
-    ap_condition_1004 = ((1'b0 == ap_block_pp0_stage2_11001) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage2));
+    ap_condition_1035 = ((1'b0 == ap_block_pp0_stage1_11001) & (1'b1 == ap_CS_fsm_pp0_stage1) & (or_ln934_reg_1285 == 1'd1));
 end
 
 always @ (*) begin
-    ap_condition_1008 = ((1'b0 == ap_block_pp0_stage3_11001) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage3));
+    ap_condition_1038 = ((1'b0 == ap_block_pp0_stage2_11001) & (1'b1 == ap_CS_fsm_pp0_stage2) & (or_ln934_reg_1285 == 1'd0));
 end
 
 always @ (*) begin
-    ap_condition_1012 = ((1'b0 == ap_block_pp0_stage4_11001) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage4));
+    ap_condition_1042 = ((1'b0 == ap_block_pp0_stage2_11001) & (or_ln934_1_reg_1294 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage2));
 end
 
 always @ (*) begin
-    ap_condition_1016 = ((1'b0 == ap_block_pp0_stage5_11001) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage5));
+    ap_condition_1046 = ((1'b0 == ap_block_pp0_stage3_11001) & (or_ln934_1_reg_1294 == 1'd0) & (1'b1 == ap_CS_fsm_pp0_stage3));
 end
 
 always @ (*) begin
-    ap_condition_1020 = ((1'b0 == ap_block_pp0_stage6_11001) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage6));
+    ap_condition_1049 = ((1'b0 == ap_block_pp0_stage3_11001) & (1'b1 == ap_CS_fsm_pp0_stage3) & (or_ln934_2_reg_1323 == 1'd1));
 end
 
 always @ (*) begin
-    ap_condition_315 = ((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7));
+    ap_condition_1052 = ((1'b0 == ap_block_pp0_stage4_11001) & (1'b1 == ap_CS_fsm_pp0_stage4) & (or_ln934_2_reg_1323 == 1'd0));
 end
 
 always @ (*) begin
-    ap_condition_999 = ((1'b0 == ap_block_pp0_stage1_11001) & (icmp_ln930_reg_1262 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1));
+    ap_condition_1055 = ((1'b0 == ap_block_pp0_stage4_11001) & (1'b1 == ap_CS_fsm_pp0_stage4) & (or_ln934_3_reg_1352 == 1'd1));
+end
+
+always @ (*) begin
+    ap_condition_1058 = ((1'b0 == ap_block_pp0_stage5_11001) & (1'b1 == ap_CS_fsm_pp0_stage5) & (or_ln934_3_reg_1352 == 1'd0));
+end
+
+always @ (*) begin
+    ap_condition_1061 = ((1'b0 == ap_block_pp0_stage5_11001) & (1'b1 == ap_CS_fsm_pp0_stage5) & (or_ln934_4_reg_1381 == 1'd1));
+end
+
+always @ (*) begin
+    ap_condition_1064 = ((1'b0 == ap_block_pp0_stage6_11001) & (1'b1 == ap_CS_fsm_pp0_stage6) & (or_ln934_4_reg_1381 == 1'd0));
+end
+
+always @ (*) begin
+    ap_condition_502 = ((1'b0 == ap_block_pp0_stage7_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage7));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
-assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage1;
+assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage2;
+
+assign ap_phi_reg_pp0_iter0_pix_val_V_100_reg_557 = 'bx;
+
+assign ap_phi_reg_pp0_iter0_pix_val_V_101_reg_547 = 'bx;
+
+assign ap_phi_reg_pp0_iter0_pix_val_V_102_reg_537 = 'bx;
+
+assign ap_phi_reg_pp0_iter0_pix_val_V_103_reg_527 = 'bx;
 
 assign ap_phi_reg_pp0_iter0_pix_val_V_94_reg_517 = 'bx;
 
@@ -1198,112 +1247,104 @@ assign ap_phi_reg_pp0_iter0_pix_val_V_96_reg_497 = 'bx;
 
 assign ap_phi_reg_pp0_iter0_pix_val_V_97_reg_487 = 'bx;
 
-assign ap_phi_reg_pp0_iter1_pix_val_V_100_reg_557 = 'bx;
-
-assign ap_phi_reg_pp0_iter1_pix_val_V_101_reg_547 = 'bx;
-
-assign ap_phi_reg_pp0_iter1_pix_val_V_102_reg_537 = 'bx;
-
-assign ap_phi_reg_pp0_iter1_pix_val_V_103_reg_527 = 'bx;
-
 always @ (*) begin
-    ap_predicate_op109_read_state5 = ((icmp_ln930_reg_1262 == 1'd0) & (or_ln934_3_reg_1364 == 1'd1));
+    ap_predicate_op116_read_state6 = ((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_4_reg_1381 == 1'd1));
 end
 
 always @ (*) begin
-    ap_predicate_op124_read_state6 = ((icmp_ln930_reg_1262 == 1'd0) & (or_ln934_4_reg_1368 == 1'd1));
+    ap_predicate_op131_read_state7 = ((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_5_reg_1385 == 1'd1));
 end
 
 always @ (*) begin
-    ap_predicate_op139_read_state7 = ((icmp_ln930_reg_1262 == 1'd0) & (or_ln934_5_reg_1372 == 1'd1));
+    ap_predicate_op146_read_state8 = ((or_ln934_6_reg_1389 == 1'd1) & (icmp_ln930_reg_1270 == 1'd0));
 end
 
 always @ (*) begin
-    ap_predicate_op154_read_state8 = ((or_ln934_6_reg_1376 == 1'd1) & (icmp_ln930_reg_1262 == 1'd0));
+    ap_predicate_op161_read_state9 = ((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_7_reg_1393 == 1'd1));
 end
 
 always @ (*) begin
-    ap_predicate_op169_read_state9 = ((icmp_ln930_reg_1262 == 1'd0) & (or_ln934_7_reg_1380 == 1'd1));
+    ap_predicate_op50_read_state2 = ((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_reg_1285 == 1'd1));
 end
 
 always @ (*) begin
-    ap_predicate_op57_read_state2 = ((or_ln934_reg_1277 == 1'd1) & (icmp_ln930_reg_1262 == 1'd0));
+    ap_predicate_op65_read_state3 = ((or_ln934_1_reg_1294 == 1'd1) & (icmp_ln930_reg_1270 == 1'd0));
 end
 
 always @ (*) begin
-    ap_predicate_op73_read_state3 = ((icmp_ln930_reg_1262 == 1'd0) & (or_ln934_1_reg_1306 == 1'd1));
+    ap_predicate_op81_read_state4 = ((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_2_reg_1323 == 1'd1));
 end
 
 always @ (*) begin
-    ap_predicate_op89_read_state4 = ((icmp_ln930_reg_1262 == 1'd0) & (or_ln934_2_reg_1335 == 1'd1));
+    ap_predicate_op97_read_state5 = ((icmp_ln930_reg_1270 == 1'd0) & (or_ln934_3_reg_1352 == 1'd1));
 end
 
-assign bytePlanes1_din = {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{trunc_ln414_30_fu_1093_p4}, {trunc_ln414_29_fu_1083_p4}}, {trunc_ln414_28_fu_1073_p4}}, {trunc_ln414_27_fu_1063_p4}}, {trunc_ln414_26_fu_1048_p4}}, {trunc_ln414_25_fu_1038_p4}}, {trunc_ln414_24_fu_1028_p4}}, {trunc_ln414_23_fu_1018_p4}}, {trunc_ln414_22_reg_1474}}, {trunc_ln414_21_reg_1469}}, {trunc_ln414_20_reg_1464}}, {trunc_ln414_19_reg_1459}}, {trunc_ln414_18_reg_1449}}, {trunc_ln414_17_reg_1444}}, {trunc_ln414_16_reg_1439}}, {trunc_ln414_15_reg_1434}}, {trunc_ln414_14_reg_1424}}, {trunc_ln414_13_reg_1419}}, {trunc_ln414_12_reg_1414}}, {trunc_ln414_11_reg_1409}}, {trunc_ln414_10_reg_1399}}, {trunc_ln414_s_reg_1394}}, {trunc_ln414_9_reg_1389}}, {trunc_ln414_8_reg_1384}}, {trunc_ln414_7_reg_1354}}, {trunc_ln414_6_reg_1349}}, {trunc_ln414_5_reg_1344}}, {trunc_ln414_4_reg_1339}}, {trunc_ln414_3_reg_1325}}, {trunc_ln414_2_reg_1320}}, {trunc_ln414_1_reg_1315}}, {trunc_ln4_reg_1310}};
+assign bytePlanes1_din = {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{trunc_ln414_30_fu_1101_p4}, {trunc_ln414_29_fu_1091_p4}}, {trunc_ln414_28_fu_1081_p4}}, {trunc_ln414_27_fu_1071_p4}}, {trunc_ln414_26_fu_1061_p4}}, {trunc_ln414_25_fu_1051_p4}}, {trunc_ln414_24_fu_1041_p4}}, {trunc_ln414_23_fu_1031_p4}}, {trunc_ln414_22_reg_1502}}, {trunc_ln414_21_reg_1497}}, {trunc_ln414_20_reg_1492}}, {trunc_ln414_19_reg_1487}}, {trunc_ln414_18_reg_1462}}, {trunc_ln414_17_reg_1457}}, {trunc_ln414_16_reg_1452}}, {trunc_ln414_15_reg_1447}}, {trunc_ln414_14_reg_1437}}, {trunc_ln414_13_reg_1432}}, {trunc_ln414_12_reg_1427}}, {trunc_ln414_11_reg_1422}}, {trunc_ln414_10_reg_1412}}, {trunc_ln414_s_reg_1407}}, {trunc_ln414_9_reg_1402}}, {trunc_ln414_8_reg_1397}}, {trunc_ln414_7_reg_1371}}, {trunc_ln414_6_reg_1366}}, {trunc_ln414_5_reg_1361}}, {trunc_ln414_4_reg_1356}}, {trunc_ln414_3_reg_1342}}, {trunc_ln414_2_reg_1337}}, {trunc_ln414_1_reg_1332}}, {trunc_ln4_reg_1327}};
 
-assign cmp101_fu_693_p2 = (($signed(zext_ln930_fu_689_p1) < $signed(sub100_cast72_cast_fu_645_p1)) ? 1'b1 : 1'b0);
+assign cmp101_fu_702_p2 = (($signed(zext_ln930_fu_698_p1) < $signed(sub100_cast72_cast_fu_654_p1)) ? 1'b1 : 1'b0);
 
-assign icmp_ln930_fu_677_p2 = ((ap_sig_allocacmp_x_3 == trunc_ln915_1) ? 1'b1 : 1'b0);
+assign icmp_ln930_fu_686_p2 = ((ap_sig_allocacmp_x_3 == trunc_ln915_1) ? 1'b1 : 1'b0);
 
-assign or_ln934_1_fu_726_p2 = (cmp103_1 | cmp101_reg_1266);
+assign or_ln934_1_fu_723_p2 = (cmp103_1 | cmp101_reg_1274);
 
-assign or_ln934_2_fu_774_p2 = (cmp103_2 | cmp101_reg_1266);
+assign or_ln934_2_fu_743_p2 = (cmp103_2 | cmp101_reg_1274);
 
-assign or_ln934_3_fu_822_p2 = (cmp103_3 | cmp101_reg_1266);
+assign or_ln934_3_fu_791_p2 = (cmp103_3 | cmp101_reg_1274);
 
-assign or_ln934_4_fu_826_p2 = (cmp103_4 | cmp101_reg_1266);
+assign or_ln934_4_fu_839_p2 = (cmp103_4 | cmp101_reg_1274);
 
-assign or_ln934_5_fu_830_p2 = (cmp103_5 | cmp101_reg_1266);
+assign or_ln934_5_fu_843_p2 = (cmp103_5 | cmp101_reg_1274);
 
-assign or_ln934_6_fu_834_p2 = (cmp103_6 | cmp101_reg_1266);
+assign or_ln934_6_fu_847_p2 = (cmp103_6 | cmp101_reg_1274);
 
-assign or_ln934_7_fu_838_p2 = (icmp_ln920 | cmp101_reg_1266);
+assign or_ln934_7_fu_851_p2 = (icmp_ln920 | cmp101_reg_1274);
 
-assign or_ln934_fu_699_p2 = (cmp103 | cmp101_fu_693_p2);
+assign or_ln934_fu_708_p2 = (cmp103 | cmp101_fu_702_p2);
 
-assign pix_val_V_104_fu_882_p1 = img_dout[9:0];
+assign pix_val_V_104_fu_835_p1 = img_dout[9:0];
 
-assign pix_val_V_106_fu_926_p1 = img_dout[9:0];
+assign pix_val_V_106_fu_895_p1 = img_dout[9:0];
 
-assign pix_val_V_108_fu_970_p1 = img_dout[9:0];
+assign pix_val_V_108_fu_939_p1 = img_dout[9:0];
 
 assign pix_val_V_10_out = pix_val_V_10_fu_122;
 
-assign pix_val_V_110_fu_1014_p1 = img_dout[9:0];
+assign pix_val_V_110_fu_983_p1 = img_dout[9:0];
 
-assign pix_val_V_112_fu_1058_p1 = img_dout[9:0];
+assign pix_val_V_112_fu_1027_p1 = img_dout[9:0];
 
 assign pix_val_V_11_out = pix_val_V_11_fu_126;
 
-assign pix_val_V_80_fu_722_p1 = img_dout[9:0];
+assign pix_val_V_80_fu_719_p1 = img_dout[9:0];
 
-assign pix_val_V_86_fu_770_p1 = img_dout[9:0];
+assign pix_val_V_86_fu_739_p1 = img_dout[9:0];
 
 assign pix_val_V_8_out = pix_val_V_8_fu_114;
 
-assign pix_val_V_92_fu_818_p1 = img_dout[9:0];
+assign pix_val_V_92_fu_787_p1 = img_dout[9:0];
 
 assign pix_val_V_9_out = pix_val_V_9_fu_118;
 
-assign sub100_cast72_cast_fu_645_p1 = $signed(sub100_cast72);
+assign sub100_cast72_cast_fu_654_p1 = $signed(sub100_cast72);
 
-assign trunc_ln414_23_fu_1018_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517[9:2]}};
+assign trunc_ln414_23_fu_1031_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_94_reg_517[9:2]}};
 
-assign trunc_ln414_24_fu_1028_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507[9:2]}};
+assign trunc_ln414_24_fu_1041_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_95_reg_507[9:2]}};
 
-assign trunc_ln414_25_fu_1038_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497[9:2]}};
+assign trunc_ln414_25_fu_1051_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_96_reg_497[9:2]}};
 
-assign trunc_ln414_26_fu_1048_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487[9:2]}};
+assign trunc_ln414_26_fu_1061_p4 = {{ap_phi_reg_pp0_iter1_pix_val_V_97_reg_487[9:2]}};
 
-assign trunc_ln414_27_fu_1063_p4 = {{ap_phi_mux_pix_val_V_100_phi_fu_560_p4[9:2]}};
+assign trunc_ln414_27_fu_1071_p4 = {{ap_phi_mux_pix_val_V_100_phi_fu_560_p4[9:2]}};
 
-assign trunc_ln414_28_fu_1073_p4 = {{ap_phi_mux_pix_val_V_101_phi_fu_550_p4[9:2]}};
+assign trunc_ln414_28_fu_1081_p4 = {{ap_phi_mux_pix_val_V_101_phi_fu_550_p4[9:2]}};
 
-assign trunc_ln414_29_fu_1083_p4 = {{ap_phi_mux_pix_val_V_102_phi_fu_540_p4[9:2]}};
+assign trunc_ln414_29_fu_1091_p4 = {{ap_phi_mux_pix_val_V_102_phi_fu_540_p4[9:2]}};
 
-assign trunc_ln414_30_fu_1093_p4 = {{ap_phi_mux_pix_val_V_103_phi_fu_530_p4[9:2]}};
+assign trunc_ln414_30_fu_1101_p4 = {{ap_phi_mux_pix_val_V_103_phi_fu_530_p4[9:2]}};
 
-assign x_4_fu_683_p2 = (ap_sig_allocacmp_x_3 + 11'd1);
+assign x_4_fu_692_p2 = (ap_sig_allocacmp_x_3 + 11'd1);
 
-assign zext_ln930_fu_689_p1 = ap_sig_allocacmp_x_3;
+assign zext_ln930_fu_698_p1 = ap_sig_allocacmp_x_3;
 
 endmodule //design_1_v_frmbuf_wr_0_0_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1

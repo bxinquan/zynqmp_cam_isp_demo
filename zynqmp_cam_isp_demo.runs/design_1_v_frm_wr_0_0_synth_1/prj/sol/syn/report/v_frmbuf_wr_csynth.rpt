@@ -1,0 +1,243 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_frmbuf_wr'
+================================================================
+* Date:           Sat Dec 17 00:28:22 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+----------+-----------+-----+-----------+---------+
+    |   Latency (cycles)  |  Latency (absolute)  |     Interval    | Pipeline|
+    |   min   |    max    |    min   |    max    | min |    max    |   Type  |
+    +---------+-----------+----------+-----------+-----+-----------+---------+
+    |       28|  141583690|  0.280 us|  1.416 sec|   29|  141583691|       no|
+    +---------+-----------+----------+-----------+-----+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+---------------------+---------+-----------+----------+-----------+-----+-----------+----------+
+        |                                |                     |   Latency (cycles)  |  Latency (absolute)  |     Interval    | Pipeline |
+        |            Instance            |        Module       |   min   |    max    |    min   |    max    | min |    max    |   Type   |
+        +--------------------------------+---------------------+---------+-----------+----------+-----------+-----+-----------+----------+
+        |grp_FrmbufWrHlsDataFlow_fu_184  |FrmbufWrHlsDataFlow  |       24|  141583685|  0.240 us|  1.416 sec|    7|  141583683|  dataflow|
+        +--------------------------------+---------------------+---------+-----------+----------+-----------+-----+-----------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     1|       -|       -|    -|
+|Expression       |        -|     -|       0|      52|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        8|     0|    3827|    5320|    0|
+|Memory           |        0|     -|       6|       6|    -|
+|Multiplexer      |        -|     -|       -|      88|    -|
+|Register         |        -|     -|     136|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        8|     1|    3969|    5466|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        2|    ~0|       1|       4|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+---------------------+---------+----+------+------+-----+
+    |            Instance            |        Module       | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +--------------------------------+---------------------+---------+----+------+------+-----+
+    |CTRL_s_axi_U                    |CTRL_s_axi           |        0|   0|   238|   360|    0|
+    |grp_FrmbufWrHlsDataFlow_fu_184  |FrmbufWrHlsDataFlow  |        8|   0|  2778|  3703|    0|
+    |mm_video_m_axi_U                |mm_video_m_axi       |        0|   0|   811|  1252|    0|
+    |mul_12ns_3ns_15_1_1_U141        |mul_12ns_3ns_15_1_1  |        0|   0|     0|     5|    0|
+    +--------------------------------+---------------------+---------+----+------+------+-----+
+    |Total                           |                     |        8|   0|  3827|  5320|    0|
+    +--------------------------------+---------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    +-------------------------------+--------------------------+-----------+
+    |            Instance           |          Module          | Expression|
+    +-------------------------------+--------------------------+-----------+
+    |mul_mul_14ns_15ns_29_4_1_U142  |mul_mul_14ns_15ns_29_4_1  |    i0 * i1|
+    +-------------------------------+--------------------------+-----------+
+
+    * Memory: 
+    +-------------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory      |            Module           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |BYTES_PER_PIXEL_U  |BYTES_PER_PIXEL_ROM_AUTO_1R  |        0|  3|   3|    0|    44|    3|     1|          132|
+    |MEMORY2LIVE_U      |MEMORY2LIVE_ROM_AUTO_1R      |        0|  3|   3|    0|    44|    3|     1|          132|
+    +-------------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total              |                             |        0|  6|   6|    0|    88|    6|     2|          264|
+    +-------------------+-----------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |                  Variable Name                  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |s_axi_CTRL_flush_done                            |       and|   0|  0|   2|           1|           0|
+    |empty_61_fu_234_p2                               |      icmp|   0|  0|  10|           6|           6|
+    |empty_62_fu_240_p2                               |      icmp|   0|  0|  10|           6|           5|
+    |empty_64_fu_252_p2                               |      icmp|   0|  0|  10|           6|           5|
+    |empty_66_fu_264_p2                               |      icmp|   0|  0|  10|           6|           5|
+    |ap_sync_grp_FrmbufWrHlsDataFlow_fu_184_ap_done   |        or|   0|  0|   2|           1|           1|
+    |ap_sync_grp_FrmbufWrHlsDataFlow_fu_184_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |empty_63_fu_246_p2                               |        or|   0|  0|   2|           1|           1|
+    |empty_65_fu_258_p2                               |        or|   0|  0|   2|           1|           1|
+    |empty_67_fu_270_p2                               |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                            |          |   0|  0|  52|          30|          26|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |WidthInBytes_reg_174              |   9|          2|   15|         30|
+    |ap_NS_fsm                         |  43|          8|    1|          8|
+    |mm_video_AWVALID                  |   9|          2|    1|          2|
+    |mm_video_BREADY                   |   9|          2|    1|          2|
+    |mm_video_WVALID                   |   9|          2|    1|          2|
+    |s_axis_video_TREADY_int_regslice  |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  88|         18|   20|         46|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |                         Name                        | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |WidthInBytes_reg_174                                 |  15|   0|   15|          0|
+    |ap_CS_fsm                                            |   7|   0|    7|          0|
+    |ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_184_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_184_ap_ready  |   1|   0|    1|          0|
+    |colorFormat_reg_381                                  |   3|   0|    3|          0|
+    |empty_59_reg_332                                     |  12|   0|   12|          0|
+    |empty_60_reg_337                                     |  12|   0|   12|          0|
+    |empty_67_reg_352                                     |   1|   0|    1|          0|
+    |empty_reg_327                                        |   6|   0|    6|          0|
+    |frm_buffer_read_reg_317                              |  32|   0|   32|          0|
+    |grp_FrmbufWrHlsDataFlow_fu_184_ap_start_reg          |   1|   0|    1|          0|
+    |s_axi_CTRL_flush_done                                |   1|   0|    1|          0|
+    |stride_read_reg_322                                  |  16|   0|   16|          0|
+    |zext_ln132_1_reg_342                                 |  12|   0|   15|          3|
+    |zext_ln132_reg_347                                   |  16|   0|   32|         16|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |Total                                                | 136|   0|  155|         19|
+    +-----------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------------------+-----+-----+------------+-----------------------+--------------+
+|s_axi_CTRL_AWVALID       |   in|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_AWREADY       |  out|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_AWADDR        |   in|    7|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_WVALID        |   in|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_WREADY        |  out|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_WDATA         |   in|   32|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_WSTRB         |   in|    4|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_ARVALID       |   in|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_ARREADY       |  out|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_ARADDR        |   in|    7|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_RVALID        |  out|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_RREADY        |   in|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_RDATA         |  out|   32|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_RRESP         |  out|    2|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_BVALID        |  out|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_BREADY        |   in|    1|       s_axi|                   CTRL|        scalar|
+|s_axi_CTRL_BRESP         |  out|    2|       s_axi|                   CTRL|        scalar|
+|ap_clk                   |   in|    1|  ap_ctrl_hs|            v_frmbuf_wr|  return value|
+|ap_rst_n                 |   in|    1|  ap_ctrl_hs|            v_frmbuf_wr|  return value|
+|interrupt                |  out|    1|  ap_ctrl_hs|            v_frmbuf_wr|  return value|
+|m_axi_mm_video_AWVALID   |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWREADY   |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWADDR    |  out|   32|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWID      |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWLEN     |  out|    8|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWSIZE    |  out|    3|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWBURST   |  out|    2|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWLOCK    |  out|    2|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWCACHE   |  out|    4|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWPROT    |  out|    3|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWQOS     |  out|    4|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWREGION  |  out|    4|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_AWUSER    |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WVALID    |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WREADY    |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WDATA     |  out|  128|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WSTRB     |  out|   16|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WLAST     |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WID       |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_WUSER     |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARVALID   |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARREADY   |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARADDR    |  out|   32|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARID      |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARLEN     |  out|    8|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARSIZE    |  out|    3|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARBURST   |  out|    2|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARLOCK    |  out|    2|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARCACHE   |  out|    4|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARPROT    |  out|    3|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARQOS     |  out|    4|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARREGION  |  out|    4|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_ARUSER    |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RVALID    |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RREADY    |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RDATA     |   in|  128|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RLAST     |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RID       |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RUSER     |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_RRESP     |   in|    2|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_BVALID    |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_BREADY    |  out|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_BRESP     |   in|    2|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_BID       |   in|    1|       m_axi|               mm_video|       pointer|
+|m_axi_mm_video_BUSER     |   in|    1|       m_axi|               mm_video|       pointer|
+|s_axis_video_TDATA       |   in|   64|        axis|  s_axis_video_V_data_V|       pointer|
+|s_axis_video_TVALID      |   in|    1|        axis|  s_axis_video_V_dest_V|       pointer|
+|s_axis_video_TREADY      |  out|    1|        axis|  s_axis_video_V_dest_V|       pointer|
+|s_axis_video_TDEST       |   in|    1|        axis|  s_axis_video_V_dest_V|       pointer|
+|s_axis_video_TKEEP       |   in|    8|        axis|  s_axis_video_V_keep_V|       pointer|
+|s_axis_video_TSTRB       |   in|    8|        axis|  s_axis_video_V_strb_V|       pointer|
+|s_axis_video_TUSER       |   in|    1|        axis|  s_axis_video_V_user_V|       pointer|
+|s_axis_video_TLAST       |   in|    1|        axis|  s_axis_video_V_last_V|       pointer|
+|s_axis_video_TID         |   in|    1|        axis|    s_axis_video_V_id_V|       pointer|
++-------------------------+-----+-----+------------+-----------------------+--------------+
+

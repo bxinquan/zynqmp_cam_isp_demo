@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'FrmbufWrHlsDataFlow'" level="0">
-<item name = "Date">Sat Dec 10 20:38:26 2022
+<item name = "Date">Sat Dec 17 00:27:14 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 4.864 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,17 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">25, 70804805, 0.167 us, 0.472 sec, 7, 70804803, dataflow</column>
+<column name="">27, 70809125, 89.991 ns, 0.236 sec, 7, 70809124, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_AXIvideo2MultiPixStream_fu_210">AXIvideo2MultiPixStream, 6, 3313446, 39.978 ns, 22.077 ms, 6, 3313446, no</column>
+<column name="grp_AXIvideo2MultiPixStream_fu_210">AXIvideo2MultiPixStream, 6, 3313446, 19.998 ns, 11.044 ms, 6, 3313446, no</column>
 <column name="call_ln0_entry_proc_fu_237">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
-<column name="grp_MultiPixStream2Bytes_fu_253">MultiPixStream2Bytes, 1, 70804802, 6.663 ns, 0.472 sec, 1, 70804802, no</column>
-<column name="grp_Bytes2AXIMMvideo_fu_265">Bytes2AXIMMvideo, 1, 9326881, 6.663 ns, 62.145 ms, 1, 9326881, no</column>
+<column name="grp_MultiPixStream2Bytes_fu_253">MultiPixStream2Bytes, 1, 70809123, 3.333 ns, 0.236 sec, 1, 70809123, no</column>
+<column name="grp_Bytes2AXIMMvideo_fu_265">Bytes2AXIMMvideo, 2, 9326882, 6.666 ns, 31.086 ms, 2, 9326882, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

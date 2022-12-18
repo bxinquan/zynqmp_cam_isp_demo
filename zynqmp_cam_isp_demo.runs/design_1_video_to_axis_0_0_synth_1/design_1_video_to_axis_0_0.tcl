@@ -70,14 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_video_to_axis_0_0_synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param power.BramSDPPropagationFix 1
-set_param chipscope.maxJobs 3
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c

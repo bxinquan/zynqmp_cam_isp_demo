@@ -23,7 +23,7 @@ add_files -cflags " -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/
 add_files -cflags " -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src " d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_types.h
 add_files -cflags " -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls -I d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src " d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_undistort.h
 
-create_clock -period 6.663 -name ap_clk
+create_clock -period 3.333 -name ap_clk
 
 
 #config_rtl -enable_maxiConservative -enable_axiFlushable

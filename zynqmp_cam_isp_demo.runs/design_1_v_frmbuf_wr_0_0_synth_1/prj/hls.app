@@ -1,4 +1,4 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" top="v_frmbuf_wr" name="prj">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" top="v_frmbuf_wr" name="prj">
     <includePaths/>
     <libraryFlag/>
     <solutions>

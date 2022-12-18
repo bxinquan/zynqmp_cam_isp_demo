@@ -1,15 +1,16 @@
 create_clock -period 2 -name mipi_ias1_clk_bit [get_ports mipi_rx_ias1_clk_p]
 create_clock -period 2 -name mipi_rpi_clk_bit [get_ports mipi_rx_rpi_clk_p]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets design_1_i/camif_ias1/mipi_rx_to_video_ias1/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/u_IBUFDS_DPHY/HSRX_O]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets design_1_i/camif_ias1/mipi_rx_to_video/inst/mipi_rx_to_video_v1_0_S00_AXI_inst/mipi_rx_to_video_inst/u_dphy_rx_to_byte/u_dphy_rx_clk_io/u_IBUFDS_DPHY/HSRX_O]
 
 set_clock_groups -async \
-        -group [get_clocks clk_sys_design_1_clk_wiz_0_0] \
+        -group [get_clocks clk_ctrl_design_1_clk_wiz_0_0] \
+        -group [get_clocks clk_mm_design_1_clk_wiz_0_0] \
         -group [get_clocks clk_isp_design_1_clk_wiz_0_0] \
         -group [get_clocks mipi_ias1_clk_bit] \
         -group [get_clocks mipi_rpi_clk_bit] \
-        -group [get_clocks mipi_rx_to_video_ias1_vid_clk] \
-        -group [get_clocks mipi_rx_to_video_rpi_vid_clk_1]
+        -group [get_clocks mipi_rx_to_video_vid_clk_1] \
+        -group [get_clocks mipi_rx_to_video_vid_clk_2]
 
 set_property -dict {PACKAGE_PIN G11 IOSTANDARD LVCMOS33 DRIVE 4 PULLUP true} [get_ports iic_scl_io]
 set_property -dict {PACKAGE_PIN F10 IOSTANDARD LVCMOS33 DRIVE 4 PULLUP true} [get_ports iic_sda_io]

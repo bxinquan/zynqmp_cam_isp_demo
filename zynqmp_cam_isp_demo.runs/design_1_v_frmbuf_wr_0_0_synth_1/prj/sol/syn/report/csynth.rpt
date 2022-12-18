@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'v_frmbuf_wr'
 ================================================================
 + General Information: 
-    * Date:           Sat Dec 10 20:38:32 2022
+    * Date:           Sat Dec 17 00:27:18 2022
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        prj
     * Solution:       sol (Vivado IP Flow Target)
@@ -19,30 +19,30 @@
     |                          Modules                          |  Issue |       | Latency  |  Latency  | Iteration|          | Trip |          |         |         |            |            |     |
     |                          & Loops                          |  Type  | Slack | (cycles) |    (ns)   |  Latency | Interval | Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT    | URAM|
     +-----------------------------------------------------------+--------+-------+----------+-----------+----------+----------+------+----------+---------+---------+------------+------------+-----+
-    |+ v_frmbuf_wr                                              |  Timing|  -0.00|  70804810|  4.718e+08|         -|  70804811|     -|        no|  15 (5%)|  1 (~0%)|   5470 (2%)|   6176 (5%)|    -|
-    | + FrmbufWrHlsDataFlow*                                    |  Timing|  -0.00|  70804805|  4.718e+08|         -|  70804803|     -|  dataflow|  15 (5%)|        -|   4007 (1%)|   4148 (3%)|    -|
-    |  + AXIvideo2MultiPixStream                                |       -|   2.51|   3313446|  2.208e+07|         -|   3313446|     -|        no|        -|        -|   479 (~0%)|   656 (~0%)|    -|
-    |   + AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start  |       -|   4.43|         2|     13.326|         -|         2|     -|        no|        -|        -|     3 (~0%)|    34 (~0%)|    -|
-    |    o loop_wait_for_start                                  |       -|   4.86|         0|      0.000|         1|         1|     0|       yes|        -|        -|           -|           -|    -|
-    |   + reg_unsigned_short_s                                  |       -|   4.86|         1|      6.663|         -|         1|     -|       yes|        -|        -|    13 (~0%)|           -|    -|
-    |   + reg_unsigned_short_s                                  |       -|   4.86|         1|      6.663|         -|         1|     -|       yes|        -|        -|    13 (~0%)|           -|    -|
-    |   o loop_height                                           |       -|   4.86|   3313440|  2.208e+07|      1062|         -|  3120|        no|        -|        -|           -|           -|    -|
-    |    + AXIvideo2MultiPixStream_Pipeline_loop_width          |       -|   2.62|      1054|  7.023e+03|         -|      1054|     -|        no|        -|        -|   137 (~0%)|   341 (~0%)|    -|
-    |     o loop_width                                          |       -|   4.86|      1052|  7.009e+03|         2|         1|  1052|       yes|        -|        -|           -|           -|    -|
-    |    + AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol   |       -|   4.01|         2|     13.326|         -|         2|     -|        no|        -|        -|     4 (~0%)|    52 (~0%)|    -|
-    |     o loop_wait_for_eol                                   |       -|   4.86|         0|      0.000|         1|         1|     0|       yes|        -|        -|           -|           -|    -|
-    |  + entry_proc                                             |       -|   3.02|         0|      0.000|         -|         0|     -|        no|        -|        -|     3 (~0%)|    56 (~0%)|    -|
-    |  + MultiPixStream2Bytes                                   |       -|   0.94|  70804802|  4.718e+08|         -|  70804802|     -|        no|        -|        -|  1936 (~0%)|   1732 (1%)|    -|
-    |   o loop_Y8                                               |       -|   4.86|  70804800|  4.718e+08|     16390|         -|  4320|        no|        -|        -|           -|           -|    -|
-    |    + MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1       |       -|   0.94|     16387|  1.092e+05|         -|     16387|     -|        no|        -|        -|   544 (~0%)|   606 (~0%)|    -|
-    |     o VITIS_LOOP_930_1                                    |       -|   4.86|     16385|  1.092e+05|         9|         8|  2048|       yes|        -|        -|           -|           -|    -|
-    |   o loop_Y10                                              |       -|   4.86|  53110080|  3.539e+08|     12294|         -|  4320|        no|        -|        -|           -|           -|    -|
-    |    + MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4       |       -|   0.94|     12291|  8.189e+04|         -|     12291|     -|        no|        -|        -|   428 (~0%)|   520 (~0%)|    -|
-    |     o VITIS_LOOP_966_4                                    |       -|   4.86|     12289|  8.188e+04|         7|         6|  2048|       yes|        -|        -|           -|           -|    -|
-    |  + Bytes2AXIMMvideo                                       |  Timing|  -0.00|   9326881|  6.215e+07|         -|   9326881|     -|        no|        -|        -|   536 (~0%)|  1010 (~0%)|    -|
-    |   o loop_Bytes2AXIMMvideo_1plane                          |       -|   4.86|   9326880|  6.215e+07|      2159|         -|  4320|        no|        -|        -|           -|           -|    -|
-    |    + Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1          |  Timing|  -0.00|      2051|  1.367e+04|         -|      2051|     -|        no|        -|        -|   273 (~0%)|    91 (~0%)|    -|
-    |     o VITIS_LOOP_1086_1                                   |       -|   4.86|      2049|  1.365e+04|         3|         1|  2048|       yes|        -|        -|           -|           -|    -|
+    |+ v_frmbuf_wr                                              |  Timing|  -0.00|  70809130|  2.360e+08|         -|  70809131|     -|        no|  15 (5%)|  1 (~0%)|   5698 (2%)|   6250 (5%)|    -|
+    | + FrmbufWrHlsDataFlow*                                    |  Timing|  -0.00|  70809125|  2.360e+08|         -|  70809124|     -|  dataflow|  15 (5%)|        -|   4216 (1%)|   4216 (3%)|    -|
+    |  + AXIvideo2MultiPixStream                                |       -|   0.08|   3313446|  1.104e+07|         -|   3313446|     -|        no|        -|        -|   479 (~0%)|   656 (~0%)|    -|
+    |   + AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start  |       -|   2.00|         2|      6.666|         -|         2|     -|        no|        -|        -|     3 (~0%)|    34 (~0%)|    -|
+    |    o loop_wait_for_start                                  |       -|   2.43|         0|      0.000|         1|         1|     0|       yes|        -|        -|           -|           -|    -|
+    |   + reg_unsigned_short_s                                  |       -|   2.43|         1|      3.333|         -|         1|     -|       yes|        -|        -|    13 (~0%)|           -|    -|
+    |   + reg_unsigned_short_s                                  |       -|   2.43|         1|      3.333|         -|         1|     -|       yes|        -|        -|    13 (~0%)|           -|    -|
+    |   o loop_height                                           |       -|   2.43|   3313440|  1.104e+07|      1062|         -|  3120|        no|        -|        -|           -|           -|    -|
+    |    + AXIvideo2MultiPixStream_Pipeline_loop_width          |       -|   0.81|      1054|  3.513e+03|         -|      1054|     -|        no|        -|        -|   137 (~0%)|   341 (~0%)|    -|
+    |     o loop_width                                          |       -|   2.43|      1052|  3.506e+03|         2|         1|  1052|       yes|        -|        -|           -|           -|    -|
+    |    + AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol   |       -|   1.58|         2|      6.666|         -|         2|     -|        no|        -|        -|     4 (~0%)|    52 (~0%)|    -|
+    |     o loop_wait_for_eol                                   |       -|   2.43|         0|      0.000|         1|         1|     0|       yes|        -|        -|           -|           -|    -|
+    |  + entry_proc                                             |       -|   1.21|         0|      0.000|         -|         0|     -|        no|        -|        -|     3 (~0%)|    56 (~0%)|    -|
+    |  + MultiPixStream2Bytes                                   |  Timing|  -0.00|  70809123|  2.360e+08|         -|  70809123|     -|        no|        -|        -|  2133 (~0%)|   1790 (1%)|    -|
+    |   o loop_Y8                                               |       -|   2.43|  70809120|  2.360e+08|     16391|         -|  4320|        no|        -|        -|           -|           -|    -|
+    |    + MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1       |       -|   0.79|     16388|  5.462e+04|         -|     16388|     -|        no|        -|        -|   625 (~0%)|   630 (~0%)|    -|
+    |     o VITIS_LOOP_930_1                                    |       -|   2.43|     16386|  5.461e+04|        10|         8|  2048|       yes|        -|        -|           -|           -|    -|
+    |   o loop_Y10                                              |       -|   2.43|  53114400|  1.770e+08|     12295|         -|  4320|        no|        -|        -|           -|           -|    -|
+    |    + MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4       |       -|   0.79|     12292|  4.097e+04|         -|     12292|     -|        no|        -|        -|   509 (~0%)|   540 (~0%)|    -|
+    |     o VITIS_LOOP_966_4                                    |       -|   2.43|     12290|  4.096e+04|         8|         6|  2048|       yes|        -|        -|           -|           -|    -|
+    |  + Bytes2AXIMMvideo                                       |  Timing|  -0.00|   9326882|  3.109e+07|         -|   9326882|     -|        no|        -|        -|   548 (~0%)|  1020 (~0%)|    -|
+    |   o loop_Bytes2AXIMMvideo_1plane                          |       -|   2.43|   9326880|  3.109e+07|      2159|         -|  4320|        no|        -|        -|           -|           -|    -|
+    |    + Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1          |  Timing|  -0.00|      2051|  6.836e+03|         -|      2051|     -|        no|        -|        -|   273 (~0%)|    91 (~0%)|    -|
+    |     o VITIS_LOOP_1086_1                                   |       -|   2.43|      2049|  6.829e+03|         3|         1|  2048|       yes|        -|        -|           -|           -|    -|
     +-----------------------------------------------------------+--------+-------+----------+-----------+----------+----------+------+----------+---------+---------+------------+------------+-----+
 
 
@@ -171,21 +171,21 @@
 |    + AXIvideo2MultiPixStream_Pipeline_loop_width    | 0   |        |            |     |        |         |
 |      j_2_fu_263_p2                                  | -   |        | j_2        | add | fabric | 0       |
 |   + MultiPixStream2Bytes                            | 0   |        |            |     |        |         |
-|     add_ln950_fu_334_p2                             | -   |        | add_ln950  | add | fabric | 0       |
-|     sub166_fu_524_p2                                | -   |        | sub166     | add | fabric | 0       |
-|     y_5_fu_585_p2                                   | -   |        | y_5        | add | fabric | 0       |
-|     add_ln915_fu_379_p2                             | -   |        | add_ln915  | add | fabric | 0       |
-|     sub100_fu_423_p2                                | -   |        | sub100     | add | fabric | 0       |
-|     y_3_fu_616_p2                                   | -   |        | y_3        | add | fabric | 0       |
+|     add_ln950_fu_333_p2                             | -   |        | add_ln950  | add | fabric | 0       |
+|     sub166_fu_395_p2                                | -   |        | sub166     | add | fabric | 0       |
+|     y_5_fu_456_p2                                   | -   |        | y_5        | add | fabric | 0       |
+|     add_ln915_fu_485_p2                             | -   |        | add_ln915  | add | fabric | 0       |
+|     sub100_fu_528_p2                                | -   |        | sub100     | add | fabric | 0       |
+|     y_3_fu_609_p2                                   | -   |        | y_3        | add | fabric | 0       |
 |    + MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4 | 0   |        |            |     |        |         |
-|      x_2_fu_609_p2                                  | -   |        | x_2        | add | fabric | 0       |
+|      x_2_fu_621_p2                                  | -   |        | x_2        | add | fabric | 0       |
 |    + MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1 | 0   |        |            |     |        |         |
-|      x_4_fu_683_p2                                  | -   |        | x_4        | add | fabric | 0       |
+|      x_4_fu_692_p2                                  | -   |        | x_4        | add | fabric | 0       |
 |   + Bytes2AXIMMvideo                                | 0   |        |            |     |        |         |
 |     add_ln1076_fu_162_p2                            | -   |        | add_ln1076 | add | fabric | 0       |
-|     y_7_fu_220_p2                                   | -   |        | y_7        | add | fabric | 0       |
-|     add_ln1086_fu_238_p2                            | -   |        | add_ln1086 | add | fabric | 0       |
-|     add_ln1092_fu_263_p2                            | -   |        | add_ln1092 | add | fabric | 0       |
+|     y_7_fu_217_p2                                   | -   |        | y_7        | add | fabric | 0       |
+|     add_ln1086_fu_235_p2                            | -   |        | add_ln1086 | add | fabric | 0       |
+|     add_ln1092_fu_260_p2                            | -   |        | add_ln1092 | add | fabric | 0       |
 |    + Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1    | 0   |        |            |     |        |         |
 |      add_ln1086_fu_116_p2                           | -   |        | add_ln1086 | add | fabric | 0       |
 +-----------------------------------------------------+-----+--------+------------+-----+--------+---------+

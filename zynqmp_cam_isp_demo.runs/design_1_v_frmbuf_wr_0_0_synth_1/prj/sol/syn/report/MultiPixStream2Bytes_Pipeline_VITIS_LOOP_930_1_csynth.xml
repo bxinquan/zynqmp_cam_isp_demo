@@ -9,8 +9,8 @@
 <ProductFamily>zynquplus</ProductFamily>
 <Part>xck26-sfvc784-2LV-c</Part>
 <TopModelName>MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1</TopModelName>
-<TargetClockPeriod>6.66</TargetClockPeriod>
-<ClockUncertainty>1.80</ClockUncertainty>
+<TargetClockPeriod>3.33</TargetClockPeriod>
+<ClockUncertainty>0.90</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.921</EstimatedClockPeriod>
+<EstimatedClockPeriod>1.644</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>3</Best-caseLatency>
+<Best-caseLatency>4</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>16387</Worst-caseLatency>
-<Best-caseRealTimeLatency>19.989 ns</Best-caseRealTimeLatency>
+<Worst-caseLatency>16388</Worst-caseLatency>
+<Best-caseRealTimeLatency>13.332 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.109 ms</Worst-caseRealTimeLatency>
-<Interval-min>3</Interval-min>
-<Interval-max>16387</Interval-max>
+<Worst-caseRealTimeLatency>54.621 us</Worst-caseRealTimeLatency>
+<Interval-min>4</Interval-min>
+<Interval-max>16388</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_930_1>
@@ -41,18 +41,18 @@
 </TripCount>
 <Latency>
 <range>
-<min>1</min>
-<max>16385</max>
+<min>2</min>
+<max>16386</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
 <min>6</min>
-<max>109173</max>
+<max>54614</max>
 </range>
 </AbsoluteTimeLatency>
 <PipelineII>8</PipelineII>
-<PipelineDepth>9</PipelineDepth>
+<PipelineDepth>10</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_930_1>
@@ -61,8 +61,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>544</FF>
-<LUT>606</LUT>
+<FF>625</FF>
+<LUT>630</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>

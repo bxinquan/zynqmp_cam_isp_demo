@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'MultiPixStream2Bytes'" level="0">
-<item name = "Date">Sat Dec 10 20:38:25 2022
+<item name = "Date">Sat Dec 17 00:27:12 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 3.921 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,21 +24,21 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 70804802, 6.663 ns, 0.472 sec, 1, 70804802, no</column>
+<column name="">1, 70809123, 3.333 ns, 0.236 sec, 1, 70809123, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4_fu_278">MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4, 3, 12291, 19.989 ns, 81.895 us, 3, 12291, no</column>
-<column name="grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1_fu_304">MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1, 3, 16387, 19.989 ns, 0.109 ms, 3, 16387, no</column>
+<column name="grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4_fu_278">MultiPixStream2Bytes_Pipeline_VITIS_LOOP_966_4, 4, 12292, 13.332 ns, 40.969 us, 4, 12292, no</column>
+<column name="grp_MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1_fu_304">MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1, 4, 16388, 13.332 ns, 54.621 us, 4, 16388, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- loop_Y8">0, 70804800, 6 ~ 16390, -, -, 0 ~ 4320, no</column>
-<column name="- loop_Y10">0, 53110080, 6 ~ 12294, -, -, 0 ~ 4320, no</column>
+<column name="- loop_Y8">0, 70809120, 7 ~ 16391, -, -, 0 ~ 4320, no</column>
+<column name="- loop_Y10">0, 53114400, 7 ~ 12295, -, -, 0 ~ 4320, no</column>
 </table>
 </item>
 </section>

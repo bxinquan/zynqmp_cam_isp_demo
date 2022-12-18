@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'AXIvideo2MultiPixStream_Pipeline_loop_width'
 ================================================================
-* Date:           Sat Dec 10 20:38:28 2022
+* Date:           Sat Dec 17 00:27:15 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,17 +20,17 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  2.241 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  1.620 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+----------+-----+------+---------+
-    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
-    |   min   |   max   |    min    |    max   | min |  max |   Type  |
-    +---------+---------+-----------+----------+-----+------+---------+
-    |        3|     1054|  19.989 ns|  7.023 us|    3|  1054|       no|
-    +---------+---------+-----------+----------+-----+------+---------+
+    +---------+---------+----------+----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   | min |  max |   Type  |
+    +---------+---------+----------+----------+-----+------+---------+
+    |        3|     1054|  9.999 ns|  3.513 us|    3|  1054|       no|
+    +---------+---------+----------+----------+-----+------+---------+
 
     + Detail: 
         * Instance: 
@@ -281,7 +281,7 @@ ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_W
 ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i120P0A, i120 %axi_data_V_3_out, i120 %axi_data_V_load"   --->   Operation 82 'write' 'write_ln0' <Predicate = (icmp_ln207)> <Delay = 0.00>
 ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 83 'ret' 'ret_ln0' <Predicate = (icmp_ln207)> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 2.24>
+State 2 <SV = 1> <Delay = 1.61>
 ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%axi_data_V_4 = load i120 %axi_data_V"   --->   Operation 45 'load' 'axi_data_V_4' <Predicate = (!icmp_ln207)> <Delay = 0.00>
 ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%axi_last_V_4 = load i1 %axi_last_V"   --->   Operation 46 'load' 'axi_last_V_4' <Predicate = (!icmp_ln207)> <Delay = 0.00>
 ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%pix_val_V_117 = partselect i10 @_ssdm_op_PartSelect.i10.i120.i32.i32, i120 %axi_data_V_4, i32 20, i32 29"   --->   Operation 47 'partselect' 'pix_val_V_117' <Predicate = (!icmp_ln207)> <Delay = 0.00>
@@ -316,7 +316,7 @@ ST_2 : Operation 75 [1/1] (0.40ns) (out node of the LUT)   --->   "%pix_val_V_13
 ST_2 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node pix_val_V_138)   --->   "%pix_val_V_137 = select i1 %cond_read, i10 %pix_val_V_136, i10 %pix_val_V_123" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:235]   --->   Operation 76 'select' 'pix_val_V_137' <Predicate = (!icmp_ln207 & !icmp_ln235_read)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 77 [1/1] (0.40ns) (out node of the LUT)   --->   "%pix_val_V_138 = select i1 %icmp_ln235_read, i10 %pix_val_V_131, i10 %pix_val_V_137" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:235]   --->   Operation 77 'select' 'pix_val_V_138' <Predicate = (!icmp_ln207)> <Delay = 0.40> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.40> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%p_0 = bitconcatenate i120 @_ssdm_op_BitConcatenate.i120.i10.i10.i10.i10.i10.i10.i10.i10.i10.i10.i10.i10, i10 %pix_val_V_138, i10 %pix_val_V_135, i10 %pix_val_V_133, i10 %pix_val_V_130, i10 %pix_val_V_127, i10 %pix_val_V_125, i10 %pix_val_V_122, i10 %pix_val_V_120, i10 %pix_val_V_119, i10 %pix_val_V_116, i10 %pix_val_V_115, i10 %pix_val_V_114" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 78 'bitconcatenate' 'p_0' <Predicate = (!icmp_ln207)> <Delay = 0.00>
-ST_2 : Operation 79 [1/1] (1.83ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i120P0A, i120 %img, i120 %p_0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 79 'write' 'write_ln174' <Predicate = (!icmp_ln207)> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 120> <Depth = 2> <FIFO>
+ST_2 : Operation 79 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i120P0A, i120 %img, i120 %p_0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 79 'write' 'write_ln174' <Predicate = (!icmp_ln207)> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 120> <Depth = 2> <FIFO>
 
 
 ============================================================

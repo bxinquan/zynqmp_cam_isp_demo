@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'FrmbufWrHlsDataFlow'
 ================================================================
-* Date:           Sat Dec 10 20:38:31 2022
+* Date:           Sat Dec 17 00:27:17 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,17 +20,17 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.864 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+----------+----------+-----------+-----+----------+----------+
-    |  Latency (cycles)  |  Latency (absolute)  |    Interval    | Pipeline |
-    |   min   |    max   |    min   |    max    | min |    max   |   Type   |
-    +---------+----------+----------+-----------+-----+----------+----------+
-    |       25|  70804805|  0.167 us|  0.472 sec|    7|  70804803|  dataflow|
-    +---------+----------+----------+-----------+-----+----------+----------+
+    +---------+----------+-----------+-----------+-----+----------+----------+
+    |  Latency (cycles)  |   Latency (absolute)  |    Interval    | Pipeline |
+    |   min   |    max   |    min    |    max    | min |    max   |   Type   |
+    +---------+----------+-----------+-----------+-----+----------+----------+
+    |       27|  70809125|  89.991 ns|  0.236 sec|    7|  70809124|  dataflow|
+    +---------+----------+-----------+-----------+-----+----------+----------+
 
     + Detail: 
         * Instance: 
@@ -38,10 +38,10 @@
         |                            |                         |  Latency (cycles)  |   Latency (absolute)  |    Interval    | Pipeline|
         |          Instance          |          Module         |   min   |    max   |    min    |    max    | min |    max   |   Type  |
         +----------------------------+-------------------------+---------+----------+-----------+-----------+-----+----------+---------+
-        |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        6|   3313446|  39.978 ns|  22.077 ms|    6|   3313446|       no|
+        |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        6|   3313446|  19.998 ns|  11.044 ms|    6|   3313446|       no|
         |entry_proc_U0               |entry_proc               |        0|         0|       0 ns|       0 ns|    0|         0|       no|
-        |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        1|  70804802|   6.663 ns|  0.472 sec|    1|  70804802|       no|
-        |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        1|   9326881|   6.663 ns|  62.145 ms|    1|   9326881|       no|
+        |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        1|  70809123|   3.333 ns|  0.236 sec|    1|  70809123|       no|
+        |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        2|   9326882|   6.666 ns|  31.086 ms|    2|   9326882|       no|
         +----------------------------+-------------------------+---------+----------+-----------+-----------+-----+----------+---------+
 
         * Loop: 
@@ -59,12 +59,12 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|      14|    -|
 |FIFO             |       15|     -|    1051|     662|    -|
-|Instance         |        -|     -|    2954|    3454|    -|
+|Instance         |        -|     -|    3163|    3522|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      18|    -|
 |Register         |        -|     -|       2|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       15|     0|    4007|    4148|    0|
+|Total            |       15|     0|    4216|    4216|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -77,11 +77,11 @@
     |          Instance          |          Module         | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------+-------------------------+---------+----+------+------+-----+
     |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        0|   0|   479|   656|    0|
-    |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        0|   0|   536|  1010|    0|
-    |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        0|   0|  1936|  1732|    0|
+    |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        0|   0|   548|  1020|    0|
+    |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        0|   0|  2133|  1790|    0|
     |entry_proc_U0               |entry_proc               |        0|   0|     3|    56|    0|
     +----------------------------+-------------------------+---------+----+------+------+-----+
-    |Total                       |                         |        0|   0|  2954|  3454|    0|
+    |Total                       |                         |        0|   0|  3163|  3522|    0|
     +----------------------------+-------------------------+---------+----+------+------+-----+
 
     * DSP: 

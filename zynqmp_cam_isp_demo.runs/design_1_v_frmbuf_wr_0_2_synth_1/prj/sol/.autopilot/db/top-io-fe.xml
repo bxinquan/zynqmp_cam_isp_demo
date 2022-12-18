@@ -1,0 +1,61 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="v_frmbuf_wr" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="width" src_type="unsigned short" src_isptr="0" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16"/>
+        </hw>
+      </arg>
+      <arg id="1" access_type="r" src_name="height" src_type="unsigned short" src_isptr="0" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="24"/>
+        </hw>
+      </arg>
+      <arg id="2" access_type="r" src_name="stride" src_type="unsigned short" src_isptr="0" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="32"/>
+        </hw>
+      </arg>
+      <arg id="3" access_type="r" src_name="video_format" src_type="unsigned short" src_isptr="0" src_bitwidth="16" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="16" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="40"/>
+        </hw>
+      </arg>
+      <arg id="4" access_type="w" src_name="frm_buffer" src_type="ap_uint&lt;64&gt;*" src_isptr="1" src_bitwidth="64" src_size_or_depth="2073600">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="mm_video" hw_bitwidth="64" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="100" num_read_outstanding="16" num_write_outstanding="4" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="64" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="48"/>
+        </hw>
+      </arg>
+      <arg id="5" access_type="w" src_name="frm_buffer2" src_type="ap_uint&lt;64&gt;*" src_isptr="1" src_bitwidth="64" src_size_or_depth="2073600">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="mm_video" hw_bitwidth="64" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="100" num_read_outstanding="16" num_write_outstanding="4" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="64" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="60"/>
+        </hw>
+      </arg>
+      <arg id="6" access_type="w" src_name="frm_buffer3" src_type="ap_uint&lt;64&gt;*" src_isptr="1" src_bitwidth="64" src_size_or_depth="2073600">
+        <hw hw_usage="data" hw_interface="MAXI" hw_name="mm_video" hw_bitwidth="64" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="100" num_read_outstanding="16" num_write_outstanding="4" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0"/>
+          <constraint constraint_type="bitwidth" orig_bitwidth="64" final_bitwidth="64"/>
+        </hw>
+        <hw hw_usage="address" hw_interface="S_AXILite" hw_name="CTRL" hw_bitwidth="64" hw_size_or_depth="0" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="84"/>
+        </hw>
+      </arg>
+      <arg id="7" access_type="r" src_name="s_axis_video" src_type="stream&lt;hls::axis&lt;ap_uint&lt;24&gt;, 1, 1, 1&gt;, 0&gt;&amp;" src_isptr="1" src_bitwidth="96" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="AXI-Stream" hw_name="s_axis_video" hw_bitwidth="24" hw_size_or_depth="1" hw_kernel_support="true">
+          <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both"/>
+        </hw>
+      </arg>
+    </args>
+    <return src_type="void" src_bitwidth="0" offset="0x0">
+      <hw hw_usage="data" hw_interface="" hw_name="" hw_bitwidth="0" hw_kernel_support="true"/>
+    </return>
+  </kernel>
+</root>

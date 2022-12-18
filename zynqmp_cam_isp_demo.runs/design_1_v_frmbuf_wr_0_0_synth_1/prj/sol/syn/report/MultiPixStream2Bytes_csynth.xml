@@ -9,8 +9,8 @@
 <ProductFamily>zynquplus</ProductFamily>
 <Part>xck26-sfvc784-2LV-c</Part>
 <TopModelName>MultiPixStream2Bytes</TopModelName>
-<TargetClockPeriod>6.66</TargetClockPeriod>
-<ClockUncertainty>1.80</ClockUncertainty>
+<TargetClockPeriod>3.33</TargetClockPeriod>
+<ClockUncertainty>0.90</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.921</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.433</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>1</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>70804802</Worst-caseLatency>
-<Best-caseRealTimeLatency>6.663 ns</Best-caseRealTimeLatency>
+<Worst-caseLatency>70809123</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.333 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.472 sec</Worst-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.236 sec</Worst-caseRealTimeLatency>
 <Interval-min>1</Interval-min>
-<Interval-max>70804802</Interval-max>
+<Interval-max>70809123</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <loop_Y8>
@@ -42,19 +42,19 @@
 <Latency>
 <range>
 <min>0</min>
-<max>70804800</max>
+<max>70809120</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
 <min>0</min>
-<max>471772389</max>
+<max>236006793</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>6</min>
-<max>16390</max>
+<min>7</min>
+<max>16391</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -70,19 +70,19 @@
 <Latency>
 <range>
 <min>0</min>
-<max>53110080</max>
+<max>53114400</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
 <min>0</min>
-<max>353872468</max>
+<max>177030292</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>6</min>
-<max>12294</max>
+<min>7</min>
+<max>12295</max>
 </range>
 </IterationLatency>
 <InstanceList>
@@ -93,8 +93,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>1936</FF>
-<LUT>1732</LUT>
+<FF>2133</FF>
+<LUT>1790</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>

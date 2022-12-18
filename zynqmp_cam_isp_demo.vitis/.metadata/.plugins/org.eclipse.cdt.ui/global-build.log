@@ -1,6 +1,6 @@
 Nothing to build in platform 'design_1_wrapper'
 
-21:12:19 **** Incremental Build of configuration Debug for project zynqmp_cam_isp_demo ****
+11:05:08 **** Incremental Build of configuration Debug for project zynqmp_cam_isp_demo ****
 make all 
 'Building file: ../src/isp_pipe.c'
 'Invoking: ARM v8 gcc compiler'
@@ -8,17 +8,17 @@ aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/isp_pipe.o" -ID
 In file included from D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xil_printf.h:16,
                  from ../src/isp_pipe.c:1:
 ../src/isp_pipe.c: In function 'isp_pipe_init':
-D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:1896:44: warning: passing argument 4 of 'XIntc_Connect' makes pointer from integer without a cast [-Wint-conversion]
- 1896 | #define XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR 0xA0070000
+D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:1995:44: warning: passing argument 4 of 'XIntc_Connect' makes pointer from integer without a cast [-Wint-conversion]
+ 1995 | #define XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR 0xA0050000
       |                                            ^~~~~~~~~~
       |                                            |
       |                                            unsigned int
-../src/isp_pipe.c:16:25: note: in expansion of macro 'XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR'
-   16 | #define ISP_BASE        XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR
+../src/isp_pipe.c:19:25: note: in expansion of macro 'XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR'
+   19 | #define ISP_BASE        XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR
       |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/isp_pipe.c:323:98: note: in expansion of macro 'ISP_BASE'
-  323 |         XIntc_Connect(&AxiIntc, XPAR_AXI_INTC_ISP_PIPE_ISP_IRQ_INTR, (XInterruptHandler)isp_isr, ISP_BASE);
-      |                                                                                                  ^~~~~~~~
+../src/isp_pipe.c:331:75: note: in expansion of macro 'ISP_BASE'
+  331 |         XIntc_Connect(&AxiIntc, ISP_IRQ_INTR, (XInterruptHandler)isp_isr, ISP_BASE);
+      |                                                                           ^~~~~~~~
 In file included from ../src/sys_intc.h:5,
                  from ../src/isp_pipe.c:5:
 D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xintc.h:332:52: note: expected 'void *' but argument is of type 'unsigned int'
@@ -26,36 +26,60 @@ D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_
       |                                              ~~~~~~^~~~~~~~~~~
 In file included from D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xil_printf.h:16,
                  from ../src/isp_pipe.c:1:
-D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:1907:44: warning: passing argument 4 of 'XIntc_Connect' makes pointer from integer without a cast [-Wint-conversion]
- 1907 | #define XPAR_ISP_PIPE_VIP_S00_AXI_BASEADDR 0xA00A0000
-      |                                            ^~~~~~~~~~
-      |                                            |
-      |                                            unsigned int
-../src/isp_pipe.c:17:25: note: in expansion of macro 'XPAR_ISP_PIPE_VIP_S00_AXI_BASEADDR'
-   17 | #define VIP_BASE        XPAR_ISP_PIPE_VIP_S00_AXI_BASEADDR
-      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/isp_pipe.c:324:98: note: in expansion of macro 'VIP_BASE'
-  324 |         XIntc_Connect(&AxiIntc, XPAR_AXI_INTC_ISP_PIPE_VIP_IRQ_INTR, (XInterruptHandler)vip_isr, VIP_BASE);
-      |                                                                                                  ^~~~~~~~
+D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xparameters.h:2006:46: warning: passing argument 4 of 'XIntc_Connect' makes pointer from integer without a cast [-Wint-conversion]
+ 2006 | #define XPAR_ISP_PIPE_VIP_1_S00_AXI_BASEADDR 0xA0060000
+      |                                              ^~~~~~~~~~
+      |                                              |
+      |                                              unsigned int
+../src/isp_pipe.c:20:25: note: in expansion of macro 'XPAR_ISP_PIPE_VIP_1_S00_AXI_BASEADDR'
+   20 | #define VIP_BASE        XPAR_ISP_PIPE_VIP_1_S00_AXI_BASEADDR
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/isp_pipe.c:332:75: note: in expansion of macro 'VIP_BASE'
+  332 |         XIntc_Connect(&AxiIntc, VIP_IRQ_INTR, (XInterruptHandler)vip_isr, VIP_BASE);
+      |                                                                           ^~~~~~~~
 In file included from ../src/sys_intc.h:5,
                  from ../src/isp_pipe.c:5:
 D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include/xintc.h:332:52: note: expected 'void *' but argument is of type 'unsigned int'
   332 |                   XInterruptHandler Handler, void *CallBackRef);
       |                                              ~~~~~~^~~~~~~~~~~
 At top level:
-../src/isp_pipe.c:498:28: warning: 'colorCurveTbl_8' defined but not used [-Wunused-const-variable=]
-  498 | static const unsigned char colorCurveTbl_8[9][2] = {
+../src/isp_pipe.c:506:28: warning: 'colorCurveTbl_8' defined but not used [-Wunused-const-variable=]
+  506 | static const unsigned char colorCurveTbl_8[9][2] = {
       |                            ^~~~~~~~~~~~~~~
-../src/isp_pipe.c:486:28: warning: 'colorCurveTbl_6' defined but not used [-Wunused-const-variable=]
-  486 | static const unsigned char colorCurveTbl_6[9][2] = {
+../src/isp_pipe.c:494:28: warning: 'colorCurveTbl_6' defined but not used [-Wunused-const-variable=]
+  494 | static const unsigned char colorCurveTbl_6[9][2] = {
       |                            ^~~~~~~~~~~~~~~
-../src/isp_pipe.c:466:28: warning: 'spaceWeightTbl_8' defined but not used [-Wunused-const-variable=]
-  466 | static const unsigned char spaceWeightTbl_8[7*7] = {
+../src/isp_pipe.c:474:28: warning: 'spaceWeightTbl_8' defined but not used [-Wunused-const-variable=]
+  474 | static const unsigned char spaceWeightTbl_8[7*7] = {
       |                            ^~~~~~~~~~~~~~~~
-../src/isp_pipe.c:456:28: warning: 'spaceWeightTbl_6' defined but not used [-Wunused-const-variable=]
-  456 | static const unsigned char spaceWeightTbl_6[7*7] = {
+../src/isp_pipe.c:464:28: warning: 'spaceWeightTbl_6' defined but not used [-Wunused-const-variable=]
+  464 | static const unsigned char spaceWeightTbl_6[7*7] = {
       |                            ^~~~~~~~~~~~~~~~
 'Finished building: ../src/isp_pipe.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -ID:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'sd_write_data':
+../src/main.c:93:18: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   93 |     f_write(&fil,(void*) src_addr,byte_len,&bw);
+      |                  ^
+../src/main.c: In function 'main':
+../src/main.c:111:9: warning: implicit declaration of function 'Xil_DCacheDisable' [-Wimplicit-function-declaration]
+  111 |         Xil_DCacheDisable();
+      |         ^~~~~~~~~~~~~~~~~
+../src/main.c:112:9: warning: implicit declaration of function 'Xil_ICacheDisable' [-Wimplicit-function-declaration]
+  112 |         Xil_ICacheDisable();
+      |         ^~~~~~~~~~~~~~~~~
+../src/main.c:159:25: warning: implicit declaration of function 'Xil_DCacheInvalidateRange' [-Wimplicit-function-declaration]
+  159 |                         Xil_DCacheInvalidateRange(raw_buf, ALIGN((SNS_WIDTH + 2) / 3 * 4, 256) * SNS_HEIGHT);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:6:
+../src/main.c: At top level:
+../src/xdpdma_video_example.h:80:12: warning: 'GraphicsOverlay' declared 'static' but never defined [-Wunused-function]
+   80 | static u8* GraphicsOverlay(u8* Frame, Run_Config *RunCfgPtr);
+      |            ^~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
 ' '
 'Building target: zynqmp_cam_isp_demo.elf'
 'Invoking: ARM v8 gcc linker'
@@ -65,6 +89,6 @@ aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/zynqmp_cam_isp_demo/zynqm
 'Invoking: ARM v8 Print Size'
 aarch64-none-elf-size zynqmp_cam_isp_demo.elf  |tee "zynqmp_cam_isp_demo.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 323932	   8436	6254840	6587208	 648348	zynqmp_cam_isp_demo.elf
+ 323868	   8572	6254832	6587272	 648388	zynqmp_cam_isp_demo.elf
 'Finished building: zynqmp_cam_isp_demo.elf.size'
 ' '

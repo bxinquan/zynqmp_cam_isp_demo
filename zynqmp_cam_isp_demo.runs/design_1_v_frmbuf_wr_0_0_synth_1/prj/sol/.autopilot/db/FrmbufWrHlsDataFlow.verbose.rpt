@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'FrmbufWrHlsDataFlow'
 ================================================================
-* Date:           Sat Dec 10 20:38:31 2022
+* Date:           Sat Dec 17 00:27:17 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,17 +20,17 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.864 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+----------+----------+-----------+-----+----------+----------+
-    |  Latency (cycles)  |  Latency (absolute)  |    Interval    | Pipeline |
-    |   min   |    max   |    min   |    max    | min |    max   |   Type   |
-    +---------+----------+----------+-----------+-----+----------+----------+
-    |       25|  70804805|  0.167 us|  0.472 sec|    7|  70804803|  dataflow|
-    +---------+----------+----------+-----------+-----+----------+----------+
+    +---------+----------+-----------+-----------+-----+----------+----------+
+    |  Latency (cycles)  |   Latency (absolute)  |    Interval    | Pipeline |
+    |   min   |    max   |    min    |    max    | min |    max   |   Type   |
+    +---------+----------+-----------+-----------+-----+----------+----------+
+    |       27|  70809125|  89.991 ns|  0.236 sec|    7|  70809124|  dataflow|
+    +---------+----------+-----------+-----------+-----+----------+----------+
 
     + Detail: 
         * Instance: 
@@ -38,10 +38,10 @@
         |                            |                         |  Latency (cycles)  |   Latency (absolute)  |    Interval    | Pipeline|
         |          Instance          |          Module         |   min   |    max   |    min    |    max    | min |    max   |   Type  |
         +----------------------------+-------------------------+---------+----------+-----------+-----------+-----+----------+---------+
-        |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        6|   3313446|  39.978 ns|  22.077 ms|    6|   3313446|       no|
+        |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        6|   3313446|  19.998 ns|  11.044 ms|    6|   3313446|       no|
         |entry_proc_U0               |entry_proc               |        0|         0|       0 ns|       0 ns|    0|         0|       no|
-        |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        1|  70804802|   6.663 ns|  0.472 sec|    1|  70804802|       no|
-        |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        1|   9326881|   6.663 ns|  62.145 ms|    1|   9326881|       no|
+        |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        1|  70809123|   3.333 ns|  0.236 sec|    1|  70809123|       no|
+        |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        2|   9326882|   6.666 ns|  31.086 ms|    2|   9326882|       no|
         +----------------------------+-------------------------+---------+----------+-----------+-----------+-----+----------+---------+
 
         * Loop: 
@@ -59,12 +59,12 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|      14|    -|
 |FIFO             |       15|     -|    1051|     662|    -|
-|Instance         |        -|     -|    2954|    3454|    -|
+|Instance         |        -|     -|    3163|    3522|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      18|    -|
 |Register         |        -|     -|       2|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       15|     0|    4007|    4148|    0|
+|Total            |       15|     0|    4216|    4216|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -77,11 +77,11 @@
     |          Instance          |          Module         | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------+-------------------------+---------+----+------+------+-----+
     |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        0|   0|   479|   656|    0|
-    |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        0|   0|   536|  1010|    0|
-    |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        0|   0|  1936|  1732|    0|
+    |Bytes2AXIMMvideo_U0         |Bytes2AXIMMvideo         |        0|   0|   548|  1020|    0|
+    |MultiPixStream2Bytes_U0     |MultiPixStream2Bytes     |        0|   0|  2133|  1790|    0|
     |entry_proc_U0               |entry_proc               |        0|   0|     3|    56|    0|
     +----------------------------+-------------------------+---------+----+------+------+-----+
-    |Total                       |                         |        0|   0|  2954|  3454|    0|
+    |Total                       |                         |        0|   0|  3163|  3522|    0|
     +----------------------------+-------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -271,7 +271,7 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 1.83>
+State 1 <SV = 0> <Delay = 1.21>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read_6 = read i12 @_ssdm_op_Read.ap_auto.i12, i12 %p_read3"   --->   Operation 7 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read26 = read i13 @_ssdm_op_Read.ap_auto.i13, i13 %p_read2"   --->   Operation 8 'read' 'p_read26' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read15 = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %p_read1"   --->   Operation 9 'read' 'p_read15' <Predicate = true> <Delay = 0.00>
@@ -285,14 +285,14 @@ ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%WidthInBytes_c = alloca i32 1"   -
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%HwReg_frm_buffer_c = alloca i32 1"   --->   Operation 17 'alloca' 'HwReg_frm_buffer_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 4> <FIFO>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%img = alloca i32 1"   --->   Operation 18 'alloca' 'img' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 120> <Depth = 2> <FIFO>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%bytePlanes_plane0 = alloca i32 1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:35]   --->   Operation 19 'alloca' 'bytePlanes_plane0' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 264> <FIFO>
-ST_1 : Operation 20 [2/2] (1.83ns)   --->   "%call_ln57 = call void @AXIvideo2MultiPixStream, i120 %s_axis_video_V_data_V, i15 %s_axis_video_V_keep_V, i15 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i120 %img, i12 %p_read_6, i13 %p_read26, i3 %p_read15, i13 %width_c, i12 %height_c10" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:57]   --->   Operation 20 'call' 'call_ln57' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 20 [2/2] (1.21ns)   --->   "%call_ln57 = call void @AXIvideo2MultiPixStream, i120 %s_axis_video_V_data_V, i15 %s_axis_video_V_keep_V, i15 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i120 %img, i12 %p_read_6, i13 %p_read26, i3 %p_read15, i13 %width_c, i12 %height_c10" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:57]   --->   Operation 20 'call' 'call_ln57' <Predicate = true> <Delay = 1.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 2 <SV = 1> <Delay = 1.83>
+State 2 <SV = 1> <Delay = 1.21>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_4 = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %p_read25"   --->   Operation 21 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_5 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %p_read14"   --->   Operation 22 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%p_read_7 = read i15 @_ssdm_op_Read.ap_auto.i15, i15 %p_read"   --->   Operation 23 'read' 'p_read_7' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%HwReg_frm_buffer_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %HwReg_frm_buffer"   --->   Operation 24 'read' 'HwReg_frm_buffer_read' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (1.83ns)   --->   "%call_ln0 = call void @entry_proc, i32 %HwReg_frm_buffer_read, i32 %HwReg_frm_buffer_c, i15 %p_read_7, i15 %WidthInBytes_c9, i16 %p_read_5, i16 %stride_c, i6 %p_read_4, i6 %video_format_c"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 25 [1/1] (1.21ns)   --->   "%call_ln0 = call void @entry_proc, i32 %HwReg_frm_buffer_read, i32 %HwReg_frm_buffer_c, i15 %p_read_7, i15 %WidthInBytes_c9, i16 %p_read_5, i16 %stride_c, i6 %p_read_4, i6 %video_format_c"   --->   Operation 25 'call' 'call_ln0' <Predicate = true> <Delay = 1.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_2 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln57 = call void @AXIvideo2MultiPixStream, i120 %s_axis_video_V_data_V, i15 %s_axis_video_V_keep_V, i15 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i120 %img, i12 %p_read_6, i13 %p_read26, i3 %p_read15, i13 %width_c, i12 %height_c10" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:57]   --->   Operation 26 'call' 'call_ln57' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
@@ -1609,8 +1609,8 @@ ret_ln65                 (ret                 ) [ 0000000]
 |----------|------------------------------------|---------|---------|---------|
 |          | grp_AXIvideo2MultiPixStream_fu_210 |  0.427  |   597   |   288   |
 |   call   |     call_ln0_entry_proc_fu_237     |    0    |    0    |    0    |
-|          |   grp_MultiPixStream2Bytes_fu_253  |  0.427  |   2155  |   460   |
-|          |     grp_Bytes2AXIMMvideo_fu_265    |  0.854  |   997   |   171   |
+|          |   grp_MultiPixStream2Bytes_fu_253  |    0    |   2284  |   451   |
+|          |     grp_Bytes2AXIMMvideo_fu_265    |  0.854  |   1008  |   171   |
 |----------|------------------------------------|---------|---------|---------|
 |          |        p_read_6_read_fu_168        |    0    |    0    |    0    |
 |          |        p_read26_read_fu_174        |    0    |    0    |    0    |
@@ -1620,7 +1620,7 @@ ret_ln65                 (ret                 ) [ 0000000]
 |          |        p_read_7_read_fu_198        |    0    |    0    |    0    |
 |          |  HwReg_frm_buffer_read_read_fu_204 |    0    |    0    |    0    |
 |----------|------------------------------------|---------|---------|---------|
-|   Total  |                                    |  1.708  |   3749  |   919   |
+|   Total  |                                    |  1.281  |   3889  |   910   |
 |----------|------------------------------------|---------|---------|---------|
 
 Memories:
@@ -1664,10 +1664,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    1   |  3749  |   919  |
+|  Function |    1   |  3889  |   910  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    -   |   27   |
 |  Register |    -   |   525  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    2   |  4274  |   946  |
+|   Total   |    2   |  4414  |   937  |
 +-----------+--------+--------+--------+

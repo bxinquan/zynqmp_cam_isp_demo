@@ -1,0 +1,17 @@
+
+*** Running vivado
+    with args -log design_1_xil_vip_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xil_vip_0_1.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_xil_vip_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/zynqmp_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_xil_vip_0_1, cache-ID = c29982d8231073c4.
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 00:30:09 2022...

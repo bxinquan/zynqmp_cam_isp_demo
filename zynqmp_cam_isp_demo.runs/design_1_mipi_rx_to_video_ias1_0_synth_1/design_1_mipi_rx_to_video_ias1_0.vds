@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Dec 10 20:27:38 2022
-# Process ID: 16180
+# Start of session at: Sat Dec 17 00:27:26 2022
+# Process ID: 26060
 # Current directory: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1
 # Command line: vivado.exe -log design_1_mipi_rx_to_video_ias1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mipi_rx_to_video_ias1_0.tcl
 # Log file: D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/design_1_mipi_rx_to_video_ias1_0.vds
@@ -21,10 +21,10 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23752
+INFO: [Synth 8-7075] Helper process launched with PID 25884
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1700.820 ; gain = 319.812
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1701.027 ; gain = 319.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_rx_to_video_ias1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ip/design_1_mipi_rx_to_video_ias1_0/synth/design_1_mipi_rx_to_video_ias1_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'mipi_rx_to_video_v1_0' [d:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.gen/sources_1/bd/design_1/ipshared/6a38/hdl/mipi_rx_to_video_v1_0.v:4]
@@ -121,18 +121,18 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module mipi_rx_to_video_v1_0_S00
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module mipi_rx_to_video_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1794.875 ; gain = 413.867
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1795.141 ; gain = 413.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1812.805 ; gain = 431.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1813.070 ; gain = 431.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1812.805 ; gain = 431.797
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1813.070 ; gain = 431.203
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1824.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1825.086 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -151,16 +151,16 @@ Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_
 Finished Parsing XDC File [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1930.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1934.434 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   IBUFDS_DPHY => IBUFDS_DPHY (DPHY_DIFFINBUF, IBUFCTRL): 3 instances
 
 INFO: [Timing 38-2] Deriving generated clocks
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1930.215 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1934.434 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1930.215 ; gain = 549.207
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1934.434 ; gain = 552.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -168,17 +168,17 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1930.215 ; gain = 549.207
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1934.434 ; gain = 552.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1930.215 ; gain = 549.207
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1934.434 ; gain = 552.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1930.215 ; gain = 549.207
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1934.434 ; gain = 552.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -271,25 +271,25 @@ WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module mipi_rx_to_video_v1_0 i
 WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module mipi_rx_to_video_v1_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1930.215 ; gain = 549.207
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1934.434 ; gain = 552.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 2365.242 ; gain = 984.234
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2367.984 ; gain = 986.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:02 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:02 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -307,37 +307,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -371,13 +371,13 @@ Report Cell Usage:
 |17    |IBUFDS_DPHY |     3|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2450.094 ; gain = 951.676
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:08 . Memory (MB): peak = 2450.094 ; gain = 1069.086
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 2453.750 ; gain = 950.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2453.750 ; gain = 1071.883
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2450.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2453.750 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -388,7 +388,7 @@ WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.
 WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
 WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2478.070 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2480.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   IBUFDS_DPHY => IBUFDS_DPHY (DPHY_DIFFINBUF, IBUFCTRL): 3 instances
@@ -397,10 +397,10 @@ Synth Design complete, checksum: a77e1217
 INFO: [Common 17-83] Releasing license: Synthesis
 60 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 2478.070 ; gain = 1198.309
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 2480.414 ; gain = 1199.906
 INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/design_1_mipi_rx_to_video_ias1_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_mipi_rx_to_video_ias1_0, cache-ID = 57414e1521bbbaee
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_mipi_rx_to_video_ias1_0, cache-ID = f950d274077c259c
 INFO: [Coretcl 2-1174] Renamed 16 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_mipi_rx_to_video_ias1_0_synth_1/design_1_mipi_rx_to_video_ias1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_mipi_rx_to_video_ias1_0_utilization_synth.rpt -pb design_1_mipi_rx_to_video_ias1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 10 20:29:03 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 17 00:28:45 2022...

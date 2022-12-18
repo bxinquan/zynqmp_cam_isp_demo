@@ -105,8 +105,16 @@ design_1_zynq_ultra_ps_e_0_0_sc::design_1_zynq_ultra_ps_e_0_0_sc(const sc_core::
   // initialize AXI sockets
   M_AXI_HPM0_FPD_rd_socket = mp_impl->M_AXI_HPM0_FPD_rd_socket;
   M_AXI_HPM0_FPD_wr_socket = mp_impl->M_AXI_HPM0_FPD_wr_socket;
+  M_AXI_HPM1_FPD_rd_socket = mp_impl->M_AXI_HPM1_FPD_rd_socket;
+  M_AXI_HPM1_FPD_wr_socket = mp_impl->M_AXI_HPM1_FPD_wr_socket;
+  S_AXI_HPC0_FPD_rd_socket = mp_impl->S_AXI_HPC0_FPD_rd_socket;
+  S_AXI_HPC0_FPD_wr_socket = mp_impl->S_AXI_HPC0_FPD_wr_socket;
   S_AXI_HP0_FPD_rd_socket = mp_impl->S_AXI_HP0_FPD_rd_socket;
   S_AXI_HP0_FPD_wr_socket = mp_impl->S_AXI_HP0_FPD_wr_socket;
+  S_AXI_HP1_FPD_rd_socket = mp_impl->S_AXI_HP1_FPD_rd_socket;
+  S_AXI_HP1_FPD_wr_socket = mp_impl->S_AXI_HP1_FPD_wr_socket;
+  S_AXI_HP2_FPD_rd_socket = mp_impl->S_AXI_HP2_FPD_rd_socket;
+  S_AXI_HP2_FPD_wr_socket = mp_impl->S_AXI_HP2_FPD_wr_socket;
 }
 
 design_1_zynq_ultra_ps_e_0_0_sc::~design_1_zynq_ultra_ps_e_0_0_sc()

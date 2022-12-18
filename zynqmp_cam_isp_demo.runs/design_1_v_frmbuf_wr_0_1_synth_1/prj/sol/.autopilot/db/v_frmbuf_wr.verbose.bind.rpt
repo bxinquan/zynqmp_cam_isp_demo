@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'v_frmbuf_wr'
 ================================================================
-* Date:           Sat Dec 10 20:38:35 2022
+* Date:           Sat Dec 17 00:27:22 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.864 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |   Latency (cycles)  |   Latency (absolute)  |     Interval    | Pipeline|
     |   min   |    max    |    min    |    max    | min |    max    |   Type  |
     +---------+-----------+-----------+-----------+-----+-----------+---------+
-    |       13|  283141447|  86.619 ns|  1.887 sec|   14|  283141448|       no|
+    |       16|  283145769|  53.328 ns|  0.944 sec|   17|  283145770|       no|
     +---------+-----------+-----------+-----------+-----+-----------+---------+
 
     + Detail: 
@@ -38,7 +38,7 @@
         |                                |                     |   Latency (cycles)  |   Latency (absolute)  |     Interval    | Pipeline |
         |            Instance            |        Module       |   min   |    max    |    min    |    max    | min |    max    |   Type   |
         +--------------------------------+---------------------+---------+-----------+-----------+-----------+-----+-----------+----------+
-        |grp_FrmbufWrHlsDataFlow_fu_162  |FrmbufWrHlsDataFlow  |       11|  283141445|  73.293 ns|  1.887 sec|    7|  283141443|  dataflow|
+        |grp_FrmbufWrHlsDataFlow_fu_162  |FrmbufWrHlsDataFlow  |       12|  283145765|  39.996 ns|  0.944 sec|    7|  283145764|  dataflow|
         +--------------------------------+---------------------+---------+-----------+-----------+-----------+-----+-----------+----------+
 
         * Loop: 
@@ -70,78 +70,84 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 3
+* Number of FSM states : 5
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
 1 --> 2 
 2 --> 3 
-3 --> 
+3 --> 4 
+4 --> 5 
+5 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.67>
-ST_1 : Operation 4 [1/1] (1.00ns)   --->   "%frm_buffer2_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %frm_buffer2"   --->   Operation 4 'read' 'frm_buffer2_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 5 [1/1] (1.00ns)   --->   "%frm_buffer_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %frm_buffer"   --->   Operation 5 'read' 'frm_buffer_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%video_format_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %video_format"   --->   Operation 6 'read' 'video_format_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%stride_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %stride"   --->   Operation 7 'read' 'stride_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%height_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %height"   --->   Operation 8 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%width_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %width"   --->   Operation 9 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty = trunc i16 %width_read"   --->   Operation 10 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%empty_64 = trunc i16 %video_format_read"   --->   Operation 11 'trunc' 'empty_64' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty_65 = trunc i16 %height_read"   --->   Operation 12 'trunc' 'empty_65' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln150 = zext i16 %video_format_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 13 'zext' 'zext_ln150' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%BYTES_PER_PIXEL_addr = getelementptr i3 %BYTES_PER_PIXEL, i32 0, i32 %zext_ln150" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 14 'getelementptr' 'BYTES_PER_PIXEL_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [2/2] (0.67ns)   --->   "%BYTES_PER_PIXEL_load = load i6 %BYTES_PER_PIXEL_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 15 'load' 'BYTES_PER_PIXEL_load' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%MEMORY2LIVE_addr = getelementptr i3 %MEMORY2LIVE, i32 0, i32 %zext_ln150" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:153]   --->   Operation 16 'getelementptr' 'MEMORY2LIVE_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [2/2] (0.67ns)   --->   "%colorFormat = load i6 %MEMORY2LIVE_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:153]   --->   Operation 17 'load' 'colorFormat' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
+ST_1 : Operation 6 [1/1] (1.00ns)   --->   "%frm_buffer2_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %frm_buffer2"   --->   Operation 6 'read' 'frm_buffer2_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 7 [1/1] (1.00ns)   --->   "%frm_buffer_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %frm_buffer"   --->   Operation 7 'read' 'frm_buffer_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 8 [1/1] (1.00ns)   --->   "%video_format_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %video_format"   --->   Operation 8 'read' 'video_format_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 9 [1/1] (1.00ns)   --->   "%stride_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %stride"   --->   Operation 9 'read' 'stride_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 10 [1/1] (1.00ns)   --->   "%height_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %height"   --->   Operation 10 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 11 [1/1] (1.00ns)   --->   "%width_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %width"   --->   Operation 11 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%empty = trunc i16 %width_read"   --->   Operation 12 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%empty_64 = trunc i16 %video_format_read"   --->   Operation 13 'trunc' 'empty_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty_65 = trunc i16 %height_read"   --->   Operation 14 'trunc' 'empty_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln150 = zext i16 %video_format_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 15 'zext' 'zext_ln150' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%BYTES_PER_PIXEL_addr = getelementptr i3 %BYTES_PER_PIXEL, i32 0, i32 %zext_ln150" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 16 'getelementptr' 'BYTES_PER_PIXEL_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (0.67ns)   --->   "%BYTES_PER_PIXEL_load = load i6 %BYTES_PER_PIXEL_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 17 'load' 'BYTES_PER_PIXEL_load' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%MEMORY2LIVE_addr = getelementptr i3 %MEMORY2LIVE, i32 0, i32 %zext_ln150" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:153]   --->   Operation 18 'getelementptr' 'MEMORY2LIVE_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [2/2] (0.67ns)   --->   "%colorFormat = load i6 %MEMORY2LIVE_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:153]   --->   Operation 19 'load' 'colorFormat' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
 
-State 2 <SV = 1> <Delay = 4.70>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%width_cast1_cast = zext i12 %empty"   --->   Operation 18 'zext' 'width_cast1_cast' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 19 [1/2] (0.67ns)   --->   "%BYTES_PER_PIXEL_load = load i6 %BYTES_PER_PIXEL_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 19 'load' 'BYTES_PER_PIXEL_load' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
-ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln150_1 = zext i3 %BYTES_PER_PIXEL_load" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 20 'zext' 'zext_ln150_1' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (2.18ns)   --->   "%WidthInBytes = mul i15 %width_cast1_cast, i15 %zext_ln150_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 21 'mul' 'WidthInBytes' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 22 [1/2] (0.67ns)   --->   "%colorFormat = load i6 %MEMORY2LIVE_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:153]   --->   Operation 22 'load' 'colorFormat' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
-ST_2 : Operation 23 [2/2] (1.83ns)   --->   "%call_ln154 = call void @FrmbufWrHlsDataFlow, i24 %s_axis_video_V_data_V, i3 %s_axis_video_V_keep_V, i3 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i64 %mm_video, i32 %frm_buffer_read, i32 %frm_buffer2_read, i15 %WidthInBytes, i3 %colorFormat, i12 %empty, i12 %empty_65, i16 %stride_read, i6 %empty_64" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:154]   --->   Operation 23 'call' 'call_ln154' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 2 <SV = 1> <Delay = 0.67>
+ST_2 : Operation 20 [1/2] (0.67ns)   --->   "%BYTES_PER_PIXEL_load = load i6 %BYTES_PER_PIXEL_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 20 'load' 'BYTES_PER_PIXEL_load' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
+ST_2 : Operation 21 [1/2] (0.67ns)   --->   "%colorFormat = load i6 %MEMORY2LIVE_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:153]   --->   Operation 21 'load' 'colorFormat' <Predicate = true> <Delay = 0.67> <CoreInst = "ROM">   --->   Core 101 'ROM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 3> <Depth = 44> <ROM>
 
-State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%spectopmodule_ln73 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:73]   --->   Operation 24 'spectopmodule' 'spectopmodule_ln73' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mm_video, void @empty_17, i32 0, i32 0, void @empty_18, i32 100, i32 2073600, void @empty_34, void @empty_20, void @empty_18, i32 16, i32 4, i32 16, i32 16, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %mm_video"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %width"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_22, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %height"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_24, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %stride"   --->   Operation 33 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stride, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_25, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stride, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %video_format"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %video_format, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_26, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %video_format, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_28, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer2, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_31, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer2, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer3, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_11, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer3, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %s_axis_video_V_data_V, i3 %s_axis_video_V_keep_V, i3 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, void @empty_32, i32 1, i32 1, void @empty_29, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %s_axis_video_V_data_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %s_axis_video_V_keep_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %s_axis_video_V_strb_V"   --->   Operation 48 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_user_V"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_last_V"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_id_V"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_dest_V"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 53 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%specstablecontent_ln99 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %width, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:99]   --->   Operation 54 'specstablecontent' 'specstablecontent_ln99' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%specstablecontent_ln101 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %height, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:101]   --->   Operation 55 'specstablecontent' 'specstablecontent_ln101' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%specstablecontent_ln103 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %stride, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:103]   --->   Operation 56 'specstablecontent' 'specstablecontent_ln103' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%specstablecontent_ln105 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %video_format, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:105]   --->   Operation 57 'specstablecontent' 'specstablecontent_ln105' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 58 [1/2] (0.00ns)   --->   "%call_ln154 = call void @FrmbufWrHlsDataFlow, i24 %s_axis_video_V_data_V, i3 %s_axis_video_V_keep_V, i3 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i64 %mm_video, i32 %frm_buffer_read, i32 %frm_buffer2_read, i15 %WidthInBytes, i3 %colorFormat, i12 %empty, i12 %empty_65, i16 %stride_read, i6 %empty_64" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:154]   --->   Operation 58 'call' 'call_ln154' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%ret_ln160 = ret" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:160]   --->   Operation 59 'ret' 'ret_ln160' <Predicate = true> <Delay = 0.00>
+State 3 <SV = 2> <Delay = 2.18>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%width_cast1_cast = zext i12 %empty"   --->   Operation 22 'zext' 'width_cast1_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln150_1 = zext i3 %BYTES_PER_PIXEL_load" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 23 'zext' 'zext_ln150_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (2.18ns)   --->   "%WidthInBytes = mul i15 %width_cast1_cast, i15 %zext_ln150_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:150]   --->   Operation 24 'mul' 'WidthInBytes' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.21>
+ST_4 : Operation 25 [2/2] (1.21ns)   --->   "%call_ln154 = call void @FrmbufWrHlsDataFlow, i24 %s_axis_video_V_data_V, i3 %s_axis_video_V_keep_V, i3 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i64 %mm_video, i32 %frm_buffer_read, i32 %frm_buffer2_read, i15 %WidthInBytes, i3 %colorFormat, i12 %empty, i12 %empty_65, i16 %stride_read, i6 %empty_64" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:154]   --->   Operation 25 'call' 'call_ln154' <Predicate = true> <Delay = 1.21> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%spectopmodule_ln73 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:73]   --->   Operation 26 'spectopmodule' 'spectopmodule_ln73' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mm_video, void @empty_17, i32 0, i32 0, void @empty_18, i32 100, i32 2073600, void @empty_34, void @empty_20, void @empty_18, i32 16, i32 4, i32 16, i32 16, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %mm_video"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %width"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_22, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %height"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_24, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %stride"   --->   Operation 35 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stride, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_25, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %stride, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %video_format"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %video_format, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_26, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %video_format, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_28, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer2, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_31, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer2, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer3, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_11, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %frm_buffer3, void @empty_23, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_6, i32 4294967295, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i24 %s_axis_video_V_data_V, i3 %s_axis_video_V_keep_V, i3 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, void @empty_32, i32 1, i32 1, void @empty_29, i32 0, i32 0, void @empty_18, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 47 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i24 %s_axis_video_V_data_V"   --->   Operation 48 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %s_axis_video_V_keep_V"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i3 %s_axis_video_V_strb_V"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_user_V"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_last_V"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_id_V"   --->   Operation 53 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_dest_V"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_21, i32 0, i32 0, void @empty_18, i32 0, i32 0, void @empty_15, void @empty_18, void @empty_18, i32 0, i32 0, i32 0, i32 0, void @empty_18, void @empty_18, i32 4294967295, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%specstablecontent_ln99 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %width, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:99]   --->   Operation 56 'specstablecontent' 'specstablecontent_ln99' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%specstablecontent_ln101 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %height, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:101]   --->   Operation 57 'specstablecontent' 'specstablecontent_ln101' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%specstablecontent_ln103 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %stride, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:103]   --->   Operation 58 'specstablecontent' 'specstablecontent_ln103' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%specstablecontent_ln105 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %video_format, void " [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:105]   --->   Operation 59 'specstablecontent' 'specstablecontent_ln105' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 60 [1/2] (0.00ns)   --->   "%call_ln154 = call void @FrmbufWrHlsDataFlow, i24 %s_axis_video_V_data_V, i3 %s_axis_video_V_keep_V, i3 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i64 %mm_video, i32 %frm_buffer_read, i32 %frm_buffer2_read, i15 %WidthInBytes, i3 %colorFormat, i12 %empty, i12 %empty_65, i16 %stride_read, i6 %empty_64" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:154]   --->   Operation 60 'call' 'call_ln154' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%ret_ln160 = ret" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_1_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:160]   --->   Operation 61 'ret' 'ret_ln160' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -178,59 +184,59 @@ Port [ MEMORY2LIVE]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1
 
 <LifeTime>
 <method=bitvector/>
-frm_buffer2_read        (read             ) [ 0011]
-frm_buffer_read         (read             ) [ 0011]
-video_format_read       (read             ) [ 0000]
-stride_read             (read             ) [ 0011]
-height_read             (read             ) [ 0000]
-width_read              (read             ) [ 0000]
-empty                   (trunc            ) [ 0011]
-empty_64                (trunc            ) [ 0011]
-empty_65                (trunc            ) [ 0011]
-zext_ln150              (zext             ) [ 0000]
-BYTES_PER_PIXEL_addr    (getelementptr    ) [ 0010]
-MEMORY2LIVE_addr        (getelementptr    ) [ 0010]
-width_cast1_cast        (zext             ) [ 0000]
-BYTES_PER_PIXEL_load    (load             ) [ 0000]
-zext_ln150_1            (zext             ) [ 0000]
-WidthInBytes            (mul              ) [ 0001]
-colorFormat             (load             ) [ 0001]
-spectopmodule_ln73      (spectopmodule    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specbitsmap_ln0         (specbitsmap      ) [ 0000]
-specinterface_ln0       (specinterface    ) [ 0000]
-specstablecontent_ln99  (specstablecontent) [ 0000]
-specstablecontent_ln101 (specstablecontent) [ 0000]
-specstablecontent_ln103 (specstablecontent) [ 0000]
-specstablecontent_ln105 (specstablecontent) [ 0000]
-call_ln154              (call             ) [ 0000]
-ret_ln160               (ret              ) [ 0000]
+frm_buffer2_read        (read             ) [ 001111]
+frm_buffer_read         (read             ) [ 001111]
+video_format_read       (read             ) [ 000000]
+stride_read             (read             ) [ 001111]
+height_read             (read             ) [ 000000]
+width_read              (read             ) [ 000000]
+empty                   (trunc            ) [ 001111]
+empty_64                (trunc            ) [ 001111]
+empty_65                (trunc            ) [ 001111]
+zext_ln150              (zext             ) [ 000000]
+BYTES_PER_PIXEL_addr    (getelementptr    ) [ 001000]
+MEMORY2LIVE_addr        (getelementptr    ) [ 001000]
+BYTES_PER_PIXEL_load    (load             ) [ 000100]
+colorFormat             (load             ) [ 000111]
+width_cast1_cast        (zext             ) [ 000000]
+zext_ln150_1            (zext             ) [ 000000]
+WidthInBytes            (mul              ) [ 000011]
+spectopmodule_ln73      (spectopmodule    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specbitsmap_ln0         (specbitsmap      ) [ 000000]
+specinterface_ln0       (specinterface    ) [ 000000]
+specstablecontent_ln99  (specstablecontent) [ 000000]
+specstablecontent_ln101 (specstablecontent) [ 000000]
+specstablecontent_ln103 (specstablecontent) [ 000000]
+specstablecontent_ln105 (specstablecontent) [ 000000]
+call_ln154              (call             ) [ 000000]
+ret_ln160               (ret              ) [ 000000]
 </LifeTime>
 
 <model>
@@ -692,7 +698,7 @@ ret_ln160               (ret              ) [ 0000]
 <pin_list>
 <pin id="101" dir="0" index="0" bw="32" slack="0"/>
 <pin id="102" dir="0" index="1" bw="32" slack="0"/>
-<pin id="103" dir="1" index="2" bw="32" slack="1"/>
+<pin id="103" dir="1" index="2" bw="32" slack="3"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -704,7 +710,7 @@ ret_ln160               (ret              ) [ 0000]
 <pin_list>
 <pin id="107" dir="0" index="0" bw="32" slack="0"/>
 <pin id="108" dir="0" index="1" bw="32" slack="0"/>
-<pin id="109" dir="1" index="2" bw="32" slack="1"/>
+<pin id="109" dir="1" index="2" bw="32" slack="3"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -728,7 +734,7 @@ ret_ln160               (ret              ) [ 0000]
 <pin_list>
 <pin id="119" dir="0" index="0" bw="16" slack="0"/>
 <pin id="120" dir="0" index="1" bw="16" slack="0"/>
-<pin id="121" dir="1" index="2" bw="16" slack="1"/>
+<pin id="121" dir="1" index="2" bw="16" slack="3"/>
 </pin_list>
 <bind>
 <opcode="read(1150) " fcode="read"/>
@@ -778,7 +784,7 @@ ret_ln160               (ret              ) [ 0000]
 <pin id="144" dir="0" index="0" bw="6" slack="0"/>
 <pin id="145" dir="0" index="1" bw="3" slack="2147483647"/>
 <pin id="146" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="147" dir="1" index="3" bw="3" slack="0"/>
+<pin id="147" dir="1" index="3" bw="3" slack="1"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -804,7 +810,7 @@ ret_ln160               (ret              ) [ 0000]
 <pin id="157" dir="0" index="0" bw="6" slack="0"/>
 <pin id="158" dir="0" index="1" bw="3" slack="2147483647"/>
 <pin id="159" dir="0" index="2" bw="0" slack="2147483647"/>
-<pin id="160" dir="1" index="3" bw="3" slack="0"/>
+<pin id="160" dir="1" index="3" bw="3" slack="2"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -823,26 +829,26 @@ ret_ln160               (ret              ) [ 0000]
 <pin id="169" dir="0" index="6" bw="1" slack="0"/>
 <pin id="170" dir="0" index="7" bw="1" slack="0"/>
 <pin id="171" dir="0" index="8" bw="64" slack="0"/>
-<pin id="172" dir="0" index="9" bw="32" slack="1"/>
-<pin id="173" dir="0" index="10" bw="32" slack="1"/>
-<pin id="174" dir="0" index="11" bw="15" slack="0"/>
-<pin id="175" dir="0" index="12" bw="3" slack="0"/>
-<pin id="176" dir="0" index="13" bw="12" slack="1"/>
-<pin id="177" dir="0" index="14" bw="12" slack="1"/>
-<pin id="178" dir="0" index="15" bw="16" slack="1"/>
-<pin id="179" dir="0" index="16" bw="6" slack="1"/>
+<pin id="172" dir="0" index="9" bw="32" slack="3"/>
+<pin id="173" dir="0" index="10" bw="32" slack="3"/>
+<pin id="174" dir="0" index="11" bw="15" slack="1"/>
+<pin id="175" dir="0" index="12" bw="3" slack="2"/>
+<pin id="176" dir="0" index="13" bw="12" slack="3"/>
+<pin id="177" dir="0" index="14" bw="12" slack="3"/>
+<pin id="178" dir="0" index="15" bw="16" slack="3"/>
+<pin id="179" dir="0" index="16" bw="6" slack="3"/>
 <pin id="180" dir="1" index="17" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln154/2 "/>
+<opset="call_ln154/4 "/>
 </bind>
 </comp>
 
-<comp id="191" class="1004" name="empty_fu_191">
+<comp id="190" class="1004" name="empty_fu_190">
 <pin_list>
-<pin id="192" dir="0" index="0" bw="16" slack="0"/>
-<pin id="193" dir="1" index="1" bw="12" slack="1"/>
+<pin id="191" dir="0" index="0" bw="16" slack="0"/>
+<pin id="192" dir="1" index="1" bw="12" slack="2"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -850,10 +856,10 @@ ret_ln160               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="195" class="1004" name="empty_64_fu_195">
+<comp id="194" class="1004" name="empty_64_fu_194">
 <pin_list>
-<pin id="196" dir="0" index="0" bw="16" slack="0"/>
-<pin id="197" dir="1" index="1" bw="6" slack="1"/>
+<pin id="195" dir="0" index="0" bw="16" slack="0"/>
+<pin id="196" dir="1" index="1" bw="6" slack="3"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -861,10 +867,10 @@ ret_ln160               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="199" class="1004" name="empty_65_fu_199">
+<comp id="198" class="1004" name="empty_65_fu_198">
 <pin_list>
-<pin id="200" dir="0" index="0" bw="16" slack="0"/>
-<pin id="201" dir="1" index="1" bw="12" slack="1"/>
+<pin id="199" dir="0" index="0" bw="16" slack="0"/>
+<pin id="200" dir="1" index="1" bw="12" slack="3"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -872,10 +878,10 @@ ret_ln160               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="203" class="1004" name="zext_ln150_fu_203">
+<comp id="202" class="1004" name="zext_ln150_fu_202">
 <pin_list>
-<pin id="204" dir="0" index="0" bw="16" slack="0"/>
-<pin id="205" dir="1" index="1" bw="32" slack="0"/>
+<pin id="203" dir="0" index="0" bw="16" slack="0"/>
+<pin id="204" dir="1" index="1" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
@@ -883,137 +889,147 @@ ret_ln160               (ret              ) [ 0000]
 </bind>
 </comp>
 
-<comp id="209" class="1004" name="width_cast1_cast_fu_209">
+<comp id="208" class="1004" name="width_cast1_cast_fu_208">
 <pin_list>
-<pin id="210" dir="0" index="0" bw="12" slack="1"/>
-<pin id="211" dir="1" index="1" bw="15" slack="0"/>
+<pin id="209" dir="0" index="0" bw="12" slack="2"/>
+<pin id="210" dir="1" index="1" bw="15" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="width_cast1_cast/2 "/>
+<opset="width_cast1_cast/3 "/>
 </bind>
 </comp>
 
-<comp id="212" class="1004" name="zext_ln150_1_fu_212">
+<comp id="211" class="1004" name="zext_ln150_1_fu_211">
 <pin_list>
-<pin id="213" dir="0" index="0" bw="3" slack="0"/>
-<pin id="214" dir="1" index="1" bw="15" slack="0"/>
+<pin id="212" dir="0" index="0" bw="3" slack="1"/>
+<pin id="213" dir="1" index="1" bw="15" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln150_1/2 "/>
+<opset="zext_ln150_1/3 "/>
 </bind>
 </comp>
 
-<comp id="216" class="1004" name="WidthInBytes_fu_216">
+<comp id="214" class="1004" name="WidthInBytes_fu_214">
 <pin_list>
-<pin id="217" dir="0" index="0" bw="12" slack="0"/>
-<pin id="218" dir="0" index="1" bw="3" slack="0"/>
-<pin id="219" dir="1" index="2" bw="15" slack="0"/>
+<pin id="215" dir="0" index="0" bw="12" slack="0"/>
+<pin id="216" dir="0" index="1" bw="3" slack="0"/>
+<pin id="217" dir="1" index="2" bw="15" slack="1"/>
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
-<opset="WidthInBytes/2 "/>
+<opset="WidthInBytes/3 "/>
 </bind>
 </comp>
 
-<comp id="223" class="1005" name="frm_buffer2_read_reg_223">
+<comp id="220" class="1005" name="frm_buffer2_read_reg_220">
 <pin_list>
-<pin id="224" dir="0" index="0" bw="32" slack="1"/>
-<pin id="225" dir="1" index="1" bw="32" slack="1"/>
+<pin id="221" dir="0" index="0" bw="32" slack="3"/>
+<pin id="222" dir="1" index="1" bw="32" slack="3"/>
 </pin_list>
 <bind>
 <opset="frm_buffer2_read "/>
 </bind>
 </comp>
 
-<comp id="228" class="1005" name="frm_buffer_read_reg_228">
+<comp id="225" class="1005" name="frm_buffer_read_reg_225">
 <pin_list>
-<pin id="229" dir="0" index="0" bw="32" slack="1"/>
-<pin id="230" dir="1" index="1" bw="32" slack="1"/>
+<pin id="226" dir="0" index="0" bw="32" slack="3"/>
+<pin id="227" dir="1" index="1" bw="32" slack="3"/>
 </pin_list>
 <bind>
 <opset="frm_buffer_read "/>
 </bind>
 </comp>
 
-<comp id="233" class="1005" name="stride_read_reg_233">
+<comp id="230" class="1005" name="stride_read_reg_230">
 <pin_list>
-<pin id="234" dir="0" index="0" bw="16" slack="1"/>
-<pin id="235" dir="1" index="1" bw="16" slack="1"/>
+<pin id="231" dir="0" index="0" bw="16" slack="3"/>
+<pin id="232" dir="1" index="1" bw="16" slack="3"/>
 </pin_list>
 <bind>
 <opset="stride_read "/>
 </bind>
 </comp>
 
-<comp id="238" class="1005" name="empty_reg_238">
+<comp id="235" class="1005" name="empty_reg_235">
 <pin_list>
-<pin id="239" dir="0" index="0" bw="12" slack="1"/>
-<pin id="240" dir="1" index="1" bw="12" slack="1"/>
+<pin id="236" dir="0" index="0" bw="12" slack="2"/>
+<pin id="237" dir="1" index="1" bw="12" slack="2"/>
 </pin_list>
 <bind>
 <opset="empty "/>
 </bind>
 </comp>
 
-<comp id="244" class="1005" name="empty_64_reg_244">
+<comp id="241" class="1005" name="empty_64_reg_241">
 <pin_list>
-<pin id="245" dir="0" index="0" bw="6" slack="1"/>
-<pin id="246" dir="1" index="1" bw="6" slack="1"/>
+<pin id="242" dir="0" index="0" bw="6" slack="3"/>
+<pin id="243" dir="1" index="1" bw="6" slack="3"/>
 </pin_list>
 <bind>
 <opset="empty_64 "/>
 </bind>
 </comp>
 
-<comp id="249" class="1005" name="empty_65_reg_249">
+<comp id="246" class="1005" name="empty_65_reg_246">
 <pin_list>
-<pin id="250" dir="0" index="0" bw="12" slack="1"/>
-<pin id="251" dir="1" index="1" bw="12" slack="1"/>
+<pin id="247" dir="0" index="0" bw="12" slack="3"/>
+<pin id="248" dir="1" index="1" bw="12" slack="3"/>
 </pin_list>
 <bind>
 <opset="empty_65 "/>
 </bind>
 </comp>
 
-<comp id="254" class="1005" name="BYTES_PER_PIXEL_addr_reg_254">
+<comp id="251" class="1005" name="BYTES_PER_PIXEL_addr_reg_251">
 <pin_list>
-<pin id="255" dir="0" index="0" bw="6" slack="1"/>
-<pin id="256" dir="1" index="1" bw="6" slack="1"/>
+<pin id="252" dir="0" index="0" bw="6" slack="1"/>
+<pin id="253" dir="1" index="1" bw="6" slack="1"/>
 </pin_list>
 <bind>
 <opset="BYTES_PER_PIXEL_addr "/>
 </bind>
 </comp>
 
-<comp id="259" class="1005" name="MEMORY2LIVE_addr_reg_259">
+<comp id="256" class="1005" name="MEMORY2LIVE_addr_reg_256">
 <pin_list>
-<pin id="260" dir="0" index="0" bw="6" slack="1"/>
-<pin id="261" dir="1" index="1" bw="6" slack="1"/>
+<pin id="257" dir="0" index="0" bw="6" slack="1"/>
+<pin id="258" dir="1" index="1" bw="6" slack="1"/>
 </pin_list>
 <bind>
 <opset="MEMORY2LIVE_addr "/>
 </bind>
 </comp>
 
-<comp id="264" class="1005" name="WidthInBytes_reg_264">
+<comp id="261" class="1005" name="BYTES_PER_PIXEL_load_reg_261">
 <pin_list>
-<pin id="265" dir="0" index="0" bw="15" slack="1"/>
-<pin id="266" dir="1" index="1" bw="15" slack="1"/>
+<pin id="262" dir="0" index="0" bw="3" slack="1"/>
+<pin id="263" dir="1" index="1" bw="3" slack="1"/>
 </pin_list>
 <bind>
-<opset="WidthInBytes "/>
+<opset="BYTES_PER_PIXEL_load "/>
 </bind>
 </comp>
 
-<comp id="269" class="1005" name="colorFormat_reg_269">
+<comp id="266" class="1005" name="colorFormat_reg_266">
 <pin_list>
-<pin id="270" dir="0" index="0" bw="3" slack="1"/>
-<pin id="271" dir="1" index="1" bw="3" slack="1"/>
+<pin id="267" dir="0" index="0" bw="3" slack="2"/>
+<pin id="268" dir="1" index="1" bw="3" slack="2"/>
 </pin_list>
 <bind>
 <opset="colorFormat "/>
+</bind>
+</comp>
+
+<comp id="271" class="1005" name="WidthInBytes_reg_271">
+<pin_list>
+<pin id="272" dir="0" index="0" bw="15" slack="1"/>
+<pin id="273" dir="1" index="1" bw="15" slack="1"/>
+</pin_list>
+<bind>
+<opset="WidthInBytes "/>
 </bind>
 </comp>
 
@@ -1074,69 +1090,67 @@ ret_ln160               (ret              ) [ 0000]
 
 <net id="189"><net_src comp="0" pin="0"/><net_sink comp="162" pin=8"/></net>
 
-<net id="190"><net_src comp="156" pin="3"/><net_sink comp="162" pin=12"/></net>
+<net id="193"><net_src comp="130" pin="2"/><net_sink comp="190" pin=0"/></net>
 
-<net id="194"><net_src comp="130" pin="2"/><net_sink comp="191" pin=0"/></net>
+<net id="197"><net_src comp="112" pin="2"/><net_sink comp="194" pin=0"/></net>
 
-<net id="198"><net_src comp="112" pin="2"/><net_sink comp="195" pin=0"/></net>
+<net id="201"><net_src comp="124" pin="2"/><net_sink comp="198" pin=0"/></net>
 
-<net id="202"><net_src comp="124" pin="2"/><net_sink comp="199" pin=0"/></net>
+<net id="205"><net_src comp="112" pin="2"/><net_sink comp="202" pin=0"/></net>
 
-<net id="206"><net_src comp="112" pin="2"/><net_sink comp="203" pin=0"/></net>
+<net id="206"><net_src comp="202" pin="1"/><net_sink comp="136" pin=2"/></net>
 
-<net id="207"><net_src comp="203" pin="1"/><net_sink comp="136" pin=2"/></net>
+<net id="207"><net_src comp="202" pin="1"/><net_sink comp="149" pin=2"/></net>
 
-<net id="208"><net_src comp="203" pin="1"/><net_sink comp="149" pin=2"/></net>
+<net id="218"><net_src comp="208" pin="1"/><net_sink comp="214" pin=0"/></net>
 
-<net id="215"><net_src comp="143" pin="3"/><net_sink comp="212" pin=0"/></net>
+<net id="219"><net_src comp="211" pin="1"/><net_sink comp="214" pin=1"/></net>
 
-<net id="220"><net_src comp="209" pin="1"/><net_sink comp="216" pin=0"/></net>
+<net id="223"><net_src comp="100" pin="2"/><net_sink comp="220" pin=0"/></net>
 
-<net id="221"><net_src comp="212" pin="1"/><net_sink comp="216" pin=1"/></net>
+<net id="224"><net_src comp="220" pin="1"/><net_sink comp="162" pin=10"/></net>
 
-<net id="222"><net_src comp="216" pin="2"/><net_sink comp="162" pin=11"/></net>
+<net id="228"><net_src comp="106" pin="2"/><net_sink comp="225" pin=0"/></net>
 
-<net id="226"><net_src comp="100" pin="2"/><net_sink comp="223" pin=0"/></net>
+<net id="229"><net_src comp="225" pin="1"/><net_sink comp="162" pin=9"/></net>
 
-<net id="227"><net_src comp="223" pin="1"/><net_sink comp="162" pin=10"/></net>
+<net id="233"><net_src comp="118" pin="2"/><net_sink comp="230" pin=0"/></net>
 
-<net id="231"><net_src comp="106" pin="2"/><net_sink comp="228" pin=0"/></net>
+<net id="234"><net_src comp="230" pin="1"/><net_sink comp="162" pin=15"/></net>
 
-<net id="232"><net_src comp="228" pin="1"/><net_sink comp="162" pin=9"/></net>
+<net id="238"><net_src comp="190" pin="1"/><net_sink comp="235" pin=0"/></net>
 
-<net id="236"><net_src comp="118" pin="2"/><net_sink comp="233" pin=0"/></net>
+<net id="239"><net_src comp="235" pin="1"/><net_sink comp="208" pin=0"/></net>
 
-<net id="237"><net_src comp="233" pin="1"/><net_sink comp="162" pin=15"/></net>
+<net id="240"><net_src comp="235" pin="1"/><net_sink comp="162" pin=13"/></net>
 
-<net id="241"><net_src comp="191" pin="1"/><net_sink comp="238" pin=0"/></net>
+<net id="244"><net_src comp="194" pin="1"/><net_sink comp="241" pin=0"/></net>
 
-<net id="242"><net_src comp="238" pin="1"/><net_sink comp="209" pin=0"/></net>
+<net id="245"><net_src comp="241" pin="1"/><net_sink comp="162" pin=16"/></net>
 
-<net id="243"><net_src comp="238" pin="1"/><net_sink comp="162" pin=13"/></net>
+<net id="249"><net_src comp="198" pin="1"/><net_sink comp="246" pin=0"/></net>
 
-<net id="247"><net_src comp="195" pin="1"/><net_sink comp="244" pin=0"/></net>
+<net id="250"><net_src comp="246" pin="1"/><net_sink comp="162" pin=14"/></net>
 
-<net id="248"><net_src comp="244" pin="1"/><net_sink comp="162" pin=16"/></net>
+<net id="254"><net_src comp="136" pin="3"/><net_sink comp="251" pin=0"/></net>
 
-<net id="252"><net_src comp="199" pin="1"/><net_sink comp="249" pin=0"/></net>
+<net id="255"><net_src comp="251" pin="1"/><net_sink comp="143" pin=0"/></net>
 
-<net id="253"><net_src comp="249" pin="1"/><net_sink comp="162" pin=14"/></net>
+<net id="259"><net_src comp="149" pin="3"/><net_sink comp="256" pin=0"/></net>
 
-<net id="257"><net_src comp="136" pin="3"/><net_sink comp="254" pin=0"/></net>
+<net id="260"><net_src comp="256" pin="1"/><net_sink comp="156" pin=0"/></net>
 
-<net id="258"><net_src comp="254" pin="1"/><net_sink comp="143" pin=0"/></net>
+<net id="264"><net_src comp="143" pin="3"/><net_sink comp="261" pin=0"/></net>
 
-<net id="262"><net_src comp="149" pin="3"/><net_sink comp="259" pin=0"/></net>
+<net id="265"><net_src comp="261" pin="1"/><net_sink comp="211" pin=0"/></net>
 
-<net id="263"><net_src comp="259" pin="1"/><net_sink comp="156" pin=0"/></net>
+<net id="269"><net_src comp="156" pin="3"/><net_sink comp="266" pin=0"/></net>
 
-<net id="267"><net_src comp="216" pin="2"/><net_sink comp="264" pin=0"/></net>
+<net id="270"><net_src comp="266" pin="1"/><net_sink comp="162" pin=12"/></net>
 
-<net id="268"><net_src comp="264" pin="1"/><net_sink comp="162" pin=11"/></net>
+<net id="274"><net_src comp="214" pin="2"/><net_sink comp="271" pin=0"/></net>
 
-<net id="272"><net_src comp="156" pin="3"/><net_sink comp="269" pin=0"/></net>
-
-<net id="273"><net_src comp="269" pin="1"/><net_sink comp="162" pin=12"/></net>
+<net id="275"><net_src comp="271" pin="1"/><net_sink comp="162" pin=11"/></net>
 
 </net_list>
 
@@ -1145,7 +1159,7 @@ ret_ln160               (ret              ) [ 0000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: mm_video | {2 3 }
+	Port: mm_video | {4 5 }
  - Input state : 
 	Port: v_frmbuf_wr : width | {1 }
 	Port: v_frmbuf_wr : height | {1 }
@@ -1153,13 +1167,13 @@ ret_ln160               (ret              ) [ 0000]
 	Port: v_frmbuf_wr : video_format | {1 }
 	Port: v_frmbuf_wr : frm_buffer | {1 }
 	Port: v_frmbuf_wr : frm_buffer2 | {1 }
-	Port: v_frmbuf_wr : s_axis_video_V_data_V | {2 3 }
-	Port: v_frmbuf_wr : s_axis_video_V_keep_V | {2 3 }
-	Port: v_frmbuf_wr : s_axis_video_V_strb_V | {2 3 }
-	Port: v_frmbuf_wr : s_axis_video_V_user_V | {2 3 }
-	Port: v_frmbuf_wr : s_axis_video_V_last_V | {2 3 }
-	Port: v_frmbuf_wr : s_axis_video_V_id_V | {2 3 }
-	Port: v_frmbuf_wr : s_axis_video_V_dest_V | {2 3 }
+	Port: v_frmbuf_wr : s_axis_video_V_data_V | {4 5 }
+	Port: v_frmbuf_wr : s_axis_video_V_keep_V | {4 5 }
+	Port: v_frmbuf_wr : s_axis_video_V_strb_V | {4 5 }
+	Port: v_frmbuf_wr : s_axis_video_V_user_V | {4 5 }
+	Port: v_frmbuf_wr : s_axis_video_V_last_V | {4 5 }
+	Port: v_frmbuf_wr : s_axis_video_V_id_V | {4 5 }
+	Port: v_frmbuf_wr : s_axis_video_V_dest_V | {4 5 }
 	Port: v_frmbuf_wr : BYTES_PER_PIXEL | {1 2 }
 	Port: v_frmbuf_wr : MEMORY2LIVE | {1 2 }
   - Chain level:
@@ -1169,10 +1183,10 @@ ret_ln160               (ret              ) [ 0000]
 		MEMORY2LIVE_addr : 1
 		colorFormat : 2
 	State 2
-		zext_ln150_1 : 1
-		WidthInBytes : 2
-		call_ln154 : 3
 	State 3
+		WidthInBytes : 1
+	State 4
+	State 5
 
 
 ============================================================
@@ -1183,9 +1197,9 @@ ret_ln160               (ret              ) [ 0000]
 |----------|--------------------------------|---------|---------|---------|---------|
 | Operation|         Functional Unit        |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|--------------------------------|---------|---------|---------|---------|
-|   call   | grp_FrmbufWrHlsDataFlow_fu_162 |    2    |  5.222  |   3168  |   1744  |
+|   call   | grp_FrmbufWrHlsDataFlow_fu_162 |    2    |  5.222  |   3348  |   1744  |
 |----------|--------------------------------|---------|---------|---------|---------|
-|    mul   |       WidthInBytes_fu_216      |    0    |    0    |    0    |    5    |
+|    mul   |       WidthInBytes_fu_214      |    0    |    0    |    0    |    5    |
 |----------|--------------------------------|---------|---------|---------|---------|
 |          |  frm_buffer2_read_read_fu_100  |    0    |    0    |    0    |    0    |
 |          |   frm_buffer_read_read_fu_106  |    0    |    0    |    0    |    0    |
@@ -1194,15 +1208,15 @@ ret_ln160               (ret              ) [ 0000]
 |          |     height_read_read_fu_124    |    0    |    0    |    0    |    0    |
 |          |     width_read_read_fu_130     |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
-|          |          empty_fu_191          |    0    |    0    |    0    |    0    |
-|   trunc  |         empty_64_fu_195        |    0    |    0    |    0    |    0    |
-|          |         empty_65_fu_199        |    0    |    0    |    0    |    0    |
+|          |          empty_fu_190          |    0    |    0    |    0    |    0    |
+|   trunc  |         empty_64_fu_194        |    0    |    0    |    0    |    0    |
+|          |         empty_65_fu_198        |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
-|          |        zext_ln150_fu_203       |    0    |    0    |    0    |    0    |
-|   zext   |     width_cast1_cast_fu_209    |    0    |    0    |    0    |    0    |
-|          |       zext_ln150_1_fu_212      |    0    |    0    |    0    |    0    |
+|          |        zext_ln150_fu_202       |    0    |    0    |    0    |    0    |
+|   zext   |     width_cast1_cast_fu_208    |    0    |    0    |    0    |    0    |
+|          |       zext_ln150_1_fu_211      |    0    |    0    |    0    |    0    |
 |----------|--------------------------------|---------|---------|---------|---------|
-|   Total  |                                |    2    |  5.222  |   3168  |   1749  |
+|   Total  |                                |    2    |  5.222  |   3348  |   1749  |
 |----------|--------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -1219,31 +1233,30 @@ Memories:
 +----------------------------+--------+
 |                            |   FF   |
 +----------------------------+--------+
-|BYTES_PER_PIXEL_addr_reg_254|    6   |
-|  MEMORY2LIVE_addr_reg_259  |    6   |
-|    WidthInBytes_reg_264    |   15   |
-|     colorFormat_reg_269    |    3   |
-|      empty_64_reg_244      |    6   |
-|      empty_65_reg_249      |   12   |
-|        empty_reg_238       |   12   |
-|  frm_buffer2_read_reg_223  |   32   |
-|   frm_buffer_read_reg_228  |   32   |
-|     stride_read_reg_233    |   16   |
+|BYTES_PER_PIXEL_addr_reg_251|    6   |
+|BYTES_PER_PIXEL_load_reg_261|    3   |
+|  MEMORY2LIVE_addr_reg_256  |    6   |
+|    WidthInBytes_reg_271    |   15   |
+|     colorFormat_reg_266    |    3   |
+|      empty_64_reg_241      |    6   |
+|      empty_65_reg_246      |   12   |
+|        empty_reg_235       |   12   |
+|  frm_buffer2_read_reg_220  |   32   |
+|   frm_buffer_read_reg_225  |   32   |
+|     stride_read_reg_230    |   16   |
 +----------------------------+--------+
-|            Total           |   140  |
+|            Total           |   143  |
 +----------------------------+--------+
 
 * Multiplexer (MUX) list: 
-|--------------------------------|------|------|------|--------||---------||---------|
-|              Comp              |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
-|--------------------------------|------|------|------|--------||---------||---------|
-|        grp_access_fu_143       |  p0  |   2  |   6  |   12   ||    9    |
-|        grp_access_fu_156       |  p0  |   2  |   6  |   12   ||    9    |
-| grp_FrmbufWrHlsDataFlow_fu_162 |  p11 |   2  |  15  |   30   ||    9    |
-| grp_FrmbufWrHlsDataFlow_fu_162 |  p12 |   2  |   3  |    6   ||    9    |
-|--------------------------------|------|------|------|--------||---------||---------|
-|              Total             |      |      |      |   60   ||  1.708  ||    36   |
-|--------------------------------|------|------|------|--------||---------||---------|
+|-------------------|------|------|------|--------||---------||---------|
+|        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_143 |  p0  |   2  |   6  |   12   ||    9    |
+| grp_access_fu_156 |  p0  |   2  |   6  |   12   ||    9    |
+|-------------------|------|------|------|--------||---------||---------|
+|       Total       |      |      |      |   24   ||  0.854  ||    18   |
+|-------------------|------|------|------|--------||---------||---------|
 
 
 
@@ -1251,10 +1264,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+--------+
-|  Function |    -   |    2   |    5   |  3168  |  1749  |
+|  Function |    -   |    2   |    5   |  3348  |  1749  |
 |   Memory  |    0   |    -   |    -   |    6   |    6   |
-|Multiplexer|    -   |    -   |    1   |    -   |   36   |
-|  Register |    -   |    -   |    -   |   140  |    -   |
+|Multiplexer|    -   |    -   |    0   |    -   |   18   |
+|  Register |    -   |    -   |    -   |   143  |    -   |
 +-----------+--------+--------+--------+--------+--------+
-|   Total   |    0   |    2   |    6   |  3314  |  1791  |
+|   Total   |    0   |    2   |    6   |  3497  |  1773  |
 +-----------+--------+--------+--------+--------+--------+

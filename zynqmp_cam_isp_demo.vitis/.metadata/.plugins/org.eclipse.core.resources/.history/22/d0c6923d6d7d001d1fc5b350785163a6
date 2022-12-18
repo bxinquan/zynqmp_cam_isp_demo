@@ -1,0 +1,573 @@
+#include <xil_printf.h>
+#include <sleep.h>
+#include <stdio.h>
+
+#include "sys_intc.h"
+#include "xv_frmbufwr_l2.h"
+#include "xv_frmbufrd_l2.h"
+#include "isp_pipe.h"
+#include "xil_isp_lite.h"
+#include "xil_vip.h"
+
+#include "ov5647.h"
+#include "ar1335.h"
+#include "hw_config.h"
+
+#define V_FRM_RD_ID	    XPAR_ISP_PIPE_V_FRM_RD_DEVICE_ID
+#define V_FRM_WR_ID	    XPAR_ISP_PIPE_V_FRM_WR_2_DEVICE_ID
+
+#define ISP_BASE        XPAR_ISP_PIPE_ISP_S00_AXI_BASEADDR
+#define VIP_BASE        XPAR_ISP_PIPE_VIP_2_S00_AXI_BASEADDR
+
+#define ISP_IRQ_INTR    XPAR_AXI_INTC_ISP_PIPE_ISP_IRQ_INTR
+#define VIP_IRQ_INTR    XPAR_AXI_INTC_ISP_PIPE_VIP_2_IRQ_INTR
+#define RD_IRQ_INTR	    XPAR_AXI_INTC_ISP_PIPE_V_FRM_RD_INTERRUPT_INTR
+#define WR_IRQ_INTR	    XPAR_AXI_INTC_ISP_PIPE_V_FRM_WR_2_INTERRUPT_INTR
+
+static unsigned isp_width  = 0;
+static unsigned isp_height = 0;
+static unsigned isp_bits   = 0;
+static unsigned isp_bayer  = 0;
+
+static volatile unsigned _rd_int_num;
+static volatile unsigned _wr_int_num;
+static volatile unsigned _isp_int_num;
+static volatile unsigned _vip_int_num;
+
+static XV_FrmbufRd_l2     v_frmbuf_rd;
+static XV_FrmbufWr_l2     v_frmbuf_wr;
+
+static void _v_frmbuf_rd_callback(void *data)
+{
+	//printf("_v_frmbuf_rd_callback\r\n");
+	_rd_int_num ++;
+	//XVFrmbufRd_Start(&v_frmbuf_rd);
+}
+
+static int v_frmbuf_rd_init(UINTPTR yptr, UINTPTR cptr)
+{
+	int Status;
+	XVidC_ColorFormat Cfmt;
+	XVidC_VideoStream VidStream = {0};
+	u32 StrideInBytes = 0;
+
+	Cfmt = (isp_bits == 10) ? XVIDC_CSF_MEM_Y10 : XVIDC_CSF_MEM_Y8;
+	StrideInBytes = ALIGN((SNS_WIDTH+2) / 3 * 4, 256); //xYYY
+
+	VidStream.ColorFormatId = XVIDC_CSF_YONLY;
+	VidStream.ColorDepth = (isp_bits == 10) ? XVIDC_BPC_10 : XVIDC_BPC_8;
+	VidStream.PixPerClk = XVIDC_PPC_1;
+	VidStream.VmId = XVIDC_VM_CUSTOM;
+	VidStream.FrameRate = XVidC_GetFrameRate(XVIDC_VM_1920x1080_30_P);
+	VidStream.Timing = *(XVidC_GetTimingInfo(XVIDC_VM_1920x1080_30_P));
+	VidStream.AspectRatio = XVIDC_AR_4_3;
+	VidStream.IsInterlaced = 0;
+	VidStream.Is3D = 0;
+	VidStream.Timing.HActive = isp_width;
+	VidStream.Timing.VActive = isp_height;
+
+	Status = XVFrmbufRd_Initialize(&v_frmbuf_rd, V_FRM_RD_ID);
+	if(Status != XST_SUCCESS) {
+	  xil_printf("ERROR:: Frame Buffer Read initialization failed %d(%04X)\r\n", Status, Status);
+	  return(XST_FAILURE);
+	}
+
+	Status = XVFrmbufRd_SetMemFormat(&v_frmbuf_rd, StrideInBytes, Cfmt, &VidStream);
+	if(Status != XST_SUCCESS) {
+	  xil_printf("ERROR:: Unable to configure Frame Buffer Read %d(%04X)\r\n", Status, Status);
+	  return(XST_FAILURE);
+	}
+
+	Status = XVFrmbufRd_SetBufferAddr(&v_frmbuf_rd, yptr);
+	if(Status != XST_SUCCESS) {
+	  xil_printf("ERROR:: Unable to configure Frame Buffer Read buffer address %d(%04X)\r\n", Status, Status);
+	  return(XST_FAILURE);
+	}
+
+	/* Set Chroma Buffer Address for semi-planar color formats */
+	if ((Cfmt == XVIDC_CSF_MEM_Y_UV8) || (Cfmt == XVIDC_CSF_MEM_Y_UV8_420) ||
+	    (Cfmt == XVIDC_CSF_MEM_Y_UV10) || (Cfmt == XVIDC_CSF_MEM_Y_UV10_420)) {
+	  Status = XVFrmbufRd_SetChromaBufferAddr(&v_frmbuf_rd, cptr);
+	  if(Status != XST_SUCCESS) {
+	    xil_printf("ERROR:: Unable to configure Frame Buffer Read chroma buffer address %d(%04X)\r\n", Status, Status);
+	    return(XST_FAILURE);
+	  }
+	}
+
+	XVFrmbufRd_SetCallback(&v_frmbuf_rd, XVFRMBUFRD_HANDLER_DONE, _v_frmbuf_rd_callback, &v_frmbuf_rd);
+
+	/* Enable Interrupt */
+	XVFrmbufRd_InterruptEnable(&v_frmbuf_rd, XVFRMBUFRD_IRQ_DONE_MASK);
+
+	/* Start Frame Buffers */
+	//XVFrmbufRd_Start(&v_frmbuf_rd);
+
+	xil_printf("INFO: FRMBUF configured\r\n");
+	return(Status);
+}
+
+
+static void _v_frmbuf_wr_callback(void *data)
+{
+	//printf("_v_frmbuf_wr_callback\r\n");
+	_wr_int_num ++;
+	XVFrmbufWr_Start(&v_frmbuf_wr);
+}
+
+static int v_frmbuf_wr_init(UINTPTR yptr, UINTPTR cptr)
+{
+	int Status;
+	XVidC_ColorFormat Cfmt;
+	XVidC_VideoStream VidStream = {0};
+	u32 StrideInBytes;
+
+	Cfmt = XVIDC_CSF_MEM_BGR8;
+	StrideInBytes = ALIGN(DISP_WIDTH*3, 256); //RGB align256
+
+	VidStream.ColorFormatId = XVIDC_CSF_RGB;
+	VidStream.ColorDepth = XVIDC_BPC_8;
+	VidStream.PixPerClk = XVIDC_PPC_1;
+	VidStream.VmId = XVIDC_VM_1920x1080_30_P;
+	VidStream.FrameRate = XVidC_GetFrameRate(VidStream.VmId);
+	VidStream.Timing = *(XVidC_GetTimingInfo(VidStream.VmId));
+	VidStream.AspectRatio = XVIDC_AR_16_9;
+	VidStream.IsInterlaced = 0;
+	VidStream.Is3D = 0;
+	VidStream.Timing.HActive = DISP_WIDTH;
+	VidStream.Timing.VActive = DISP_HEIGHT;
+
+	Status = XVFrmbufWr_Initialize(&v_frmbuf_wr, V_FRM_WR_ID);
+	if(Status != XST_SUCCESS) {
+	  xil_printf("ERROR:: Frame Buffer Write initialization failed %d(%04X)\r\n", Status, Status);
+	  return(XST_FAILURE);
+	}
+
+	Status = XVFrmbufWr_SetMemFormat(&v_frmbuf_wr, StrideInBytes, Cfmt, &VidStream);
+	if(Status != XST_SUCCESS) {
+	  xil_printf("ERROR:: Unable to configure Frame Buffer Write %d(%04X)\r\n", Status, Status);
+	  return(XST_FAILURE);
+	}
+
+	Status = XVFrmbufWr_SetBufferAddr(&v_frmbuf_wr, yptr);
+	if(Status != XST_SUCCESS) {
+	  xil_printf("ERROR:: Unable to configure Frame Buffer Write buffer address %d(%04X)\r\n", Status, Status);
+	  return(XST_FAILURE);
+	}
+
+	/* Set Chroma Buffer Address for semi-planar color formats */
+	if ((Cfmt == XVIDC_CSF_MEM_Y_UV8) || (Cfmt == XVIDC_CSF_MEM_Y_UV8_420) ||
+	    (Cfmt == XVIDC_CSF_MEM_Y_UV10) || (Cfmt == XVIDC_CSF_MEM_Y_UV10_420)) {
+	  Status = XVFrmbufWr_SetChromaBufferAddr(&v_frmbuf_wr, cptr);
+	  if(Status != XST_SUCCESS) {
+	    xil_printf("ERROR:: Unable to configure Frame Buffer Write chroma buffer address %d(%04X)\r\n", Status, Status);
+	    return(XST_FAILURE);
+	  }
+	}
+
+	XVFrmbufWr_SetCallback(&v_frmbuf_wr, XVFRMBUFWR_HANDLER_DONE, _v_frmbuf_wr_callback, &v_frmbuf_wr);
+
+	/* Enable Interrupt */
+	XVFrmbufWr_InterruptEnable(&v_frmbuf_wr, XVFRMBUFWR_IRQ_DONE_MASK);
+
+	/* Start Frame Buffers */
+	XVFrmbufWr_Start(&v_frmbuf_wr);
+
+	xil_printf("INFO: FRMBUF configured\r\n");
+	return(Status);
+}
+
+
+static void isp_isr(UINTPTR isr_context)
+{
+	XIL_ISP_LITE_mWriteReg(isr_context, ISP_REG_INT_STATUS, 0);
+	_isp_int_num ++;
+}
+
+static void vip_isr(UINTPTR isr_context)
+{
+	XIL_VIP_mWriteReg(isr_context, VIP_REG_INT_STATUS, 0);
+	_vip_int_num ++;
+}
+
+static void isp_init_gamma(UINTPTR isp_base);
+static void isp_init_2dnr(UINTPTR isp_base);
+static void vip_init_osd(UINTPTR vip_base, unsigned osd_x, unsigned osd_y, unsigned color_fg, unsigned color_bg);
+
+static void init_isp_vip()
+{
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_RESET, 1);
+	XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_RESET, 1);
+
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_INT_MASK, 0xffff);
+	XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_INT_MASK, 0xffff);
+	usleep(100000);
+
+	unsigned int isp_top_en = 0;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_DPC_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_BLC_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_BNR_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_DGAIN_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_DEMOSIC_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_WB_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_CCM_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_CSC_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_GAMMA_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_2DNR_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_EE_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_STAT_AE_EN;
+	isp_top_en |= ISP_REG_TOP_EN_BIT_STAT_AWB_EN;
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_TOP_EN, isp_top_en);
+
+	isp_init_gamma(ISP_BASE);
+	isp_init_2dnr(ISP_BASE);
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_BLC_R,  10<<(isp_bits-8));
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_BLC_GR, 10<<(isp_bits-8));
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_BLC_GB, 10<<(isp_bits-8));
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_BLC_B,  10<<(isp_bits-8));
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_NR_LEVEL, 2);
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_DGAIN_GAIN, 0x10);//1.0x
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_STAT_AE_RECT_X, isp_width/8);
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_STAT_AE_RECT_Y, isp_height/8);
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_STAT_AE_RECT_W, isp_width/4*3);
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_STAT_AE_RECT_H, isp_height/4*3);
+
+	//VIP
+	unsigned int vip_top_en = 0;
+	unsigned scale_h = isp_width / DISP_WIDTH;
+	unsigned scale_v = isp_height / DISP_HEIGHT;
+	//vip_top_en |= VIP_REG_TOP_EN_BIT_HIST_EQU_EN;
+	//vip_top_en |= VIP_REG_TOP_EN_BIT_SOBEL_EN;
+	vip_top_en |= VIP_REG_TOP_EN_BIT_YUV2RGB_EN;
+	vip_top_en |= VIP_REG_TOP_EN_BIT_CROP_EN;
+	vip_top_en |= VIP_REG_TOP_EN_BIT_OSD_EN;
+	if (scale_h > 1 && scale_v > 1) {
+		vip_top_en |= VIP_REG_TOP_EN_BIT_DSCALE_EN;
+	}
+	XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_TOP_EN, vip_top_en);
+	vip_init_osd(VIP_BASE, 16, 16, (0x3ff<<(20)), ((0x0ff<<20)|(0xff<<10)|0xff));
+
+	if (vip_top_en & VIP_REG_TOP_EN_BIT_DSCALE_EN) {
+		unsigned scale_val = scale_h < scale_v ? scale_h : scale_v;
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_X, (isp_width-DISP_WIDTH*scale_val)/2);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_Y, (isp_height-DISP_HEIGHT*scale_val)/2);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_W, DISP_WIDTH*scale_val);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_H, DISP_HEIGHT*scale_val);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_DSCALE_H, scale_val-1);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_DSCALE_V, scale_val-1);
+	} else {
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_X, (isp_width-DISP_WIDTH)/2);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_Y, (isp_height-DISP_HEIGHT)/2);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_W, DISP_WIDTH);
+		XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_CROP_H, DISP_HEIGHT);
+	}
+
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_RESET, 0);
+	XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_RESET, 0);
+	printf("isp_reset = %08X\n", XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_RESET));
+	printf("vip_reset = %08X\n", XIL_VIP_mReadReg(VIP_BASE, VIP_REG_RESET));
+
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_START);
+	XIL_VIP_mWriteReg(VIP_BASE, VIP_REG_INT_MASK, ~VIP_REG_INT_MASK_BIT_FRAME_DONE);
+}
+
+
+static void _set_exposure(unsigned exposure, void* priv_data)
+{
+#if SNS_TYPE == SNS_TYPE_AR1335
+	ar1335_set_exposure(exposure);
+#endif
+#if SNS_TYPE == SNS_TYPE_OV5647
+	ov5647_set_exposure(exposure);
+#endif
+}
+static void _set_gain(unsigned gain, void* priv_data)
+{
+#if SNS_TYPE == SNS_TYPE_AR1335
+	ar1335_set_gain(gain);
+#endif
+#if SNS_TYPE == SNS_TYPE_OV5647
+	ov5647_set_gain(gain);
+#endif
+}
+
+
+static IspContext isp_context = {0};
+
+int isp_pipe_init(UINTPTR rawptr, UINTPTR rgbptr)
+{
+	isp_width  = XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_WIDTH);
+	isp_height = XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_HEIGHT);
+	isp_bits   = XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_BITS);
+	isp_bayer  = XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_BAYER);
+	printf(">>> ISP %u x %u RAW%u bayer %u\n", isp_width, isp_height, isp_bits, isp_bayer);
+
+	unsigned vip_width  = XIL_VIP_mReadReg(VIP_BASE, VIP_REG_WIDTH);
+	unsigned vip_height = XIL_VIP_mReadReg(VIP_BASE, VIP_REG_HEIGHT);
+	unsigned vip_bits   = XIL_VIP_mReadReg(VIP_BASE, VIP_REG_BITS);
+	printf(">>> VIP %u x %u BITS %u\n", vip_width, vip_height, vip_bits);
+
+	unsigned max_exposure = 0, max_gain = 0;
+#if SNS_TYPE == SNS_TYPE_AR1335
+	ar1335_init(SNS_WIDTH, SNS_HEIGHT, &max_exposure, &max_gain);
+#endif
+#if SNS_TYPE == SNS_TYPE_OV5647
+	ov5647_init(SNS_WIDTH, SNS_HEIGHT, &max_exposure, &max_gain);
+#endif
+
+	isp_context.base = ISP_BASE;
+	isp_context.pfn_set_exposure = _set_exposure;
+	isp_context.pfn_set_gain = _set_gain;
+	isp_context.priv_data = NULL;
+	isp_context.ae_target_luminance = 65<<(isp_bits-8);
+	isp_context.ae_max_exposure = max_exposure;
+	isp_context.ae_max_gain = max_gain;
+	isp_context.ae_cur_exposure = max_exposure;
+	isp_context.ae_cur_gain = 0x010;
+	isp_context.ae_cur_isp_dgain = 0x010;
+	isp_context.awb_cur_rgain = 0x010;
+	isp_context.awb_cur_bgain = 0x010;
+
+	XIntc_Connect(&AxiIntc, RD_IRQ_INTR, (XInterruptHandler)XVFrmbufRd_InterruptHandler, &v_frmbuf_rd);
+	XIntc_Connect(&AxiIntc, ISP_IRQ_INTR, (XInterruptHandler)isp_isr, ISP_BASE);
+	XIntc_Connect(&AxiIntc, VIP_IRQ_INTR, (XInterruptHandler)vip_isr, VIP_BASE);
+	XIntc_Connect(&AxiIntc, WR_IRQ_INTR, (XInterruptHandler)XVFrmbufWr_InterruptHandler, &v_frmbuf_wr);
+	XIntc_Enable(&AxiIntc, RD_IRQ_INTR);
+	XIntc_Enable(&AxiIntc, ISP_IRQ_INTR);
+	XIntc_Enable(&AxiIntc, VIP_IRQ_INTR);
+	XIntc_Enable(&AxiIntc, WR_IRQ_INTR);
+
+	init_isp_vip();
+
+	v_frmbuf_wr_init(rgbptr, 0);
+
+	v_frmbuf_rd_init(rawptr, 0);
+
+	return 0;
+}
+
+int isp_pipe_handler(void)
+{
+	isp_ae_handler(&isp_context);
+	isp_awb_handler(&isp_context);
+
+	//unsigned long long pix_cnt = XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_STAT_AE_PIX_CNT_L) | ((unsigned long long)XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_STAT_AE_PIX_CNT_H) << 32);
+	//unsigned long long luma_sum = XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_STAT_AE_SUM_L) | ((unsigned long long)XIL_ISP_LITE_mReadReg(ISP_BASE, ISP_REG_STAT_AE_SUM_H) << 32);
+	//printf("%llu, %llu\n", pix_cnt, luma_sum);
+	return 0;
+}
+
+int isp_pipe_trigger(void)
+{
+	XVFrmbufRd_Start(&v_frmbuf_rd);
+	return 0;
+}
+
+int isp_pipe_get_int_num(unsigned *rd_int_num, unsigned *isp_int_num, unsigned *vip_int_num, unsigned *wr_int_num)
+{
+	if (rd_int_num) {
+		*rd_int_num = _rd_int_num;
+	}
+	if (isp_int_num) {
+		*isp_int_num = _isp_int_num;
+	}
+	if (vip_int_num) {
+		*vip_int_num = _vip_int_num;
+	}
+	if (wr_int_num) {
+		*wr_int_num = _wr_int_num;
+	}
+	return 0;
+}
+
+
+//np.uint8(np.power(np.double(range(64))/63, 1/2.2) * 63)
+static const unsigned gamma_table[] = {
+		0,  9, 13, 15, 17, 19, 21, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33,
+       34, 35, 36, 37, 38, 39, 39, 40, 41, 42, 42, 43, 44, 44, 45, 46, 46,
+       47, 48, 48, 49, 50, 50, 51, 51, 52, 52, 53, 54, 54, 55, 55, 56, 56,
+       57, 57, 58, 58, 59, 59, 60, 60, 61, 61, 62, 62, 63
+};
+
+static void isp_init_gamma(UINTPTR isp_base)
+{
+	unsigned i;
+	for (i = 0; i < sizeof(gamma_table)/sizeof(gamma_table[0]); i++) {
+		XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_GAMMA_TABLE_ADDR+i*4, gamma_table[i]);
+	}
+	//for (i = 0; i < sizeof(gamma_table)/sizeof(gamma_table[0]); i++) {
+	//	printf("gamma[%u]:\t%u\n", i, XIL_ISP_LITE_mReadReg(isp_base, ISP_REG_GAMMA_TABLE_ADDR+i*4));
+	//}
+}
+
+//OSD演示视频
+static const u32 osd_bitmap_128x32[] = {
+	0x00000000, 0x00000000, 0x00000000, 0x00000000,
+	0x00000000, 0x00000000, 0x00000000, 0x00000000,
+	0x00002000, 0x00000000, 0x04000000, 0x00400000,
+	0x08001800, 0x00000080, 0x03000020, 0x00600008,
+	0x06001800, 0x000000C0, 0x0381FFF0, 0x0061FFFC,
+	0x03080818, 0x03FFFFE0, 0x01818060, 0x00600300,
+	0x038FFFFC,	0x00000000, 0x01818060,	0x06600600,
+	0x01080018,	0x00000000,	0x01218060,	0x06640400,
+	0x01380020,	0x00000000,	0x3FF18860,	0x067E0408,
+	0x00580020,	0x00000000,	0x00618E60,	0x06607FFC,
+	0x007000C0,	0x00000000,	0x00618C60,	0x06606018,
+	0x304FFFE0,	0x00000000,	0x00C18C60,	0x06606018,
+	0x18801000,	0x00000018,	0x00C18C60,	0x06626218,
+	0x1C801000,	0x3FFFFFFC,	0x01818C60,	0x3FFF6398,
+	0x0C801020,	0x00018000,	0x01818C60,	0x00406318,
+	0x0D0FFFF0,	0x00018000,	0x03818C60,	0x00606318,
+	0x010C1020,	0x00018000,	0x07E18860,	0x04406318,
+	0x010C1020,	0x00618800,	0x05B98860,	0x06406318,
+	0x030C1020,	0x00F18400,	0x09998C60,	0x06426318,
+	0x020FFFE0,	0x00C18300,	0x11981F00,	0x0C476318,
+	0x020C1020,	0x01C18180,	0x21881E00,	0x0C466318,
+	0x060C1020,	0x018180C0,	0x41801600,	0x184C6218,
+	0x3E0C1020,	0x030180E0,	0x01803600,	0x104C6218,
+	0x0E0FFFE0,	0x06018070,	0x01803600,	0x20180700,
+	0x0C0C8020,	0x0C018038,	0x01806604,	0x20300480,
+	0x0C018600,	0x08018018,	0x0180C604,	0x00600C60,
+	0x0C03C1C0,	0x10018010,	0x01808604,	0x00C01838,
+	0x0C0700F0,	0x20618000,	0x0183060C,	0x0180301C,
+	0x0C0C0038,	0x001F8000,	0x018607FE,	0x0600600C,
+	0x0C300018,	0x00070000,	0x019803FC,	0x08018004,
+	0x00C00000,	0x00020000,	0x01200000,	0x30060004,
+	0x00000000,	0x00000000,	0x00000000,	0x00000000
+};
+
+static void vip_init_osd(UINTPTR vip_base, unsigned osd_x, unsigned osd_y, unsigned color_fg, unsigned color_bg)
+{
+	XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_X, osd_x);
+	XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_Y, osd_y);
+	XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_W, 32*4);
+	XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_H, 32);
+	XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_COLOR_FG, color_fg);
+	XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_COLOR_BG, color_bg);
+	printf("osd rect:%u,%u,%u,%u fg/bg:%08X,%08X\n",
+			XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_X),
+			XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_Y),
+			XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_W),
+			XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_H),
+			XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_COLOR_FG),
+			XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_COLOR_BG));
+
+	unsigned i;
+	for (i = 0; i < sizeof(osd_bitmap_128x32)/sizeof(osd_bitmap_128x32[0]); i++) {
+		XIL_VIP_mWriteReg(vip_base, VIP_REG_OSD_RAM_ADDR + i*4, osd_bitmap_128x32[i]);
+	}
+	//for (i = 0; i < sizeof(osd_bitmap_128x32)/sizeof(osd_bitmap_128x32[0]); i++) {
+	//	printf("0x%08X\n",XIL_VIP_mReadReg(vip_base, VIP_REG_OSD_RAM_ADDR + i*4));
+	//}
+}
+
+//spaceKernel = x_bf_makeSpaceKern(7, 6, 31); print(spaceKernel)
+static const unsigned char spaceWeightTbl_6[7*7] = {
+		24, 26, 27, 27, 27, 26, 24,
+		26, 28, 29, 29, 29, 28, 26,
+		27, 29, 30, 31, 30, 29, 27,
+		27, 29, 31, 31, 31, 29, 27,
+		27, 29, 30, 31, 30, 29, 27,
+		26, 28, 29, 29, 29, 28, 26,
+		24, 26, 27, 27, 27, 26, 24
+	};
+//spaceKernel = x_bf_makeSpaceKern(7, 8, 31); print(spaceKernel)
+static const unsigned char spaceWeightTbl_8[7*7] = {
+		27, 28, 29, 29, 29, 28, 27,
+		28, 29, 30, 30, 30, 29, 28,
+		29, 30, 31, 31, 31, 30, 29,
+		29, 30, 31, 31, 31, 30, 29,
+		29, 30, 31, 31, 31, 30, 29,
+		28, 29, 30, 30, 30, 29, 28,
+		27, 28, 29, 29, 29, 28, 27
+	};
+//spaceKernel = x_bf_makeSpaceKern(7, 10, 31); print(spaceKernel)
+static const unsigned char spaceWeightTbl_10[7*7] = {
+		28, 29, 29, 30, 29, 29, 28,
+		29, 30, 30, 30, 30, 30, 29,
+		29, 30, 31, 31, 31, 30, 29,
+		30, 30, 31, 31, 31, 30, 30,
+		29, 30, 31, 31, 31, 30, 29,
+		29, 30, 30, 30, 30, 30, 29,
+		28, 29, 29, 30, 29, 29, 28
+	};
+//colorCurve = x_bf_makeColorCurve(9, 20, 6, 31); print(colorCurve)
+static const unsigned char colorCurveTbl_6[9][2] = {
+		{ 2, 29},
+		{ 4, 25},
+		{ 6, 19},
+		{ 8, 13},
+		{10,  8},
+		{12,  4},
+		{14,  2},
+		{16,  1},
+		{18,  0}
+	};
+//colorCurve = x_bf_makeColorCurve(9, 26, 8, 31); print(colorCurve)
+static const unsigned char colorCurveTbl_8[9][2] = {
+		{ 2, 30},
+		{ 5, 25},
+		{ 7, 21},
+		{10, 14},
+		{13,  8},
+		{15,  5},
+		{18,  2},
+		{20,  1},
+		{23,  0}
+	};
+//colorCurve = x_bf_makeColorCurve(9, 34, 10, 31); print(colorCurve)
+static const unsigned char colorCurveTbl_10[9][2] = {
+		{ 3, 30},
+		{ 6, 26},
+		{10, 19},
+		{13, 13},
+		{17,  7},
+		{20,  4},
+		{23,  2},
+		{27,  1},
+		{30,  0}
+	};
+
+static void isp_cfg_2dnr(UINTPTR isp_base, const unsigned char spaceWeightTbl[7*7], const unsigned char colorCurveTbl[9][2])
+{
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_0,  spaceWeightTbl[0] | (spaceWeightTbl[1]<<8) | (spaceWeightTbl[2]<<16) | (spaceWeightTbl[3]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_4,  spaceWeightTbl[4] | (spaceWeightTbl[5]<<8) | (spaceWeightTbl[6]<<16) | (spaceWeightTbl[7]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_8,  spaceWeightTbl[8] | (spaceWeightTbl[9]<<8) | (spaceWeightTbl[10]<<16) | (spaceWeightTbl[11]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_12, spaceWeightTbl[12] | (spaceWeightTbl[13]<<8) | (spaceWeightTbl[14]<<16) | (spaceWeightTbl[15]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_16, spaceWeightTbl[16] | (spaceWeightTbl[17]<<8) | (spaceWeightTbl[18]<<16) | (spaceWeightTbl[19]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_20, spaceWeightTbl[20] | (spaceWeightTbl[21]<<8) | (spaceWeightTbl[22]<<16) | (spaceWeightTbl[23]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_24, spaceWeightTbl[24] | (spaceWeightTbl[25]<<8) | (spaceWeightTbl[26]<<16) | (spaceWeightTbl[27]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_28, spaceWeightTbl[28] | (spaceWeightTbl[29]<<8) | (spaceWeightTbl[30]<<16) | (spaceWeightTbl[31]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_32, spaceWeightTbl[32] | (spaceWeightTbl[33]<<8) | (spaceWeightTbl[34]<<16) | (spaceWeightTbl[35]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_36, spaceWeightTbl[36] | (spaceWeightTbl[37]<<8) | (spaceWeightTbl[38]<<16) | (spaceWeightTbl[39]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_40, spaceWeightTbl[40] | (spaceWeightTbl[41]<<8) | (spaceWeightTbl[42]<<16) | (spaceWeightTbl[43]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_SPACE_WEIGHT_44, spaceWeightTbl[44] | (spaceWeightTbl[45]<<8) | (spaceWeightTbl[46]<<16) | (spaceWeightTbl[47]<<24));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_0, colorCurveTbl[0][0] | (colorCurveTbl[0][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_1, colorCurveTbl[1][0] | (colorCurveTbl[1][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_2, colorCurveTbl[2][0] | (colorCurveTbl[2][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_3, colorCurveTbl[3][0] | (colorCurveTbl[3][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_4, colorCurveTbl[4][0] | (colorCurveTbl[4][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_5, colorCurveTbl[5][0] | (colorCurveTbl[5][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_6, colorCurveTbl[6][0] | (colorCurveTbl[6][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_7, colorCurveTbl[7][0] | (colorCurveTbl[7][1] << 16));
+	XIL_ISP_LITE_mWriteReg(isp_base, ISP_REG_2DNR_COLOR_CURVE_8, colorCurveTbl[8][0] | (colorCurveTbl[8][1] << 16));
+}
+
+static void isp_init_2dnr(UINTPTR isp_base)
+{
+	unsigned char spaceWeightTbl[7*7] = {0};
+	unsigned char colorCurveTbl[9][2] = {0};
+	for (unsigned i = 0; i < sizeof(spaceWeightTbl)/sizeof(spaceWeightTbl[0]); i++) {
+		//spaceWeightTbl[i] = spaceWeightTbl_6[i];
+		//spaceWeightTbl[i] = spaceWeightTbl_8[i];
+		spaceWeightTbl[i] = spaceWeightTbl_10[i];
+	}
+	for (unsigned i = 0; i < sizeof(colorCurveTbl)/sizeof(colorCurveTbl[0]); i++) {
+		//colorCurveTbl[i][0] = colorCurveTbl_6[i][0] << (isp_bits - 8);
+		//colorCurveTbl[i][1] = colorCurveTbl_6[i][1];
+		//colorCurveTbl[i][0] = colorCurveTbl_8[i][0] << (isp_bits - 8);
+		//colorCurveTbl[i][1] = colorCurveTbl_8[i][1];
+		colorCurveTbl[i][0] = colorCurveTbl_10[i][0] << (isp_bits - 8);
+		colorCurveTbl[i][1] = colorCurveTbl_10[i][1];
+	}
+	isp_cfg_2dnr(isp_base, spaceWeightTbl, colorCurveTbl);
+}

@@ -18,7 +18,7 @@
         <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="ap_clk" period="6.663" default="false"/>
+        <clock name="ap_clk" period="3.333" default="false"/>
     </clockList>
     <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
         <Format formatName="ip_catalog" description="" vendor="xilinx.com" library="ip" ipname="v_frmbuf_wr" version="2.4" display_name="" taxonomy=""/>

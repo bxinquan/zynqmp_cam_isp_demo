@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'FrmbufRdHlsDataFlow'
 ================================================================
-* Date:           Sat Dec 10 20:38:28 2022
+* Date:           Sat Dec 17 00:27:16 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.864 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |   Latency (cycles)  |  Latency (absolute)  |     Interval    | Pipeline |
     |   min   |    max    |    min   |    max    | min |    max    |   Type   |
     +---------+-----------+----------+-----------+-----+-----------+----------+
-    |      131|  283132911|  0.873 us|  1.887 sec|    9|  283132803|  dataflow|
+    |      132|  283132911|  0.440 us|  0.944 sec|   10|  283132804|  dataflow|
     +---------+-----------+----------+-----------+-----+-----------+----------+
 
     + Detail: 
@@ -38,10 +38,10 @@
         |                            |                         |   Latency (cycles)  |   Latency (absolute)  |     Interval    | Pipeline|
         |          Instance          |          Module         |   min   |    max    |    min    |    max    | min |    max    |   Type  |
         +----------------------------+-------------------------+---------+-----------+-----------+-----------+-----+-----------+---------+
-        |AXIMMvideo2Bytes_U0         |AXIMMvideo2Bytes         |        1|   35873281|   6.663 ns|  0.239 sec|    1|   35873281|       no|
+        |AXIMMvideo2Bytes_U0         |AXIMMvideo2Bytes         |        1|   35873281|   3.333 ns|  0.120 sec|    1|   35873281|       no|
         |entry_proc_U0               |entry_proc               |        0|          0|       0 ns|       0 ns|    0|          0|       no|
-        |Bytes2MultiPixStream_U0     |Bytes2MultiPixStream     |        1|  283132802|   6.663 ns|  1.887 sec|    1|  283132802|       no|
-        |MultiPixStream2AXIvideo_U0  |MultiPixStream2AXIvideo  |        8|    8305208|  53.304 ns|  55.338 ms|    8|    8305208|       no|
+        |Bytes2MultiPixStream_U0     |Bytes2MultiPixStream     |        1|  283132803|   3.333 ns|  0.944 sec|    1|  283132803|       no|
+        |MultiPixStream2AXIvideo_U0  |MultiPixStream2AXIvideo  |        9|    8305209|  29.997 ns|  27.681 ms|    9|    8305209|       no|
         +----------------------------+-------------------------+---------+-----------+-----------+-----------+-----+-----------+---------+
 
         * Loop: 
@@ -59,12 +59,12 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|      14|    -|
 |FIFO             |        4|     -|     956|     601|    -|
-|Instance         |        0|     -|     913|    2501|    -|
+|Instance         |        0|     -|     949|    2522|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|      18|    -|
 |Register         |        -|     -|       2|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        4|     0|    1871|    3134|    0|
+|Total            |        4|     0|    1907|    3155|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -77,11 +77,11 @@
     |          Instance          |          Module         | BRAM_18K| DSP|  FF |  LUT | URAM|
     +----------------------------+-------------------------+---------+----+-----+------+-----+
     |AXIMMvideo2Bytes_U0         |AXIMMvideo2Bytes         |        0|   0|  300|   983|    0|
-    |Bytes2MultiPixStream_U0     |Bytes2MultiPixStream     |        0|   0|  453|  1077|    0|
-    |MultiPixStream2AXIvideo_U0  |MultiPixStream2AXIvideo  |        0|   0|  157|   394|    0|
+    |Bytes2MultiPixStream_U0     |Bytes2MultiPixStream     |        0|   0|  486|  1092|    0|
+    |MultiPixStream2AXIvideo_U0  |MultiPixStream2AXIvideo  |        0|   0|  160|   400|    0|
     |entry_proc_U0               |entry_proc               |        0|   0|    3|    47|    0|
     +----------------------------+-------------------------+---------+----+-----+------+-----+
-    |Total                       |                         |        0|   0|  913|  2501|    0|
+    |Total                       |                         |        0|   0|  949|  2522|    0|
     +----------------------------+-------------------------+---------+----+-----+------+-----+
 
     * DSP: 

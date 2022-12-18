@@ -16,7 +16,7 @@ OBJECTS = $(addsuffix .o, $(basename $(wildcard *.c *.cpp)))
 ASSEMBLY_OBJECTS = $(addsuffix .o, $(basename $(wildcard *.S)))
 
 libs:
-	echo "Compiling mipi_rx_to_video..."
+	echo "Compiling xil_vip..."
 	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) $(LIBSOURCES)
 	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${OBJECTS} ${ASSEMBLY_OBJECTS}
 	make clean

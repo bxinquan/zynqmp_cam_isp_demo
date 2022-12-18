@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'AXIvideo2MultiPixStream'" level="0">
-<item name = "Date">Sat Dec 10 20:38:36 2022
+<item name = "Date">Sat Dec 17 00:27:23 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 2.378 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 2.378 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,18 +24,18 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">6, 8316006, 39.978 ns, 55.410 ms, 6, 8316006, no</column>
+<column name="">6, 8316006, 19.998 ns, 27.717 ms, 6, 8316006, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194">AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start, 2, 2, 13.326 ns, 13.326 ns, 2, 2, no</column>
-<column name="grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214">AXIvideo2MultiPixStream_Pipeline_loop_width, 3, 3842, 19.989 ns, 25.599 us, 3, 3842, no</column>
-<column name="grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242">AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol, 2, 2, 13.326 ns, 13.326 ns, 2, 2, no</column>
-<column name="grp_reg_unsigned_short_s_fu_289">reg_unsigned_short_s, 1, 1, 6.663 ns, 6.663 ns, 1, 1, yes</column>
-<column name="grp_reg_unsigned_short_s_fu_294">reg_unsigned_short_s, 1, 1, 6.663 ns, 6.663 ns, 1, 1, yes</column>
+<column name="grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_194">AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start, 2, 2, 6.666 ns, 6.666 ns, 2, 2, no</column>
+<column name="grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_214">AXIvideo2MultiPixStream_Pipeline_loop_width, 3, 3842, 9.999 ns, 12.805 us, 3, 3842, no</column>
+<column name="grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_242">AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol, 2, 2, 6.666 ns, 6.666 ns, 2, 2, no</column>
+<column name="grp_reg_unsigned_short_s_fu_289">reg_unsigned_short_s, 1, 1, 3.333 ns, 3.333 ns, 1, 1, yes</column>
+<column name="grp_reg_unsigned_short_s_fu_294">reg_unsigned_short_s, 1, 1, 3.333 ns, 3.333 ns, 1, 1, yes</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

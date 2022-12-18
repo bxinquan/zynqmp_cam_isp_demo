@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'v_frmbuf_wr'" level="0">
-<item name = "Date">Sat Dec 10 20:38:42 2022
+<item name = "Date">Sat Dec 17 00:27:29 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 4.864 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">13, 283141447, 86.619 ns, 1.887 sec, 14, 283141448, no</column>
+<column name="">16, 283145769, 53.328 ns, 0.944 sec, 17, 283145770, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_FrmbufWrHlsDataFlow_fu_162">FrmbufWrHlsDataFlow, 11, 283141445, 73.293 ns, 1.887 sec, 7, 283141443, dataflow</column>
+<column name="grp_FrmbufWrHlsDataFlow_fu_162">FrmbufWrHlsDataFlow, 12, 283145765, 39.996 ns, 0.944 sec, 7, 283145764, dataflow</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,10 +50,10 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 6, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">8, 2, 4962, 8445, 0</column>
+<column name="Instance">8, 2, 5194, 8543, 0</column>
 <column name="Memory">0, -, 6, 6, -</column>
-<column name="Multiplexer">-, -, -, 56, -</column>
-<column name="Register">-, -, 135, -, -</column>
+<column name="Multiplexer">-, -, -, 67, -</column>
+<column name="Register">-, -, 140, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">2, ~0, 2, 7, 0</specialColumn>
 </table>
@@ -63,7 +63,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="CTRL_s_axi_U">CTRL_s_axi, 0, 0, 238, 360, 0</column>
-<column name="grp_FrmbufWrHlsDataFlow_fu_162">FrmbufWrHlsDataFlow, 8, 2, 3960, 6849, 0</column>
+<column name="grp_FrmbufWrHlsDataFlow_fu_162">FrmbufWrHlsDataFlow, 8, 2, 4192, 6947, 0</column>
 <column name="mm_video_m_axi_U">mm_video_m_axi, 0, 0, 764, 1231, 0</column>
 <column name="mul_12ns_3ns_15_1_1_U206">mul_12ns_3ns_15_1_1, 0, 0, 0, 5, 0</column>
 </table>
@@ -91,7 +91,7 @@
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
+<column name="ap_NS_fsm">31, 6, 1, 6</column>
 <column name="mm_video_AWVALID">9, 2, 1, 2</column>
 <column name="mm_video_BREADY">9, 2, 1, 2</column>
 <column name="mm_video_WVALID">9, 2, 1, 2</column>
@@ -100,19 +100,20 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="WidthInBytes_reg_264">15, 0, 15, 0</column>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="BYTES_PER_PIXEL_load_reg_261">3, 0, 3, 0</column>
+<column name="WidthInBytes_reg_271">15, 0, 15, 0</column>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
 <column name="ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_done">1, 0, 1, 0</column>
 <column name="ap_sync_reg_grp_FrmbufWrHlsDataFlow_fu_162_ap_ready">1, 0, 1, 0</column>
-<column name="colorFormat_reg_269">3, 0, 3, 0</column>
-<column name="empty_64_reg_244">6, 0, 6, 0</column>
-<column name="empty_65_reg_249">12, 0, 12, 0</column>
-<column name="empty_reg_238">12, 0, 12, 0</column>
-<column name="frm_buffer2_read_reg_223">32, 0, 32, 0</column>
-<column name="frm_buffer_read_reg_228">32, 0, 32, 0</column>
+<column name="colorFormat_reg_266">3, 0, 3, 0</column>
+<column name="empty_64_reg_241">6, 0, 6, 0</column>
+<column name="empty_65_reg_246">12, 0, 12, 0</column>
+<column name="empty_reg_235">12, 0, 12, 0</column>
+<column name="frm_buffer2_read_reg_220">32, 0, 32, 0</column>
+<column name="frm_buffer_read_reg_225">32, 0, 32, 0</column>
 <column name="grp_FrmbufWrHlsDataFlow_fu_162_ap_start_reg">1, 0, 1, 0</column>
 <column name="s_axi_CTRL_flush_done">1, 0, 1, 0</column>
-<column name="stride_read_reg_233">16, 0, 16, 0</column>
+<column name="stride_read_reg_230">16, 0, 16, 0</column>
 </table>
 </item>
 </section>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sat Dec 10 20:30:18 2022
+| Date         : Sat Dec 17 00:30:45 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_axi_gpio_0_0_utilization_synth.rpt -pb design_1_axi_gpio_0_0_utilization_synth.pb
 | Design       : design_1_axi_gpio_0_0
@@ -32,11 +32,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |   47 |     0 |          0 |    117120 |  0.04 |
-|   LUT as Logic          |   47 |     0 |          0 |    117120 |  0.04 |
+| CLB LUTs*               |   63 |     0 |          0 |    117120 |  0.05 |
+|   LUT as Logic          |   63 |     0 |          0 |    117120 |  0.05 |
 |   LUT as Memory         |    0 |     0 |          0 |     57600 |  0.00 |
-| CLB Registers           |   64 |     0 |          0 |    234240 |  0.03 |
-|   Register as Flip Flop |   64 |     0 |          0 |    234240 |  0.03 |
+| CLB Registers           |   96 |     0 |          0 |    234240 |  0.04 |
+|   Register as Flip Flop |   96 |     0 |          0 |    234240 |  0.04 |
 |   Register as Latch     |    0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                  |    0 |     0 |          0 |     14640 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     58560 |  0.00 |
@@ -61,7 +61,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 63    |          Yes |       Reset |            - |
+| 95    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -156,9 +156,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   63 |            Register |
-| LUT6     |   15 |                 CLB |
-| LUT4     |   13 |                 CLB |
+| FDRE     |   95 |            Register |
+| LUT6     |   23 |                 CLB |
+| LUT4     |   21 |                 CLB |
 | LUT2     |   10 |                 CLB |
 | LUT5     |    8 |                 CLB |
 | LUT3     |    7 |                 CLB |

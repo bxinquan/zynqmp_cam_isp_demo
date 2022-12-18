@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'MultiPixStream2AXIvideo'
 ================================================================
-* Date:           Sat Dec 10 20:38:24 2022
+* Date:           Sat Dec 17 00:27:12 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.109 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.378 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
     |   min   |   max   |    min    |    max    | min |   max   |   Type  |
     +---------+---------+-----------+-----------+-----+---------+---------+
-    |        8|  8305208|  53.304 ns|  55.338 ms|    8|  8305208|       no|
+    |        9|  8305209|  29.997 ns|  27.681 ms|    9|  8305209|       no|
     +---------+---------+-----------+-----------+-----+---------+---------+
 
     + Detail: 
@@ -70,7 +70,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 5
+* Number of FSM states : 6
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -79,97 +79,103 @@ IsGatedGlobalClock: 0
 2 --> 3 
 3 --> 4 
 4 --> 5 
-5 --> 4 
+5 --> 6 
+6 --> 5 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 4.10>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 6 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%sof = alloca i32 1"   --->   Operation 7 'alloca' 'sof' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%map_V_loc = alloca i32 1"   --->   Operation 8 'alloca' 'map_V_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%map_V_1_loc = alloca i32 1"   --->   Operation 9 'alloca' 'map_V_1_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%map_V_2_loc = alloca i32 1"   --->   Operation 10 'alloca' 'map_V_2_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (1.83ns)   --->   "%colorFormat_read = read i2 @_ssdm_op_Read.ap_fifo.i2P0A, i2 %colorFormat"   --->   Operation 11 'read' 'colorFormat_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 4> <FIFO>
-ST_1 : Operation 12 [1/1] (1.83ns)   --->   "%Height_read = read i12 @_ssdm_op_Read.ap_fifo.i12P0A, i12 %Height"   --->   Operation 12 'read' 'Height_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
-ST_1 : Operation 13 [1/1] (1.83ns)   --->   "%WidthOut_read = read i12 @_ssdm_op_Read.ap_fifo.i12P0A, i12 %WidthOut"   --->   Operation 13 'read' 'WidthOut_read' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln291 = zext i2 %colorFormat_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 14 'zext' 'zext_ln291' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i2.i2, i2 %colorFormat_read, i2 0" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 15 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.79ns)   --->   "%sub_ln291 = sub i4 %tmp, i4 %zext_ln291" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 16 'sub' 'sub_ln291' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 17 [2/2] (1.47ns)   --->   "%call_ln291 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_289_1, i4 %sub_ln291, i5 %map_V_2_loc, i5 %map_V_1_loc, i5 %map_V_loc, i2 %mapComp" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 17 'call' 'call_ln291' <Predicate = true> <Delay = 1.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 18 [1/1] (0.42ns)   --->   "%store_ln296 = store i1 1, i1 %sof" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 18 'store' 'store_ln296' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln296 = store i12 0, i12 %i_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 19 'store' 'store_ln296' <Predicate = true> <Delay = 0.42>
+State 1 <SV = 0> <Delay = 1.21>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 7 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%sof = alloca i32 1"   --->   Operation 8 'alloca' 'sof' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%map_V_loc = alloca i32 1"   --->   Operation 9 'alloca' 'map_V_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%map_V_1_loc = alloca i32 1"   --->   Operation 10 'alloca' 'map_V_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%map_V_2_loc = alloca i32 1"   --->   Operation 11 'alloca' 'map_V_2_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.21ns)   --->   "%colorFormat_read = read i2 @_ssdm_op_Read.ap_fifo.i2P0A, i2 %colorFormat"   --->   Operation 12 'read' 'colorFormat_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 2> <Depth = 4> <FIFO>
+ST_1 : Operation 13 [1/1] (1.21ns)   --->   "%Height_read = read i12 @_ssdm_op_Read.ap_fifo.i12P0A, i12 %Height"   --->   Operation 13 'read' 'Height_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (1.21ns)   --->   "%WidthOut_read = read i12 @_ssdm_op_Read.ap_fifo.i12P0A, i12 %WidthOut"   --->   Operation 14 'read' 'WidthOut_read' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln296 = store i1 1, i1 %sof" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 15 'store' 'store_ln296' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln296 = store i12 0, i12 %i_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 16 'store' 'store_ln296' <Predicate = true> <Delay = 0.42>
 
-State 2 <SV = 1> <Delay = 0.87>
-ST_2 : Operation 20 [2/2] (0.00ns)   --->   "%rows = call i12 @reg<unsigned short>, i12 %Height_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:246]   --->   Operation 20 'call' 'rows' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 21 [2/2] (0.00ns)   --->   "%cols = call i12 @reg<unsigned short>, i12 %WidthOut_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 21 'call' 'cols' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 22 [1/2] (0.87ns)   --->   "%call_ln291 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_289_1, i4 %sub_ln291, i5 %map_V_2_loc, i5 %map_V_1_loc, i5 %map_V_loc, i2 %mapComp" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 22 'call' 'call_ln291' <Predicate = true> <Delay = 0.87> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 2 <SV = 1> <Delay = 2.27>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln291 = zext i2 %colorFormat_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 17 'zext' 'zext_ln291' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i2.i2, i2 %colorFormat_read, i2 0" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 18 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.79ns)   --->   "%sub_ln291 = sub i4 %tmp, i4 %zext_ln291" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 19 'sub' 'sub_ln291' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [2/2] (1.47ns)   --->   "%call_ln291 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_289_1, i4 %sub_ln291, i5 %map_V_2_loc, i5 %map_V_1_loc, i5 %map_V_loc, i2 %mapComp" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 20 'call' 'call_ln291' <Predicate = true> <Delay = 1.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 3 <SV = 2> <Delay = 0.97>
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %colorFormat, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %Height, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %WidthOut, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %img, void @empty_1, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 28 [1/2] (0.00ns)   --->   "%rows = call i12 @reg<unsigned short>, i12 %Height_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:246]   --->   Operation 28 'call' 'rows' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 29 [1/2] (0.00ns)   --->   "%cols = call i12 @reg<unsigned short>, i12 %WidthOut_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 29 'call' 'cols' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln247 = zext i12 %cols" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 30 'zext' 'zext_ln247' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%map_V_2_loc_load = load i5 %map_V_2_loc"   --->   Operation 31 'load' 'map_V_2_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%map_V_1_loc_load = load i5 %map_V_1_loc"   --->   Operation 32 'load' 'map_V_1_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%map_V_loc_load = load i5 %map_V_loc"   --->   Operation 33 'load' 'map_V_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 34 [1/1] (0.80ns)   --->   "%sub = add i13 %zext_ln247, i13 8191" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 34 'add' 'sub' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 35 [1/1] (0.97ns)   --->   "%cmp35184 = icmp_eq  i12 %cols, i12 0" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 35 'icmp' 'cmp35184' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln296 = br void %VITIS_LOOP_298_3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 36 'br' 'br_ln296' <Predicate = true> <Delay = 0.00>
+State 3 <SV = 2> <Delay = 0.87>
+ST_3 : Operation 21 [2/2] (0.00ns)   --->   "%rows = call i12 @reg<unsigned short>, i12 %Height_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:246]   --->   Operation 21 'call' 'rows' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 22 [2/2] (0.00ns)   --->   "%cols = call i12 @reg<unsigned short>, i12 %WidthOut_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 22 'call' 'cols' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 23 [1/2] (0.87ns)   --->   "%call_ln291 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_289_1, i4 %sub_ln291, i5 %map_V_2_loc, i5 %map_V_1_loc, i5 %map_V_loc, i2 %mapComp" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291]   --->   Operation 23 'call' 'call_ln291' <Predicate = true> <Delay = 0.87> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 4 <SV = 3> <Delay = 2.37>
-ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%i = load i12 %i_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 37 'load' 'i' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 38 [1/1] (0.97ns)   --->   "%icmp_ln296 = icmp_eq  i12 %i, i12 %rows" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 38 'icmp' 'icmp_ln296' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 2160, i64 0"   --->   Operation 39 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 40 [1/1] (0.80ns)   --->   "%i_2 = add i12 %i, i12 1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 40 'add' 'i_2' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln296 = br i1 %icmp_ln296, void %VITIS_LOOP_298_3.split, void %for.end83.loopexit" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 41 'br' 'br_ln296' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%specloopname_ln294 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:294]   --->   Operation 42 'specloopname' 'specloopname_ln294' <Predicate = (!icmp_ln296)> <Delay = 0.00>
-ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln298 = br i1 %cmp35184, void %for.body37.preheader, void %for.inc81" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:298]   --->   Operation 43 'br' 'br_ln298' <Predicate = (!icmp_ln296)> <Delay = 0.00>
-ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%sof_load = load i1 %sof"   --->   Operation 44 'load' 'sof_load' <Predicate = (!icmp_ln296 & !cmp35184)> <Delay = 0.00>
-ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 45 'wait' 'empty' <Predicate = (!icmp_ln296 & !cmp35184)> <Delay = 0.00>
-ST_4 : Operation 46 [2/2] (1.40ns)   --->   "%call_ln247 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3, i1 %sof_load, i12 %cols, i13 %sub, i30 %img, i5 %map_V_2_loc_load, i5 %map_V_1_loc_load, i5 %map_V_loc_load, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 46 'call' 'call_ln247' <Predicate = (!icmp_ln296 & !cmp35184)> <Delay = 1.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln342 = ret" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:342]   --->   Operation 47 'ret' 'ret_ln342' <Predicate = (icmp_ln296)> <Delay = 0.00>
+State 4 <SV = 3> <Delay = 0.97>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i2 %colorFormat, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %Height, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i12 %WidthOut, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %img, void @empty_1, i32 0, i32 0, void @empty_8, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_8, void @empty_8, void @empty_8, i32 0, i32 0, i32 0, i32 0, void @empty_8, void @empty_8, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/2] (0.00ns)   --->   "%rows = call i12 @reg<unsigned short>, i12 %Height_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:246]   --->   Operation 29 'call' 'rows' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 30 [1/2] (0.00ns)   --->   "%cols = call i12 @reg<unsigned short>, i12 %WidthOut_read" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 30 'call' 'cols' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%zext_ln247 = zext i12 %cols" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 31 'zext' 'zext_ln247' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%map_V_2_loc_load = load i5 %map_V_2_loc"   --->   Operation 32 'load' 'map_V_2_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%map_V_1_loc_load = load i5 %map_V_1_loc"   --->   Operation 33 'load' 'map_V_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%map_V_loc_load = load i5 %map_V_loc"   --->   Operation 34 'load' 'map_V_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.80ns)   --->   "%sub = add i13 %zext_ln247, i13 8191" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 35 'add' 'sub' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 36 [1/1] (0.97ns)   --->   "%cmp35184 = icmp_eq  i12 %cols, i12 0" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 36 'icmp' 'cmp35184' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln296 = br void %VITIS_LOOP_298_3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 37 'br' 'br_ln296' <Predicate = true> <Delay = 0.00>
 
-State 5 <SV = 4> <Delay = 2.31>
-ST_5 : Operation 48 [1/2] (2.31ns)   --->   "%call_ln247 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3, i1 %sof_load, i12 %cols, i13 %sub, i30 %img, i5 %map_V_2_loc_load, i5 %map_V_1_loc_load, i5 %map_V_loc_load, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 48 'call' 'call_ln247' <Predicate = (!cmp35184)> <Delay = 2.31> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_5 : Operation 49 [1/1] (0.42ns)   --->   "%store_ln0 = store i1 0, i1 %sof"   --->   Operation 49 'store' 'store_ln0' <Predicate = (!cmp35184)> <Delay = 0.42>
-ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc81"   --->   Operation 50 'br' 'br_ln0' <Predicate = (!cmp35184)> <Delay = 0.00>
-ST_5 : Operation 51 [1/1] (0.42ns)   --->   "%store_ln296 = store i12 %i_2, i12 %i_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 51 'store' 'store_ln296' <Predicate = true> <Delay = 0.42>
-ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln296 = br void %VITIS_LOOP_298_3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 52 'br' 'br_ln296' <Predicate = true> <Delay = 0.00>
+State 5 <SV = 4> <Delay = 2.37>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%i = load i12 %i_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 38 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.97ns)   --->   "%icmp_ln296 = icmp_eq  i12 %i, i12 %rows" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 39 'icmp' 'icmp_ln296' <Predicate = true> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 2160, i64 0"   --->   Operation 40 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.80ns)   --->   "%i_2 = add i12 %i, i12 1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 41 'add' 'i_2' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln296 = br i1 %icmp_ln296, void %VITIS_LOOP_298_3.split, void %for.end83.loopexit" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 42 'br' 'br_ln296' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%specloopname_ln294 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:294]   --->   Operation 43 'specloopname' 'specloopname_ln294' <Predicate = (!icmp_ln296)> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln298 = br i1 %cmp35184, void %for.body37.preheader, void %for.inc81" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:298]   --->   Operation 44 'br' 'br_ln298' <Predicate = (!icmp_ln296)> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%sof_load = load i1 %sof"   --->   Operation 45 'load' 'sof_load' <Predicate = (!icmp_ln296 & !cmp35184)> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 46 'wait' 'empty' <Predicate = (!icmp_ln296 & !cmp35184)> <Delay = 0.00>
+ST_5 : Operation 47 [2/2] (1.40ns)   --->   "%call_ln247 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3, i1 %sof_load, i12 %cols, i13 %sub, i30 %img, i5 %map_V_2_loc_load, i5 %map_V_1_loc_load, i5 %map_V_loc_load, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 47 'call' 'call_ln247' <Predicate = (!icmp_ln296 & !cmp35184)> <Delay = 1.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln342 = ret" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:342]   --->   Operation 48 'ret' 'ret_ln342' <Predicate = (icmp_ln296)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.69>
+ST_6 : Operation 49 [1/2] (1.69ns)   --->   "%call_ln247 = call void @MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3, i1 %sof_load, i12 %cols, i13 %sub, i30 %img, i5 %map_V_2_loc_load, i5 %map_V_1_loc_load, i5 %map_V_loc_load, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247]   --->   Operation 49 'call' 'call_ln247' <Predicate = (!cmp35184)> <Delay = 1.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 50 [1/1] (0.42ns)   --->   "%store_ln0 = store i1 0, i1 %sof"   --->   Operation 50 'store' 'store_ln0' <Predicate = (!cmp35184)> <Delay = 0.42>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc81"   --->   Operation 51 'br' 'br_ln0' <Predicate = (!cmp35184)> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.42ns)   --->   "%store_ln296 = store i12 %i_2, i12 %i_1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 52 'store' 'store_ln296' <Predicate = true> <Delay = 0.42>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln296 = br void %VITIS_LOOP_298_3" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:296]   --->   Operation 53 'br' 'br_ln296' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 6.66ns, clock uncertainty: 1.8ns.
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
 
- <State 1>: 4.11ns
+ <State 1>: 1.22ns
 The critical path consists of the following:
-	fifo read operation ('colorFormat_read') on port 'colorFormat' [19]  (1.84 ns)
+	fifo read operation ('colorFormat_read') on port 'colorFormat' [19]  (1.22 ns)
+
+ <State 2>: 2.27ns
+The critical path consists of the following:
 	'sub' operation ('sub_ln291', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291) [31]  (0.797 ns)
 	'call' operation ('call_ln291', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291) to 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_289_1' [32]  (1.47 ns)
 
- <State 2>: 0.873ns
+ <State 3>: 0.873ns
 The critical path consists of the following:
 	'call' operation ('call_ln291', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:291) to 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_289_1' [32]  (0.873 ns)
 
- <State 3>: 0.976ns
+ <State 4>: 0.976ns
 The critical path consists of the following:
 	'call' operation ('cols', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247) to 'reg<unsigned short>' [27]  (0 ns)
 	'icmp' operation ('cmp35184', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247) [37]  (0.976 ns)
 
- <State 4>: 2.38ns
+ <State 5>: 2.38ns
 The critical path consists of the following:
 	'load' operation ('sof_load') on local variable 'sof' [51]  (0 ns)
 	'call' operation ('call_ln247', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247) to 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3' [53]  (1.4 ns)
 	blocking operation 0.976 ns on control path)
 
- <State 5>: 2.31ns
+ <State 6>: 1.69ns
 The critical path consists of the following:
-	'call' operation ('call_ln247', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247) to 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3' [53]  (2.31 ns)
+	'call' operation ('call_ln247', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:247) to 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_298_3' [53]  (1.69 ns)
 
 
 ============================================================
@@ -185,6 +191,7 @@ N/A
 	State 3
 	State 4
 	State 5
+	State 6
 
 
 ============================================================

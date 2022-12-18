@@ -16229,10 +16229,24 @@ set psu_afi_config {
     #  width 11: reserved
 		# PSU_FPD_SLCR_AFI_FS_DW_SS0_SEL                                                  0x2
 
+		# Select the 32/64/128-bit data width selection for the Slave 1 00: 32-bit
+    #  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
+    #  width 11: reserved
+		# PSU_FPD_SLCR_AFI_FS_DW_SS1_SEL                                                  0x2
+
 		# afi fs SLCR control register. This register is static and should not be
     # modified during operation.
-		#(OFFSET, MASK, VALUE)      (0XFD615000, 0x00000300U ,0x00000200U)  */
-    mask_write 0XFD615000 0x00000300 0x00000200
+		#(OFFSET, MASK, VALUE)      (0XFD615000, 0x00000F00U ,0x00000A00U)  */
+    mask_write 0XFD615000 0x00000F00 0x00000A00
+		# Register : AFIFM_RDCTRL @ 0XFD360000</p>
+
+		# Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
+    # 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+		# PSU_AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH                                            0x0
+
+		# Read Channel Control Register
+		#(OFFSET, MASK, VALUE)      (0XFD360000, 0x00000003U ,0x00000000U)  */
+    mask_write 0XFD360000 0x00000003 0x00000000
 		# Register : AFIFM_RDCTRL @ 0XFD380000</p>
 
 		# Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
@@ -16242,6 +16256,33 @@ set psu_afi_config {
 		# Read Channel Control Register
 		#(OFFSET, MASK, VALUE)      (0XFD380000, 0x00000003U ,0x00000000U)  */
     mask_write 0XFD380000 0x00000003 0x00000000
+		# Register : AFIFM_RDCTRL @ 0XFD390000</p>
+
+		# Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
+    # 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+		# PSU_AFIFM3_AFIFM_RDCTRL_FABRIC_WIDTH                                            0x0
+
+		# Read Channel Control Register
+		#(OFFSET, MASK, VALUE)      (0XFD390000, 0x00000003U ,0x00000000U)  */
+    mask_write 0XFD390000 0x00000003 0x00000000
+		# Register : AFIFM_RDCTRL @ 0XFD3A0000</p>
+
+		# Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
+    # 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+		# PSU_AFIFM4_AFIFM_RDCTRL_FABRIC_WIDTH                                            0x0
+
+		# Read Channel Control Register
+		#(OFFSET, MASK, VALUE)      (0XFD3A0000, 0x00000003U ,0x00000000U)  */
+    mask_write 0XFD3A0000 0x00000003 0x00000000
+		# Register : AFIFM_WRCTRL @ 0XFD360014</p>
+
+		# Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
+    # b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+		# PSU_AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH                                            0x0
+
+		# Write Channel Control Register
+		#(OFFSET, MASK, VALUE)      (0XFD360014, 0x00000003U ,0x00000000U)  */
+    mask_write 0XFD360014 0x00000003 0x00000000
 		# Register : AFIFM_WRCTRL @ 0XFD380014</p>
 
 		# Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
@@ -16251,6 +16292,24 @@ set psu_afi_config {
 		# Write Channel Control Register
 		#(OFFSET, MASK, VALUE)      (0XFD380014, 0x00000003U ,0x00000000U)  */
     mask_write 0XFD380014 0x00000003 0x00000000
+		# Register : AFIFM_WRCTRL @ 0XFD390014</p>
+
+		# Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
+    # b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+		# PSU_AFIFM3_AFIFM_WRCTRL_FABRIC_WIDTH                                            0x0
+
+		# Write Channel Control Register
+		#(OFFSET, MASK, VALUE)      (0XFD390014, 0x00000003U ,0x00000000U)  */
+    mask_write 0XFD390014 0x00000003 0x00000000
+		# Register : AFIFM_WRCTRL @ 0XFD3A0014</p>
+
+		# Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
+    # b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+		# PSU_AFIFM4_AFIFM_WRCTRL_FABRIC_WIDTH                                            0x0
+
+		# Write Channel Control Register
+		#(OFFSET, MASK, VALUE)      (0XFD3A0014, 0x00000003U ,0x00000000U)  */
+    mask_write 0XFD3A0014 0x00000003 0x00000000
 }
 
 set psu_ps_pl_reset_config_data {

@@ -144,7 +144,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "16387",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "4", "EstimateLatencyMax" : "16388",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -179,7 +179,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "pix_val_V_8_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_930_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "8", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+				"LoopDec" : {"FSMBitwidth" : "8", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -190,7 +190,7 @@ set ArgLastReadFirstWriteLatency {
 		pix_val_V_1 {Type I LastRead 0 FirstWrite -1}
 		pix_val_V {Type I LastRead 0 FirstWrite -1}
 		trunc_ln915_1 {Type I LastRead 0 FirstWrite -1}
-		bytePlanes1 {Type O LastRead -1 FirstWrite 8}
+		bytePlanes1 {Type O LastRead -1 FirstWrite 9}
 		icmp_ln920 {Type I LastRead 0 FirstWrite -1}
 		cmp103_6 {Type I LastRead 0 FirstWrite -1}
 		cmp103_5 {Type I LastRead 0 FirstWrite -1}
@@ -201,16 +201,16 @@ set ArgLastReadFirstWriteLatency {
 		sub100_cast72 {Type I LastRead 0 FirstWrite -1}
 		cmp103 {Type I LastRead 0 FirstWrite -1}
 		img {Type I LastRead 8 FirstWrite -1}
-		pix_val_V_11_out {Type O LastRead -1 FirstWrite 1}
-		pix_val_V_10_out {Type O LastRead -1 FirstWrite 1}
-		pix_val_V_9_out {Type O LastRead -1 FirstWrite 1}
-		pix_val_V_8_out {Type O LastRead -1 FirstWrite 1}}}
+		pix_val_V_11_out {Type O LastRead -1 FirstWrite 2}
+		pix_val_V_10_out {Type O LastRead -1 FirstWrite 2}
+		pix_val_V_9_out {Type O LastRead -1 FirstWrite 2}
+		pix_val_V_8_out {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3", "Max" : "16387"}
-	, {"Name" : "Interval", "Min" : "3", "Max" : "16387"}
+	{"Name" : "Latency", "Min" : "4", "Max" : "16388"}
+	, {"Name" : "Interval", "Min" : "4", "Max" : "16388"}
 ]}
 
 set PipelineEnableSignalInfo {[

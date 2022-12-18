@@ -9,8 +9,8 @@
 <ProductFamily>zynquplus</ProductFamily>
 <Part>xck26-sfvc784-2LV-c</Part>
 <TopModelName>AXIMMvideo2Bytes</TopModelName>
-<TargetClockPeriod>6.66</TargetClockPeriod>
-<ClockUncertainty>1.80</ClockUncertainty>
+<TargetClockPeriod>3.33</TargetClockPeriod>
+<ClockUncertainty>0.90</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,16 +18,16 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.864</EstimatedClockPeriod>
+<EstimatedClockPeriod>2.433</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>1</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
 <Worst-caseLatency>35873281</Worst-caseLatency>
-<Best-caseRealTimeLatency>6.663 ns</Best-caseRealTimeLatency>
+<Best-caseRealTimeLatency>3.333 ns</Best-caseRealTimeLatency>
 <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.239 sec</Worst-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.120 sec</Worst-caseRealTimeLatency>
 <Interval-min>1</Interval-min>
 <Interval-max>35873281</Interval-max>
 </SummaryOfOverallLatency>
@@ -48,7 +48,7 @@
 <AbsoluteTimeLatency>
 <range>
 <min>0</min>
-<max>239023668</max>
+<max>119565640</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>

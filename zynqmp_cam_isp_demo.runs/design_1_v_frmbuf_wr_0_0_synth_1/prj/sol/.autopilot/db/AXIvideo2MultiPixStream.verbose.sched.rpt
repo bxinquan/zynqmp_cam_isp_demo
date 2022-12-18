@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'AXIvideo2MultiPixStream'
 ================================================================
-* Date:           Sat Dec 10 20:38:23 2022
+* Date:           Sat Dec 17 00:27:11 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  2.346 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.346 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
     |   min   |   max   |    min    |    max    | min |   max   |   Type  |
     +---------+---------+-----------+-----------+-----+---------+---------+
-    |        6|  3313446|  39.978 ns|  22.077 ms|    6|  3313446|       no|
+    |        6|  3313446|  19.998 ns|  11.044 ms|    6|  3313446|       no|
     +---------+---------+-----------+-----------+-----+---------+---------+
 
     + Detail: 
@@ -88,7 +88,7 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 1.83>
+State 1 <SV = 0> <Delay = 1.21>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 11 'alloca' 'i' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%axi_data_V_2 = alloca i32 1"   --->   Operation 12 'alloca' 'axi_data_V_2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sof = alloca i32 1"   --->   Operation 13 'alloca' 'sof' <Predicate = true> <Delay = 0.00>
@@ -99,8 +99,8 @@ ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%axi_last_V_4_loc = alloca i32 1"  
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%axi_data_V_3_loc = alloca i32 1"   --->   Operation 18 'alloca' 'axi_data_V_3_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%eol_loc = alloca i32 1"   --->   Operation 19 'alloca' 'eol_loc' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%axi_last_V_loc = alloca i32 1"   --->   Operation 20 'alloca' 'axi_last_V_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (1.83ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i12P0A, i12 %height_c10, i12 %p_read_8"   --->   Operation 21 'write' 'write_ln0' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
-ST_1 : Operation 22 [1/1] (1.83ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i13P0A, i13 %width_c, i13 %p_read14"   --->   Operation 22 'write' 'write_ln0' <Predicate = true> <Delay = 1.83> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 13> <Depth = 2> <FIFO>
+ST_1 : Operation 21 [1/1] (1.21ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i12P0A, i12 %height_c10, i12 %p_read_8"   --->   Operation 21 'write' 'write_ln0' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (1.21ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i13P0A, i13 %width_c, i13 %p_read14"   --->   Operation 22 'write' 'write_ln0' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 13> <Depth = 2> <FIFO>
 ST_1 : Operation 23 [2/2] (0.00ns)   --->   "%cols = call i13 @reg<unsigned short>, i13 %p_read14" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:186]   --->   Operation 23 'call' 'cols' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_1 : Operation 24 [1/1] (0.58ns)   --->   "%cond = icmp_eq  i3 %p_read25, i3 0"   --->   Operation 24 'icmp' 'cond' <Predicate = true> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 25 [1/1] (0.58ns)   --->   "%icmp_ln235 = icmp_eq  i3 %p_read25, i3 1" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:235]   --->   Operation 25 'icmp' 'icmp_ln235' <Predicate = true> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -174,12 +174,12 @@ ST_10 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln205 = br void %loop_width" [
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 6.66ns, clock uncertainty: 1.8ns.
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
 
- <State 1>: 1.84ns
+ <State 1>: 1.22ns
 The critical path consists of the following:
 	wire read operation ('p_read_8') on port 'p_read' [19]  (0 ns)
-	fifo write operation ('write_ln0') on port 'height_c10' [25]  (1.84 ns)
+	fifo write operation ('write_ln0') on port 'height_c10' [25]  (1.22 ns)
 
  <State 2>: 0.427ns
 The critical path consists of the following:
@@ -204,7 +204,7 @@ The critical path consists of the following:
 
  <State 7>: 0.427ns
 The critical path consists of the following:
-	'store' operation ('store_ln205', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:205) of variable 'i', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:205 on local variable 'i' [72]  (0.427 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'sof' [63]  (0.427 ns)
 
  <State 8>: 0.854ns
 The critical path consists of the following:

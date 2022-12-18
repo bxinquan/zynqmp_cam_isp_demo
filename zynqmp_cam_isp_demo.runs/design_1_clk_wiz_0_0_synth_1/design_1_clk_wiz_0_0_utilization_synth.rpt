@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sat Dec 10 20:38:04 2022
+| Date         : Sat Dec 17 00:30:46 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_clk_wiz_0_0_utilization_synth.rpt -pb design_1_clk_wiz_0_0_utilization_synth.pb
 | Design       : design_1_clk_wiz_0_0
@@ -105,8 +105,8 @@ Table of Contents
 +----------------------+------+-------+------------+-----------+-------+
 |       Site Type      | Used | Fixed | Prohibited | Available | Util% |
 +----------------------+------+-------+------------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    2 |     0 |          0 |       352 |  0.57 |
-|   BUFGCE             |    2 |     0 |          0 |       112 |  1.79 |
+| GLOBAL CLOCK BUFFERs |    4 |     0 |          0 |       352 |  1.14 |
+|   BUFGCE             |    4 |     0 |          0 |       112 |  3.57 |
 |   BUFGCE_DIV         |    0 |     0 |          0 |        16 |  0.00 |
 |   BUFG_GT            |    0 |     0 |          0 |        96 |  0.00 |
 |   BUFG_PS            |    0 |     0 |          0 |        96 |  0.00 |
@@ -156,7 +156,7 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| BUFGCE     |    2 |               Clock |
+| BUFGCE     |    4 |               Clock |
 | MMCME4_ADV |    1 |               Clock |
 | INBUF      |    1 |                 I/O |
 | IBUFCTRL   |    1 |              Others |

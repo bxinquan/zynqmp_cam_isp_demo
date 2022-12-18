@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'AXIMMvideo2Bytes_Pipeline_VITIS_LOOP_437_1'
 ================================================================
-* Date:           Sat Dec 10 20:38:21 2022
+* Date:           Sat Dec 17 00:27:10 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.864 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
     |   min   |   max   |    min    |    max    | min |  max |   Type  |
     +---------+---------+-----------+-----------+-----+------+---------+
-    |        4|     8195|  26.652 ns|  54.603 us|    4|  8195|       no|
+    |        4|     8195|  13.332 ns|  27.314 us|    4|  8195|       no|
     +---------+---------+-----------+-----------+-----+------+---------+
 
     + Detail: 
@@ -101,23 +101,23 @@ ST_1 : Operation 17 [1/1] (0.82ns)   --->   "%add_ln437 = add i13 %x_5, i13 1" [
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln437 = br i1 %icmp_ln437, void %for.inc.split, void %for.inc10.loopexit.exitStub" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437]   --->   Operation 18 'br' 'br_ln437' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln437 = store i13 %add_ln437, i13 %x" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437]   --->   Operation 19 'store' 'store_ln437' <Predicate = (!icmp_ln437)> <Delay = 0.42>
 
-State 2 <SV = 1> <Delay = 4.86>
+State 2 <SV = 1> <Delay = 2.43>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%mm_video_addr = getelementptr i64 %mm_video, i32 %sext_ln437_cast" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437]   --->   Operation 20 'getelementptr' 'mm_video_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 8192, i64 0"   --->   Operation 21 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (4.86ns)   --->   "%mm_video_addr_read = read i64 @_ssdm_op_Read.m_axi.p1i64, i64 %mm_video_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:441]   --->   Operation 22 'read' 'mm_video_addr_read' <Predicate = (!icmp_ln437)> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 22 [1/1] (2.43ns)   --->   "%mm_video_addr_read = read i64 @_ssdm_op_Read.m_axi.p1i64, i64 %mm_video_addr" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:441]   --->   Operation 22 'read' 'mm_video_addr_read' <Predicate = (!icmp_ln437)> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 27 'ret' 'ret_ln0' <Predicate = (icmp_ln437)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 1.74>
+State 3 <SV = 2> <Delay = 1.21>
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln439 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_8" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:439]   --->   Operation 23 'specpipeline' 'specpipeline_ln439' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln437 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437]   --->   Operation 24 'specloopname' 'specloopname_ln437' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (1.74ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %bytePlanes1, i64 %mm_video_addr_read" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 25 'write' 'write_ln174' <Predicate = true> <Delay = 1.74> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
+ST_3 : Operation 25 [1/1] (1.21ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %bytePlanes1, i64 %mm_video_addr_read" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 25 'write' 'write_ln174' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.74> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 960> <FIFO>
 ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln437 = br void %for.inc" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437]   --->   Operation 26 'br' 'br_ln437' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 6.66ns, clock uncertainty: 1.8ns.
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
 
  <State 1>: 1.43ns
 The critical path consists of the following:
@@ -127,14 +127,14 @@ The critical path consists of the following:
 	'store' operation ('store_ln437', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437) of variable 'add_ln437', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437 on local variable 'x' [26]  (0.427 ns)
 	blocking operation 0.187 ns on control path)
 
- <State 2>: 4.86ns
+ <State 2>: 2.43ns
 The critical path consists of the following:
 	'getelementptr' operation ('mm_video_addr', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:437) [16]  (0 ns)
-	bus read operation ('mm_video_addr_read', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:441) on port 'mm_video' (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:441) [24]  (4.86 ns)
+	bus read operation ('mm_video_addr_read', D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:441) on port 'mm_video' (D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_rd_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_rd.cpp:441) [24]  (2.43 ns)
 
- <State 3>: 1.74ns
+ <State 3>: 1.22ns
 The critical path consists of the following:
-	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'bytePlanes1' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [25]  (1.74 ns)
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'bytePlanes1' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [25]  (1.22 ns)
 
 
 ============================================================

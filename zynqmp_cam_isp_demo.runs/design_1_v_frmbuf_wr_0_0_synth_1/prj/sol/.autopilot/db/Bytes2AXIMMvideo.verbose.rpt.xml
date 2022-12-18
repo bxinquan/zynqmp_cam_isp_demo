@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Bytes2AXIMMvideo'" level="0">
-<item name = "Date">Sat Dec 10 20:38:30 2022
+<item name = "Date">Sat Dec 17 00:27:17 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 4.864 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 9326881, 6.663 ns, 62.145 ms, 1, 9326881, no</column>
+<column name="">2, 9326882, 6.666 ns, 31.086 ms, 2, 9326882, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145">Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1, 4, 2051, 26.652 ns, 13.666 us, 4, 2051, no</column>
+<column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145">Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1, 4, 2051, 13.332 ns, 6.836 us, 4, 2051, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -53,8 +53,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 273, 91, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 781, -</column>
-<column name="Register">-, -, 263, -, -</column>
+<column name="Multiplexer">-, -, -, 791, -</column>
+<column name="Register">-, -, 275, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -81,12 +81,12 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln1076_fu_162_p2">+, 0, 0, 23, 16, 5</column>
-<column name="add_ln1086_fu_238_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln1092_fu_263_p2">+, 0, 0, 30, 23, 23</column>
-<column name="y_7_fu_220_p2">+, 0, 0, 19, 12, 1</column>
-<column name="ap_block_state109">and, 0, 0, 2, 1, 1</column>
-<column name="cmp32_fu_192_p2">icmp, 0, 0, 11, 11, 1</column>
-<column name="icmp_ln1082_fu_215_p2">icmp, 0, 0, 12, 12, 12</column>
+<column name="add_ln1086_fu_235_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln1092_fu_260_p2">+, 0, 0, 30, 23, 23</column>
+<column name="y_7_fu_217_p2">+, 0, 0, 19, 12, 1</column>
+<column name="ap_block_state110">and, 0, 0, 2, 1, 1</column>
+<column name="cmp32_fu_201_p2">icmp, 0, 0, 11, 11, 1</column>
+<column name="icmp_ln1082_fu_212_p2">icmp, 0, 0, 12, 12, 12</column>
 <column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
@@ -95,7 +95,7 @@
 <column name="Height_blk_n">9, 2, 1, 2</column>
 <column name="StrideInBytes_blk_n">9, 2, 1, 2</column>
 <column name="WidthInBytes_blk_n">9, 2, 1, 2</column>
-<column name="ap_NS_fsm">545, 110, 1, 110</column>
+<column name="ap_NS_fsm">555, 111, 1, 111</column>
 <column name="ap_done">9, 2, 1, 2</column>
 <column name="bytePlanes1_read">9, 2, 1, 2</column>
 <column name="dstImg_blk_n">9, 2, 1, 2</column>
@@ -121,19 +121,20 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="Height_read_reg_291">12, 0, 12, 0</column>
-<column name="ap_CS_fsm">109, 0, 109, 0</column>
+<column name="Height_read_reg_288">12, 0, 12, 0</column>
+<column name="ap_CS_fsm">110, 0, 110, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="cmp32_reg_311">1, 0, 1, 0</column>
-<column name="dstImg_read_reg_296">32, 0, 32, 0</column>
+<column name="cmp32_reg_315">1, 0, 1, 0</column>
+<column name="div8_reg_305">11, 0, 11, 0</column>
+<column name="dstImg_read_reg_293">32, 0, 32, 0</column>
 <column name="grp_Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1_fu_145_ap_start_reg">1, 0, 1, 0</column>
-<column name="loopWidth_reg_301">11, 0, 11, 0</column>
-<column name="trunc_ln5_reg_328">27, 0, 27, 0</column>
-<column name="y_7_reg_323">12, 0, 12, 0</column>
+<column name="loopWidth_reg_298">11, 0, 11, 0</column>
+<column name="trunc_ln5_reg_332">27, 0, 27, 0</column>
+<column name="y_7_reg_327">12, 0, 12, 0</column>
 <column name="y_fu_106">12, 0, 12, 0</column>
 <column name="yoffset_fu_110">23, 0, 23, 0</column>
-<column name="zext_ln1076_1_reg_306">11, 0, 32, 21</column>
-<column name="zext_ln1082_reg_315">11, 0, 23, 12</column>
+<column name="zext_ln1076_1_reg_310">11, 0, 32, 21</column>
+<column name="zext_ln1082_reg_319">11, 0, 23, 12</column>
 </table>
 </item>
 </section>

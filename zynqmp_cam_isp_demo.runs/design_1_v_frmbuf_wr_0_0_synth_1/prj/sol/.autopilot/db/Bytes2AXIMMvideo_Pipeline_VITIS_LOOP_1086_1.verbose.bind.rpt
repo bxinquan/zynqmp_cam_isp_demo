@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Bytes2AXIMMvideo_Pipeline_VITIS_LOOP_1086_1'
 ================================================================
-* Date:           Sat Dec 10 20:38:25 2022
+* Date:           Sat Dec 17 00:27:13 2022
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        prj
@@ -20,17 +20,17 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  |  6.66 ns|  4.864 ns|     1.80 ns|
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
     +--------+---------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+------+---------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
-    |   min   |   max   |    min    |    max    | min |  max |   Type  |
-    +---------+---------+-----------+-----------+-----+------+---------+
-    |        4|     2051|  26.652 ns|  13.666 us|    4|  2051|       no|
-    +---------+---------+-----------+-----------+-----+------+---------+
+    +---------+---------+-----------+----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max |   Type  |
+    +---------+---------+-----------+----------+-----+------+---------+
+    |        4|     2051|  13.332 ns|  6.836 us|    4|  2051|       no|
+    +---------+---------+-----------+----------+-----+------+---------+
 
     + Detail: 
         * Instance: 
@@ -101,16 +101,16 @@ ST_1 : Operation 17 [1/1] (0.79ns)   --->   "%add_ln1086 = add i11 %x_5, i11 1" 
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln1086 = br i1 %icmp_ln1086, void %for.inc.split, void %for.inc10.loopexit.exitStub" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1086]   --->   Operation 18 'br' 'br_ln1086' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln1086 = store i11 %add_ln1086, i11 %x" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1086]   --->   Operation 19 'store' 'store_ln1086' <Predicate = (!icmp_ln1086)> <Delay = 0.42>
 
-State 2 <SV = 1> <Delay = 1.65>
+State 2 <SV = 1> <Delay = 1.21>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%mm_video_addr = getelementptr i256 %mm_video, i32 %sext_ln1086_cast" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1086]   --->   Operation 20 'getelementptr' 'mm_video_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 2048, i64 0"   --->   Operation 21 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 22 [1/1] (1.65ns)   --->   "%mem_pix = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %bytePlanes1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 22 'read' 'mem_pix' <Predicate = (!icmp_ln1086)> <Delay = 1.65> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 264> <FIFO>
+ST_2 : Operation 22 [1/1] (1.21ns)   --->   "%mem_pix = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %bytePlanes1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 22 'read' 'mem_pix' <Predicate = (!icmp_ln1086)> <Delay = 1.21> <CoreInst = "FIFO_BRAM">   --->   Core 79 'FIFO_BRAM' <Latency = 0> <II = 1> <Delay = 1.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 264> <FIFO>
 ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 27 'ret' 'ret_ln0' <Predicate = (icmp_ln1086)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 4.86>
+State 3 <SV = 2> <Delay = 2.43>
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln1088 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_14" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1088]   --->   Operation 23 'specpipeline' 'specpipeline_ln1088' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln1086 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1086]   --->   Operation 24 'specloopname' 'specloopname_ln1086' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 25 [1/1] (4.86ns)   --->   "%write_ln1090 = write void @_ssdm_op_Write.m_axi.p1i256, i256 %mm_video_addr, i256 %mem_pix, i32 4294967295" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090]   --->   Operation 25 'write' 'write_ln1090' <Predicate = true> <Delay = 4.86> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 25 [1/1] (2.43ns)   --->   "%write_ln1090 = write void @_ssdm_op_Write.m_axi.p1i256, i256 %mm_video_addr, i256 %mem_pix, i32 4294967295" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090]   --->   Operation 25 'write' 'write_ln1090' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln1086 = br void %for.inc" [D:/zynqmp_cam_isp_demo/zynqmp_cam_isp_demo.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1086]   --->   Operation 26 'br' 'br_ln1086' <Predicate = true> <Delay = 0.00>
 
 

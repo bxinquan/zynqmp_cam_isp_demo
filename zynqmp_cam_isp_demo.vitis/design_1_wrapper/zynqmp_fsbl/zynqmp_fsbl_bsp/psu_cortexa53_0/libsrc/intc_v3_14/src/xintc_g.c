@@ -26,16 +26,28 @@ extern void XNullHandler (void *);
 XIntc_Config XIntc_ConfigTable[] =
 {
 	{
-		XPAR_AXI_INTC_0_DEVICE_ID,
-		XPAR_AXI_INTC_0_BASEADDR,
-		XPAR_AXI_INTC_0_KIND_OF_INTR,
-		XPAR_AXI_INTC_0_HAS_FAST,
-		XPAR_AXI_INTC_0_IVAR_RESET_VALUE,
-		XPAR_AXI_INTC_0_NUM_INTR_INPUTS,
-		XPAR_AXI_INTC_0_ADDR_WIDTH,
+		XPAR_AXI_INTC_DEVICE_ID,
+		XPAR_AXI_INTC_BASEADDR,
+		XPAR_AXI_INTC_KIND_OF_INTR,
+		XPAR_AXI_INTC_HAS_FAST,
+		XPAR_AXI_INTC_IVAR_RESET_VALUE,
+		XPAR_AXI_INTC_NUM_INTR_INPUTS,
+		XPAR_AXI_INTC_ADDR_WIDTH,
 		XIN_SVC_SGL_ISR_OPTION,
-		XPAR_AXI_INTC_0_TYPE,
+		XPAR_AXI_INTC_TYPE,
 		{
+			{
+				XNullHandler,
+				(void *) XNULL
+			},
+			{
+				XNullHandler,
+				(void *) XNULL
+			},
+			{
+				XNullHandler,
+				(void *) XNULL
+			},
 			{
 				XNullHandler,
 				(void *) XNULL
@@ -73,7 +85,7 @@ XIntc_Config XIntc_ConfigTable[] =
 				(void *) XNULL
 			}
 		},
-		XPAR_AXI_INTC_0_NUM_SW_INTR
+		XPAR_AXI_INTC_NUM_SW_INTR
 	}
 };
 

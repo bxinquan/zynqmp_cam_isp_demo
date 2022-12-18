@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'MultiPixStream2Bytes_Pipeline_VITIS_LOOP_930_1'" level="0">
-<item name = "Date">Sat Dec 10 20:38:24 2022
+<item name = "Date">Sat Dec 17 00:27:12 2022
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.66 ns, 3.921 ns, 1.80 ns</column>
+<column name="ap_clk">3.33 ns, 1.644 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3, 16387, 19.989 ns, 0.109 ms, 3, 16387, no</column>
+<column name="">4, 16388, 13.332 ns, 54.621 us, 4, 16388, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_930_1">1, 16385, 9, 8, 8, 0 ~ 2048, yes</column>
+<column name="- VITIS_LOOP_930_1">2, 16386, 10, 8, 8, 0 ~ 2048, yes</column>
 </table>
 </item>
 </section>

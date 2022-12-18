@@ -63,6 +63,9 @@ module design_1_xlconcat_0_0 (
   In6,
   In7,
   In8,
+  In9,
+  In10,
+  In11,
   dout
 );
 
@@ -75,7 +78,10 @@ input wire [0 : 0] In5;
 input wire [0 : 0] In6;
 input wire [0 : 0] In7;
 input wire [0 : 0] In8;
-output wire [8 : 0] dout;
+input wire [0 : 0] In9;
+input wire [0 : 0] In10;
+input wire [0 : 0] In11;
+output wire [11 : 0] dout;
 
   xlconcat_v2_1_4_xlconcat #(
     .IN0_WIDTH(1),
@@ -206,8 +212,8 @@ output wire [8 : 0] dout;
     .IN125_WIDTH(1),
     .IN126_WIDTH(1),
     .IN127_WIDTH(1),
-    .dout_width(9),
-    .NUM_PORTS(9)
+    .dout_width(12),
+    .NUM_PORTS(12)
   ) inst (
     .In0(In0),
     .In1(In1),
@@ -218,9 +224,9 @@ output wire [8 : 0] dout;
     .In6(In6),
     .In7(In7),
     .In8(In8),
-    .In9(1'B0),
-    .In10(1'B0),
-    .In11(1'B0),
+    .In9(In9),
+    .In10(In10),
+    .In11(In11),
     .In12(1'B0),
     .In13(1'B0),
     .In14(1'B0),
